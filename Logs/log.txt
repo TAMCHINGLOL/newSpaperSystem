@@ -1,0 +1,144 @@
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=638316EBB2E4BA9378AC3C67163D319B
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=638316EBB2E4BA9378AC3C67163D319B
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=168C98C8DCEA4DE7409652108AFE1320
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=168C98C8DCEA4DE7409652108AFE1320
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=BDC3C375363224F23FEF819DEDC0E349
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=BDC3C375363224F23FEF819DEDC0E349
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=A0401ABAA19C0B2BF8D5062920BF9B98
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=A0401ABAA19C0B2BF8D5062920BF9B98
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=7F9896E608631A46D4E30575DA241F6F
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=7F9896E608631A46D4E30575DA241F6F
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=BA5C37BEDC80AC174DC730B3DD2631F4
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=BA5C37BEDC80AC174DC730B3DD2631F4
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=F9C704AA08B8792E1ECBF8B5F6CBBE65
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=F9C704AA08B8792E1ECBF8B5F6CBBE65
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=334F13414D51FFBD8290EFF85FAAAE1C
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=334F13414D51FFBD8290EFF85FAAAE1C
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=493AC7B6B09EA52101FCE71486320B7C
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=493AC7B6B09EA52101FCE71486320B7C
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=44C543C1454BDB48D06F153FF1A06A7F
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=F41C76AFB5BB8C2DBE07B39439FF737E
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'','templateId':'','appId':'8a216da857a253ce0157acc868760930','datas':['','',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=4385A7561E6CA6F9FC7114FEA67DC055
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=B1D9B69CCB74E4E049D9988FC321046D
+response body = {"statusCode":"111109","statusMsg":"【账号】请求地址Sig校验失败"}
+request body = {'to':'13570308136','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=FDCC59B35D7F2A42CB92B47EF767F680
+response body = {"statusCode":"112310","statusMsg":"【短信】应用未上线，模板短信接收号码外呼受限"}
+request body = {'to':'13570308146','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=3AEE51BE309C8B3C01D9CBEFF4BD2DF3
+response body = {"statusCode":"000000","templateSMS":{"smsMessageSid":"7cdb8cbc1e8b4e69820bfc92d54f5cac","dateCreated":"20161010173409"}}
+request body = {'to':'18620455350','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=D1111E7D6480386F3666DDA552CA61AE
+response body = {"statusCode":"112310","statusMsg":"【短信】应用未上线，模板短信接收号码外呼受限"}
+request body = {'to':'18620455350','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=BF7326D46388465FC9385D0E584EE049
+response body = {"statusCode":"113302","statusMsg":"【短信】您正在使用云通讯测试模板且短信接收者不是注册的测试号码"}
+request body = {'to':'18620455350','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=F6832DC86D70F1C2250A65D23C8C2FEF
+response body = {"statusCode":"113302","statusMsg":"【短信】您正在使用云通讯测试模板且短信接收者不是注册的测试号码"}
+request body = {'to':'18620455350','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=DAA7AA499DE10EE299586785CA1DA443
+response body = {"statusCode":"112310","statusMsg":"【短信】应用未上线，模板短信接收号码外呼受限"}
+request body = {'to':'18620455350','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=7EFFD61FB4C70997361C9E751F0B7F6A
+response body = {"statusCode":"113302","statusMsg":"【短信】您正在使用云通讯测试模板且短信接收者不是注册的测试号码"}
+request body = {'to':'18620455350','templateId':'2','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=311E3352521B81E6D43E8A4521E57C69
+response body = {"statusCode":"160032","statusMsg":"短信模板无效"}
+request body = {'to':'18620455350','templateId':'0','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=2CD1560763EF27CA203752B68B0BBD1F
+response body = {"statusCode":"160032","statusMsg":"短信模板无效"}
+request body = {'to':'18620455350','templateId':'11','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=5C1F6576E598258E4918FDEA35AC8532
+response body = {"statusCode":"160032","statusMsg":"短信模板无效"}
+request body = {'to':'18620455350','templateId':'111111','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=D41AE8884F6741DB81D2BC1453CFDD37
+response body = {"statusCode":"160032","statusMsg":"短信模板无效"}
+request body = {'to':'18620455350','templateId':'160032','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=CCCE6C3460D5836410B60D52CBFD4C00
+response body = {"statusCode":"160032","statusMsg":"短信模板无效"}
+request body = {'to':'18620455350','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://app.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=01BAFF996A2CB22322E03249B05FF01A
+response body = {"statusCode":"113302","statusMsg":"【短信】您正在使用云通讯测试模板且短信接收者不是注册的测试号码"}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['12345','5',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=8CFB3E7FB6D5CACB42818B6C5F8523F4
+response body = {"statusCode":"000000","templateSMS":{"smsMessageSid":"be9750cac66741d4b9ce55a015871459","dateCreated":"20161010181200"}}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456789','5',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=2B1BF57DEAC7ECF79EDD7B4ED751A656
+response body = {"statusCode":"000000","templateSMS":{"smsMessageSid":"bf5e1c74bc07492eb0227912f545c5e3","dateCreated":"20161010181627"}}
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456789','2',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=504FF1B7569C11DD0D764CBDF344F516
+response body = {"statusCode":"000000","templateSMS":{"smsMessageSid":"8ed86249040d4c2b8cc2b74d3cee6893","dateCreated":"20161010181901"}}
+************************************************************************************************
+LogResponseTime:2016-10-10 18:24:56
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456789','2',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=D64814336A5C0F8FEDF7D4B4EF228EF8
+response body = {"statusCode":"111180","statusMsg":"【账号】应用已暂停"}
+************************************************************************************************
+************************************************************************************************
+LogResponseTime:2016-10-10
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456789','2',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=0810C4DC28663ED1D4F4D19D1E5578DF
+response body = {"statusCode":"111180","statusMsg":"【账号】应用已暂停"}
+************************************************************************************************
+************************************************************************************************
+LogResponseTime:2016-10-10
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456789','2',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=F2B7B81955ACC5938EE98B1D70C5C6DF
+response body = {"statusCode":"111180","statusMsg":"【账号】应用已暂停"}
+************************************************************************************************
+************************************************************************************************
+LogResponseTime:2016-10-10
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456789','2',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=2BF32BE035DDEDC5922A9CFA41D53A1C
+response body = {"statusCode":"111180","statusMsg":"【账号】应用已暂停"}
+************************************************************************************************
+************************************************************************************************
+LogResponseTime:2016-10-10
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['123456789','2',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=11933B66BA5AA20A092F25578B8BB2C0
+response body = {"statusCode":"000000","templateSMS":{"smsMessageSid":"1a257139998142848333fd2f2f308520","dateCreated":"20161010182636"}}
+************************************************************************************************

@@ -1,0 +1,12 @@
+[ 2016-10-09T00:20:29+08:00 ] ::1 /term/articleOnLine/Admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000467s ]
+ERR: 无法加载模块:Admin
+
+[ 2016-10-09T00:20:35+08:00 ] ::1 /term/articleOnLine/Admin/admin/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+ERR: 无法加载模块:Admin
+
