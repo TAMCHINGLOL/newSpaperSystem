@@ -14,6 +14,12 @@ use Think\Controller;
 
 class LoginController extends Controller
 {
+	/**
+     *加载登录页面
+     */
+	public function index(){
+		$this->display();
+	}
 
     /**
      *用户登录
