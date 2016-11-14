@@ -10,8 +10,23 @@
 include_once("./Plugin/SMSPHP_v2.6r/CCPRestSmsSDK.php");
 
 
-
-
+/**
+ *检验tp自带验证码
+ * @param $code
+ * @return bool
+ */
+function checkVerify($code){
+    $verify = new \Think\Verify();
+    if(empty($code)){
+        $this->error("请输入验证码");
+        exit;
+    }
+    if(!$verify->check($code)){
+        $this->error('验证码有误');
+        exit;
+    }
+    return true;
+}
 
 /**
  * 随机生成短信验证码

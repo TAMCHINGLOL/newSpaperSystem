@@ -48,14 +48,14 @@ $(document).ready(function(){
 	$(document.getElementsByName("code")).blur(function(){
 	  if($(this).val()==""){
 	  	var erorr='<div class="passport-note passport-error-text"><span>请输入动态码</span></div>';
-	  	$(this).parent().addClass("has-error");
+	  	$(this).addClass("has-error");
 	  	$(this).after(erorr);
 	  }
 	});
-//	$(document.getElementsByName('code')).focus(function(){
-//	  $(this).parent().removeClass("has-error");
-//	  $(this).next().remove(); 
-//	});
+	//$(document.getElementsByName('code')).focus(function(){
+	//  $(this).removeClass("has-error");
+	//  $(this).next().remove();
+	//});
 	
 });
 

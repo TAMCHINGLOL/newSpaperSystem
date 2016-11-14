@@ -4,6 +4,7 @@ return array(
     /* 模块相关配置 */
     'DEFAULT_MODULE' => 'Home',
     'MODULE_DENY_LIST'   => array('Common','User'),
+//    'URL_ROUTER_ON' => true,
 
     /* 加载扩展配置文件 */
     'LOAD_EXT_CONFIG' => 'db',

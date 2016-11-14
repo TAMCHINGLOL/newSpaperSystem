@@ -55,7 +55,27 @@ class UserModel extends Model
      */
     public function login($phone){
         $where['phone'] = $phone;
-        return $this->where($where)->getField('password,uid,isdefriend');
+        $files = array(
+            'password',
+            'uid',
+            'isdefriend'
+        );
+        return $this->field($files)->where($where)->find();
+    }
+
+    /**
+     * 根据别名登录
+     * @param $username
+     * @return mixed
+     */
+    public function loginName($username){
+        $where['alias'] = $username;
+        $files = array(
+            'password',
+            'uid',
+            'isdefriend'
+        );
+        return $this->field($files)->where($where)->find();
     }
 
     /**
