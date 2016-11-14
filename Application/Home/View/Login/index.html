@@ -335,7 +335,7 @@
                     url: verifySms_url,
                     type: 'post',
                     dataType: 'json',
-                    data: {code: verify, smsCode: hex_md5(code)},
+                    data: {code: verify, smsCode: hex_md5(code), phone: phone},
                     success: function (result) {
                         if (result.status == 1) {
                             layer.msg(' 正 在 跳 转...');

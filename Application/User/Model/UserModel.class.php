@@ -57,7 +57,9 @@ class UserModel extends Model
         $where['phone'] = $phone;
         $files = array(
             'password',
+            'id',
             'uid',
+            'username',
             'isdefriend'
         );
         return $this->field($files)->where($where)->find();
@@ -72,7 +74,9 @@ class UserModel extends Model
         $where['alias'] = $username;
         $files = array(
             'password',
+            'id',
             'uid',
+            'username',
             'isdefriend'
         );
         return $this->field($files)->where($where)->find();

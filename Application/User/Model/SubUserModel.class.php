@@ -95,7 +95,14 @@ class SubUserModel extends Model
      */
     public function login($phone){
         $where['phone'] = $phone;
-        return $this->where($where)->getField('uid,password');
+        $files = array(
+            'sub_user_id',
+            'uid',
+            'username',
+            'parentid',
+            'isdefriend'
+        );
+        return $this->field($files)->where($where)->find();
     }
 
     /**

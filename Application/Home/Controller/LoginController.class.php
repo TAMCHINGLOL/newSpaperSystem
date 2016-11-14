@@ -46,10 +46,6 @@ class LoginController extends Controller
                 $returnResult = $userModel->loginName($username);
             }
 //                $countRow = $messageModel->getMessageCount($returnResult['uid']);
-        } else if ($userTag == 'subUser') {                //子帐号管理员登录
-            $subUserModel = D('User/SubUser');
-            $returnResult = $subUserModel->login($phone);
-//                $countRow = $messageModel->getMessageCount($returnResult['uid']);
         } else {
             $this->error('未知用户类型');
             exit();
@@ -60,8 +56,9 @@ class LoginController extends Controller
             exit();
         }
         if ($returnResult['password'] == $pwd) {
-            session('uid', $returnResult['uid']);
             session('phone', $phone);
+            sessionSave($returnResult);
+            session('password',null);
             $data['status'] = 1;
             $data['info'] = '登录成功';
 //                $data['count'] = $countRow;
@@ -135,13 +132,21 @@ class LoginController extends Controller
     }
 
     /**
-     *验证手机验证码
+     *验证手机验证码(管理员登录)
      */
     public function verifySms()
     {
         $smsCode = I('post.smsCode');
         $sureSms = session('smsCode');
         if ($smsCode == md5($sureSms)) {
+            $phone = I('post.phone');
+            $subUserModel = D('User/SubUser');
+            $info = $subUserModel->login($phone);
+            if($info['isdefriend'] == 12){
+                $this->error('你已被管理员拉黑,请联系管理员');
+                exit();
+            }
+            sessionSave($info);
             $this->success('动态码正确');
             exit();
         } else {
@@ -193,12 +198,12 @@ class LoginController extends Controller
      */
     public function register()
     {
-//        $smsCode = I('post.smsCode');
-//        $sureSms = session('smsCode');
-//        if ($smsCode != md5($sureSms)) {
-//            $this->error('动态码不正确');
-//            exit();
-//        }
+        $smsCode = I('post.smsCode');
+        $sureSms = session('smsCode');
+        if ($smsCode != md5($sureSms)) {
+            $this->error('动态码不正确');
+            exit();
+        }
 
         $phone = I('post.phone');
         if (preg_match("/^1[34578]{1}\d{9}$/", $phone)) {

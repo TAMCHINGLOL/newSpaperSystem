@@ -11,6 +11,18 @@ include_once("./Plugin/SMSPHP_v2.6r/CCPRestSmsSDK.php");
 
 
 /**
+ * 遍历数组保存session值
+ * @param $infoArray
+ */
+function sessionSave($infoArray){
+    if(!empty($infoArray) && is_array($infoArray)){
+        foreach($infoArray as $k => $v){
+            session($k,$v);
+        }
+    }
+}
+
+/**
  *检验tp自带验证码
  * @param $code
  * @return bool
