@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64bb4386-a0d4-45bb-98a4-dc27963fc083" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/layer/skin/default/icon-ext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/layer/skin/default/icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/layer/skin/default/loading-0.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/layer/skin/default/loading-1.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/layer/skin/default/loading-2.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/layer/layer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/layer/skin/layer.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/md5/md4.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/md5/md5.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Common/function.php" afterPath="$PROJECT_DIR$/Application/Common/Common/function.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/config.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Login/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Login/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/public/js/Login/login.js" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/Login/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/User/Model/UserModel.class.php" afterPath="$PROJECT_DIR$/Application/User/Model/UserModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logs/log.txt" afterPath="$PROJECT_DIR$/Logs/log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Cache/Home/5b6adcb62ad2b5dfc2abc2cd5e11dc99.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/5b6adcb62ad2b5dfc2abc2cd5e11dc99.php" />
-    </list>
+    <list default="true" id="64bb4386-a0d4-45bb-98a4-dc27963fc083" name="默认的" comment="" />
     <ignored path="articleOnLine.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
