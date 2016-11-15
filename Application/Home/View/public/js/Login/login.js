@@ -1,5 +1,5 @@
-$(document).ready(function(){
-	/*登陆*/
+﻿$(document).ready(function(){
+	/*登陆模块*/
 	$(document.getElementsByName('user')).blur(function(){
 	  if($(this).val()==""){
 	  	var erorr='<div class="passport-note passport-error-text"><span>请输入账号</span></div>';
