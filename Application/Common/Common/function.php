@@ -30,11 +30,11 @@ function sessionSave($infoArray){
 function checkVerify($code){
     $verify = new \Think\Verify();
     if(empty($code)){
-        $this->error("请输入验证码");
+        return false;
         exit;
     }
     if(!$verify->check($code)){
-        $this->error('验证码有误');
+        return false;
         exit;
     }
     return true;

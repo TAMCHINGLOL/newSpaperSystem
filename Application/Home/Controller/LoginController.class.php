@@ -99,7 +99,7 @@ class LoginController extends Controller
             exit();
         }
         if (!checkVerify($code)) {
-            $this->error('验证码不正确,请刷新');
+            $this->error('验证码不正确');
             exit();
         }
         $this->success('验 证 码 正 确');

@@ -335,7 +335,7 @@
                     url: verifySms_url,
                     type: 'post',
                     dataType: 'json',
-                    data: {code: verify, smsCode: hex_md5(code)},
+                    data: {code: verify, smsCode: hex_md5(code), phone: phone},
                     success: function (result) {
                         if (result.status == 1) {
                             layer.msg(' 正 在 跳 转...');
@@ -360,7 +360,7 @@
             if(code == null || code == ''){
                 return false;
             }else{
-                verifyCode(code);
+                verifyCode(code,"#r-verify");
             }
         });
 
@@ -370,7 +370,7 @@
             if(code == null || code == ''){
                 return false;
             }else{
-                verifyCode(code);
+                verifyCode(code,this);
             }
         });
 
@@ -471,7 +471,7 @@
         }
 
         //验证码验证
-        function verifyCode(code){
+        function verifyCode(code,id){
             if(code != '' && code != null){
                 $.ajax({
                     url: verifyCode_url,
@@ -484,6 +484,9 @@
                             return false;
                         } else if (result.status == 0) {
                             layer.alert(result.info, {icon: 6});
+                            var erorr='<div class="passport-note passport-error-text"><span>'+result.info+'</span></div>';
+                            $(id).parent().addClass("has-error");
+                            $(id).after(erorr);
                             return false;
                         }
                     },error: function(){
