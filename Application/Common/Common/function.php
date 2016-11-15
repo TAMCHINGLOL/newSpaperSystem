@@ -11,6 +11,22 @@ include_once("./Plugin/SMSPHP_v2.6r/CCPRestSmsSDK.php");
 
 
 /**
+ *生成图片验证码
+ */
+function makeVerify(){
+    ob_end_clean();         //会清除缓冲区的内容，并将缓冲区关闭
+    $config = array(
+//            'expire' =>
+        'fontSize' => 35,   // 验证码字体大小
+        'length' => 4,      // 验证码位数
+        'bg' => array(255, 255, 255),
+        'useCurve' => false, // 关闭曲线干扰
+    );
+    $verify = new \Think\Verify($config);
+    $verify->entry();
+}
+
+/**
  * 遍历数组保存session值
  * @param $infoArray
  */
@@ -46,7 +62,7 @@ function checkVerify($code){
  * @return int
  */
 function makeSmsCode($length = 7){
-    $min = pow(10,($length - 1));
+    $min = pow(10,($length - 2));
     $max = pow(10,($length - 1));
     return mt_rand($min,$max);
 }

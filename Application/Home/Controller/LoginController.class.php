@@ -11,8 +11,6 @@ namespace Home\Controller;
 
 
 use Think\Controller;
-use Think\Think;
-use Think\Verify;
 
 class LoginController extends Controller
 {
@@ -55,6 +53,10 @@ class LoginController extends Controller
             $this->error('你已被管理员拉黑,请联系管理员');
             exit();
         }
+        if(empty($returnResult)){
+            $this->error("用户不存在");
+            exit();
+        }
         if ($returnResult['password'] == $pwd) {
             session('phone', $phone);
             sessionSave($returnResult);
@@ -76,16 +78,7 @@ class LoginController extends Controller
      */
     public function verify()
     {
-        ob_end_clean();         //会清除缓冲区的内容，并将缓冲区关闭
-        $config = array(
-//            'expire' =>
-            'fontSize' => 35,   // 验证码字体大小
-            'length' => 4,      // 验证码位数
-            'bg' => array(255, 255, 255),
-            'useCurve' => false, // 关闭曲线干扰
-        );
-        $verify = new Verify($config);
-        $verify->entry();
+        makeVerify();
     }
 
     /**
@@ -198,12 +191,12 @@ class LoginController extends Controller
      */
     public function register()
     {
-        $smsCode = I('post.smsCode');
-        $sureSms = session('smsCode');
-        if ($smsCode != md5($sureSms)) {
-            $this->error('动态码不正确');
-            exit();
-        }
+//        $smsCode = I('post.smsCode');
+//        $sureSms = session('smsCode');
+//        if ($smsCode != md5($sureSms)) {
+//            $this->error('动态码不正确');
+//            exit();
+//        }
 
         $phone = I('post.phone');
         if (preg_match("/^1[34578]{1}\d{9}$/", $phone)) {

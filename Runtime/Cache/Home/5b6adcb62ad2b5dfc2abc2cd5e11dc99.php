@@ -94,7 +94,7 @@
                             </div>
                             <div style="float: left;width: 46%">
                                 <img id="img" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新">
+                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img')">
                             </div>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                             </div>
                             <div style="float: left;width: 46%">
                                 <img id="img2" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新">
+                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img2')">
                             </div>
                         </div>
                     </div>
@@ -185,7 +185,7 @@
                             </div>
                             <div style="float: left;width: 46%">
                                 <img id="img3" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新">
+                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img3')">
                             </div>
                         </div>
                     </div>
@@ -232,22 +232,38 @@
             var password = $('#r-password').val();
             var code = $('#code').val();
             if (code == '' || code == null) {
-                layer.alert("请输入动态码");
-                $('#code').focus();
+                alertTips("#code","请输入动态码");
+//                alertTips("#code","请输入动态码");
+//                $('#code').focus();
                 return false;
             }
             if(user == '' || user == null){
-                layer.alert('请输入手机号');
-                $("#r-phone").focus();
+                alertTips("#r-phone","请输入手机号");
+//                alertTips("#r-phone","请输入手机号");
+//                $("#r-phone").focus();
                 return false;
             }
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (!reg.test(user)) {
-                layer.alert("手机号码有误");
-                $("#r-phone").focus();
+                alertTips("#r-phone","手机号码有误");
+//                alertTips('#r-phone',"手机号码有误");
+//                $("#r-phone").focus();
+                return false;
+            }
+            if(password == '' || password == null){
+                alertTips("#r-password","请输入密码");
+//                alertTips("#r-password",'请输入密码');
+//                $('#r-password').focus();
+                return false;
+            }
+            if(password.length < 6 || password.length >21){
+                alertTips("#r-password","密码长度限制6~21位");
+//                alertTips("#r-password",'密码长度限制6~21位');
+//                $("#r-password").focus();
                 return false;
             }
             password = hex_md5(password);
+
             $.ajax({
                 url: register_url,
                 type: 'post',
@@ -256,7 +272,11 @@
                 success: function (result) {
                     if (result.status == 1) {
                         layer.msg(result.info,{time: 3000});
-                        $("#open-register").css('display',"none");      //隐藏注册
+//                        $("#open-register").attr('aria-hidden',"true");      //隐藏注册
+//                        $("#open-register").css('display',"none");      //隐藏注册
+                        setTimeout(function(){
+                            window.location.href = login_url;
+                        },3000);
                     } else if (result.status == 0) {
                         layer.alert(result.info, {icon: 6});
                     }
@@ -272,7 +292,8 @@
             var password = $('#password').val();
             var code = $('#verify').val();
             if (code == '' || code == null) {
-                layer.alert("请输入验证码");
+//                layer.alert("请输入验证码");
+                alertTips("#verify","请输入验证码");
                 return false;
             }
             if (user.length == 11 && !isNaN(user)) {
@@ -280,18 +301,25 @@
                 if (reg.test(user)) {
                     var phone = user;
                 } else {
-                    layer.alert("手机号码有误");
+//                    layer.alert("手机号码有误");
+                    alertTips('#user',"手机号码有误");
                     return false;
                 }
             } else {
                 if (user == "" || user == null) {
-                    layer.alert("请输入账号");
+//                    layer.alert("请输入账号");
+                    alertTips('#user',"请输入账号");
                     return false;
                 }
                 var username = user;
             }
+            if(password == '' || password == null){
+                alertTips("#password",'请输入密码');
+                return false;
+            }
             var userTag = 'author';
             password = hex_md5(password);
+            layer.load(3,{time: 2000});
             $.ajax({
                 url: login_url,
                 type: 'post',
@@ -318,16 +346,24 @@
             var verify = $("#new-password").val();
             var code = $('#gcode').val();
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
+            if(phone == '' || phone == null){
+                alertTips("#new-user",'请输入手机号');
+//                layer.alert("请输入手机号");
+                return false;
+            }
             if (!reg.test(phone)) {
-                layer.alert("手机号码有误");
+                alertTips("#new-user",'手机号码有误');
+//                layer.alert("手机号码有误");
                 return false;
             }
             if (verify == '' || verify == null) {
-                layer.alert("请输入验证码");
+                alertTips("#new-password",'请输入验证码');
+//                layer.alert("请输入验证码");
                 return false;
             }
             if (code == '' || code == null) {
-                layer.alert("请输入动态码");
+                alertTips("#gcode",'请输入动态码');
+//                layer.alert("请输入动态码");
                 return false;
             }
             if (phone != '' && verify != '' && code != '') {
@@ -360,7 +396,7 @@
             if(code == null || code == ''){
                 return false;
             }else{
-                verifyCode(code,"#r-verify");
+                verifyCode(code,this,"#img3");
             }
         });
 
@@ -370,7 +406,7 @@
             if(code == null || code == ''){
                 return false;
             }else{
-                verifyCode(code,this);
+                verifyCode(code,this,"#img");
             }
         });
 
@@ -380,7 +416,7 @@
             if(code == null || code == ''){
                 return false;
             }else{
-                verifyCode(code);
+                verifyCode(code,this,"#img2");
             }
         });
 
@@ -392,28 +428,33 @@
             var code = $("#code").val();
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (phone == '' || phone == null) {
-                layer.alert("请输入手机号");
-                $("#r-phone").focus();
+                alertTips('#r-phone','请输入手机号');
+//                layer.alert("请输入手机号");
+//                $("#r-phone").focus();
                 return false;
             }
             if (!reg.test(phone)) {
-                layer.alert("手机号码有误");
-                $("#r-phone").focus();
+                alertTips('#r-phone','手机号码有误');
+//                layer.alert("手机号码有误");
+//                $("#r-phone").focus();
                 return false;
             }
             if(password == '' || password == null){
-                layer.alert("请输入密码");
-                $("#r-password").focus();
+                alertTips('#r-password','请输入密码');
+//                layer.alert("请输入密码");
+//                $("#r-password").focus();
                 return false;
             }
             if(password.length < 6 || password.length >21){
-                layer.alert("密码长度限制6~21位");
-                $("#r-password").focus();
+                alertTips('#r-password','密码长度限制6~21位');
+//                layer.alert("密码长度限制6~21位");
+//                $("#r-password").focus();
                 return false;
             }
             if (verify == '' || verify == null) {
-                layer.alert("请输入验证码");
-                $("#r-verify").focus();
+                alertTips('#r-verify','请输入验证码');
+//                layer.alert("请输入验证码");
+//                $("#r-verify").focus();
                 return false;
             }
             if (phone != '' && verify != '') {
@@ -427,24 +468,34 @@
             var verify = $("#new-password").val();
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (phone == '' || phone == null) {
-                $("#new-user").focus();
-                layer.alert("请输入手机号");
+                alertTips('#new-user','请输入手机号');
+//                layer.alert("请输入手机号");
+//                $("#new-user").focus();
                 return false;
             }
             if (!reg.test(phone)) {
-                layer.alert("手机号码有误");
-                $("#new-user").focus();
+                alertTips('#new-user','手机号码有误');
+//                layer.alert("手机号码有误");
+//                $("#new-user").focus();
                 return false;
             }
             if (verify == '' || verify == null) {
-                layer.alert("请输入验证码");
-                $("#new-password").focus();
+                alertTips('#new-password','请输入验证码');
+//                layer.alert("请输入验证码");
+//                $("#new-password").focus();
                 return false;
             }
             if (phone != '' && verify != '') {
                 sendSms(phone);
             }
         });
+
+        //提示统一接口
+        function alertTips(id,info){
+            var erorr='<div class="passport-note passport-error-text"><span>'+info+'</span></div>';
+            $(id).parent().addClass("has-error");
+            $(id).after(erorr);
+        }
 
         //发送动态码
         function sendSms(phone) {
@@ -471,7 +522,7 @@
         }
 
         //验证码验证
-        function verifyCode(code,id){
+        function verifyCode(code,id,img){
             if(code != '' && code != null){
                 $.ajax({
                     url: verifyCode_url,
@@ -480,13 +531,12 @@
                     data: {code: code},
                     success: function(result){
                         if (result.status == 1) {
-//                            layer.msg(result.info, {time: 3000});
                             return false;
                         } else if (result.status == 0) {
-                            layer.alert(result.info, {icon: 6});
                             var erorr='<div class="passport-note passport-error-text"><span>'+result.info+'</span></div>';
                             $(id).parent().addClass("has-error");
                             $(id).after(erorr);
+                            $(img).attr("src", verifyImg1 + '&rand=' + Math.random());
                             return false;
                         }
                     },error: function(){
@@ -498,43 +548,53 @@
         }
 
         //点击刷新验证码(笔者注册)
-        var captcha_img2 = $('#img3');
-        var verifyImg2 = captcha_img2.attr("src");
-        captcha_img2.attr('title', '点击刷新');
-        captcha_img2.click(function () {
-            if (verifyImg2.indexOf('?') > 0) {
-                $(this).attr("src", verifyImg2 + '&ran=' + Math.random());
-            } else {
-                $(this).attr("src", verifyImg2.replace(/\?.*$/, '') + '?' + Math.random());
-            }
-        });
+//        var captcha_img2 = $('#img3');
+//        var verifyImg2 = captcha_img2.attr("src");
+//        captcha_img2.attr('title', '点击刷新');
+//        captcha_img2.click(function () {
+//            if (verifyImg2.indexOf('?') > 0) {
+//                $(this).attr("src", verifyImg2 + '&ran=' + Math.random());
+//            } else {
+//                $(this).attr("src", verifyImg2.replace(/\?.*$/, '') + '?' + Math.random());
+//            }
+//        });
+
 
         //点击刷新验证码(笔者登录)
-        var captcha_img = $('#img');
-        var verifyImg = captcha_img.attr("src");
-        captcha_img.attr('title', '点击刷新');
-        captcha_img.click(function () {
-            if (verifyImg.indexOf('?') > 0) {
-                $(this).attr("src", verifyImg + '&random=' + Math.random());
-            } else {
-                $(this).attr("src", verifyImg.replace(/\?.*$/, '') + '?' + Math.random());
-            }
-        });
+//        var captcha_img = $('#img');
+//        var verifyImg = captcha_img.attr("src");
+//        captcha_img.attr('title', '点击刷新');
+//        captcha_img.click(function () {
+//            if (verifyImg.indexOf('?') > 0) {
+//                $(this).attr("src", verifyImg + '&random=' + Math.random());
+//            } else {
+//                $(this).attr("src", verifyImg.replace(/\?.*$/, '') + '?' + Math.random());
+//            }
+//        });
 
         //点击刷新验证码(管理员登录)
-        var captcha_img1 = $('#img2');
-        var verifyImg1 = captcha_img.attr("src");
-        captcha_img1.attr('title', '点击刷新');
-        captcha_img1.click(function () {
-            if (verifyImg1.indexOf('?') > 0) {
-                $(this).attr("src", verifyImg1 + '&rand=' + Math.random());
-            } else {
-                $(this).attr("src", verifyImg1.replace(/\?.*$/, '') + '?' + Math.random());
-            }
-        });
+//        var captcha_img1 = $('#img2');
+//        var verifyImg1 = captcha_img.attr("src");
+//        captcha_img1.attr('title', '点击刷新');
+//        captcha_img1.click(function () {
+//            if (verifyImg1.indexOf('?') > 0) {
+//                $(this).attr("src", verifyImg1 + '&rand=' + Math.random());
+//            } else {
+//                $(this).attr("src", verifyImg1.replace(/\?.*$/, '') + '?' + Math.random());
+//            }
+//        });
     });
 
-
+    //点击刷新验证码统一接口
+    function clickVerify(id){
+        var verifyImg = $(id).attr("src");
+        $(id).attr('title', '点击刷新');
+        if (verifyImg.indexOf('?') > 0) {
+            $(id).attr("src", verifyImg + '&random=' + Math.random());
+        } else {
+            $(id).attr("src", verifyImg.replace(/\?.*$/, '') + '?' + Math.random());
+        }
+    }
 </script>
 </body>
 </html>

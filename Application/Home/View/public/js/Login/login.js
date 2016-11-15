@@ -52,10 +52,10 @@
 	  	$(this).after(erorr);
 	  }
 	});
-	$(document.getElementsByName('code')).focus(function(){
-	  $(this).removeClass("has-error");
-	  $(this).next().remove();
-	});
+	//$(document.getElementsByName('code')).focus(function(){
+	//  $(this).removeClass("has-error");
+	//  $(this).next().remove();
+	//});
 	
 });
 

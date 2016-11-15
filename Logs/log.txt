@@ -220,3 +220,9 @@ request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce015
 request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=24D859AC407EDECF7C1F532AE0ACFC65
 response body = {"statusCode":"000000","templateSMS":{"smsMessageSid":"e96b5a4e9051406e89fa4257529e5e4d","dateCreated":"20161114232148"}}
 *********************************************************************************************************************************************************
+*********************************************************************************************************************************************************
+LogResponseTime:2016-11-16 00:23:32
+request body = {'to':'13144490855','templateId':'1','appId':'8a216da857a253ce0157acc868760930','datas':['824113','2',]}
+request url = https://sandboxapp.cloopen.com:8883/2013-12-26/Accounts/8a216da857a253ce0157acc867d1092a/SMS/TemplateSMS?sig=ABBDA050CAC40C3ACE622217ADF93492
+response body = {"statusCode":"000000","templateSMS":{"smsMessageSid":"83f9ec63dc6c4801bf95cf7a373ab682","dateCreated":"20161116002335"}}
+*********************************************************************************************************************************************************

@@ -11,7 +11,7 @@
 <body class="body-color">
 <div class="header">
     <div class="centent">
-        <a class="logo-img"><img class="pull-left" src="/term/newSpaperSystem/Application/Home/View/public/img/logo.png"/></a>
+        <a class="logo-img" href="<?php echo U('Home/Index/index');?>"><img class="pull-left" src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="105px" height="45px"/></a>
         <nav>
             <ul class="header-nav">
                 <li><a href="<?php echo U('Home/Index/index');?>" style="color: rgb(53, 181, 88);">首页</a></li>
