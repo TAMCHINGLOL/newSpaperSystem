@@ -2,18 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="64bb4386-a0d4-45bb-98a4-dc27963fc083" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/logo1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/logo2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/default.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/get.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/getted.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/good.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/gooded.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/icon_gengduo1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/next.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/prev.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/img/shangche.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/lib/ieonly.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Common/Controller/CommonController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/Controller/PersonController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Person/account.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Person/account1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Person/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Person/index1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Person/message.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/Person/message1.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/css/Login/datetimepicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/css/Login/zui.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/autoheight.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/datetimepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/jquery.1.7.2.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/login.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/zui.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/lib/ieonly/excanvas.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/lib/ieonly/html5shiv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Application/Home/View/public/lib/ieonly/respond.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Test/Conf/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Test/Conf/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Test/View/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/Test/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Application/User/Controller/IndexController.class.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Common/function.php" afterPath="$PROJECT_DIR$/Application/Common/Common/function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Common/Conf/config.php" afterPath="$PROJECT_DIR$/Application/Common/Conf/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Index/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/Login/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/Login/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/public/js/Login/login.js" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/Login/login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/public/css/Login/common.css" afterPath="$PROJECT_DIR$/Application/Home/View/public/css/Login/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/public/css/Login/login.css" afterPath="$PROJECT_DIR$/Application/Home/View/public/css/Login/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/View/public/js/Login/zui.min.js" afterPath="$PROJECT_DIR$/Application/Home/View/public/js/Login/zui.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/User/Model/SubUserModel.class.php" afterPath="$PROJECT_DIR$/Application/User/Model/SubUserModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/User/Model/UserModel.class.php" afterPath="$PROJECT_DIR$/Application/User/Model/UserModel.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Logs/log.txt" afterPath="$PROJECT_DIR$/Logs/log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/2a94b8bda04ff446dcedd42276fc99ee.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Cache/Home/5b6adcb62ad2b5dfc2abc2cd5e11dc99.php" afterPath="$PROJECT_DIR$/Runtime/Cache/Home/5b6adcb62ad2b5dfc2abc2cd5e11dc99.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Home/16_11_15.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Home/16_11_15.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Runtime/Logs/Home/16_11_16.log" afterPath="$PROJECT_DIR$/Runtime/Logs/Home/16_11_16.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Build.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Build.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Firebird.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Firebird.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Oracle.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Oracle.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlite.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlite.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlsrv.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlsrv.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Html.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Html.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Bcs/bcs.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Bcs/bcs.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Bcs/requestcore.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Bcs/requestcore.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Boris/ColoredInspector.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Boris/ColoredInspector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/EaseTemplate/template.core.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/EaseTemplate/template.core.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/EaseTemplate/template.ease.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/EaseTemplate/template.ease.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/Smarty.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/Smarty.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.counter.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.counter.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.cycle.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.cycle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_checkboxes.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_checkboxes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_image.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_options.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_options.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_radios.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_radios.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_select_date.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_select_date.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_table.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_table.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.mailto.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.mailto.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/modifier.date_format.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/modifiercompiler.default.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/modifiercompiler.default.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/shared.literal_compiler_param.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/shared.literal_compiler_param.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/shared.mb_unicode.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/shared.mb_unicode.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_capture.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_capture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_include.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_include.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_print_expression.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_print_expression.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compilebase.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compilebase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatebase.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatebase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatecompilerbase.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_templatecompilerbase.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_utility.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_utility.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_resource.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_security.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_security.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/TemplateLite/class.compiler.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/TemplateLite/class.compiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/Spyc.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/Spyc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/examples/yaml-dump.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/examples/yaml-dump.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/php4/spyc.php4" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/php4/spyc.php4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/tests/DumpTest.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/tests/DumpTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Mode/Lite/Model.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Mode/Lite/Model.class.php" />
     </list>
     <ignored path="articleOnLine.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,84 +116,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="function.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
+      <file leaf-file-name="PersonController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/PersonController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.967742">
-              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Login/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.902292">
-              <caret line="229" column="47" selection-start-line="229" selection-start-column="47" selection-end-line="229" selection-end-column="47" />
+            <state vertical-scroll-proportion="-24.161291">
+              <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#div#2;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#11117#13505#0" expanded="false" />
-                <element signature="e#13568#15560#0" expanded="false" />
-                <element signature="e#15623#17567#0" expanded="false" />
-                <element signature="e#17634#17844#0" expanded="false" />
-                <element signature="e#17909#18116#0" expanded="false" />
-                <element signature="e#18186#18400#0" expanded="false" />
-                <element signature="e#18475#19951#0" expanded="false" />
-                <element signature="e#20028#20949#0" expanded="false" />
-                <element signature="e#21005#21198#0" expanded="false" />
-                <element signature="e#21248#22092#0" expanded="false" />
-                <element signature="e#22150#23180#0" expanded="false" />
-                <element signature="e#23190#23205#0" expanded="false" />
-                <element signature="e#23672#23687#0" expanded="false" />
-                <element signature="e#24147#24163#0" expanded="false" />
+                <element signature="e#147#186#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/public/js/Login/login.js">
+      <file leaf-file-name="account.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Person/account.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="4" selection-start-line="54" selection-start-column="6" selection-end-line="57" selection-end-column="9" />
-              <folding />
+            <state vertical-scroll-proportion="0.60890496">
+              <caret line="128" column="176" selection-start-line="128" selection-start-column="176" selection-end-line="128" selection-end-column="176" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#if#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
+        <entry file="file://$PROJECT_DIR$/Application/Home/View/Person/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="12.032258">
-              <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+            <state vertical-scroll-proportion="-22.225807">
+              <caret line="98" column="115" selection-start-line="98" selection-start-column="115" selection-end-line="98" selection-end-column="115" />
               <folding>
-                <element signature="n#div#1;n#body#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#body#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#if#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
+      <file leaf-file-name="CommonController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Common/Controller/CommonController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.354838">
-              <caret line="16" column="29" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="29" />
+            <state vertical-scroll-proportion="-10.645162">
+              <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -121,28 +165,8 @@
       <file leaf-file-name="LoginController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.409836">
-              <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/User/Model/UserModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubUserModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/User/Model/SubUserModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
+            <state vertical-scroll-proportion="-19.161291">
+              <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -156,13 +180,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Home/Conf/config.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Common/function.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Conf/db.php" />
-        <option value="$PROJECT_DIR$/Application/Common/Conf/db.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/Application/Plugin/SMSPHP_v2.6r/CCPRestSmsSDK.php" />
-        <option value="$PROJECT_DIR$/Application/Plugin/SMSPHP_v2.6r/SendTemplateSMS.php" />
         <option value="$PROJECT_DIR$/Application/Test/Controller/IndexController.class.php" />
         <option value="$PROJECT_DIR$/Plugin/SMSPHP_v2.6r/CCPRestSmsSDK.php" />
         <option value="$PROJECT_DIR$/Plugin/SMSPHP_v2.6r/SendTemplateSMS.php" />
@@ -187,20 +204,33 @@
         <option value="$PROJECT_DIR$/Application/User/Model/MessageModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/default/Login/index.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/public/css/Login/common.css" />
-        <option value="$PROJECT_DIR$/Application/Home/View/public/css/Login/login.css" />
         <option value="$PROJECT_DIR$/Application/Home/View/Login/index1.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Login/index2.html" />
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/shared.mb_unicode.php" />
-        <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Verify.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/public/js/Login/login.js" />
+        <option value="$PROJECT_DIR$/ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Person/person.html" />
         <option value="$PROJECT_DIR$/Application/User/Model/SubUserModel.class.php" />
         <option value="$PROJECT_DIR$/Application/User/Model/UserModel.class.php" />
-        <option value="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
-        <option value="$PROJECT_DIR$/Application/Home/View/public/js/Login/login.js" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" />
         <option value="$PROJECT_DIR$/Application/Common/Common/function.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Person/home.html" />
         <option value="$PROJECT_DIR$/Application/Home/View/Login/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/CommonController.class.php" />
+        <option value="$PROJECT_DIR$/Application/User/Controller/PersonController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Person/newspull.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Person/personalset.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Index/index.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Person/index.html" />
+        <option value="$PROJECT_DIR$/Application/Common/Controller/CommonController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Person/message.html" />
+        <option value="$PROJECT_DIR$/Application/Home/View/public/css/Login/login.css" />
+        <option value="$PROJECT_DIR$/Application/Home/View/public/css/Login/zui.css" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/PersonController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Conf/config.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/View/Person/account.html" />
       </list>
     </option>
   </component>
@@ -250,7 +280,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -279,15 +308,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="View" />
+              <option name="myItemId" value="ThinkPHP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -301,33 +322,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
+              <option name="myItemId" value="ThinkPHP" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="articleOnLine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newSpaperSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="User" />
+              <option name="myItemId" value="Common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,7 +396,37 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="articleOnLine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newSpaperSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Person" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -445,9 +474,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="articleOnLine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newSpaperSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="articleOnLine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newSpaperSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="articleOnLine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newSpaperSystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Application" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,17 +549,17 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View\public\img" />
-      <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View\Index" />
-      <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View\Login" />
-      <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View\public\js\md5" />
+      <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View\Person" />
       <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View\public\js" />
+      <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View\public" />
+      <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View\public\css\Login" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\WWW\term\newSpaperSystem\Application\Home\Controller" />
+      <recent name="E:\WWW\term\newSpaperSystem\Application\User\Controller" />
+      <recent name="E:\WWW\term\newSpaperSystem\Application\Common\Controller" />
       <recent name="E:\WWW\term\newSpaperSystem\Application\Home\View" />
       <recent name="E:\WWW\term\articleOnLine\Application\Common\Model" />
-      <recent name="E:\WWW\term\articleOnLine" />
-      <recent name="E:\WWW\term\articleOnLine\Application\Common\Conf" />
-      <recent name="E:\WWW\term\articleOnLine\Application\Common\Common" />
     </key>
   </component>
   <component name="RunManager">
@@ -518,10 +606,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10885417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="版本控制" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -529,6 +617,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32535365" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -538,7 +627,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261944" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -579,118 +667,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Conf/convention.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.225844">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/db.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48263255">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plugin/SMSPHP_v2.6r/接口说明.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.0276817">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Plugin/SMSPHP_v2.6r/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Test/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20109689">
-          <caret line="5" column="65" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Logs/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.733564">
-          <caret line="143" column="7" selection-start-line="143" selection-start-column="7" selection-end-line="143" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/User/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89639115">
-          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/TypeModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.115173675">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/TypeController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3839123">
-          <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/User/Model/AdminModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39670932">
-          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/RoleController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6087751">
-          <caret line="46" column="10" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Admin/Model/RoleModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.419355">
-          <caret line="53" column="11" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/SubUserController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5878929">
-          <caret line="68" column="31" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/User/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20109689">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/Controller/ArticleController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.0090191">
@@ -810,35 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28153566">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/css/Login/zui.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="5" column="49167" selection-start-line="5" selection-start-column="49165" selection-end-line="5" selection-end-column="49167" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/css/Login/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30367506">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/css/Login/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.80438757">
-          <caret line="13" column="81" selection-start-line="13" selection-start-column="81" selection-end-line="13" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/public/img/打开新的标签页.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.005484461">
@@ -857,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.096774">
           <caret line="98" column="21" selection-start-line="98" selection-start-column="21" selection-end-line="98" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,33 +822,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/User/Model/SubUserModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="24" selection-start-line="98" selection-start-column="24" selection-end-line="98" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/User/Model/UserModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/public/img/logo2.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.967742">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/public/js/Login/login.js">
@@ -913,37 +835,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php">
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.409836">
-          <caret line="93" column="20" selection-start-line="93" selection-start-column="20" selection-end-line="93" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.354838">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.032258">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.21206582">
+          <caret line="642" column="51" selection-start-line="642" selection-start-column="51" selection-end-line="642" selection-end-column="51" />
           <folding>
-            <element signature="n#div#1;n#body#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#body#0;n#!!top" expanded="false" />
+            <marker date="1479283681081" expanded="true" signature="28661:28763" placeholder="..." />
+            <marker date="1479283681081" expanded="true" signature="28778:28808" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Person/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="27.966103">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/View/Login/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.902292">
-          <caret line="229" column="47" selection-start-line="229" selection-start-column="47" selection-end-line="229" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.589057">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="8" selection-end-line="67" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -960,20 +876,215 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#11117#13505#0" expanded="false" />
-            <element signature="e#13568#15560#0" expanded="false" />
-            <element signature="e#15623#17567#0" expanded="false" />
-            <element signature="e#17634#17844#0" expanded="false" />
-            <element signature="e#17909#18116#0" expanded="false" />
-            <element signature="e#18186#18400#0" expanded="false" />
-            <element signature="e#18475#19951#0" expanded="false" />
-            <element signature="e#20028#20949#0" expanded="false" />
-            <element signature="e#21005#21198#0" expanded="false" />
-            <element signature="e#21248#22092#0" expanded="false" />
-            <element signature="e#22150#23180#0" expanded="false" />
-            <element signature="e#23190#23205#0" expanded="false" />
-            <element signature="e#23672#23687#0" expanded="false" />
-            <element signature="e#24147#24163#0" expanded="false" />
+            <element signature="e#11774#14162#0" expanded="false" />
+            <element signature="e#14225#16217#0" expanded="false" />
+            <element signature="e#16280#18224#0" expanded="false" />
+            <element signature="e#18291#18501#0" expanded="false" />
+            <element signature="e#18843#19057#0" expanded="false" />
+            <element signature="e#19132#20617#0" expanded="false" />
+            <element signature="e#20694#21623#0" expanded="false" />
+            <element signature="e#21679#21872#0" expanded="false" />
+            <element signature="e#21926#22780#0" expanded="false" />
+            <element signature="e#24029#24044#0" expanded="false" />
+            <element signature="e#24510#24525#0" expanded="false" />
+            <element signature="e#24985#25001#0" expanded="false" />
+            <marker date="1479297087056" expanded="true" signature="1859:2100" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/User/Model/UserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.014475271">
+          <caret line="65" column="25" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/User/Model/SubUserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33293125">
+          <caret line="105" column="25" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Common/function.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65192086">
+          <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/lib/ieonly/respond.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/js/datetimepicker.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/js/autoheight.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.034883723">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Person/account1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30616996">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="57" selection-end-column="18" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Person/message1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79394644">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#if#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#1;n#div#1;n#body#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#1;n#div#1;n#body#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#1;n#div#1;n#body#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#body#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4097788">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Person/message.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38416764">
+          <caret line="86" column="20" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#nav#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#if#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/PersonController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.161291">
+          <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
+          <folding>
+            <element signature="e#147#186#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69150174">
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ThinkPHP/Common/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34575087">
+          <caret line="1240" column="33" selection-start-line="1240" selection-start-column="11" selection-end-line="1240" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Common/Controller/CommonController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.645162">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/css/Login/zui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23050058">
+          <caret line="2833" column="23" selection-start-line="2832" selection-start-column="20" selection-end-line="2833" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/css/Login/common.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/public/css/Login/login.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68917346">
+          <caret line="897" column="21" selection-start-line="897" selection-start-column="21" selection-end-line="897" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Person/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.225807">
+          <caret line="98" column="115" selection-start-line="98" selection-start-column="115" selection-end-line="98" selection-end-column="115" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#if#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.161291">
+          <caret line="153" column="9" selection-start-line="153" selection-start-column="9" selection-end-line="153" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/View/Person/account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60890496">
+          <caret line="128" column="176" selection-start-line="128" selection-start-column="176" selection-end-line="128" selection-end-column="176" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#span#0;n#span#0;n#if#0;n#div#0;n#div#0;n#div#0;n#body#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

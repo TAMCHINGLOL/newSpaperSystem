@@ -15,6 +15,16 @@ class UserModel extends Model
     protected $tableName = 'users';
 
     /**
+     * 根据uid获取改记录
+     * @param $uid
+     * @return mixed
+     */
+    public function getRowByUid($uid){
+        $where['uid'] = $uid;
+        return $this->where($where)->find();
+    }
+
+    /**
      * 更新用户状态(1为未被发送聘任消息,2则反之)
      * @param $uid
      * @param $status

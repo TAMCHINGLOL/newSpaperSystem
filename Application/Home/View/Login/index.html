@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
+    <!--<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/datetimepicker.css">-->
 </head>
 <style type="text/css">
     .body-back {
@@ -39,15 +40,33 @@
     }
 
     .numberBtn {
-        font-size: 10px;
-        background: #eaeaea;
-        color: #666;
-        border: 1px solid #eaeaea;
-        outline: 0;
+         font-size: 10px;
+         background: #eaeaea;
+         color: #666;
+         border: 1px solid #eaeaea;
+         outline: 0;
 
+     }
+    #logo122 {
+        position: absolute;
+        margin-top: 10%;
+        width: 150px;
+        height: 55px;
+        /*margin-right: auto;*/
+        margin-left: 45%;
+    }
+    .passport-header {
+        margin-bottom: 30px;
     }
 </style>
 <body class="body-back">
+<header id="header" class="passport-header">
+    <!--<div id="logo122">-->
+        <!--<a href="{:U('Home/Index/index')}" jktag="0001|0.1|91006">-->
+            <!--<img src="__ROOT__/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
+        <!--</a>-->
+    <!--</div>-->
+</header>
 <div class="login">
     <div class="share-box">
         <div class="passport-goto">没有账号? <a data-toggle="modal" data-position="center" data-target="#open-register">新用户注册</a>
@@ -459,7 +478,7 @@
                 return false;
             }
             if (phone != '' && verify != '') {
-                sendSms(phone);
+                sendSms(phone,'author');
             }
         });
 
@@ -487,7 +506,7 @@
                 return false;
             }
             if (phone != '' && verify != '') {
-                sendSms(phone);
+                sendSms(phone,'admin');
             }
         });
 
@@ -499,13 +518,13 @@
         }
 
         //发送动态码
-        function sendSms(phone) {
+        function sendSms(phone,tag) {
             if (phone != '' && phone != null) {
                 $.ajax({
                     url: getSms_url,
                     type: 'post',
                     dataType: 'json',
-                    data: {phone: phone},
+                    data: {phone: phone, tag: tag},
                     success: function (result) {
                         if (result.status == 1) {
                             layer.msg(result.info, {time: 4000});
@@ -522,6 +541,9 @@
             }
         }
 
+        var captcha_img = $('#img');
+        var verifyImg = captcha_img.attr("src");
+
         //验证码验证
         function verifyCode(code,id,img){
             if(code != '' && code != null){
@@ -537,7 +559,8 @@
                             var erorr='<div class="passport-note passport-error-text"><span>'+result.info+'</span></div>';
                             $(id).parent().addClass("has-error");
                             $(id).after(erorr);
-                            $(img).attr("src", verifyImg1 + '&rand=' + Math.random());
+//                            var verifyImg = $(id).attr('src');
+                            $(img).attr("src", verifyImg + '&rand=' + Math.random());
                             return false;
                         }
                     },error: function(){
@@ -559,7 +582,6 @@
 //                $(this).attr("src", verifyImg2.replace(/\?.*$/, '') + '?' + Math.random());
 //            }
 //        });
-
 
         //点击刷新验证码(笔者登录)
 //        var captcha_img = $('#img');

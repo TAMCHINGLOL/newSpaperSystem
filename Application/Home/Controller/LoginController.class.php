@@ -20,6 +20,9 @@ class LoginController extends Controller
      */
     public function index()
     {
+        if(session('uid') != null && isset($_SESSION['uid'])){
+            $this->redirect('/Home/Index/index');
+        }
         $this->display();
     }
 
@@ -28,6 +31,10 @@ class LoginController extends Controller
      */
     public function login()
     {
+        if(session('isVerify') == 'no' && isset($_SESSION['isVerify'])){
+            $this->error('请重新输入验证码');
+            exit();
+        }
         $phone = I('post.phone');
         $username = I('post.username');
         $password = I('post.password');
@@ -58,6 +65,8 @@ class LoginController extends Controller
             exit();
         }
         if ($returnResult['password'] == $pwd) {
+
+            session('sys_tag','author');
             session('phone', $phone);
             sessionSave($returnResult);
             session('password',null);
@@ -92,6 +101,7 @@ class LoginController extends Controller
             exit();
         }
         if (!checkVerify($code)) {
+            session("isVerify",'no');
             $this->error('验证码不正确');
             exit();
         }
@@ -105,6 +115,15 @@ class LoginController extends Controller
     {
         $phone = I('post.phone');
         if (preg_match("/^1[34578]{1}\d{9}$/", $phone)) {
+            $tag = I('post.tag');
+            if($tag == 'admin'){
+                $userSubModel = D('User/SubUser');
+                $returnResult = $userSubModel->getRowByPhone($phone);
+                if(empty($returnResult)){
+                    $this->error('用户不存在');
+                    exit();
+                }
+            }
             $smsCode = makeSmsCode();
             $data = array($smsCode, '2');
             $tempId = "1";
@@ -129,16 +148,25 @@ class LoginController extends Controller
      */
     public function verifySms()
     {
+        if(session('isVerify') == 'no' && isset($_SESSION['isVerify'])){
+            $this->error('请重新输入验证码');
+            exit();
+        }
         $smsCode = I('post.smsCode');
         $sureSms = session('smsCode');
         if ($smsCode == md5($sureSms)) {
             $phone = I('post.phone');
             $subUserModel = D('User/SubUser');
             $info = $subUserModel->login($phone);
+            if(empty($info)){
+                $this->error('用户不存在');
+                exit();
+            }
             if($info['isdefriend'] == 12){
                 $this->error('你已被管理员拉黑,请联系管理员');
                 exit();
             }
+            session('sys_tag','admin');
             sessionSave($info);
             $this->success('动态码正确');
             exit();
@@ -209,7 +237,7 @@ class LoginController extends Controller
             $password = I('post.password');
             $pwd = md5($password);              //用户密码
             $uid = getRandStr(8);               //生成用户id
-            $name = $phone;
+            $name = getRandStr(11);             //生成用户名
             $result = $userModel->register($uid, $phone, $pwd, $name);
             if ($result) {
                 $this->success(' 注 册 成 功');

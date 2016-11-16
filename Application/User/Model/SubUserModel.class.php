@@ -18,6 +18,16 @@ class SubUserModel extends Model
 
 
     /**
+     * 根据uid获取改记录
+     * @param $uid
+     * @return mixed
+     */
+    public function getRowByUid($uid){
+        $where['uid'] = $uid;
+        return $this->where($where)->find();
+    }
+
+    /**
      * 删除子帐号
      * @param $uid
      * @param $phone
@@ -128,4 +138,5 @@ class SubUserModel extends Model
         $data['password'] = $password;
         return $this->where($where)->save($data);
     }
+
 }

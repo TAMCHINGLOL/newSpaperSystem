@@ -107,7 +107,7 @@ class Oracle extends Driver{
                     'name'    => strtolower($val['column_name']),
                     'type'    => strtolower($val['data_type']),
                     'notnull' => $val['notnull'],
-                    'default' => $val['data_default'],
+                    'Person' => $val['data_default'],
                     'primary' => $val['pk'],
                     'autoinc' => $val['pk'],
                 );

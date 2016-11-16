@@ -11,11 +11,17 @@
 <body class="body-color">
 <div class="header">
     <div class="centent">
-        <a class="logo-img" href="{:U('Home/Index/index')}"><img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px"/></a>
+        <a class="logo-img" href="{:U('Home/Index/index')}"><img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
         <nav>
             <ul class="header-nav">
                 <li><a href="{:U('Home/Index/index')}" style="color: rgb(53, 181, 88);">首页</a></li>
-                <li>论文分类<i class="arrow-icon"></i>
+                <li>
+                    <if condition="session('sys_tag') eq admin">
+                        审核文章
+                        <else/>投递文章
+                    </if>
+                </li>
+                <li>分类浏览<i class="arrow-icon"></i>
                     <div class="submenu school-list">
                         <h3>前端学院</h3>
                         <a href="http://www.jikexueyuan.com/zhiye/web"><i class="web-icon"></i>Web 前端工程师</a>
@@ -26,28 +32,33 @@
                         <a href="http://www.jikexueyuan.com/zhiye/ios"><i class="ios-icon"></i>iOS工程师</a>
                     </div>
                 </li>
-                <li>论文投递</li>
+
                 <li>社区</li>
             </ul>
         </nav>
         <div class="icon-box">
             <span class="search-icon" id="search-btn"></span>
-					<span class="relative loginlist login-icon" id="loginlist">
-						<dl class="submenu"><i class="top-icon"></i>
-                            <dd><a href="http://passport.jikexueyuan.com/sso/reg_phone" class="reg-btn">注册</a>|<a
-                                    href="{:U('Home/Login/index')}" class="login-btn">登录</a></dd>
-                            <dd><a href="http://passport.jikexueyuan.com/sso/login"><i class="xxzx-icon"></i>学习中心</a>
-                            </dd>
-                            <dd><a href="personal/home.html"><i class="grzy-icon"></i>个人主页</a></dd>
-                            <dd><a href="personal/newspull.html"><i class="xxtz-icon"></i>消息通知</a></dd>
-                            <dd><a href="personal/personalset.html"><i class="zhsz-icon"></i>账号设置</a></dd>
-                        </dl>
-					</span>
+                <if condition="session('uid') eq ''">
+                    <span class="relative loginlist login-icon" id="loginlist">
+                    <else/>
+                    <span class="relative loginlist" id="loginlist">
+                    <img src="__ROOT__/Application/Home/View/public/img/default.gif" style="height: 25px;width: 25px;margin-bottom: 54px">
+                </if>
+                    <dl class="submenu"><i class="top-icon"></i>
+                        <dd>
+                            <a href="{:U('Home/Login/index')}" class="reg-btn">注册</a>|<a href="{:U('Home/Login/index')}" class="login-btn">登录</a>
+                        </dd>
+                        <dd><a href="{:U('Home/Person/index')}"><i class="grzy-icon"></i>个人主页</a></dd>
+                        <dd><a href="{:U('Home/Person/message')}"><i class="xxtz-icon"></i>消息通知</a></dd>
+                        <dd><a href="{:U('Home/Person/account')}"><i class="zhsz-icon"></i>账号设置</a></dd>
+                        <dd><a href="{:U('Home/Index/exitLogin')}"><i class="zhsz-icon"></i>退出登录</a></dd>
+                    </dl>
+                </span>
         </div>
         <div class="searchbox" id="searchbox">
             <i class="close-icon" id="close-btn"></i>
             <i class="search-icon" id="search-btn"></i>
-            <input id="web_search_header" placeholder="搜索课程、问答或Wiki" value=""/>
+            <input id="web_search_header" placeholder="搜索课程、问答或Wiki" value="" />
         </div>
     </div>
 </div>
@@ -88,43 +99,7 @@
     </div>
     <!-- 轮播结束 -->
     <!-- 热门论文排行开始 -->
-    <div class="cards">
-        <div class="col-md-4 col-sm-6 col-lg-3">
-            <a class="card" href="###">
-                <img src="http://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20161013/2a7bf0a0-d94d-40d4-a244-20e5a5e359e6.jpg"
-                     alt="">
-                <div class="caption">“良辰美景” 出自《牡丹亭》</div>
-                <div class="card-heading"><strong>良辰美景</strong></div>
-                <div class="card-content text-muted">良辰美景奈何天，赏心乐事谁家院。</div>
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6 col-lg-3">
-            <a class="card" href="###">
-                <img src="http://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20161013/2a7bf0a0-d94d-40d4-a244-20e5a5e359e6.jpg"
-                     alt="">
-                <div class="caption">“良辰美景” 出自《牡丹亭》</div>
-                <div class="card-heading"><strong>良辰美景</strong></div>
-                <div class="card-content text-muted">良辰美景奈何天，赏心乐事谁家院。</div>
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6 col-lg-3">
-            <a class="card" href="###">
-                <img src="http://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20161013/2a7bf0a0-d94d-40d4-a244-20e5a5e359e6.jpg"
-                     alt="">
-                <div class="caption">“良辰美景” 出自《牡丹亭》</div>
-                <div class="card-heading"><strong>良辰美景</strong></div>
-                <div class="card-content text-muted">良辰美景奈何天，赏心乐事谁家院。</div>
-            </a>
-        </div>
-        <div class="col-md-4 col-sm-6 col-lg-3">
-            <a class="card" href="###">
-                <img src="http://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20161013/2a7bf0a0-d94d-40d4-a244-20e5a5e359e6.jpg"
-                     alt="">
-                <div class="caption">“良辰美景” 出自《牡丹亭》</div>
-                <div class="card-heading"><strong>良辰美景</strong></div>
-                <div class="card-content text-muted">良辰美景奈何天，赏心乐事谁家院。</div>
-            </a>
-        </div>
+    <div class="cards" style="padding-top: 20px;">
         <div class="col-md-4 col-sm-6 col-lg-3">
             <a class="card" href="###">
                 <img src="http://jiuye-res.jikexueyuan.com/zhiye/showcase/attach-/20161013/2a7bf0a0-d94d-40d4-a244-20e5a5e359e6.jpg"
@@ -542,14 +517,14 @@
 </script>
 
 
-<!--&lt;!&ndash;[if lt IE 9]>-->
-<!--<script type='text/javascript' src="lib/ieonly/html5shiv.js"></script>-->
-<!--<![endif]&ndash;&gt;-->
-<!--&lt;!&ndash;[if lt IE 9]>-->
-<!--<script type='text/javascript' src="lib/ieonly/respond.js"></script>-->
-<!--<![endif]&ndash;&gt;-->
-<!--&lt;!&ndash;[if lt IE 9]>-->
-<!--<script type='text/javascript' src="lib/ieonly/excanvas.js"></script>-->
-<!--<![endif]&ndash;&gt;-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
+<![endif]-->
 </body>
 </html>

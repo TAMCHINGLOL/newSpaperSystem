@@ -1336,9 +1336,9 @@ class Model {
      */
     public function scope($scope='',$args=NULL){
         if('' === $scope) {
-            if(isset($this->_scope['default'])) {
+            if(isset($this->_scope['Person'])) {
                 // 默认的命名范围
-                $options    =   $this->_scope['default'];
+                $options    =   $this->_scope['Person'];
             }else{
                 return $this;
             }

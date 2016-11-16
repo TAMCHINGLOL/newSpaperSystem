@@ -12,6 +12,12 @@
 .passport-third p{ width: 106px;margin: 0 auto -8px;background-color: #fff;font-weight: 400;line-height: 16px;}
 .link-third{width: 286px;margin: 0 auto;padding-top: 20px;}
 .link-third a{float: left;display: block;margin: 0 8px;width: 55px;height: 55px;}
+.qq{background-image: url(../img/QQ1.png);}
+.weixin{background-image: url(../img/weixin1.png);}
+.weibo{background-image: url(../img/weibo1.png);}
+.qq:hover{background-image: url(../img/QQ.png);}
+.weixin:hover{background-image: url(../img/weixin.png);}
+.weibo:hover{background-image: url(../img/weibo.png);}
 .passport-note {
     position: absolute;
     top: 0;
@@ -186,6 +192,7 @@ li .submenu a:hover {
     top: 60px;
     right: -10px;
     margin: 0;
+        border: 1px solid #ececec;
 }
 .submenu {
     display: none;
@@ -430,6 +437,8 @@ ul.story .story-info span {
     min-width: 1000px;
     border-top: 1px solid #e4e4e4;
     background: #fff;
+        position: absolute;
+    width: 100%;
 }
 #footer .jkinfor-block {
     background: #fff;
@@ -443,6 +452,16 @@ ul.story .story-info span {
     padding-left: 224px;
     padding-top: 25px;
     box-sizing: border-box;
+}
+#footer .jk-down .downCon img {
+    display: inline-block;
+    width: 115px;
+    height: 153px;
+    position: absolute;
+    top: -157px;
+    left: 12px;
+    z-index: 2;
+    display: none;
 }
 .cf {
     zoom: 1;
@@ -506,14 +525,6 @@ ul.story .story-info span {
     font-size: 13px;
     padding-left: 40px;
     cursor: pointer;
-}
-.cf:after {
-    content: '';
-    display: block;
-    clear: both;
-    height: 0;
-    overflow: hidden;
-    visibility: hidden;
 }
 #footer .copyright {
     font-size: 12px;
@@ -630,6 +641,7 @@ ul.story .story-info span {
     background-color: #f5f5f5;
     border: 1px solid #ddd;
     font-size: 14px;
+    height: 40px;
 }
 .user-course .course-nav .active, .user-course .course-nav a:hover {
     color: #35b558;
@@ -637,12 +649,9 @@ ul.story .story-info span {
 }
 
 .user-course .course-nav a {
-    color: #333;
-    padding: 10px 20px;
-    height: 40px;
-    float: left;
-    border-right: 1px solid #ddd;
+        padding: 9px 20px;
     box-sizing: border-box;
+    line-height: 39px; 
 }
 .clearfix:after, .user-course .course-nav:after, .user-course .user-course-content .video-container:after, .user-visit .user-info-above .user-body-footer:after {
     display: table;
@@ -663,7 +672,7 @@ ul.story .story-info span {
 }
 #learn-course-missing {
     position: relative;
-    height: 350px;
+    height: 515px;
 }
 #learn-course-missing img {
     position: relative;
@@ -746,18 +755,685 @@ ul.story .story-info span {
     line-height: 50px;
     border-top: 1px solid #e4e4e4;
 }
-.leftnav ul li .active {
+.leftnav ul li.active {
     color: #35b558;
 }
 
 .leftnav ul li a {
     color: #333;
 }
+.leftnav ul li.active a {
+    color: #35b558;
+}
 .main {
     width: 760px;
     margin-left: 240px;
     border: 1px solid #e4e4e4;
 }
+.common-head>.edit-data:hover {
+    color: #fff;
+    background-color: #35b558;
+}
+.common-head>.edit-data {
+    position: absolute;
+    display: block;
+    text-decoration: none;
+    width: 110px;
+    text-align: center;
+    line-height: 30px;
+    height: 30px;
+    right: 20px;
+    top: 24px;
+    border-radius: 2px;
+    border: 1px solid #35b558;
+    color: #35b558;
+    background-color: #fff;
+    transition: background-color .5s,color .5s;
+}
+.common-data p .local {
+    padding-left: 40px;
+}
+.main {
+    width: 760px;
+    margin-left: 240px;
+    border: 1px solid #e4e4e4;
+}
+.main, .popup {
+    background-color: #fff;
+}
+.main>h2 {
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #e4e4e4;
+    margin: 0;
+}
+.main>h2, .main>section>h3, .popup header h2 {
+    padding-left: 20px;
+}
+.basic {
+    border-bottom: 1px solid #e4e4e4;
+}
+.main>section>h3 {
+    margin-left: -1px;
+    font-size: 14px;
+    color: #666;
+    border-left: 4px solid #35b558;
+}
+
+.basic h3 {
+    line-height: 20px;
+}
+.basic form, .basic h3 {
+    margin-top: 20px;
+}
+.basic form>ul li:first-of-type {
+    height: 70px;
+    line-height: 70px;
+}
+.basic form>ul li {
+    margin-bottom: 20px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+}
+.basic form>ul li label {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    text-align: right;
+}
+.basic form>ul li .inputbox .portrait-box {
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+    border: 1px solid #e4e4e4;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.basic form>ul li .inputbox .portrait-box .headpic {
+    display: block;
+    width: 50px;
+    height: 50px;
+}
+.basic form>ul li .inputbox .portrait-box .change {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    opacity: .7;
+    text-align: center;
+    line-height: 50px;
+}
+.basic form>ul li .inputbox .portrait-box .change span {
+    color: #fff;
+    opacity: 1;
+}
+.basic form>ul li .inputbox .portrait-box:hover .change {
+    display: block;
+}
+.basic form>ul li .inputbox {
+    display: inline-block;
+    margin-left: 20px;
+}
+.basic form>ul li .inputbox #truename, .basic form>ul li .inputbox .laydate-icon {
+    width: 130px;
+    height: 30px;
+    border: 1px solid #e4e4e4;
+    text-indent: 10px;
+}
+button, input, optgroup, option, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+.basic form>ul li label{
+    font-weight: 500;
+}
+.security>ul>li label{
+    font-weight: 500;
+}
+.basic form>ul li .inputbox #uname {
+    width: 130px;
+    height: 30px;
+    border: 1px solid #e4e4e4;
+    text-indent: 10px;
+}
+.basic form>ul li .inputbox #city_id {
+    width: 130px;
+    height: 30px;
+    border: 1px solid #e4e4e4;
+    text-indent: 10px;
+}
+.basic form>ul li .inputbox .select-box-home .select-home, .basic form>ul li .inputbox .select-box-sex #usex {
+    width: 130px;
+    height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 5px;
+    position: relative;
+    bottom: 1px;
+}
+
+button, input, optgroup, option, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+.basic form>ul li .inputbox .select-box-sex {
+    display: inline-block;
+    position: relative;
+    background: url(../img/icon_gengduo1.png) 104px no-repeat #fff;
+    border-radius: 2px;
+    width: 130px;
+    height: 30px;
+    margin-right: 20px;
+    border: none;
+}
+.basic form>ul li .inputbox .select-box-sex #usex {
+    border: 0;
+    appearance: none;
+    background: 0 0;
+}
+
+.basic form>ul li .inputbox>textarea {
+    width: 590px;
+    height: 80px;
+    border: 1px solid #e4e4e4;
+    resize: none;
+    padding: 10px;
+    line-height: 20px;
+}
+.green-btn:hover {
+    background-color: #3dd065;
+    border-color: #3dd065;
+}
+.basic form>button {
+    margin: 0 auto 30px;
+    width: 180px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.green-btn {
+    background-color: #35b558;
+    border: 1px solid #35b558;
+    border-radius: 2px;
+}
+#warning, .cancel-btn, .gray-btn, .green-btn, .orange-btn {
+    text-align: center;
+}
+.gray-btn, .green-btn, .orange-btn {
+    color: #fff;
+    transition: background-color .5s,border-color .5s;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+}
+.basic form>ul li .inputbox .extra-tips {
+    text-align: right;
+    color: #999;
+    line-height: 30px;
+}
+.basic form>ul li:last-of-type {
+    height: 80px;
+    line-height: 20px;
+    margin-bottom: 40px;
+}
+
+.datetimepicker table tr td span {
+    width: 23%;
+    height: 30px;
+    line-height: 30px;
+}
+.datetimepicker td span.active, .datetimepicker td span.active:hover, .datetimepicker td span.active.disabled, .datetimepicker td span.active.disabled:hover {
+    background-color: #1abc9c;
+}
+.datetimepicker td.day.active {
+    background-color: #1abc9c;
+}
+.notify {
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+.notify form {
+    padding-left: 20px;
+}
+.notify h3 {
+    font-size: 14px;
+}
+.notify-explain {
+    margin-top: 10px;
+    line-height: 20px;
+    color: #999;
+}
+.notify-notyet {
+    margin: 10px 0;
+    color: #666;
+}
+.notify img {
+    display: block;
+    margin-left: 20px;
+}
+.notify-yet {
+    margin: 10px 0;
+    color: #666;
+}
+.notify form label {
+    display: block;
+    width: 70px;
+    margin-bottom: 10px;
+}
+.notify form label input {
+    display: none;
+}
+.notify form label .notify-circle {
+    position: relative;
+    border: 1px solid #e4e4e4;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.notify form label .notify-circle i {
+    display: block;
+    position: relative;
+    left: 3px;
+    top: 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.notify form label input[type=radio]:checked+.notify-circle i {
+    background-color: #35b558;
+}
+
+button, input, optgroup, option, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+.security {
+    padding: 40px 50px;
+}
+.security>ul>li {
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+.security>ul>li label {
+    margin-right: 20px;
+}
+.get-code, .note, a.btn, button, input, label, select, span.btn {
+    vertical-align: middle;
+}
+.security>ul>li a {
+    color: #2d85ca;
+    float: right;
+}
+.security>ul>li .ora {
+    color: #ff5c00;
+}
+.form-setting {
+    min-height: 260px;
+    padding: 23px 0;
+    color: #666;
+    font-size: 12px;
+}
+.form>.note {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.note {
+    color: #999;
+}
+.btn.xs, .note, .tab-setting {
+    font-size: 12px;
+}
+.form-setting .form-item {
+    margin-bottom: 26px;
+}
+.form .item-cont.w-lg {
+    margin-left: 30px;
+}
+
+.form-setting .item-cont {
+    position: relative;
+    margin-left: 88px;
+}
+.form .item-cont {
+    margin-left: 80px;
+    min-height: 1em;
+    text-align: left;
+    line-height: 32px;
+}
+
+
+.select.w-lg {
+    width: 260px;
+}
+.select, select {
+    width: 130px;
+    height: 32px;
+    border: 1px solid #e4e4e4;
+}
+.select, select, textarea {
+    background: #fff;
+    outline: 0;
+}
+.form .form-item:after {
+    display: table;
+}
+.form .form-item:after, .popup .bd:after, .tab-setting>.tabs ul:after {
+    clear: both;
+    content: " ";
+}
+.form-setting .item-label {
+    width: 78px;
+}
+.form .item-label {
+    float: left;
+    width: 70px;
+    min-height: 1em;
+    margin-right: 10px;
+    text-align: right;
+    line-height: 30px;
+}
+.txt.w-xs {
+    width: 120px;
+}
+.txt {
+    width: 200px;
+    padding: 0 9px;
+    border: 1px solid #e4e4e4;
+    font-size: 12px;
+    line-height: 30px;
+}
+.get-code, .txt, .txt.sm {
+    height: 32px;
+}
+.get-code {
+    width: 80px;
+    padding: 0;
+}
+.get-code, .txt, .txt.sm {
+    height: 32px;
+}
+.get-code, a.btn, span.btn {
+    display: inline-block;
+    text-align: center;
+}
+.btn.lg {
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+}
+button, input[type=button], input[type=reset], input[type=submit] {
+    line-height: normal;
+    cursor: pointer;
+}
+.btn {
+    border: 0;
+    border-radius: 3px;
+    font-size: 16px;
+    white-space: nowrap;
+}
+.btn, a.btn, span.btn {
+    height: 38px;
+    padding: 0 48px;
+}
+.orange-btn {
+    background-color: #ff6a00;
+    border-color: #ff6a00;
+    cursor: pointer;
+}
+.orange-btn:hover {
+    color: #fff !important;
+    text-shadow: none;
+}
+.btn {
+    color: #fff;
+    text-shadow: none;
+}
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open .dropdown-toggle.btn {
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open .dropdown-toggle.btn {
+    color: #fff;    
+    background-color: #3dd065;
+    border-color: #3dd065;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+/*公共部分*/
+.quesall {
+    display: inline-block;
+    width: 159px;
+    line-height: 38px;
+    padding-left: 13px;
+    margin-right: 13px;
+    font-size: 13px;
+    color: #333;
+    font-weight: 400;
+    cursor: pointer;   
+    color: #35b558;
+    background-color: #fff;
+}
+.quesall:hover {
+    border-top: 2px solid #35b558;
+    margin-top: -2px;
+    border-right: 1px solid #e4e4e4;
+}
+.quesall #allques-title {
+    display: inline;
+    font-size: 13px;
+    line-height: 38px;
+    font-weight: 400;
+    color: #333;
+}
+.quesall:hover .lesson-classfiy-nav {
+    display: block;
+}
+.lesson-classfiy-nav {
+    display: none;
+    width: 160px;
+    float: left;
+    margin-left: -14px;
+    height: 300px;
+    border-top: 1px solid #e4e4e4;
+    position: relative;
+    border-right: 0;
+    background: url(http://s1.jikexueyuan.com/index/images/nav_r_border_04083a2.jpg) 100% 0 repeat-y;
+}
+.lesson-classfiy-nav ul {
+    position: absolute;
+    padding: 0;
+    z-index: 800;
+    width: 160px;
+    height: 298px;
+    border-bottom: 0;
+    border-top: 0;
+}
+.lesson-classfiy-nav ul li{
+    border-left: 1px solid #e4e4e4;
+}
+.lesson-classfiy-nav li > div {
+    width: 158px;
+    height: 37px;
+    line-height: 37px;
+    padding: 0 15px;
+    font-size: 13px;
+    color: #333;
+    border-bottom: 1px solid #F5F5F5;
+    background: #ffffff url(http://s1.jikexueyuan.com/index/images/more-icon_d39346f.png) 136px center no-repeat;
+    background-size: 6px 10px;
+    cursor: pointer;
+    font-weight: 400;
+}
+.lesson-classfiy-nav li > div > a {
+    color: #333333;
+}
+.lesson-classfiy-nav li .lesson-list-show {
+    -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 108px;
+    min-height: 447px;
+    background: #fff;
+    border: 1px solid #e4e4e4;
+    position: absolute;
+    left: 159px;
+    top: -1px;
+    z-index: 100;
+    border-left: 0;
+    display: none;
+    padding-bottom: 30px;
+}
+.lesson-classfiy-nav li > div:hover .lesson-list-show{
+	display: block;
+}
+.lesson-classfiy-nav li > div:hover {
+    color: #333;
+    height: 38px;
+    border-left: 2px solid #35b558;
+    padding-left: 10px;
+    width: 163px;
+    background: #fff;
+}
+.lesson-classfiy-nav li .lesson-list-show dl {
+    margin: 0 10px;
+    overflow: hidden;
+}
+.lesson-classfiy-nav li .lesson-list-show dt {
+    display: block;
+    border-bottom: 1px solid #f5f5f5;
+    height: 37px;
+    line-height: 45px;
+}
+.lesson-classfiy-nav li .lesson-list-show dt > a {
+    color: #333;
+    font-size: 13px;
+    font-weight: 400;
+}
+.lesson-classfiy-nav li .lesson-list-show dd {
+    list-style: none;
+    margin-left: -8px;
+    padding: 3px 0;
+}
+.lesson-classfiy-nav li > div:hover a {
+    color: #35b558;
+}
+.cf:before, .cf:after {
+    content: '';
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.lesson-classfiy-nav li .lesson-list-show dd a {
+    height: 14px;
+    line-height: 14px;
+    margin-bottom: 10px;
+    margin-top: 4px;
+    padding: 0 7px;
+    color: #666;
+    display: inline-block;
+    font-size: 12px;
+    border-left: 1px solid #e0e0e0;
+    float: left;
+    white-space: nowrap;
+    font-weight: 400;
+}
+.point-good img {
+    width: 25px;
+    border-radius: 15px;
+    margin-right: 10px;
+}
+.point-good {
+    float: right;
+}
+.comment>.avatar{
+	margin: 0;
+}
+.comment>.avatar>img{
+	width: 40px;
+	border-radius: 5px;
+}
+.comments>footer>.reply-form>.avatar {
+    margin-top: 0px;
+}
+.new-comment-text{
+	overflow:hidden;
+	min-height: 52px;
+}
+.zhiye {
+    position: relative;
+}
+.zhiye>ul {
+    margin-top: 20px;
+}
+.zhiye>ul>li {
+    position: relative;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.zhiye>ul>li label {
+    display: inline-block;
+    vertical-align: top;
+    width: 100px;
+    text-align: right;
+}
+.zhiye>ul>li .dir-pop, .zhiye>ul>li .status-pop {
+    margin-left: 30px;
+    display: inline-block;
+}
+.zhiye>ul>li .status-pop .zhiye-popup {
+    display: inline-block;
+    color: #2d85ca;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

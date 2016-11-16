@@ -21,10 +21,11 @@ return array(
     /* JSON返回中文编码 */
     'JSON_UNESCAPED_UNICODE' => true,   // PHP 5.4以上才支持
 
-    /* session保存在数据库 */
-//    'SESSION_OPTIONS'=>array(
-//        'type'=> 'db',      //session采用数据库保存
-//        'expire'=>1440,     //session过期时间，如果不设就是php.ini中设置的默认值
-//    ),
+    'SESSION_OPTIONS' => array(
+        'name' => 'uid',
+        'use_trans_sid'       =>  1,    //跨页传递
+        'use_only_cookies'    =>  0,    //是否只开启基于cookies的session的会话方式
+        'expire' => 360,                //session过期时间6分钟，如果不设就是php.ini中设置的默认值
+    ),
 //    'SESSION_TABLE'=>'art_session', //必须设置成这样，如果不加前缀就找不到数据表，这个需要注意
 );

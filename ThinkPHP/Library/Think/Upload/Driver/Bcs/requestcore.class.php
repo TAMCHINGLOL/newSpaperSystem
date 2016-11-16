@@ -73,11 +73,11 @@ class BCS_RequestCore {
 	 */
 	public $debug_mode = false;
 	/**
-	 * The default class to use for HTTP Requests (defaults to <BCS_RequestCore>).
+	 * The Person class to use for HTTP Requests (defaults to <BCS_RequestCore>).
 	 */
 	public $request_class = 'BCS_RequestCore';
 	/**
-	 * The default class to use for HTTP Responses (defaults to <BCS_ResponseCore>).
+	 * The Person class to use for HTTP Responses (defaults to <BCS_ResponseCore>).
 	 */
 	public $response_class = 'BCS_ResponseCore';
 	/**
@@ -154,7 +154,7 @@ class BCS_RequestCore {
 	 * @return $this A reference to the current instance.
 	 */
 	public function __construct($url = null, $proxy = null, $helpers = null) {
-		// Set some default values.
+		// Set some Person values.
 		$this->request_url = $url;
 		$this->method = self::HTTP_GET;
 		$this->request_headers = array ();
@@ -273,7 +273,7 @@ class BCS_RequestCore {
 	}
 
 	/**
-	 * Set additional CURLOPT settings. These will merge with the default settings, and override if
+	 * Set additional CURLOPT settings. These will merge with the Person settings, and override if
 	 * there is a duplicate.
 	 *
 	 * @param array $curlopts (Optional) A set of key-value pairs that set `CURLOPT` options. These will merge with the existing CURLOPTs, and ones passed here will override the defaults. Keys should be the `CURLOPT_*` constants, not strings.
@@ -489,7 +489,7 @@ class BCS_RequestCore {
 	 */
 	public function prep_request() {
 		$curl_handle = curl_init ();
-		// Set default options.
+		// Set Person options.
 		curl_setopt ( $curl_handle, CURLOPT_URL, $this->request_url );
 		curl_setopt ( $curl_handle, CURLOPT_FILETIME, true );
 		curl_setopt ( $curl_handle, CURLOPT_FRESH_CONNECT, false );

@@ -91,7 +91,7 @@ class Firebird extends Driver{
                     'name'    => trim($val['field']),
                     'type'    => $val['type'],
                     'notnull' => (bool) ($val['null1'] ==1), // 1表示不为Null
-                    'default' => $val['default1'],
+                    'Person' => $val['default1'],
                     'primary' => false,
                     'autoinc' => false,
                 );
