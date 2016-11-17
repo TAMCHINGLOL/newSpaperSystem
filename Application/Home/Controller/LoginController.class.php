@@ -20,7 +20,7 @@ class LoginController extends Controller
      */
     public function index()
     {
-        if(session('uid') != null && isset($_SESSION['uid'])){
+        if (session('uid') != null && isset($_SESSION['uid'])) {
             $this->redirect('/Home/Index/index');
         }
         $this->display();
@@ -31,7 +31,7 @@ class LoginController extends Controller
      */
     public function login()
     {
-        if(session('isVerify') == 'no' && isset($_SESSION['isVerify'])){
+        if (session('isVerify') == 'no' && isset($_SESSION['isVerify'])) {
             $this->error('请重新输入验证码');
             exit();
         }
@@ -60,16 +60,16 @@ class LoginController extends Controller
             $this->error('你已被管理员拉黑,请联系管理员');
             exit();
         }
-        if(empty($returnResult)){
+        if (empty($returnResult)) {
             $this->error("用户不存在");
             exit();
         }
         if ($returnResult['password'] == $pwd) {
 
-            session('sys_tag','author');
+            session('sys_tag', 'author');
             session('phone', $phone);
             sessionSave($returnResult);
-            session('password',null);
+            session('password', null);
             $data['status'] = 1;
             $data['info'] = '登录成功';
 //                $data['count'] = $countRow;
@@ -87,6 +87,7 @@ class LoginController extends Controller
      */
     public function verify()
     {
+        session('isVerify',null);
         makeVerify();
     }
 
@@ -101,7 +102,7 @@ class LoginController extends Controller
             exit();
         }
         if (!checkVerify($code)) {
-            session("isVerify",'no');
+            session("isVerify", 'no');
             $this->error('验证码不正确');
             exit();
         }
@@ -116,10 +117,10 @@ class LoginController extends Controller
         $phone = I('post.phone');
         if (preg_match("/^1[34578]{1}\d{9}$/", $phone)) {
             $tag = I('post.tag');
-            if($tag == 'admin'){
+            if ($tag == 'admin') {
                 $userSubModel = D('User/SubUser');
                 $returnResult = $userSubModel->getRowByPhone($phone);
-                if(empty($returnResult)){
+                if (empty($returnResult)) {
                     $this->error('用户不存在');
                     exit();
                 }
@@ -137,7 +138,7 @@ class LoginController extends Controller
                 exit();
             }
         } else {
-            $this->error('手 机 号 有 误');
+            $this->error('手机号不正确');
             exit();
         }
 
@@ -148,7 +149,7 @@ class LoginController extends Controller
      */
     public function verifySms()
     {
-        if(session('isVerify') == 'no' && isset($_SESSION['isVerify'])){
+        if (session('isVerify') == 'no') {
             $this->error('请重新输入验证码');
             exit();
         }
@@ -158,15 +159,15 @@ class LoginController extends Controller
             $phone = I('post.phone');
             $subUserModel = D('User/SubUser');
             $info = $subUserModel->login($phone);
-            if(empty($info)){
+            if (empty($info)) {
                 $this->error('用户不存在');
                 exit();
             }
-            if($info['isdefriend'] == 12){
+            if ($info['isdefriend'] == 12) {
                 $this->error('你已被管理员拉黑,请联系管理员');
                 exit();
             }
-            session('sys_tag','admin');
+            session('sys_tag', 'admin');
             sessionSave($info);
             $this->success('动态码正确');
             exit();
@@ -177,9 +178,9 @@ class LoginController extends Controller
     }
 
     /**
-     *修改密码(忘记密码)
+     *忘记密码
      */
-    public function updatePassword()
+    public function findPassword()
     {
         $phone = I('post.phone');
         $userModel = D('User/User');
@@ -219,12 +220,12 @@ class LoginController extends Controller
      */
     public function register()
     {
-//        $smsCode = I('post.smsCode');
-//        $sureSms = session('smsCode');
-//        if ($smsCode != md5($sureSms)) {
-//            $this->error('动态码不正确');
-//            exit();
-//        }
+        $smsCode = I('post.smsCode');
+        $sureSms = session('smsCode');
+        if ($smsCode != md5($sureSms)) {
+            $this->error('动态码不正确');
+            exit();
+        }
 
         $phone = I('post.phone');
         if (preg_match("/^1[34578]{1}\d{9}$/", $phone)) {
@@ -237,8 +238,8 @@ class LoginController extends Controller
             $password = I('post.password');
             $pwd = md5($password);              //用户密码
             $uid = getRandStr(8);               //生成用户id
-            $name = getRandStr(11);             //生成用户名
-            $result = $userModel->register($uid, $phone, $pwd, $name);
+            $alias = getRandStr(11);            //生成用户名
+            $result = $userModel->register($uid, $phone, $pwd, $alias);
             if ($result) {
                 $this->success(' 注 册 成 功');
                 exit();

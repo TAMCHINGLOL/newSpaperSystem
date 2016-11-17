@@ -25,7 +25,7 @@ return array(
         'name' => 'uid',
         'use_trans_sid'       =>  1,    //跨页传递
         'use_only_cookies'    =>  0,    //是否只开启基于cookies的session的会话方式
-        'expire' => 360,                //session过期时间6分钟，如果不设就是php.ini中设置的默认值
+        'expire' => 3600,                //session过期时间60分钟，如果不设就是php.ini中设置的默认值
     ),
 //    'SESSION_TABLE'=>'art_session', //必须设置成这样，如果不加前缀就找不到数据表，这个需要注意
 );

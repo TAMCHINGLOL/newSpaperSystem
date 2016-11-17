@@ -56,7 +56,42 @@ $(document).ready(function(){
 //	  $(this).parent().removeClass("has-error");
 //	  $(this).next().remove(); 
 //	});
-	
+
+	$(document.getElementsByName('email')).blur(function(){
+		if($(this).val()==""){
+			var erorr='<div class="passport-note passport-error-text"><span>请输入邮箱</span></div>';
+			$(this).parent().addClass("has-error");
+			$(this).after(erorr);
+		}
+	});
+	$(document.getElementsByName('email')).focus(function(){
+		$(this).parent().removeClass("has-error");
+		$(this).next().remove();
+	});
+
+	$(document.getElementsByName('pwd1')).blur(function(){
+		if($(this).val()==""){
+			var erorr='<div class="passport-note passport-error-text"><span>请输入旧密码</span></div>';
+			$(this).parent().addClass("has-error");
+			$(this).after(erorr);
+		}
+	});
+	$(document.getElementsByName('pwd2')).focus(function(){
+		$(this).parent().removeClass("has-error");
+		$(this).next().remove();
+	});
+
+	$(document.getElementsByName('pwd2')).blur(function(){
+		if($(this).val()==""){
+			var erorr='<div class="passport-note passport-error-text"><span>请输入新密码</span></div>';
+			$(this).parent().addClass("has-error");
+			$(this).after(erorr);
+		}
+	});
+	$(document.getElementsByName('pwd2')).focus(function(){
+		$(this).parent().removeClass("has-error");
+		$(this).next().remove();
+	});
 });
 
 

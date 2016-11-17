@@ -15,13 +15,38 @@ class UserModel extends Model
     protected $tableName = 'users';
 
     /**
-     * 根据uid获取改记录
+     * 修改/绑定邮箱
+     * @param $email
      * @param $uid
-     * @return mixed
+     * @return bool
      */
-    public function getRowByUid($uid){
+    public function updateEmailByUid($email, $uid){
+        $data['email'] = $email;
         $where['uid'] = $uid;
-        return $this->where($where)->find();
+        return $this->where($where)->save($data);
+    }
+
+    /**
+     * 修改/绑定手机号
+     * @param $phone
+     * @param $uid
+     * @return bool
+     */
+    public function updatePhoneByUid($phone, $uid){
+        $data['phone'] = $phone;
+        $where['uid'] = $uid;
+        return $this->where($where)->save($data);
+    }
+
+    /**
+     * 修改信息通过uid
+     * @param $uid
+     * @param $data
+     * @return bool
+     */
+    public function updateRowByUid($uid, $data){
+        $where['uid'] = $uid;
+        return $this->where($where)->save($data);
     }
 
     /**
@@ -93,12 +118,32 @@ class UserModel extends Model
     }
 
     /**
+     * 根据uid获取改记录
+     * @param $uid
+     * @return mixed
+     */
+    public function getRowByUid($uid){
+        $where['uid'] = $uid;
+        return $this->where($where)->find();
+    }
+
+    /**
      * 根据用户手机号查询该记录
      * @param $phone
      * @return mixed
      */
     public function getRowByPhone($phone){
         $where['phone'] = $phone;
+        return $this->where($where)->find();
+    }
+
+    /**
+     * 根据用户email查询该记录
+     * @param $email
+     * @return mixed
+     */
+    public function getRowByEmail($email){
+        $where['email'] = $email;
         return $this->where($where)->find();
     }
 
@@ -115,7 +160,7 @@ class UserModel extends Model
             'uid' => $uid,
             'phone' => $phone,
             'password' => $pwd,
-            'username' => $name
+            'alias' => $name
         );
         return $this->add($data);
     }
@@ -131,6 +176,18 @@ class UserModel extends Model
     public function updatePassword($uid, $phone, $password){
         $where['uid'] = $uid;
         $where['phone'] = $phone;
+        $data['password'] = $password;
+        return $this->where($where)->save($data);
+    }
+
+    /**
+     * 修改密码
+     * @param $uid
+     * @param $password
+     * @return bool
+     */
+    public function updatePassword1($uid, $password){
+        $where['uid'] = $uid;
         $data['password'] = $password;
         return $this->where($where)->save($data);
     }
