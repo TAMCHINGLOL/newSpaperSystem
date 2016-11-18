@@ -11,6 +11,8 @@ class IndexController extends Controller {
         $this->display();
     }
 
+
+
     /**
      *退出登录
      */

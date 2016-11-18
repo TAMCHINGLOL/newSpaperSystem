@@ -40,13 +40,19 @@
     }
 
     .numberBtn {
-         font-size: 10px;
-         background: #eaeaea;
-         color: #666;
-         border: 1px solid #eaeaea;
-         outline: 0;
-
-     }
+        font-size: 10px;
+        font-size: 10px;
+        background: #35b558;
+        color: #fff;
+        border: 1px solid #35b558;
+        outline: 0;
+    }
+    .numberBtn.disabled{
+        background: #f2f2f2;
+        color: #333;
+        border: 1px solid #f2f2f2;
+        cursor:not-allowed;
+    }
     #logo122 {
         position: absolute;
         margin-top: 10%;
@@ -62,14 +68,15 @@
 <body class="body-back">
 <header id="header" class="passport-header">
     <!--<div id="logo122">-->
-        <!--<a href="<?php echo U('Home/Index/index');?>" jktag="0001|0.1|91006">-->
-            <!--<img src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
-        <!--</a>-->
+    <!--<a href="<?php echo U('Home/Index/index');?>" jktag="0001|0.1|91006">-->
+    <!--<img src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
+    <!--</a>-->
     <!--</div>-->
 </header>
 <div class="login">
     <div class="share-box">
-        <div class="passport-goto">没有账号? <a data-toggle="modal" data-position="center" data-target="#open-register">新用户注册</a>
+        <!--<div class="passport-goto">没有账号? <a data-toggle="modal" data-position="center" data-target="#open-register">新用户注册</a>-->
+            <div class="passport-goto">没有账号? <a href="<?php echo U('Home/Login/register');?>">新用户注册</a>
         </div>
         <div class="passport-third"><p style="color: #999">第三方账号登录</p></div>
         <div class="link-third">
@@ -106,20 +113,20 @@
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
-                        <div class="input-group">
-                            <div style="float: left">
+                        <div class="input-group" style="display: inline-block">
+                            <div style="float: left;">
                                 <input type="text" name="verify" class="form-control form-type" id="verify"
                                        placeholder="验证码">
                             </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img')">
-                            </div>
+                        </div>
+                        <div style="float: right;width: 137px;display: inline-block;">
+                            <img id="img2" name="img" width="90%" height="40" style="float: right" alt="验证码"
+                                 src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img2')">
                         </div>
                     </div>
                     <div class="form-group">
-                        <p class="fr a-link">忘记密码</p>
-                        <div class="checkbox">
+                        <p class="fr a-link" data-toggle="modal" data-position="center" data-target="#open-forgive">忘记密码</p>
+                        <div class="checkbox" style="width: 150px;">
                             <label>
                                 <input type="checkbox" checked> 记住密码
                             </label>
@@ -137,15 +144,15 @@
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
-                        <div class="input-group">
+                        <div class="input-group" style="display: inline-block">
                             <div style="float: left;">
-                                <input type="text" name="verify" class="form-control form-type" id="new-password"
+                                <input type="text" name="verify" class="form-control form-type" id="r-verify1"
                                        placeholder="验证码">
                             </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img2" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img2')">
-                            </div>
+                        </div>
+                        <div style="float: right;width: 137px;display: inline-block;">
+                            <img id="img3" name="img" width="90%" height="40" style="float: right" alt="验证码"
+                                 src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img3')">
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
@@ -172,7 +179,8 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="open-register">
+<!--跳窗-->
+<div class="modal fade" id="open-forgive">
     <div class="modal-dialog modal-dialog-1">
         <div class="modal-content">
             <div class="modal-header">
@@ -180,7 +188,7 @@
                     <span aria-hidden="true">×</span>
                     <span class="sr-only">关闭</span>
                 </button>
-                <span class="modal-title" style="font-size: 16px;color: #35b558;font-weight: 500;">笔 者 注 册</span>
+                <span class="modal-title" style="font-size: 16px;color: #35b558;font-weight: 500;">找回密码</span>
             </div>
             <div class="modal-body">
                 <form>
@@ -188,24 +196,6 @@
                         <div class="input-group width">
                             <input type="text" class="form-control form-type " name="phone" id="r-phone"
                                    placeholder="请输入手机号">
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group width">
-                            <input type="password" class="form-control form-type" name="password" id="r-password"
-                                   placeholder="请输入6~21位密码">
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group">
-                            <div style="float: left;width: 46%">
-                                <input type="text" name="verify" class="form-control form-type" id="r-verify"
-                                       placeholder="验证码">
-                            </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img3" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img3')">
-                            </div>
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
@@ -218,16 +208,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" checked> 同意<a>鱼易社用户协议</a>
-                            </label>
-                        </div>
-                    </div>
-                    <button class="btn btn-login btn-lg btn-block form-group-mar" id='register' type="button">注册
+                    <button class="btn btn-login btn-lg btn-block form-group-mar"  data-dismiss="modal" id='register' type="button"  data-toggle="modal" data-position="center" data-target="#open-forgive">提交
                     </button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--跳窗-->
+<div class="modal fade" id="open-dailog-password">
+    <div class="modal-dialog modal-dialog-1">
+        <div class="modal-content" style="height: 300px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <div class="bd">
+                    <form class="form form-setting">
+                        <fieldset>
+                            <div class="form-item">
+                                <div id="newPwd" style="display: inline-block; margin-bottom: 30px;">
+                                    <div class="item-label">
+                                        <label>原密码</label>
+                                    </div>
+                                    <div class="item-cont no-right">
+                                        <input class="txt w-sm auth-code" type="password" id="oldpassword" name="pwd1" placeholder="请输入旧密码">
+                                    </div>
+                                </div>
+                                <div id="oldPwd" style="display: inline-block;">
+                                    <div class="item-label">
+                                        <label>新密码</label>
+                                    </div>
+                                    <div class="item-cont no-right">
+                                        <input class="txt w-sm auth-code" type="password" id="newpassword" name="pwd2" placeholder="请输入6~21位新密码">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <div class="item-cont">
+                                    <input type="button" id="verifyIdBtn2" class="btn green-btn lg" value="确认修改">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -242,7 +269,7 @@
     var getSms_url = "<?php echo U('Home/Login/getSms','',false);?>";
     var verifySms_url = "<?php echo U('Home/Login/verifySms','',false);?>";
     var verifyCode_url = "<?php echo U('Home/Login/verifyCode','',false);?>";
-    var register_url = "<?php echo U('Home/Login/register','',false);?>";
+    var register_url = "<?php echo U('Home/Login/registerNew','',false);?>";
     var home_url = "<?php echo U('Home/Index/index','',false);?>";
     $(document).ready(function () {
         //笔者注册
@@ -252,33 +279,23 @@
             var code = $('#code').val();
             if (code == '' || code == null) {
                 alertTips("#code","请输入动态码");
-//                alertTips("#code","请输入动态码");
-//                $('#code').focus();
                 return false;
             }
             if(user == '' || user == null){
                 alertTips("#r-phone","请输入手机号");
-//                alertTips("#r-phone","请输入手机号");
-//                $("#r-phone").focus();
                 return false;
             }
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (!reg.test(user)) {
                 alertTips("#r-phone","手机号码有误");
-//                alertTips('#r-phone',"手机号码有误");
-//                $("#r-phone").focus();
                 return false;
             }
             if(password == '' || password == null){
                 alertTips("#r-password","请输入密码");
-//                alertTips("#r-password",'请输入密码');
-//                $('#r-password').focus();
                 return false;
             }
             if(password.length < 6 || password.length >21){
                 alertTips("#r-password","密码长度限制6~21位");
-//                alertTips("#r-password",'密码长度限制6~21位');
-//                $("#r-password").focus();
                 return false;
             }
             password = hex_md5(password);
@@ -291,8 +308,6 @@
                 success: function (result) {
                     if (result.status == 1) {
                         layer.msg(result.info,{time: 3000});
-//                        $("#open-register").attr('aria-hidden',"true");      //隐藏注册
-//                        $("#open-register").css('display',"none");      //隐藏注册
                         setTimeout(function(){
                             window.location.href = login_url;
                         },3000);
@@ -311,10 +326,10 @@
             var password = $('#password').val();
             var code = $('#verify').val();
             if (code == '' || code == null) {
-//                layer.alert("请输入验证码");
                 alertTips("#verify","请输入验证码");
                 return false;
             }
+
             if (user.length == 11 && !isNaN(user)) {
                 var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
                 if (reg.test(user)) {
@@ -367,22 +382,18 @@
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if(phone == '' || phone == null){
                 alertTips("#new-user",'请输入手机号');
-//                layer.alert("请输入手机号");
                 return false;
             }
             if (!reg.test(phone)) {
                 alertTips("#new-user",'手机号码有误');
-//                layer.alert("手机号码有误");
                 return false;
             }
             if (verify == '' || verify == null) {
                 alertTips("#new-password",'请输入验证码');
-//                layer.alert("请输入验证码");
                 return false;
             }
             if (code == '' || code == null) {
                 alertTips("#gcode",'请输入动态码');
-//                layer.alert("请输入动态码");
                 return false;
             }
             if (phone != '' && verify != '' && code != '') {
@@ -416,7 +427,7 @@
             if(code == null || code == ''){
                 return false;
             }else{
-                verifyCode(code,this,"#img3");
+                verifyCode(code,this,"#img");
             }
         });
 
@@ -426,17 +437,18 @@
             if(code == null || code == ''){
                 return false;
             }else{
-                verifyCode(code,this,"#img");
+                verifyCode(code,this,"#img2");
             }
         });
 
-        //管理员验证验证码
-        $("#new-password").on('blur',function(){
-            var code = $('#new-password').val();
+        //管理员登录验证验证码
+        $("#r-verify1").on('blur',function(){
+            var code = $('#r-verify1').val();
+//            alert(code);
             if(code == null || code == ''){
                 return false;
             }else{
-                verifyCode(code,this,"#img2");
+                verifyCode(code,this,"#img3");
             }
         });
 
@@ -449,32 +461,22 @@
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (phone == '' || phone == null) {
                 alertTips('#r-phone','请输入手机号');
-//                layer.alert("请输入手机号");
-//                $("#r-phone").focus();
                 return false;
             }
             if (!reg.test(phone)) {
                 alertTips('#r-phone','手机号码有误');
-//                layer.alert("手机号码有误");
-//                $("#r-phone").focus();
                 return false;
             }
             if(password == '' || password == null){
                 alertTips('#r-password','请输入密码');
-//                layer.alert("请输入密码");
-//                $("#r-password").focus();
                 return false;
             }
             if(password.length < 6 || password.length >21){
                 alertTips('#r-password','密码长度限制6~21位');
-//                layer.alert("密码长度限制6~21位");
-//                $("#r-password").focus();
                 return false;
             }
             if (verify == '' || verify == null) {
                 alertTips('#r-verify','请输入验证码');
-//                layer.alert("请输入验证码");
-//                $("#r-verify").focus();
                 return false;
             }
             if (phone != '' && verify != '') {
@@ -485,27 +487,22 @@
         //发送短信动态码(管理员登录)
         $("#getSmsBtn").on('click', function () {
             var phone = $('#new-user').val();
-            var verify = $("#new-password").val();
+            var verify = $("#r-verify1").val();
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (phone == '' || phone == null) {
                 alertTips('#new-user','请输入手机号');
-//                layer.alert("请输入手机号");
-//                $("#new-user").focus();
                 return false;
             }
             if (!reg.test(phone)) {
                 alertTips('#new-user','手机号码有误');
-//                layer.alert("手机号码有误");
-//                $("#new-user").focus();
                 return false;
             }
             if (verify == '' || verify == null) {
-                alertTips('#new-password','请输入验证码');
-//                layer.alert("请输入验证码");
-//                $("#new-password").focus();
+                alertTips('#r-verify1','请输入验证码');
                 return false;
             }
             if (phone != '' && verify != '') {
+                countDown(this,'getSmsBtn');
                 sendSms(phone,'admin');
             }
         });
@@ -517,7 +514,7 @@
             $(id).after(erorr);
         }
 
-        //发送动态码
+        //发送动态码统一接口
         function sendSms(phone,tag) {
             if (phone != '' && phone != null) {
                 $.ajax({
@@ -541,11 +538,10 @@
             }
         }
 
-        var captcha_img = $('#img');
-        var verifyImg = captcha_img.attr("src");
-
-        //验证码验证
+        //验证码验证统一接口
         function verifyCode(code,id,img){
+            var captcha_img = $(img);
+            var verifyImg = captcha_img.attr("src");
             if(code != '' && code != null){
                 $.ajax({
                     url: verifyCode_url,
@@ -571,41 +567,26 @@
             }
         }
 
-        //点击刷新验证码(笔者注册)
-//        var captcha_img2 = $('#img3');
-//        var verifyImg2 = captcha_img2.attr("src");
-//        captcha_img2.attr('title', '点击刷新');
-//        captcha_img2.click(function () {
-//            if (verifyImg2.indexOf('?') > 0) {
-//                $(this).attr("src", verifyImg2 + '&ran=' + Math.random());
-//            } else {
-//                $(this).attr("src", verifyImg2.replace(/\?.*$/, '') + '?' + Math.random());
-//            }
-//        });
+        //倒计时统一接口
+        function countDown(id,name){
+            $(id).attr('disabled','true');
+            $(id).addClass("disabled");
+            var myVar=setInterval(function(){myTimer()},1000);
+            var a=0;
+            function myTimer(){
+                var add=60-a;
+                var string= "<span style='color: #35B558; font-size: 14px'>"+add+"s</span>";
+                document.getElementById(name).innerHTML=string;
+                a++;
+                if(a==61){
+                    clearInterval(myVar);
+                    $(id).removeClass("disabled");
+                    $(id).attr("disabled",false);
+                    document.getElementById(name).innerHTML="重新获取";
+                }
+            }
+        }
 
-        //点击刷新验证码(笔者登录)
-//        var captcha_img = $('#img');
-//        var verifyImg = captcha_img.attr("src");
-//        captcha_img.attr('title', '点击刷新');
-//        captcha_img.click(function () {
-//            if (verifyImg.indexOf('?') > 0) {
-//                $(this).attr("src", verifyImg + '&random=' + Math.random());
-//            } else {
-//                $(this).attr("src", verifyImg.replace(/\?.*$/, '') + '?' + Math.random());
-//            }
-//        });
-
-        //点击刷新验证码(管理员登录)
-//        var captcha_img1 = $('#img2');
-//        var verifyImg1 = captcha_img.attr("src");
-//        captcha_img1.attr('title', '点击刷新');
-//        captcha_img1.click(function () {
-//            if (verifyImg1.indexOf('?') > 0) {
-//                $(this).attr("src", verifyImg1 + '&rand=' + Math.random());
-//            } else {
-//                $(this).attr("src", verifyImg1.replace(/\?.*$/, '') + '?' + Math.random());
-//            }
-//        });
     });
 
     //点击刷新验证码统一接口

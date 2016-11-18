@@ -93,9 +93,13 @@ h1, h2, h3, h4, h5, h6 {
 .nav-tabs>li>a {
     border: none;
 }
+.layout-box .nav-tabs>li>a {
+    padding-top: 0;
+}
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border: none;
-    border-bottom-color: transparent;
+    border-bottom: 1px solid #35b558;
+    color:#35b558;
 }
 .nav-login>li.active>a, .nav-login>li.active>a:focus, .nav-login>li.active>a:hover {
     border: none;

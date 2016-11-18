@@ -27,6 +27,15 @@ class LoginController extends Controller
     }
 
     /**
+      *加载注册页面
+      */
+     public function register()
+     {
+         $this->display();
+     }
+
+
+    /**
      *用户登录
      */
     public function login()
@@ -218,7 +227,7 @@ class LoginController extends Controller
     /**
      *笔者用户注册
      */
-    public function register()
+    public function registerNew()
     {
         $smsCode = I('post.smsCode');
         $sureSms = session('smsCode');
