@@ -4,16 +4,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>账号设置</title>
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">
 </head>
 <body class="body-color">
 <div class="header">
     <div class="centent">
         <a class="logo-img" href="<?php echo U('Home/Index/index');?>"><img class="pull-left"
-                                                                 src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png"
+                                                                 src="/newSpaperSystem/Application/Home/View/public/img/logo2.png"
                                                                  width="105px" height="45px"/></a>
         <nav>
             <ul class="header-nav">
@@ -43,7 +43,7 @@
             <?php if(session('uid') == ''): ?><span class="relative loginlist login-icon" id="loginlist">
                     <?php else: ?>
                     <span class="relative loginlist" id="loginlist">
-                    <img src="/term/newSpaperSystem/Application/Home/View/public/img/default.gif"
+                    <img src="/newSpaperSystem/Application/Home/View/public/img/default.gif"
                          style="height: 25px;width: 25px;margin-bottom: 54px"><?php endif; ?>
             <dl class="submenu"><i class="top-icon"></i>
                 <dd>
@@ -85,7 +85,7 @@
                                     <?php if($info["head_img"] != ''): ?><img class="headpic" name="headpic" src="<?php echo ($info["head_img"]); ?>">
                                         <?php else: ?>
                                         <img class="headpic"
-                                             src="/term/newSpaperSystem/Application/Home/View/public/img/default.gif"><?php endif; ?>
+                                             src="/newSpaperSystem/Application/Home/View/public/img/default.gif"><?php endif; ?>
                                     <p class="change" id="setPhoto"><span>修改</span></p>
                                 </div>
                             </div>
@@ -422,12 +422,12 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/jquery.1.7.2.min.js'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/zui.min.js'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/datetimepicker.js'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/login.js' ></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/jquery.1.7.2.min.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/zui.min.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/datetimepicker.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/login.js' ></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>
 <script type="text/javascript">
     var getSms_url = "<?php echo U('Home/Login/getSms','',false);?>";
     var login_url = "<?php echo U('Home/Login/index','',false);?>";
@@ -657,13 +657,13 @@
 </script>
 
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
 <![endif]-->
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
 <![endif]-->
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
 <![endif]-->
 </body>
 </html>

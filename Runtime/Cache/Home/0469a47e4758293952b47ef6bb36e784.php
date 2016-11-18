@@ -4,15 +4,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>消息通知</title>
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
 </head>
 <body>
 <div class="header">
     <div class="centent">
         <a class="logo-img" href="<?php echo U('Home/Index/index');?>"><img class="pull-left"
-                                                                 src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png"
+                                                                 src="/newSpaperSystem/Application/Home/View/public/img/logo2.png"
                                                                  width="105px" height="45px"/></a>
         <nav>
             <ul class="header-nav">
@@ -42,7 +42,7 @@
             <?php if(session('uid') == ''): ?><span class="relative loginlist login-icon" id="loginlist">
                     <?php else: ?>
                     <span class="relative loginlist" id="loginlist">
-                    <img src="/term/newSpaperSystem/Application/Home/View/public/img/default.gif"
+                    <img src="/newSpaperSystem/Application/Home/View/public/img/default.gif"
                          style="height: 25px;width: 25px;margin-bottom: 54px"><?php endif; ?>
             <dl class="submenu"><i class="top-icon"></i>
                 <dd>
@@ -67,7 +67,7 @@
         <div class="common-portrait">
             <?php if($info["head_img"] != ''): ?><img src="<?php echo ($info["head_img"]); ?>" width="80px" alt="头像">
                 <?php else: ?>
-                <img src="/term/newSpaperSystem/Application/Home/View/public/img/default.gif" width="80px" alt="头像"><?php endif; ?>
+                <img src="/newSpaperSystem/Application/Home/View/public/img/default.gif" width="80px" alt="头像"><?php endif; ?>
             <i class="noprohead-icon portrait-icon"></i></div>
 
         <div class="common-data">
@@ -254,10 +254,10 @@
 </div>
 <!--底部结束-->
 
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/jquery.1.7.2.min.js'
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/jquery.1.7.2.min.js'
         charset='utf-8'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/login.js' charset='utf-8'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/login.js' charset='utf-8'></script>
 <script type="text/javascript">
     $(document).ready(function () {
         $("#search-btn").click(function () {
@@ -272,13 +272,13 @@
 
 
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
 <![endif]-->
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
 <![endif]-->
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
 <![endif]-->
 </body>
 </html>
