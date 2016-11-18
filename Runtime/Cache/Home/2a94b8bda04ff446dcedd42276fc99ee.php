@@ -15,11 +15,7 @@
         <nav>
             <ul class="header-nav">
                 <li><a href="<?php echo U('Home/Index/index');?>" style="color: rgb(53, 181, 88);">首页</a></li>
-                <li>
-                    <?php if(session('sys_tag') == admin): ?>审核文章
-                        <?php else: ?>投递文章<?php endif; ?>
-                </li>
-                <li><a href="all/thesis-classify.html">论文分类<i class="arrow-icon"></i></a>
+                <li><a href="<?php echo U('Home/all/thesis-classify');?>">论文分类<i class="arrow-icon"></i></a>
                     <div class="submenu school-list">
                         <h3>前端学院</h3>
                         <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
@@ -42,7 +38,7 @@
                     <img src="/newSpaperSystem/Application/Home/View/public/img/default.gif" style="height: 25px;width: 25px;margin-bottom: 54px"><?php endif; ?>
                     <dl class="submenu"><i class="top-icon"></i>
                         <dd>
-                            <?php if(session('uid') == ''): ?><a href="<?php echo U('Home/Login/index');?>" class="reg-btn">注册</a>|<a href="<?php echo U('Home/Login/index');?>" class="login-btn">登录</a><?php endif; ?>
+                            <?php if(session('uid') == ''): ?><a href="<?php echo U('Home/Login/register');?>" class="reg-btn">注册</a>|<a href="<?php echo U('Home/Login/index');?>" class="login-btn">登录</a><?php endif; ?>
                         </dd>
                         <dd><a href="<?php echo U('Home/Person/index');?>"><i class="grzy-icon"></i>个人主页</a></dd>
                         <dd><a href="<?php echo U('Home/Person/message');?>"><i class="xxtz-icon"></i>消息通知</a></dd>

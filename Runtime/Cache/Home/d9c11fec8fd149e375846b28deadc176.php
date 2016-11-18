@@ -5,19 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登录</title>
-    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
-    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
-    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
-    <!--<link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">-->
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
+    <!--<link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">-->
 </head>
 <style type="text/css">
+<<<<<<< HEAD
 
+=======
+    .body-back {
+        background: url(/term/newSpaperSystem/Application/Home/View/public/img/rebc.gif) repeat;
+    }
+
+    .qq {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/QQ1.png);
+    }
+
+    .weixin {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weixin1.png);
+    }
+
+    .weibo {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weibo1.png);
+    }
+
+    .qq:hover {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/QQ.png);
+    }
+
+    .weixin:hover {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weixin.png);
+    }
+
+    .weibo:hover {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weibo.png);
+    }
+
+    .numberBtn {
+        font-size: 10px;
+		font-size: 10px;
+	    background: #35b558;
+	    color: #fff;
+	    border: 1px solid #35b558;
+        outline: 0;
+    }
+    .numberBtn.disabled{
+	    background: #f2f2f2;
+	    color: #333;
+	    border: 1px solid #f2f2f2;
+	    cursor:not-allowed;
+    }
+    #logo122 {
+        position: absolute;
+        margin-top: 10%;
+        width: 150px;
+        height: 55px;
+        margin-left: 45%;
+    }
+    .passport-header {
+        margin-bottom: 30px;
+    }
+>>>>>>> origin/master
 </style>
 <body class="body-back">
 <header id="header" class="passport-header">
     <!--<div id="logo122">-->
     <!--<a href="<?php echo U('Home/Index/index');?>" jktag="0001|0.1|91006">-->
-    <!--<img src="/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
+    <!--<img src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
     <!--</a>-->
     <!--</div>-->
 </header>
@@ -182,11 +237,11 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/zui.min.js'></script>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/login.js'></script>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/zui.min.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/login.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>
 <script type="text/javascript">
     var login_url = "<?php echo U('Home/Login/login','',false);?>";
     var getSms_url = "<?php echo U('Home/Login/getSms','',false);?>";
@@ -428,6 +483,22 @@
                 return false;
             }
             if (phone != '' && verify != '') {
+                $(this).attr('disabled','true');
+                $(this).addClass("disabled");
+                var myVar=setInterval(function(){myTimer()},1000);
+                var a=0;
+                function myTimer(){
+                    var add=60-a;
+                    var string= "<span style='color: #35B558; font-size: 14px'>"+add+"s</span>";
+                    document.getElementById("getSmsId").innerHTML=string;
+                    a++;
+                    if(a==61){
+                        clearInterval(myVar);
+                        $("#getSmsId").removeClass("disabled");
+                        $("#getSmsId").attr("disabled",false);
+                        document.getElementById("getSmsId").innerHTML="重新获取";
+                    }
+                }
                 sendSms(phone,'author');
             }
         });
@@ -491,7 +562,7 @@
             }
         }
 
-        var captcha_img = $('#img');
+        var captcha_img = $('#img3');
         var verifyImg = captcha_img.attr("src");
 
         //验证码验证
@@ -571,24 +642,24 @@
     
 </script>
 <script>//倒计时60秒
-$("#getSmsId").on('click', function () {
-	$(this).attr('disabled','true');
-	$(this).addClass("disabled");
-	var myVar=setInterval(function(){myTimer()},1000);
-	var a=0;
-	function myTimer(){
-		var add=60-a;
-		var string="还有 "+add+" ...";
-		document.getElementById("getSmsId").innerHTML=string;
-		a++;
-		if(a==61){
-			clearInterval(myVar);
-			$("#getSmsId").removeClass("disabled");
-			$("#getSmsId").attr("disabled",false);
-			document.getElementById("getSmsId").innerHTML="重新获取";
-		}
-	}
-});
+//$("#getSmsId").on('click', function () {
+//	$(this).attr('disabled','true');
+//	$(this).addClass("disabled");
+//	var myVar=setInterval(function(){myTimer()},1000);
+//	var a=0;
+//	function myTimer(){
+//		var add=60-a;
+//		var string= "<span style='color: #35B558; font-size: 14px'>"+add+"s</span>";
+//		document.getElementById("getSmsId").innerHTML=string;
+//		a++;
+//		if(a==61){
+//			clearInterval(myVar);
+//			$("#getSmsId").removeClass("disabled");
+//			$("#getSmsId").attr("disabled",false);
+//			document.getElementById("getSmsId").innerHTML="重新获取";
+//		}
+//	}
+//});
 </script>
 </body>
 </html>

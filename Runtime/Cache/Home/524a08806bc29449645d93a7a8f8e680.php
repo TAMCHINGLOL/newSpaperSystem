@@ -1,26 +1,80 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登录</title>
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
-    <!--<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/datetimepicker.css">-->
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
+    <!--<link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">-->
 </head>
+<style type="text/css">
+    .body-back {
+        background: url(/term/newSpaperSystem/Application/Home/View/public/img/rebc.gif) repeat;
+    }
+
+    .qq {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/QQ1.png);
+    }
+
+    .weixin {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weixin1.png);
+    }
+
+    .weibo {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weibo1.png);
+    }
+
+    .qq:hover {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/QQ.png);
+    }
+
+    .weixin:hover {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weixin.png);
+    }
+
+    .weibo:hover {
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weibo.png);
+    }
+
+    .numberBtn {
+        font-size: 10px;
+		font-size: 10px;
+	    background: #35b558;
+	    color: #fff;
+	    border: 1px solid #35b558;
+        outline: 0;
+    }
+    .numberBtn.disabled{
+	    background: #f2f2f2;
+	    color: #333;
+	    border: 1px solid #f2f2f2;
+	    cursor:not-allowed;
+    }
+    #logo122 {
+        position: absolute;
+        margin-top: 10%;
+        width: 150px;
+        height: 55px;
+        margin-left: 45%;
+    }
+    .passport-header {
+        margin-bottom: 30px;
+    }
+</style>
 <body class="body-back">
 <header id="header" class="passport-header">
     <!--<div id="logo122">-->
-    <!--<a href="{:U('Home/Index/index')}" jktag="0001|0.1|91006">-->
-    <!--<img src="__ROOT__/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
+    <!--<a href="<?php echo U('Home/Index/index');?>" jktag="0001|0.1|91006">-->
+    <!--<img src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
     <!--</a>-->
     <!--</div>-->
 </header>
 <div class="login">
     <div class="share-box">
-        <div class="passport-goto">没有账号? <a href="{:U('Home/Login/index')}">已有用户，请登录</a>
+        <div class="passport-goto">没有账号? <a href="<?php echo U('Home/Login/index');?>">已有用户，请登录</a>
         </div>
         <div class="passport-third"><p style="color: #999">第三方账号登录</p></div>
         <div class="link-third">
@@ -60,7 +114,7 @@
                         </div>
                         <div style="float: right;width: 137px;display: inline-block;">
                             <img id="img3" name="img" width="90%" height="40" style="float: right" alt="验证码"
-                                 src="{:U('Home/Login/verify',array())}" title="点击刷新" onclick="clickVerify('#img3')">
+                                 src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img3')">
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
@@ -179,18 +233,18 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/zui.min.js'></script>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/login.js'></script>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/layer/layer.js'></script>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/md5/md5.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/zui.min.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/login.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>
 <script type="text/javascript">
-    var login_url = "{:U('Home/Login/login','',false)}";
-    var getSms_url = "{:U('Home/Login/getSms','',false)}";
-    var verifySms_url = "{:U('Home/Login/verifySms','',false)}";
-    var verifyCode_url = "{:U('Home/Login/verifyCode','',false)}";
-    var register_url = "{:U('Home/Login/register','',false)}";
-    var home_url = "{:U('Home/Index/index','',false)}";
+    var login_url = "<?php echo U('Home/Login/login','',false);?>";
+    var getSms_url = "<?php echo U('Home/Login/getSms','',false);?>";
+    var verifySms_url = "<?php echo U('Home/Login/verifySms','',false);?>";
+    var verifyCode_url = "<?php echo U('Home/Login/verifyCode','',false);?>";
+    var register_url = "<?php echo U('Home/Login/registerNew','',false);?>";
+    var home_url = "<?php echo U('Home/Index/index','',false);?>";
     $(document).ready(function () {
         //笔者注册
         $("#register").on("click", function () {
@@ -425,6 +479,7 @@
                 return false;
             }
             if (phone != '' && verify != '') {
+                countDown(this,'getSmsId');
                 sendSms(phone,'author');
             }
         });
@@ -464,7 +519,7 @@
             $(id).after(erorr);
         }
 
-        //发送动态码
+        //发送动态码统一接口
         function sendSms(phone,tag) {
             if (phone != '' && phone != null) {
                 $.ajax({
@@ -488,11 +543,10 @@
             }
         }
 
-        var captcha_img = $('#img');
-        var verifyImg = captcha_img.attr("src");
-
-        //验证码验证
+        //验证码验证统一接口
         function verifyCode(code,id,img){
+            var captcha_img = $(img);
+            var verifyImg = captcha_img.attr("src");
             if(code != '' && code != null){
                 $.ajax({
                     url: verifyCode_url,
@@ -515,6 +569,26 @@
                         return false;
                     }
                 });
+            }
+        }
+
+        //倒计时统一接口
+        function countDown(id,name){
+            $(id).attr('disabled','true');
+            $(id).addClass("disabled");
+            var myVar=setInterval(function(){myTimer()},1000);
+            var a=0;
+            function myTimer(){
+                var add=60-a;
+                var string= "<span style='color: #35B558; font-size: 14px'>"+add+"s</span>";
+                document.getElementById(name).innerHTML=string;
+                a++;
+                if(a==61){
+                    clearInterval(myVar);
+                    $(id).removeClass("disabled");
+                    $(id).attr("disabled",false);
+                    document.getElementById(name).innerHTML="重新获取";
+                }
             }
         }
 
@@ -568,24 +642,24 @@
     
 </script>
 <script>//倒计时60秒
-$("#getSmsId").on('click', function () {
-	$(this).attr('disabled','true');
-	$(this).addClass("disabled");
-	var myVar=setInterval(function(){myTimer()},1000);
-	var a=0;
-	function myTimer(){
-		var add=60-a;
-		var string="还有 "+add+" ...";
-		document.getElementById("getSmsId").innerHTML=string;
-		a++;
-		if(a==61){
-			clearInterval(myVar);
-			$("#getSmsId").removeClass("disabled");
-			$("#getSmsId").attr("disabled",false);
-			document.getElementById("getSmsId").innerHTML="重新获取";
-		}
-	}
-});
+//$("#getSmsId").on('click', function () {
+//	$(this).attr('disabled','true');
+//	$(this).addClass("disabled");
+//	var myVar=setInterval(function(){myTimer()},1000);
+//	var a=0;
+//	function myTimer(){
+//		var add=60-a;
+//		var string= "<span style='color: #35B558; font-size: 14px'>"+add+"s</span>";
+//		document.getElementById("getSmsId").innerHTML=string;
+//		a++;
+//		if(a==61){
+//			clearInterval(myVar);
+//			$("#getSmsId").removeClass("disabled");
+//			$("#getSmsId").attr("disabled",false);
+//			document.getElementById("getSmsId").innerHTML="重新获取";
+//		}
+//	}
+//});
 </script>
 </body>
 </html>
