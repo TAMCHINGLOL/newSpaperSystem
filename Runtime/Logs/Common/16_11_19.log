@@ -880,3 +880,237 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
 ERR: 无法加载模块:Application
 
+[ 2016-11-19T07:04:52+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000449s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:04:53+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000767s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:14:36+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000631s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:14:36+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000471s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:14:39+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001319s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:14:39+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000670s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:14:42+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001315s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:14:42+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001162s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:15:05+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000777s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:15:05+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:15:25+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000610s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:15:25+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000845s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:15:26+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000046s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002061s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:15:26+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001164s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:15:53+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001770s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:15:53+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000436s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:16:18+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000836s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:16:18+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:16:35+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000787s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:16:35+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000453s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:06+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/rebc.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:06+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/weixin1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000657s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:06+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/QQ1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:06+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/weibo1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000271s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001421s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:06+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000032s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000804s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:06+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000532s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:07+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/QQ.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000596s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:14+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/QQ1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000877s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:14+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/weibo1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000501s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:14+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/rebc.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000639s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:14+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/weixin1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000138s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001195s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:14+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000460s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:18:14+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000653s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:24:18+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/weixin1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:24:18+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/weibo1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000579s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:24:18+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/QQ1.png
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000768s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:24:18+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/Login/__ROOT__/Application/Home/View/public/img/rebc.gif
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000640s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:24:19+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000415s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T07:24:19+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000565s ]
+ERR: 无法加载模块:Application
+

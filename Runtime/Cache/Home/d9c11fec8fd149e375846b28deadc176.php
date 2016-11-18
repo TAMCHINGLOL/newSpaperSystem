@@ -11,58 +11,7 @@
     <!--<link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">-->
 </head>
 <style type="text/css">
-    .body-back {
-        background: url(/newSpaperSystem/Application/Home/View/public/img/rebc.gif) repeat;
-    }
 
-    .qq {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/QQ1.png);
-    }
-
-    .weixin {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weixin1.png);
-    }
-
-    .weibo {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weibo1.png);
-    }
-
-    .qq:hover {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/QQ.png);
-    }
-
-    .weixin:hover {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weixin.png);
-    }
-
-    .weibo:hover {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weibo.png);
-    }
-
-    .numberBtn {
-        font-size: 10px;
-		font-size: 10px;
-	    background: #35b558;
-	    color: #fff;
-	    border: 1px solid #35b558;
-        outline: 0;
-    }
-    .numberBtn.disabled{
-	    background: #f2f2f2;
-	    color: #333;
-	    border: 1px solid #f2f2f2;
-	    cursor:not-allowed;
-    }
-    #logo122 {
-        position: absolute;
-        margin-top: 10%;
-        width: 150px;
-        height: 55px;
-        margin-left: 45%;
-    }
-    .passport-header {
-        margin-bottom: 30px;
-    }
 </style>
 <body class="body-back">
 <header id="header" class="passport-header">
