@@ -58,7 +58,7 @@
         <div class="searchbox" id="searchbox">
             <i class="close-icon" id="close-btn"></i>
             <i class="search-icon" id="search-btn"></i>
-            <input id="web_search_header" placeholder="搜索课程、问答或Wiki" value=""/>
+            <input id="web_search_header" placeholder="搜索文章 / 问答" value=""/>
         </div>
     </div>
 </div>
