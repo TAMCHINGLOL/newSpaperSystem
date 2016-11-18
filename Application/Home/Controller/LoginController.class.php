@@ -27,6 +27,15 @@ class LoginController extends Controller
     }
 
     /**
+      *加载注册页面
+      */
+     public function register1()
+     {
+         $this->display();
+     }
+
+
+    /**
      *用户登录
      */
     public function login()

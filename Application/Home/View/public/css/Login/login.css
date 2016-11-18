@@ -20,7 +20,9 @@ a{cursor: pointer}
 .weixin:hover{background-image: url(../img/weixin.png);}
 .weibo:hover{background-image: url(../img/weibo.png);}
 .width100{width: 100px;}
-
+.layout-box .nav-tabs {
+    border-bottom: none;
+}
 .passport-note {
     position: absolute;
     top: 0;

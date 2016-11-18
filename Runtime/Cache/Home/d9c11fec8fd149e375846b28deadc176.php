@@ -1,58 +1,63 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登录</title>
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
-    <!--<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/datetimepicker.css">-->
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
+    <!--<link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">-->
 </head>
 <style type="text/css">
     .body-back {
-        background: url(__ROOT__/Application/Home/View/public/img/rebc.gif) repeat;
+        background: url(/newSpaperSystem/Application/Home/View/public/img/rebc.gif) repeat;
     }
 
     .qq {
-        background-image: url(__ROOT__/Application/Home/View/public/img/QQ1.png);
+        background-image: url(/newSpaperSystem/Application/Home/View/public/img/QQ1.png);
     }
 
     .weixin {
-        background-image: url(__ROOT__/Application/Home/View/public/img/weixin1.png);
+        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weixin1.png);
     }
 
     .weibo {
-        background-image: url(__ROOT__/Application/Home/View/public/img/weibo1.png);
+        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weibo1.png);
     }
 
     .qq:hover {
-        background-image: url(__ROOT__/Application/Home/View/public/img/QQ.png);
+        background-image: url(/newSpaperSystem/Application/Home/View/public/img/QQ.png);
     }
 
     .weixin:hover {
-        background-image: url(__ROOT__/Application/Home/View/public/img/weixin.png);
+        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weixin.png);
     }
 
     .weibo:hover {
-        background-image: url(__ROOT__/Application/Home/View/public/img/weibo.png);
+        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weibo.png);
     }
 
     .numberBtn {
         font-size: 10px;
-        background: #eaeaea;
-        color: #666;
-        border: 1px solid #eaeaea;
+		font-size: 10px;
+	    background: #35b558;
+	    color: #fff;
+	    border: 1px solid #35b558;
         outline: 0;
-
+    }
+    .numberBtn.disabled{
+	    background: #f2f2f2;
+	    color: #333;
+	    border: 1px solid #f2f2f2;
+	    cursor:not-allowed;
     }
     #logo122 {
         position: absolute;
         margin-top: 10%;
         width: 150px;
         height: 55px;
-        /*margin-right: auto;*/
         margin-left: 45%;
     }
     .passport-header {
@@ -62,14 +67,14 @@
 <body class="body-back">
 <header id="header" class="passport-header">
     <!--<div id="logo122">-->
-    <!--<a href="{:U('Home/Index/index')}" jktag="0001|0.1|91006">-->
-    <!--<img src="__ROOT__/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
+    <!--<a href="<?php echo U('Home/Index/index');?>" jktag="0001|0.1|91006">-->
+    <!--<img src="/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
     <!--</a>-->
     <!--</div>-->
 </header>
 <div class="login">
     <div class="share-box">
-        <div class="passport-goto">没有账号? <a data-toggle="modal" data-position="center" data-target="#open-register">新用户注册</a>
+        <div class="passport-goto">没有账号? <a href="<?php echo U('Home/Login/index');?>">已有用户，请登录</a>
         </div>
         <div class="passport-third"><p style="color: #999">第三方账号登录</p></div>
         <div class="link-third">
@@ -85,104 +90,8 @@
         </div>
     </div>
     <div class="layout-box">
-        <ul class="nav nav-tabs">
-            <li class="login-tittle width50 active"><a href="###" data-target="#tab2Content1" data-toggle="tab">笔者登录</a>
-            </li>
-            <li class="login-tittle width50"><a href="###" data-target="#tab2Content2" data-toggle="tab">管理员登录</a></li>
-        </ul>
         <div class="tab-content">
             <div class="tab-pane fade active in" id="tab2Content1">
-                <form>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group width">
-                            <input type="text" class="form-control form-type" name="user" id="user"
-                                   placeholder="请输入手机 / 用户名">
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group width">
-                            <input type="password" name="password" class="form-control form-type" id="password"
-                                   placeholder="请输入6~21位密码">
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group">
-                            <div style="float: left">
-                                <input type="text" name="verify" class="form-control form-type" id="verify"
-                                       placeholder="验证码">
-                            </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="{:U('Home/Login/verify',array())}" title="点击刷新" onclick="clickVerify('#img')">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <a class="fr a-link" data-toggle="modal" data-position="center" data-target="#open-forgivt">忘记密码</a>
-                        <div class="checkbox width100">
-                            <label>
-                                <input type="checkbox" checked> 记住密码
-                            </label>
-                        </div>
-                    </div>
-                    <button class="btn btn-login btn-lg btn-block form-group-mar" id='login' type="button">登录</button>
-                </form>
-            </div>
-            <div class="tab-pane fade" id="tab2Content2">
-                <form>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group width">
-                            <input type="text" class="form-control form-type" name="phone" id="new-user"
-                                   placeholder="请输入手机号">
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group">
-                            <div style="float: left;">
-                                <input type="text" name="verify" class="form-control form-type" id="new-password"
-                                       placeholder="验证码">
-                            </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img2" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="{:U('Home/Login/verify',array())}" title="点击刷新" onclick="clickVerify('#img2')">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group form-mcode width">
-                            <input type="text" class="form-control form-type " name="code" id="gcode" placeholder="动态码">
-                            <div class="btn-getcode">
-                                <button type="button" id="getSmsBtn" class="passport-btn js-getcode numberBtn"
-                                        jktag="0001|0.1|91024">获取动态码
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <!--<p class="fr a-link">忘记密码</p>-->
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" checked> 记住密码
-                            </label>
-                        </div>
-                    </div>
-                    <button class="btn btn-login btn-lg btn-block form-group-mar" id='sign' type="button">登录</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="open-register">
-    <div class="modal-dialog modal-dialog-1">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" style="outline: 0;">
-                    <span aria-hidden="true">×</span>
-                    <span class="sr-only">关闭</span>
-                </button>
-                <span class="modal-title" style="font-size: 16px;color: #35b558;font-weight: 500;">笔 者 注 册</span>
-            </div>
-            <div class="modal-body">
                 <form>
                     <div class="form-group form-group-mar">
                         <div class="input-group width">
@@ -197,15 +106,15 @@
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
-                        <div class="input-group">
-                            <div style="float: left;width: 46%">
+                        <div class="input-group" style="display: inline-block">
+                            <div style="float: left;">
                                 <input type="text" name="verify" class="form-control form-type" id="r-verify"
                                        placeholder="验证码">
                             </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img3" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="{:U('Home/Login/verify',array())}" title="点击刷新" onclick="clickVerify('#img3')">
-                            </div>
+                        </div>
+                        <div style="float: right;width: 137px;display: inline-block;">
+                            <img id="img3" name="img" width="90%" height="40" style="float: right" alt="验证码"
+                                 src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img3')">
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
@@ -229,6 +138,7 @@
                     </button>
                 </form>
             </div>
+
         </div>
     </div>
 </div>
@@ -323,18 +233,18 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/zui.min.js'></script>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/login.js'></script>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/layer/layer.js'></script>
-<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/md5/md5.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/zui.min.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/login.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>
 <script type="text/javascript">
-    var login_url = "{:U('Home/Login/login','',false)}";
-    var getSms_url = "{:U('Home/Login/getSms','',false)}";
-    var verifySms_url = "{:U('Home/Login/verifySms','',false)}";
-    var verifyCode_url = "{:U('Home/Login/verifyCode','',false)}";
-    var register_url = "{:U('Home/Login/register','',false)}";
-    var home_url = "{:U('Home/Index/index','',false)}";
+    var login_url = "<?php echo U('Home/Login/login','',false);?>";
+    var getSms_url = "<?php echo U('Home/Login/getSms','',false);?>";
+    var verifySms_url = "<?php echo U('Home/Login/verifySms','',false);?>";
+    var verifyCode_url = "<?php echo U('Home/Login/verifyCode','',false);?>";
+    var register_url = "<?php echo U('Home/Login/register','',false);?>";
+    var home_url = "<?php echo U('Home/Index/index','',false);?>";
     $(document).ready(function () {
         //笔者注册
         $("#register").on("click", function () {
@@ -709,6 +619,27 @@
             $(id).attr("src", verifyImg.replace(/\?.*$/, '') + '?' + Math.random());
         }
     }
+    
+</script>
+<script>//倒计时60秒
+$("#getSmsId").on('click', function () {
+	$(this).attr('disabled','true');
+	$(this).addClass("disabled");
+	var myVar=setInterval(function(){myTimer()},1000);
+	var a=0;
+	function myTimer(){
+		var add=60-a;
+		var string="还有 "+add+" ...";
+		document.getElementById("getSmsId").innerHTML=string;
+		a++;
+		if(a==61){
+			clearInterval(myVar);
+			$("#getSmsId").removeClass("disabled");
+			$("#getSmsId").attr("disabled",false);
+			document.getElementById("getSmsId").innerHTML="重新获取";
+		}
+	}
+});
 </script>
 </body>
 </html>

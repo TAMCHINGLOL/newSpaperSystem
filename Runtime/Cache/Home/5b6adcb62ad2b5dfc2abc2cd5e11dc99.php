@@ -69,7 +69,8 @@
 </header>
 <div class="login">
     <div class="share-box">
-        <div class="passport-goto">没有账号? <a data-toggle="modal" data-position="center" data-target="#open-register">新用户注册</a>
+        <!--<div class="passport-goto">没有账号? <a data-toggle="modal" data-position="center" data-target="#open-register">新用户注册</a>-->
+            <div class="passport-goto">没有账号? <a href="<?php echo U('Home/Login/register1');?>">新用户注册</a>
         </div>
         <div class="passport-third"><p style="color: #999">第三方账号登录</p></div>
         <div class="link-third">
@@ -106,20 +107,20 @@
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
-                        <div class="input-group">
-                            <div style="float: left">
-                                <input type="text" name="verify" class="form-control form-type" id="verify"
+                        <div class="input-group" style="display: inline-block">
+                            <div style="float: left;">
+                                <input type="text" name="verify" class="form-control form-type" id="r-verify"
                                        placeholder="验证码">
                             </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img')">
-                            </div>
+                        </div>
+                        <div style="float: right;width: 137px;display: inline-block;">
+                            <img id="img3" name="img" width="90%" height="40" style="float: right" alt="验证码"
+                                 src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img3')">
                         </div>
                     </div>
                     <div class="form-group">
-                        <p class="fr a-link">忘记密码</p>
-                        <div class="checkbox">
+                        <p class="fr a-link" data-toggle="modal" data-position="center" data-target="#open-forgive">忘记密码</p>
+                        <div class="checkbox" style="width: 150px;">
                             <label>
                                 <input type="checkbox" checked> 记住密码
                             </label>
@@ -137,15 +138,15 @@
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
-                        <div class="input-group">
+                        <div class="input-group" style="display: inline-block">
                             <div style="float: left;">
-                                <input type="text" name="verify" class="form-control form-type" id="new-password"
+                                <input type="text" name="verify" class="form-control form-type" id="r-verify"
                                        placeholder="验证码">
                             </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img2" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img2')">
-                            </div>
+                        </div>
+                        <div style="float: right;width: 137px;display: inline-block;">
+                            <img id="img3" name="img" width="90%" height="40" style="float: right" alt="验证码"
+                                 src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img3')">
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
@@ -172,7 +173,8 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="open-register">
+<!--跳窗-->
+<div class="modal fade" id="open-forgive">
     <div class="modal-dialog modal-dialog-1">
         <div class="modal-content">
             <div class="modal-header">
@@ -191,24 +193,6 @@
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
-                        <div class="input-group width">
-                            <input type="password" class="form-control form-type" name="password" id="r-password"
-                                   placeholder="请输入6~21位密码">
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group">
-                            <div style="float: left;width: 46%">
-                                <input type="text" name="verify" class="form-control form-type" id="r-verify"
-                                       placeholder="验证码">
-                            </div>
-                            <div style="float: left;width: 46%">
-                                <img id="img3" name="img" width="90%" height="45" style="float: right" alt="验证码"
-                                     src="<?php echo U('Home/Login/verify',array());?>" title="点击刷新" onclick="clickVerify('#img3')">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
                         <div class="input-group form-mcode width">
                             <input type="text" class="form-control form-type " name="code" id="code" placeholder="动态码">
                             <div class="btn-getcode">
@@ -218,16 +202,53 @@
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" checked> 同意<a>鱼易社用户协议</a>
-                            </label>
-                        </div>
-                    </div>
-                    <button class="btn btn-login btn-lg btn-block form-group-mar" id='register' type="button">注册
+                    <button class="btn btn-login btn-lg btn-block form-group-mar"  data-dismiss="modal" id='register' type="button"  data-toggle="modal" data-position="center" data-target="#open-forgive">提交
                     </button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--跳窗-->
+<div class="modal fade" id="open-dailog-password">
+    <div class="modal-dialog modal-dialog-1">
+        <div class="modal-content" style="height: 300px;">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <div class="bd">
+                    <form class="form form-setting">
+                        <fieldset>
+                            <div class="form-item">
+                                <div id="newPwd" style="display: inline-block; margin-bottom: 30px;">
+                                    <div class="item-label">
+                                        <label>原密码</label>
+                                    </div>
+                                    <div class="item-cont no-right">
+                                        <input class="txt w-sm auth-code" type="password" id="oldpassword" name="pwd1" placeholder="请输入旧密码">
+                                    </div>
+                                </div>
+                                <div id="oldPwd" style="display: inline-block;">
+                                    <div class="item-label">
+                                        <label>新密码</label>
+                                    </div>
+                                    <div class="item-cont no-right">
+                                        <input class="txt w-sm auth-code" type="password" id="newpassword" name="pwd2" placeholder="请输入6~21位新密码">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-item">
+                                <div class="item-cont">
+                                    <input type="button" id="verifyIdBtn2" class="btn green-btn lg" value="确认修改">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -618,6 +639,26 @@
             $(id).attr("src", verifyImg.replace(/\?.*$/, '') + '?' + Math.random());
         }
     }
+</script>
+<script>//倒计时60秒
+$("#getSmsId").on('click', function () {
+	$(this).attr('disabled','true');
+	$(this).addClass("disabled");
+	var myVar=setInterval(function(){myTimer()},1000);
+	var a=0;
+	function myTimer(){
+		var add=60-a;
+		var string="还有 "+add+" ...";
+		document.getElementById("getSmsId").innerHTML=string;
+		a++;
+		if(a==61){
+			clearInterval(myVar);
+			$("#getSmsId").removeClass("disabled");
+			$("#getSmsId").attr("disabled",false);
+			document.getElementById("getSmsId").innerHTML="重新获取";
+		}
+	}
+});
 </script>
 </body>
 </html>
