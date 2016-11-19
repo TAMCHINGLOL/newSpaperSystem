@@ -27,12 +27,12 @@ class LoginController extends Controller
     }
 
     /**
-      *加载注册页面
-      */
-     public function register()
-     {
-         $this->display();
-     }
+     *加载注册页面
+     */
+    public function register()
+    {
+        $this->display();
+    }
 
 
     /**
@@ -96,7 +96,7 @@ class LoginController extends Controller
      */
     public function verify()
     {
-        session('isVerify',null);
+        session('isVerify', null);
         makeVerify();
     }
 
@@ -123,6 +123,11 @@ class LoginController extends Controller
      */
     public function getSms()
     {
+        if (session('isVerify') == 'no' && isset($_SESSION['isVerify'])) {
+            $this->error('请重新输入验证码');
+            exit();
+        }
+
         $phone = I('post.phone');
         if (preg_match("/^1[34578]{1}\d{9}$/", $phone)) {
             $tag = I('post.tag');

@@ -64,7 +64,7 @@ class Mysql extends Driver{
                     'name'    => $val['field'],
                     'type'    => $val['type'],
                     'notnull' => (bool) ($val['null'] === ''), // not null is empty, null is yes
-                    'Person' => $val['Person'],
+                    'default' => $val['default'],
                     'primary' => (strtolower($val['key']) == 'pri'),
                     'autoinc' => (strtolower($val['extra']) == 'auto_increment'),
                 );

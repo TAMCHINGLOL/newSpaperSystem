@@ -47,12 +47,14 @@
         border: 1px solid #35b558;
         outline: 0;
     }
-    .numberBtn.disabled{
+
+    .numberBtn.disabled {
         background: #f2f2f2;
         color: #333;
         border: 1px solid #f2f2f2;
-        cursor:not-allowed;
+        cursor: not-allowed;
     }
+
     #logo122 {
         position: absolute;
         margin-top: 10%;
@@ -61,6 +63,7 @@
         /*margin-right: auto;*/
         margin-left: 45%;
     }
+
     .passport-header {
         margin-bottom: 30px;
     }
@@ -76,7 +79,7 @@
 <div class="login">
     <div class="share-box">
         <!--<div class="passport-goto">没有账号? <a data-toggle="modal" data-position="center" data-target="#open-register">新用户注册</a>-->
-            <div class="passport-goto">没有账号? <a href="<?php echo U('Home/Login/register');?>">新用户注册</a>
+        <div class="passport-goto">没有账号? <a href="<?php echo U('Home/Login/register');?>">新用户注册</a>
         </div>
         <div class="passport-third"><p style="color: #999">第三方账号登录</p></div>
         <div class="link-third">
@@ -125,7 +128,8 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <p class="fr a-link" data-toggle="modal" data-position="center" data-target="#open-forgive">忘记密码</p>
+                        <p class="fr a-link" data-toggle="modal" data-position="center" data-target="#open-forgive">
+                            忘记密码</p>
                         <div class="checkbox" style="width: 150px;">
                             <label>
                                 <input type="checkbox" checked> 记住密码
@@ -202,13 +206,15 @@
                         <div class="input-group form-mcode width">
                             <input type="text" class="form-control form-type " name="code" id="code" placeholder="动态码">
                             <div class="btn-getcode">
-                                <button type="button" id="getSmsId" class="passport-btn js-getcode numberBtn" jktag="0001|0.1|91024">
+                                <button type="button" id="getSmsId" class="passport-btn js-getcode numberBtn"
+                                        jktag="0001|0.1|91024">
                                     获取动态码
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <button class="btn btn-login btn-lg btn-block form-group-mar"  data-dismiss="modal" id='register' type="button"  data-toggle="modal" data-position="center" data-target="#open-forgive">提交
+                    <button class="btn btn-login btn-lg btn-block form-group-mar" data-dismiss="modal" id='register'
+                            type="button" data-toggle="modal" data-position="center" data-target="#open-forgive">提交
                     </button>
                 </form>
             </div>
@@ -235,7 +241,8 @@
                                         <label>原密码</label>
                                     </div>
                                     <div class="item-cont no-right">
-                                        <input class="txt w-sm auth-code" type="password" id="oldpassword" name="pwd1" placeholder="请输入旧密码">
+                                        <input class="txt w-sm auth-code" type="password" id="oldpassword" name="pwd1"
+                                               placeholder="请输入旧密码">
                                     </div>
                                 </div>
                                 <div id="oldPwd" style="display: inline-block;">
@@ -243,7 +250,8 @@
                                         <label>新密码</label>
                                     </div>
                                     <div class="item-cont no-right">
-                                        <input class="txt w-sm auth-code" type="password" id="newpassword" name="pwd2" placeholder="请输入6~21位新密码">
+                                        <input class="txt w-sm auth-code" type="password" id="newpassword" name="pwd2"
+                                               placeholder="请输入6~21位新密码">
                                     </div>
                                 </div>
                             </div>
@@ -278,28 +286,28 @@
             var password = $('#r-password').val();
             var code = $('#code').val();
             if (code == '' || code == null) {
-                alertTips("#code","请输入动态码");
+                alertTips("#code", "请输入动态码");
                 return false;
             }
-            if(user == '' || user == null){
-                alertTips("#r-phone","请输入手机号");
+            if (user == '' || user == null) {
+                alertTips("#r-phone", "请输入手机号");
                 return false;
             }
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (!reg.test(user)) {
-                alertTips("#r-phone","手机号码有误");
+                alertTips("#r-phone", "手机号码有误");
                 return false;
             }
-            if(password == '' || password == null){
-                alertTips("#r-password","请输入密码");
+            if (password == '' || password == null) {
+                alertTips("#r-password", "请输入密码");
                 return false;
             }
-            if(password.length < 6 || password.length >21){
-                alertTips("#r-password","密码长度限制6~21位");
+            if (password.length < 6 || password.length > 21) {
+                alertTips("#r-password", "密码长度限制6~21位");
                 return false;
             }
             password = hex_md5(password);
-            layer.load(3,{time: 2000});
+            layer.load(3, {time: 2000});
             $.ajax({
                 url: register_url,
                 type: 'post',
@@ -307,10 +315,10 @@
                 data: {smsCode: hex_md5(code), phone: user, password: password},
                 success: function (result) {
                     if (result.status == 1) {
-                        layer.msg(result.info,{time: 3000});
-                        setTimeout(function(){
+                        layer.msg(result.info, {time: 3000});
+                        setTimeout(function () {
                             window.location.href = login_url;
-                        },3000);
+                        }, 3000);
                     } else if (result.status == 0) {
                         layer.alert(result.info, {icon: 6});
                     }
@@ -326,7 +334,7 @@
             var password = $('#password').val();
             var code = $('#verify').val();
             if (code == '' || code == null) {
-                alertTips("#verify","请输入验证码");
+                alertTips("#verify", "请输入验证码");
                 return false;
             }
 
@@ -336,24 +344,24 @@
                     var phone = user;
                 } else {
 //                    layer.alert("手机号码有误");
-                    alertTips('#user',"手机号码有误");
+                    alertTips('#user', "手机号码有误");
                     return false;
                 }
             } else {
                 if (user == "" || user == null) {
 //                    layer.alert("请输入账号");
-                    alertTips('#user',"请输入账号");
+                    alertTips('#user', "请输入账号");
                     return false;
                 }
                 var username = user;
             }
-            if(password == '' || password == null){
-                alertTips("#password",'请输入密码');
+            if (password == '' || password == null) {
+                alertTips("#password", '请输入密码');
                 return false;
             }
             var userTag = 'author';
             password = hex_md5(password);
-            layer.load(3,{time: 2000});
+            layer.load(3, {time: 2000});
             $.ajax({
                 url: login_url,
                 type: 'post',
@@ -380,24 +388,24 @@
             var verify = $("#new-password").val();
             var code = $('#gcode').val();
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
-            if(phone == '' || phone == null){
-                alertTips("#new-user",'请输入手机号');
+            if (phone == '' || phone == null) {
+                alertTips("#new-user", '请输入手机号');
                 return false;
             }
             if (!reg.test(phone)) {
-                alertTips("#new-user",'手机号码有误');
+                alertTips("#new-user", '手机号码有误');
                 return false;
             }
             if (verify == '' || verify == null) {
-                alertTips("#new-password",'请输入验证码');
+                alertTips("#new-password", '请输入验证码');
                 return false;
             }
             if (code == '' || code == null) {
-                alertTips("#gcode",'请输入动态码');
+                alertTips("#gcode", '请输入动态码');
                 return false;
             }
             if (phone != '' && verify != '' && code != '') {
-                layer.load(3,{time: 2000});
+                layer.load(3, {time: 2000});
                 $.ajax({
                     url: verifySms_url,
                     type: 'post',
@@ -406,9 +414,9 @@
                     success: function (result) {
                         if (result.status == 1) {
                             layer.msg(' 正 在 跳 转...');
-                            setTimeout(function(){
+                            setTimeout(function () {
                                 window.location.href = home_url;
-                            },2000)
+                            }, 2000)
                         } else if (result.status == 0) {
                             layer.alert(result.info, {icon: 6});
                             return false;
@@ -421,36 +429,36 @@
             }
         });
 
-        //笔者注册验证验证码
-        $("#r-verify").on('blur',function(){
-            var code = $('#r-verify').val();
-            if(code == null || code == ''){
-                return false;
-            }else{
-                verifyCode(code,this,"#img");
-            }
-        });
+//        //笔者注册验证验证码
+//        $("#r-verify").on('blur', function () {
+//            var code = $('#r-verify').val();
+//            if (code == null || code == '') {
+//                return false;
+//            } else {
+//                verifyCode(code, this, "#img");
+//            }
+//        });
 
-        //笔者登录验证验证码
-        $("#verify").on('blur',function(){
-            var code = $('#verify').val();
-            if(code == null || code == ''){
-                return false;
-            }else{
-                verifyCode(code,this,"#img2");
-            }
-        });
+//        //笔者登录验证验证码
+//        $("#verify").on('blur', function () {
+//            var code = $('#verify').val();
+//            if (code == null || code == '') {
+//                return false;
+//            } else {
+//                verifyCode(code, this, "#img2");
+//            }
+//        });
 
-        //管理员登录验证验证码
-        $("#r-verify1").on('blur',function(){
-            var code = $('#r-verify1').val();
-//            alert(code);
-            if(code == null || code == ''){
-                return false;
-            }else{
-                verifyCode(code,this,"#img3");
-            }
-        });
+//        //管理员登录验证验证码
+//        $("#r-verify1").on('blur', function () {
+//            var code = $('#r-verify1').val();
+////            alert(code);
+//            if (code == null || code == '') {
+//                return false;
+//            } else {
+//                verifyCode(code, this, "#img3");
+//            }
+//        });
 
         //发送短信动态码(笔者注册)
         $("#getSmsId").on('click', function () {
@@ -460,27 +468,27 @@
             var code = $("#code").val();
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (phone == '' || phone == null) {
-                alertTips('#r-phone','请输入手机号');
+                alertTips('#r-phone', '请输入手机号');
                 return false;
             }
             if (!reg.test(phone)) {
-                alertTips('#r-phone','手机号码有误');
+                alertTips('#r-phone', '手机号码有误');
                 return false;
             }
-            if(password == '' || password == null){
-                alertTips('#r-password','请输入密码');
+            if (password == '' || password == null) {
+                alertTips('#r-password', '请输入密码');
                 return false;
             }
-            if(password.length < 6 || password.length >21){
-                alertTips('#r-password','密码长度限制6~21位');
+            if (password.length < 6 || password.length > 21) {
+                alertTips('#r-password', '密码长度限制6~21位');
                 return false;
             }
             if (verify == '' || verify == null) {
-                alertTips('#r-verify','请输入验证码');
+                alertTips('#r-verify', '请输入验证码');
                 return false;
             }
             if (phone != '' && verify != '') {
-                sendSms(phone,'author');
+                sendSms(phone, 'author');
             }
         });
 
@@ -490,32 +498,35 @@
             var verify = $("#r-verify1").val();
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (phone == '' || phone == null) {
-                alertTips('#new-user','请输入手机号');
+                alertTips('#new-user', '请输入手机号');
                 return false;
             }
             if (!reg.test(phone)) {
-                alertTips('#new-user','手机号码有误');
+                alertTips('#new-user', '手机号码有误');
                 return false;
             }
             if (verify == '' || verify == null) {
-                alertTips('#r-verify1','请输入验证码');
+                alertTips('#r-verify1', '请输入验证码');
                 return false;
             }
+            if(verify != ''){
+                verifyCode(verify,"#r_verify1","#img3")
+            }
             if (phone != '' && verify != '') {
-                countDown(this,'getSmsBtn');
-                sendSms(phone,'admin');
+                sendSms(phone, 'admin');
+                countDown(this, 'getSmsBtn');
             }
         });
 
         //提示统一接口
-        function alertTips(id,info){
-            var erorr='<div class="passport-note passport-error-text"><span>'+info+'</span></div>';
+        function alertTips(id, info) {
+            var erorr = '<div class="passport-note passport-error-text"><span>' + info + '</span></div>';
             $(id).parent().addClass("has-error");
             $(id).after(erorr);
         }
 
         //发送动态码统一接口
-        function sendSms(phone,tag) {
+        function sendSms(phone, tag) {
             if (phone != '' && phone != null) {
                 $.ajax({
                     url: getSms_url,
@@ -539,27 +550,26 @@
         }
 
         //验证码验证统一接口
-        function verifyCode(code,id,img){
+        function verifyCode(code, id, img) {
             var captcha_img = $(img);
             var verifyImg = captcha_img.attr("src");
-            if(code != '' && code != null){
+            if (code != '' && code != null) {
                 $.ajax({
                     url: verifyCode_url,
                     type: 'post',
                     dataType: 'json',
                     data: {code: code},
-                    success: function(result){
+                    success: function (result) {
                         if (result.status == 1) {
                             return false;
                         } else if (result.status == 0) {
-                            var erorr='<div class="passport-note passport-error-text"><span>'+result.info+'</span></div>';
+                            var erorr = '<div class="passport-note passport-error-text"><span>' + result.info + '</span></div>';
                             $(id).parent().addClass("has-error");
                             $(id).after(erorr);
-//                            var verifyImg = $(id).attr('src');
                             $(img).attr("src", verifyImg + '&rand=' + Math.random());
                             return false;
                         }
-                    },error: function(){
+                    }, error: function () {
                         layer.alert(' 小 编 抢 修 网 络 Ing...', {time: 3000});
                         return false;
                     }
@@ -568,21 +578,24 @@
         }
 
         //倒计时统一接口
-        function countDown(id,name){
-            $(id).attr('disabled','true');
+        function countDown(id, name) {
+            $(id).attr('disabled', 'true');
             $(id).addClass("disabled");
-            var myVar=setInterval(function(){myTimer()},1000);
-            var a=0;
-            function myTimer(){
-                var add=60-a;
-                var string= "<span style='color: #35B558; font-size: 14px'>"+add+"s</span>";
-                document.getElementById(name).innerHTML=string;
+            var myVar = setInterval(function () {
+                myTimer()
+            }, 1000);
+            var a = 0;
+
+            function myTimer() {
+                var add = 60 - a;
+                var string = "<span style='color: #35B558; font-size: 14px'>" + add + "s</span>";
+                document.getElementById(name).innerHTML = string;
                 a++;
-                if(a==61){
+                if (a == 61) {
                     clearInterval(myVar);
                     $(id).removeClass("disabled");
-                    $(id).attr("disabled",false);
-                    document.getElementById(name).innerHTML="重新获取";
+                    $(id).attr("disabled", false);
+                    document.getElementById(name).innerHTML = "重新获取";
                 }
             }
         }
@@ -590,7 +603,7 @@
     });
 
     //点击刷新验证码统一接口
-    function clickVerify(id){
+    function clickVerify(id) {
         var verifyImg = $(id).attr("src");
         $(id).attr('title', '点击刷新');
         if (verifyImg.indexOf('?') > 0) {
