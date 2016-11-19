@@ -9088,3 +9088,1210 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002216s ]
 INFO: [ app_end ] --END-- [ RunTime:0.002342s ]
 
+[ 2016-11-19T07:49:20+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000495s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000616s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000166s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013028s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013097s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000757s ]
+
+[ 2016-11-19T07:49:22+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/all/thesis-classify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000626s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001659s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001794s ]
+ERR: 无法加载控制器:All
+
+[ 2016-11-19T07:49:38+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Person/account.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000564s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `art_users` [ RunTime:0.0216s ]
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+SQL: SELECT * FROM `art_users` WHERE `uid` = 'K0MuKDM2' LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000606s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000860s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\WWW\newSpaperSystem\Runtime\Cache\Home\e89d9ff15911cf8f7c5734be3c78d31f.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065235s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001638s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001827s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003849s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004971s ]
+
+[ 2016-11-19T07:49:48+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Person/message.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001655s ]
+SQL: SHOW COLUMNS FROM `art_users` [ RunTime:0.0335s ]
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+SQL: SELECT * FROM `art_users` WHERE `uid` = 'K0MuKDM2' LIMIT 1   [ RunTime:0.0016s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000330s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000548s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\WWW\newSpaperSystem\Runtime\Cache\Home\0469a47e4758293952b47ef6bb36e784.php 第 21 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042225s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001879s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002070s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004359s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011464s ]
+
+[ 2016-11-19T07:49:53+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Person/account.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000494s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000721s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000792s ]
+SQL: SHOW COLUMNS FROM `art_users` [ RunTime:0.0144s ]
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+SQL: SELECT * FROM `art_users` WHERE `uid` = 'K0MuKDM2' LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000768s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001056s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\WWW\newSpaperSystem\Runtime\Cache\Home\e89d9ff15911cf8f7c5734be3c78d31f.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067466s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067939s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002454s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002648s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.013477s ]
+INFO: [ app_end ] --END-- [ RunTime:0.014969s ]
+
+[ 2016-11-19T07:49:57+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Person/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000052s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001703s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002670s ]
+SQL: SHOW COLUMNS FROM `art_users` [ RunTime:0.0158s ]
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+SQL: SELECT * FROM `art_users` WHERE `uid` = 'K0MuKDM2' LIMIT 1   [ RunTime:0.0015s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000263s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000488s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036395s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002905s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003123s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003861s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004218s ]
+
+[ 2016-11-19T07:50:01+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000742s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001193s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000184s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014779s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014853s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000624s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000681s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000864s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000946s ]
+
+[ 2016-11-19T07:50:08+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Person/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000850s ]
+SQL: SHOW COLUMNS FROM `art_users` [ RunTime:0.0164s ]
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+SQL: SELECT * FROM `art_users` WHERE `uid` = 'K0MuKDM2' LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000472s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000821s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039832s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040056s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001610s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001883s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004101s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004476s ]
+
+[ 2016-11-19T07:50:21+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Person/message.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000780s ]
+SQL: SHOW COLUMNS FROM `art_users` [ RunTime:0.0159s ]
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+SQL: SELECT * FROM `art_users` WHERE `uid` = 'K0MuKDM2' LIMIT 1   [ RunTime:0.0013s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000330s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000573s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\WWW\newSpaperSystem\Runtime\Cache\Home\0469a47e4758293952b47ef6bb36e784.php 第 21 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.039067s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.039307s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001734s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001918s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003219s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003504s ]
+
+[ 2016-11-19T08:00:40+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Person/message.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000027s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000714s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000726s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+SQL: SHOW COLUMNS FROM `art_users` [ RunTime:0.0165s ]
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+NOTIC: [8] Undefined index: Person D:\WWW\newSpaperSystem\ThinkPHP\Library\Think\Db\Driver\Mysql.class.php 第 67 行.
+SQL: SELECT * FROM `art_users` WHERE `uid` = 'K0MuKDM2' LIMIT 1   [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000207s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+NOTIC: [8] Use of undefined constant admin - assumed 'admin' D:\WWW\newSpaperSystem\Runtime\Cache\Home\0469a47e4758293952b47ef6bb36e784.php 第 21 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033851s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034016s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001280s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001471s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002055s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002200s ]
+
+[ 2016-11-19T08:00:42+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000177s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000254s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016158s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000559s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000617s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000886s ]
+
+[ 2016-11-19T08:00:44+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesis-classify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000540s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000802s ]
+
+[ 2016-11-19T08:04:49+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesis-classify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+ERR: 非法操作:thesis-classify
+
+[ 2016-11-19T08:05:08+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesis-classify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000595s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002050s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002200s ]
+ERR: 非法操作:thesis-classify
+
+[ 2016-11-19T08:07:34+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000948s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001080s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000247s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014694s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000616s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002687s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002812s ]
+
+[ 2016-11-19T08:07:36+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000056s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000646s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000737s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067201s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001814s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002033s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004443s ]
+
+[ 2016-11-19T08:09:30+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000066s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000190s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000805s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000896s ]
+
+[ 2016-11-19T08:22:00+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000061s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000752s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000796s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000892s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015283s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015357s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000810s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000899s ]
+
+[ 2016-11-19T08:22:02+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000757s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.135476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.135692s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002096s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002401s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003126s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003393s ]
+
+[ 2016-11-19T08:22:05+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001489s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016517s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016599s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000547s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000762s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000843s ]
+
+[ 2016-11-19T08:22:08+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000232s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013868s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013952s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000650s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000718s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001147s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001257s ]
+
+[ 2016-11-19T08:22:11+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000695s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000256s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013910s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013982s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000801s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000908s ]
+
+[ 2016-11-19T08:22:26+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000802s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001980s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002230s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001504s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025833s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025912s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001987s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002151s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.009571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.010085s ]
+
+[ 2016-11-19T08:22:59+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000799s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000176s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000253s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013715s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013790s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000571s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000803s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000887s ]
+
+[ 2016-11-19T08:25:11+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000907s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000986s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000268s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014373s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000733s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000798s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001534s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001658s ]
+
+[ 2016-11-19T08:25:23+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000967s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003799s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003917s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000288s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.038829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038956s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002460s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002934s ]
+
+[ 2016-11-19T08:28:07+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001144s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001300s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000193s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014844s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000637s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001009s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001088s ]
+
+[ 2016-11-19T08:28:08+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000552s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000886s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000183s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000271s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014835s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000526s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001029s ]
+
+[ 2016-11-19T08:28:09+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001114s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000388s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000724s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.025772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025883s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000881s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001665s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001061s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001372s ]
+
+[ 2016-11-19T08:28:12+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000561s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000743s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012561s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012664s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000581s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001067s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001207s ]
+
+[ 2016-11-19T08:30:22+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000995s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001102s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000096s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000175s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013176s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013385s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000666s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000749s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000927s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001005s ]
+
+[ 2016-11-19T08:30:25+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000533s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000784s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000261s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015532s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015611s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000653s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001704s ]
+
+[ 2016-11-19T08:30:26+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012696s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012772s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000625s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000697s ]
+
+[ 2016-11-19T08:30:29+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000542s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000823s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000093s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012394s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012472s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000683s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001167s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001483s ]
+
+[ 2016-11-19T08:33:03+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000661s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000727s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011799s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000907s ]
+
+[ 2016-11-19T08:33:10+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001288s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001406s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000199s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013401s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013516s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000539s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000614s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001778s ]
+
+[ 2016-11-19T08:33:14+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisclassify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000545s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000653s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000162s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000234s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016343s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002179s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002370s ]
+
+[ 2016-11-19T08:33:16+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000554s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000781s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012115s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012191s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000601s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001065s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001164s ]
+
+[ 2016-11-19T08:38:27+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000040s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001363s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000858s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000132s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000230s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012151s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012236s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000861s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000931s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000868s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000969s ]
+
+[ 2016-11-19T08:39:01+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000883s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001202s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001381s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000099s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012685s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012783s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000967s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001090s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001118s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001238s ]
+
+[ 2016-11-19T08:41:54+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000837s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000215s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000338s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013730s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013810s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000565s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000623s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000965s ]
+
+[ 2016-11-19T08:42:51+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000030s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000876s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000781s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012539s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012615s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000498s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000555s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000903s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001004s ]
+
+[ 2016-11-19T08:44:44+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000770s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000838s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000248s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012860s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012942s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000641s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001283s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001423s ]
+
+[ 2016-11-19T08:45:19+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000036s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000725s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000844s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000155s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000284s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012175s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012262s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000541s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000930s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001016s ]
+
+[ 2016-11-19T08:46:30+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000970s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000790s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000893s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011992s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000496s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000929s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001020s ]
+
+[ 2016-11-19T08:47:43+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000570s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000827s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000897s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000097s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012914s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012990s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000671s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001103s ]
+
+[ 2016-11-19T08:49:16+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001134s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001530s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000079s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012886s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000776s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000840s ]
+
+[ 2016-11-19T08:49:57+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000692s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000792s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000863s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000167s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012484s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000672s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000733s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000971s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001067s ]
+
+[ 2016-11-19T08:50:29+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000588s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000858s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000960s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011797s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000901s ]
+
+[ 2016-11-19T08:51:14+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001164s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001381s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000086s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010546s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010645s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000754s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001140s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000972s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001093s ]
+
+[ 2016-11-19T08:51:22+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000615s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000980s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000104s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012986s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000629s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000912s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000997s ]
+
+[ 2016-11-19T08:51:36+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000580s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000776s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000848s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000103s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013338s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013418s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001238s ]
+
+[ 2016-11-19T08:51:49+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000593s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001136s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001248s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000227s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012547s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012627s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000572s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000628s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000995s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001095s ]
+
+[ 2016-11-19T08:52:34+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000690s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000779s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000111s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000240s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012172s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012251s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000567s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000625s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001004s ]
+
+[ 2016-11-19T08:52:43+08:00 ] ::1 /newSpaperSystem/index.php?s=/Home/All/thesisshow.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001081s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001191s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000128s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000231s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015916s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016037s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000773s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004760s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004893s ]
+

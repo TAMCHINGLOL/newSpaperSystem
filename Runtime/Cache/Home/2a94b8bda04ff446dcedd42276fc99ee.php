@@ -15,7 +15,7 @@
         <nav>
             <ul class="header-nav">
                 <li><a href="<?php echo U('Home/Index/index');?>" style="color: rgb(53, 181, 88);">首页</a></li>
-                <li><a href="<?php echo U('Home/all/thesis-classify');?>">论文分类<i class="arrow-icon"></i></a>
+                <li><a href="<?php echo U('Home/All/thesisclassify');?>">论文分类<i class="arrow-icon"></i></a>
                     <div class="submenu school-list">
                         <h3>前端学院</h3>
                         <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
