@@ -1744,3 +1744,15 @@ INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
 INFO: [ app_init ] --END-- [ RunTime:0.000888s ]
 ERR: 无法加载模块:Application
 
+[ 2016-11-19T08:54:23+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.woff?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000617s ]
+ERR: 无法加载模块:Application
+
+[ 2016-11-19T08:54:23+08:00 ] ::1 /newSpaperSystem/Application/Home/View/public/css/fonts/zenicon.ttf?v=2.2.0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000655s ]
+ERR: 无法加载模块:Application
+
