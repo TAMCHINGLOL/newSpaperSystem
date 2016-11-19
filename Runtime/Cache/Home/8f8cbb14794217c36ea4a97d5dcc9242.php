@@ -451,9 +451,9 @@
 </div>
 <!--底部结束-->
 
-<script type='text/javascript' src='../js/jquery.1.7.2.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='../js/zui.min.js' charset='utf-8'></script>
-<script type='text/javascript' src='../js/login.js' charset='utf-8'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/jquery.1.7.2.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/login.js' charset='utf-8'></script>
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#search-btn").click(function(){
