@@ -11,6 +11,9 @@
     <!--<link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">-->
 </head>
 <style type="text/css">
+<<<<<<< HEAD
+
+=======
     .body-back {
         background: url(/term/newSpaperSystem/Application/Home/View/public/img/rebc.gif) repeat;
     }
@@ -63,6 +66,7 @@
     .passport-header {
         margin-bottom: 30px;
     }
+>>>>>>> origin/master
 </style>
 <body class="body-back">
 <header id="header" class="passport-header">

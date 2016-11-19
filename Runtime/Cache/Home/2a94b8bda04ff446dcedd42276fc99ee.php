@@ -4,33 +4,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>首页</title>
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
-    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
 </head>
 <body class="body-color">
 <div class="header">
     <div class="centent">
-        <a class="logo-img" href="<?php echo U('Home/Index/index');?>"><img class="pull-left" src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
+        <a class="logo-img" href="<?php echo U('Home/Index/index');?>"><img class="pull-left" src="/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
         <nav>
             <ul class="header-nav">
                 <li><a href="<?php echo U('Home/Index/index');?>" style="color: rgb(53, 181, 88);">首页</a></li>
-                <li>
-                    <?php if(session('sys_tag') == admin): ?>审核文章
-                        <?php else: ?>投递文章<?php endif; ?>
-                </li>
-                <li>分类浏览<i class="arrow-icon"></i>
+                <li><a href="<?php echo U('Home/All/thesisclassify');?>">论文分类<i class="arrow-icon"></i></a>
                     <div class="submenu school-list">
                         <h3>前端学院</h3>
-                        <a href="http://www.jikexueyuan.com/zhiye/web"><i class="web-icon"></i>Web 前端工程师</a>
+                        <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
                         <h3>后端学院</h3>
-                        <a href="http://www.jikexueyuan.com/zhiye/python"><i class="python-icon"></i>Python Web工程师</a>
-                        <a href="http://www.jikexueyuan.com/zhiye/go"><i class="go-icon"></i>Go语言工程师</a>
+                        <a href="#"><i class="python-icon"></i>Python Web工程师</a>
+                        <a href="#"><i class="go-icon"></i>Go语言工程师</a>
                         <h3>移动学院</h3>
-                        <a href="http://www.jikexueyuan.com/zhiye/ios"><i class="ios-icon"></i>iOS工程师</a>
+                        <a href="#"><i class="ios-icon"></i>iOS工程师</a>
                     </div>
                 </li>
-
+                <li>论文投递</li>
                 <li>社区</li>
             </ul>
         </nav>
@@ -39,7 +35,7 @@
                 <?php if(session('uid') == ''): ?><span class="relative loginlist login-icon" id="loginlist">
                     <?php else: ?>
                     <span class="relative loginlist" id="loginlist">
-                    <img src="/term/newSpaperSystem/Application/Home/View/public/img/default.gif" style="height: 25px;width: 25px;margin-bottom: 54px"><?php endif; ?>
+                    <img src="/newSpaperSystem/Application/Home/View/public/img/default.gif" style="height: 25px;width: 25px;margin-bottom: 54px"><?php endif; ?>
                     <dl class="submenu"><i class="top-icon"></i>
                         <dd>
                             <?php if(session('uid') == ''): ?><a href="<?php echo U('Home/Login/register');?>" class="reg-btn">注册</a>|<a href="<?php echo U('Home/Login/index');?>" class="login-btn">登录</a><?php endif; ?>
@@ -495,11 +491,11 @@
 </div>
 <!--底部结束-->
 
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/zui.min.js'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/login.js'></script>
-<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
-<!--<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>-->
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/zui.min.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/login.js'></script>
+<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
+<!--<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>-->
 <script type="text/javascript">
     $(document).ready(function () {
         $("#search-btn").click(function () {
@@ -514,13 +510,13 @@
 
 
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
 <![endif]-->
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
 <![endif]-->
 <!--[if lt IE 9]>
-<script type='text/javascript' src="/term/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
+<script type='text/javascript' src="/newSpaperSystem/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
 <![endif]-->
 </body>
 </html>
