@@ -24,5 +24,12 @@ class WriterController extends Controller {
     public function addthesis(){
         $this->display();
     }
-
+    
+    /**
+     *加载添加论文
+     */
+    public function new_file(){
+        $this->display();
+    }
+    
 }
