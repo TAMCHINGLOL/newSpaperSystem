@@ -494,7 +494,7 @@ ul.story .story-info span {
     min-width: 1000px;
     border-top: 1px solid #e4e4e4;
     background: #fff;
-        position: absolute;
+    position: absolute;
     width: 100%;
 }
 #footer .jkinfor-block {
@@ -730,6 +730,7 @@ ul.story .story-info span {
 #learn-course-missing {
     position: relative;
     height: 515px;
+    display: inline-block;
 }
 #learn-course-missing img {
     position: relative;
@@ -1022,6 +1023,12 @@ button, input, optgroup, option, select, textarea {
     border: 1px solid #35b558;
     border-radius: 2px;
 }
+.gray-btn {
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    border-radius: 2px;
+    color:#999999 !important;
+}
 #warning, .cancel-btn, .gray-btn, .green-btn, .orange-btn {
     text-align: center;
 }
@@ -1139,8 +1146,7 @@ button, input, optgroup, option, select, textarea {
     color: #ff5c00;
 }
 .form-setting {
-/*    min-height: 260px;*/
-    padding: 23px 0;
+    padding-top: 23px;
     color: #666;
     font-size: 12px;
 }

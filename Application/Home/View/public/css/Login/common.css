@@ -70,25 +70,39 @@ h1, h2, h3, h4, h5, h6 {
 .fl{float: left;}
 .fr{float: right;}
 .txt-center{text-align: center;}
+.txt-right{text-align: right;}
 .width50{width: 50%;}
 .width{width: 100%;}
 .margin-rl-10{margin: 0 10px;}
-.mar-t50 {
-    margin-top: 50px!important;
-}
-.mar-t20{
-    margin-top: 20px!important;
-}
-.bottom-50{
-    bottom: -50px!important;
-}
+.mar-t50 {margin-top: 50px!important;}
+.mar-t20{margin-top: 20px!important;}
+.bottom-50{bottom: -50px!important;}
 .pad-rl-10{padding: 0 10px;}
 .error-color{border-color: #ff5c00;}
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    height: 55px;
+}
+.item-content .media img {
+    height: 60px;
+}
 /*按钮*/
 .btn-login {color: #fff;text-shadow: 0 -1px 0 rgba(0,0,0,.2);background-color: #35b558;border-color: #35b558;}
 .btn-login:hover,.btn-login:focus,.btn.active, .btn:active, .open .dropdown-toggle.btn{color: #fff !important;text-shadow: 0 -1px 0 rgba(0,0,0,.2) !important;background-color: #51cc73 !important;border-color: #51cc73 !important;}
 .btn:focus {outline: none;}
 .del{/*display:none;*/width: 23px;background: url(../img/close.png) no-repeat center right;margin-right: 5px;}
+.btn-operate{margin: 20px 0;display: inline-block;font-size:18px;padding: 5px 10px;color: #35b558;border: 1px solid #35b558;border-radius: 5px;opacity: 1.0;}
+.btn-operate:hover{opacity: 0.8;}
+.tip button {
+    width: 50px;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 20px;
+}
 /*选显卡*/
 .nav-tabs>li>a {
     border: none;
