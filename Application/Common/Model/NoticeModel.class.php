@@ -7,7 +7,7 @@
  * @Description: 描述
  */
 
-namespace Admin\Model;
+namespace Common\Model;
 
 
 use Think\Model;
