@@ -5,40 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>登录</title>
-    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
-    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
-    <link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
-    <!--<link rel="stylesheet" href="/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">-->
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/zui.min.css">
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/login.css">
+    <!--<link rel="stylesheet" href="/term/newSpaperSystem/Application/Home/View/public/css/Login/datetimepicker.css">-->
 </head>
-<<<<<<< HEAD
-=======
 <style type="text/css">
     .body-back {
-        background: url(/newSpaperSystem/Application/Home/View/public/img/rebc.gif) repeat;
+        background: url(/term/newSpaperSystem/Application/Home/View/public/img/rebc.gif) repeat;
     }
 
     .qq {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/QQ1.png);
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/QQ1.png);
     }
 
     .weixin {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weixin1.png);
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weixin1.png);
     }
 
     .weibo {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weibo1.png);
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weibo1.png);
     }
 
     .qq:hover {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/QQ.png);
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/QQ.png);
     }
 
     .weixin:hover {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weixin.png);
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weixin.png);
     }
 
     .weibo:hover {
-        background-image: url(/newSpaperSystem/Application/Home/View/public/img/weibo.png);
+        background-image: url(/term/newSpaperSystem/Application/Home/View/public/img/weibo.png);
     }
 
     .numberBtn {
@@ -70,12 +68,11 @@
         margin-bottom: 30px;
     }
 </style>
->>>>>>> origin/master
 <body class="body-back">
 <header id="header" class="passport-header">
     <!--<div id="logo122">-->
     <!--<a href="<?php echo U('Home/Index/index');?>" jktag="0001|0.1|91006">-->
-    <!--<img src="/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
+    <!--<img src="/term/newSpaperSystem/Application/Home/View/public/img/logo2.png" width="220px" height="70px">-->
     <!--</a>-->
     <!--</div>-->
 </header>
@@ -270,11 +267,11 @@
         </div>
     </div>
 </div>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/zui.min.js'></script>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/Login/login.js'></script>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
-<script type='text/javascript' src='/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/zui.min.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/Login/login.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/layer/layer.js'></script>
+<script type='text/javascript' src='/term/newSpaperSystem/Application/Home/View/public/js/md5/md5.js'></script>
 <script type="text/javascript">
     var login_url = "<?php echo U('Home/Login/login','',false);?>";
     var getSms_url = "<?php echo U('Home/Login/getSms','',false);?>";
