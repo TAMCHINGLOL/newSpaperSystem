@@ -146,7 +146,10 @@ a{cursor: pointer}
     float: left;
     line-height: 60px;
 }
-.header .header-nav li:hover{
+.header .header-nav li a{
+    color: #333333;
+}
+.header .header-nav li a:hover,.header .header-nav li a.active{
     color: #35b558;
     cursor: pointer;
 }
@@ -494,7 +497,7 @@ ul.story .story-info span {
     min-width: 1000px;
     border-top: 1px solid #e4e4e4;
     background: #fff;
-        position: absolute;
+    position: absolute;
     width: 100%;
 }
 #footer .jkinfor-block {
@@ -730,6 +733,7 @@ ul.story .story-info span {
 #learn-course-missing {
     position: relative;
     height: 515px;
+    display: inline-block;
 }
 #learn-course-missing img {
     position: relative;
@@ -827,6 +831,7 @@ ul.story .story-info span {
     margin-left: 240px;
     border: 1px solid #e4e4e4;
 }
+/*评论*/
 .common-head>.edit-data:hover {
     color: #fff;
     background-color: #35b558;
@@ -847,13 +852,15 @@ ul.story .story-info span {
     background-color: #fff;
     transition: background-color .5s,color .5s;
 }
+.comments>footer>.reply-form>.avatar+.form {
+    margin-bottom: 10px;
+}
+.comment {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: none;
+}
 .common-data p .local {
     padding-left: 40px;
-}
-.main {
-    width: 760px;
-    margin-left: 240px;
-    border: 1px solid #e4e4e4;
 }
 .main, .popup {
     background-color: #fff;
@@ -1022,6 +1029,12 @@ button, input, optgroup, option, select, textarea {
     border: 1px solid #35b558;
     border-radius: 2px;
 }
+.gray-btn {
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+    border-radius: 2px;
+    color:#999999 !important;
+}
 #warning, .cancel-btn, .gray-btn, .green-btn, .orange-btn {
     text-align: center;
 }
@@ -1139,8 +1152,7 @@ button, input, optgroup, option, select, textarea {
     color: #ff5c00;
 }
 .form-setting {
-/*    min-height: 260px;*/
-    padding: 23px 0;
+    padding-top: 23px;
     color: #666;
     font-size: 12px;
 }

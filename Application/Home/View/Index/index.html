@@ -14,7 +14,7 @@
         <a class="logo-img" href="{:U('Home/Index/index')}"><img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
         <nav>
             <ul class="header-nav">
-                <li><a href="{:U('Home/Index/index')}" style="color: rgb(53, 181, 88);">首页</a></li>
+                <li><a href="{:U('Home/Index/index')}" class="active">首页</a></li>
                 <li><a href="{:U('Home/All/thesisclassify')}">论文分类<i class="arrow-icon"></i></a>
                     <div class="submenu school-list">
                         <h3>前端学院</h3>
@@ -26,12 +26,14 @@
                         <a href="#"><i class="ios-icon"></i>iOS工程师</a>
                     </div>
                 </li>
-                <li>论文投递</li>
+                <li><a href="{:U('Home/Writer/mythesis')}">论文投递</a></li>
+                <li><a href="{:U('Home/Approval/approvalfirst')}">一级审核</a></li>
+                <li><a href="{:U('Home/Approval/approvalsecond')}">二级审核</a></li>
                 <li>社区</li>
             </ul>
         </nav>
         <div class="icon-box">
-            <span class="search-icon" id="search-btn"></span>
+            <span class="search-icon" id="search-btn" onclick="searchBtn()"></span>
                 <if condition="session('uid') eq ''">
                     <span class="relative loginlist login-icon" id="loginlist">
                     <else/>
@@ -54,7 +56,7 @@
                 </span>
         </div>
         <div class="searchbox" id="searchbox">
-            <i class="close-icon" id="close-btn"></i>
+            <i class="close-icon" id="close-btn" onclick="closeBtn(this)"></i>
             <i class="search-icon" id="search-btn"></i>
             <input id="web_search_header" placeholder="搜索文章 / 问答" value="" />
         </div>
@@ -503,15 +505,12 @@
 <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/layer/layer.js'></script>
 <!--<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/md5/md5.js'></script>-->
 <script type="text/javascript">
-    $(document).ready(function () {
-        $("#search-btn").click(function () {
-            $("#searchbox").addClass("scale");
-        });
-        $("#close-btn").click(function () {
-            $("#searchbox").removeClass("scale");
-        });
-
-    });
+     function searchBtn(){
+        $("#searchbox").addClass("scale");//开启搜索框
+    }
+    function closeBtn(c){
+        $(c).parent().removeClass("scale");//关闭搜索框
+    }
 </script>
 
 

@@ -2,19 +2,19 @@
 namespace Home\Controller;
 use Think\Controller;
 
-class AllController extends Controller {
+class ApprovalController extends Controller {
 
     /**
      *加载论文分类
      */
-    public function thesisclassify(){
+    public function approvalfirst(){
         $this->display();
     }
 
     /**
      *加载论文展示
      */
-    public function thesisshow(){
+    public function approvalsecond(){
         $this->display();
     }
 

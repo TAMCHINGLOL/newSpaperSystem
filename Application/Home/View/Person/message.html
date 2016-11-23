@@ -24,18 +24,17 @@
                         投递文章
                     </if>
                 </li>
-                <li>分类浏览<i class="arrow-icon"></i>
+                <li><a href="{:U('Home/All/thesisclassify')}">论文分类<i class="arrow-icon"></i></a>
                     <div class="submenu school-list">
                         <h3>前端学院</h3>
-                        <a href="http://www.jikexueyuan.com/zhiye/web"><i class="web-icon"></i>Web 前端工程师</a>
+                        <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
                         <h3>后端学院</h3>
-                        <a href="http://www.jikexueyuan.com/zhiye/python"><i class="python-icon"></i>Python Web工程师</a>
-                        <a href="http://www.jikexueyuan.com/zhiye/go"><i class="go-icon"></i>Go语言工程师</a>
+                        <a href="#"><i class="python-icon"></i>Python Web工程师</a>
+                        <a href="#"><i class="go-icon"></i>Go语言工程师</a>
                         <h3>移动学院</h3>
-                        <a href="http://www.jikexueyuan.com/zhiye/ios"><i class="ios-icon"></i>iOS工程师</a>
+                        <a href="#"><i class="ios-icon"></i>iOS工程师</a>
                     </div>
                 </li>
-
                 <li>社区</li>
             </ul>
         </nav>
@@ -269,15 +268,12 @@
 <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/login.js' charset='utf-8'></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $("#search-btn").click(function () {
-            $("#searchbox").addClass("scale");
-        });
-        $("#close-btn").click(function () {
-            $("#searchbox").removeClass("scale");
-        });
-
-    });
+     function searchBtn(){
+        $("#searchbox").addClass("scale");//开启搜索框
+    }
+    function closeBtn(c){
+        $(c).parent().removeClass("scale");//关闭搜索框
+    }
 </script>
 
 

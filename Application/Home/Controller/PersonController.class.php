@@ -16,6 +16,25 @@ use Think\Controller;
 class PersonController extends CommonController
 {
     /**
+     *加载账号安全页面
+     */
+    public function accountsafety()
+    {
+        $this->display();
+    }	
+    /**
+     *加载消息设置页面
+     */
+    public function messageset()
+    {
+        $this->display();
+    }		
+	
+	
+	
+	
+	
+    /**
      *加载个人主页页面
      */
     public function index()
