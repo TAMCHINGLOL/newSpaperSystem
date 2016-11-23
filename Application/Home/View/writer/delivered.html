@@ -1,20 +1,14 @@
-
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
-	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/js/edit-modal/themes/default/default.css">
-	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
-	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
-	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/edit.css">
-	    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/jquery.1.7.2.min.js' charset='utf-8'></script>
-	    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
-	    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/kindeditor-all-min.js' charset='utf-8'></script>
-	    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/lang/zh-CN.js' charset='utf-8'></script>
-
-	</head>
-	<body>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的论文</title>
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
+</head>
+<body>
     <div class="header">
         <div class="centent">
             <a class="logo-img"><img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
@@ -23,7 +17,7 @@
                     <li><a href="{:U('Home/Index/index')}" style="color: rgb(53, 181, 88);">首页</a></li>
                     <li>
                         <if condition="session('sys_tag') eq admin">
-                            	审核文章
+                            审核文章
                             <else/>投递文章
                         </if>
                     </li>
@@ -42,13 +36,14 @@
                 </ul>
             </nav>
             <div class="icon-box">
-                <span class="search-icon" id="search-btn"></span>
+                <span class="search-icon" id="search-btn" onclick="searchBtn(this)"></span>
                         <span class="relative loginlist login-icon" id="loginlist">
                             <dl class="submenu"><i class="top-icon"></i>
-                                <dd>
-                                    <a href="{:U('Home/Login/register')}" class="reg-btn">注册</a>|
-                                    <a href="{:U('Home/Login/index')}" class="login-btn">登录</a>
-                                </dd>
+		                        <dd>
+		                            <if condition="session('uid') eq ''">
+		                                <a href="{:U('Home/Login/register')}" class="reg-btn">注册</a>|<a href="{:U('Home/Login/index')}" class="login-btn">登录</a>
+		                            </if>
+		                        </dd>
                                 <dd><a href="{:U('Home/Person/index')}"><i class="grzy-icon"></i>个人主页</a></dd>
                                 <dd><a href="{:U('Home/Person/message')}"><i class="xxtz-icon"></i>消息通知</a></dd>
                                 <dd><a href="{:U('Home/Person/account')}"><i class="zhsz-icon"></i>账号设置</a></dd>
@@ -62,52 +57,59 @@
             </div>
         </div>
     </div>
-   	<div class="centent mar-t20">
-   		<div class="edit-box">
-   			<p class="edit-thesis">编辑论文</p>
-   			<textarea class="form-control kindeditor" name="content" style="height: 700px;">123123</textarea>
-			<p class="edit-number pull-right">
-				您当前输入了 <span class="word_count2">0</span> 个文字。
-			</p>
 
-			<form class="form-horizontal form-condensed edit-form ">
-			  <div class="form-group">
-			    <label for="exampleInputAccount4" class="col-sm-1">标&nbsp;&nbsp;&nbsp;&nbsp;签：</label>
-			    <div class="col-md-3 col-sm-10">
-			      <input type="text" class="form-control" id="exampleInputAccount4" placeholder="电子邮件/手机号/用户名">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="exampleInputPassword4" class="col-sm-1">分&nbsp;&nbsp;&nbsp;&nbsp;类：</label>
-			    <div class="col-md-3 col-sm-10">
-			      <input type="text" class="form-control" id="exampleInputPassword4" placeholder="密码">
-			    </div>
-			  </div>
-			  <div class="form-group">
-			    <label for="exampleInputAddress1" class="col-sm-1">投&nbsp;&nbsp;&nbsp;&nbsp;稿：</label>
-			    <div class="col-sm-3">
-			      <select class="form-control" id="exampleInputAddress1">
-			        <option>不投稿</option>
-			        <option>投稿</option>
-			      </select>
-			    </div>
-			  </div>
-			</form>
-			
-		
-			
-			<p>
-				<input type="button" name="getHtml" value="取得HTML" />
-				<input type="button" name="getText" value="取得文本(包含img,embed)" />
-				<br />
-				<br />
-				<input type="button" name="setHtml" value="设置HTML" />
-				<input type="button" name="setText" value="设置文本" />
-				<input type="button" name="clear" value="清空内容" />
-			</p>
-		</div>
-   	</div>
-   <!--底部-->
+    <div class="centent">
+        <div class="user-course">
+            <div class="course-nav" id="courseNav">
+                <a href="{:U('Home/Writer/mythesis')}" id="navHome">我的论文</a>
+                <a href="{:U('Home/Writer/delivered')}" id="navHome"  class="active" >已投递</a>
+                <a href="{:U('Home/Writer/nodeliver')}" id="navHome" >未投递</a>
+            </div>
+            <div class="user-course-content">
+                <div class="user-course-cont">
+                  <div id="learn-course-missing">
+ <!-- //无论文是显示                    	<img src="http://sm1.jikexueyuan.com/assets/images/empty/paizi-he-not-index-course.png" class="data-missing-bg">-->	
+			            <div class="txt-right">
+			            	<a class="btn-operate" href="{:U('Home/Writer/addthesis')}"><strong>+</strong>新增论文</a>
+			            </div>
+					  <div class="items">
+						<div class="item">
+						  <div class="item-heading">
+							<div class="pull-right"><span class="text-muted">2013-11-11 16:14:37</span> &nbsp; <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a></div>
+							<h4><a href="{:U('Home/All/thesisshow')}">我的论文</a></h4>
+						  </div>
+						  <div class="item-content">
+							<div class="text">HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
+						  </div>
+						  <div class="txt-right">
+							  <a class="margin-rl-10 label label-danger">已投递</a>
+						  </div>
+						</div>
+						<div class="item">
+						  <div class="item-heading">
+							<div class="pull-right"><span class="text-muted">2013-11-11 16:14:37</span> &nbsp; <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a></div>
+							<h4><a href="thesisshow.html">HTML5 发展历史</a></h4>
+						  </div>
+						  <div class="item-content">
+							<div class="text">HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
+						  </div>
+						  <div class="txt-right">
+							  <a class="margin-rl-10 label label-danger">已投递</a>
+						  </div>
+						</div>
+					  </div>
+                   </div>
+                </div>
+                <div class="user-side">
+                    <div class="user-visit-header"><h2>最近访客</h2></div>
+                    <div class="user-visit user-popBoxs-container">
+                        <div id="learn-data-missing"><img src="http://sm1.jikexueyuan.com/assets/images/empty/face-he-no-visit.png" class="data-missing-bg" alt="暂无访客"></div>													</div>
+                </div>
+            </div>
+        </div>
+    </div>		
+    	
+    <!--底部-->
     <div id="footer" class="mar-t50">
         <link rel="stylesheet" href="http://e.jikexueyuan.com/headerandfooter/css/footer.css?t=1475152597000">
         <div class=" jkinfor-block">
@@ -167,54 +169,17 @@
         </div>
     </div>
     <!--底部结束-->
-<script>
-	var editor;
-	KindEditor.ready(function(K) {
-		editor = K.create('textarea[name="content"]', {
-			allowFileManager : true
-		});
-		K('input[name=getHtml]').click(function(e) {
-			if(editor.isEmpty()){
-				alert("论文内容不能为空");
-			}else{
-				alert(editor.html());
-			}
-		});
-		K('input[name=getText]').click(function(e) {
-			alert(editor.text());
-		});
-		K('input[name=setHtml]').click(function(e) {
-			editor.html('<h3>Hello KindEditor</h3>');
-		});
-		K('input[name=setText]').click(function(e) {
-			editor.text('<h3>Hello KindEditor</h3>');
-		});
-		K('input[name=clear]').click(function(e) {
-			editor.html('');
-		});
-	});
-</script>
-
-
+	<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/jquery.1.7.2.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/login.js' charset='utf-8'></script>
     <script type="text/javascript">
-		KindEditor.ready(function(K) {
-			K.create('textarea[name="content"]', {
-				afterChange : function() {
-					K('.word_count2').html(this.count('text'));
-				}
-			});
-		});
-        $(document).ready(function(){
-            $("#search-btn").click(function(){
-                $("#searchbox").addClass("scale");
-            });
-            $("#close-btn").click(function(){
-                $("#searchbox").removeClass("scale");
-            });
-
-        });
+     function searchBtn(){
+        $("#searchbox").addClass("scale");//开启搜索框
+    }
+    function closeBtn(c){
+        $(c).parent().removeClass("scale");//关闭搜索框
+    }
     </script>
-
 
     <!--[if lt IE 9]>
     <script type='text/javascript' src="lib/ieonly/html5shiv.js"></script>

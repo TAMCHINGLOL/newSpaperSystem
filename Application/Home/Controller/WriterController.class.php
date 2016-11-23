@@ -26,7 +26,21 @@ class WriterController extends Controller {
     }
     
     /**
-     *加载添加论文
+     *加载未投递论文
+     */
+    public function nodeliver(){
+        $this->display();
+    }
+    
+    /**
+     *加载已投递论文
+     */
+    public function delivered(){
+        $this->display();
+    }
+    
+    /**
+     *加载已投递论文
      */
     public function new_file(){
         $this->display();

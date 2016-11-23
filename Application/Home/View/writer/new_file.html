@@ -3,86 +3,238 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Default Examples</title>
-		<style>
-			form {
-				margin: 0;
-			}
-			textarea {
-				display: block;
-			}
-		</style>
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/js/edit-modal/themes/default/default.css">
-    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/jquery.1.7.2.min.js' charset='utf-8'></script>
-    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
-    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/kindeditor-all-min.js' charset='utf-8'></script>
-    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/lang/zh-CN.js' charset='utf-8'></script>
-		<script>
-			var editor;
-			KindEditor.ready(function(K) {
-				editor = K.create('textarea[name="content"]', {
-					allowFileManager : true
-				});
-				K('input[name=getHtml]').click(function(e) {
-					alert(editor.html());
-				});
-				K('input[name=isEmpty]').click(function(e) {
-					alert(editor.isEmpty());
-				});
-				K('input[name=getText]').click(function(e) {
-					alert(editor.text());
-				});
-				K('input[name=selectedHtml]').click(function(e) {
-					alert(editor.selectedHtml());
-				});
-				K('input[name=setHtml]').click(function(e) {
-					editor.html('<h3>Hello KindEditor</h3>');
-				});
-				K('input[name=setText]').click(function(e) {
-					editor.text('<h3>Hello KindEditor</h3>');
-				});
-				K('input[name=insertHtml]').click(function(e) {
-					editor.insertHtml('<strong>插入HTML</strong>');
-				});
-				K('input[name=appendHtml]').click(function(e) {
-					editor.appendHtml('<strong>添加HTML</strong>');
-				});
-				K('input[name=clear]').click(function(e) {
-					editor.html('');
-				});
-			});
-		</script>
+	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
+	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/js/edit-modal/themes/default/default.css">
+	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
+	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
+	    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/edit.css">
+	    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/jquery.1.7.2.min.js' charset='utf-8'></script>
+	    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
+	    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/kindeditor-all-min.js' charset='utf-8'></script>
+	    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/lang/zh-CN.js' charset='utf-8'></script>
+<script>
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="content"]', {
+			allowFileManager : true
+		});
+		K('input[name=getHtml]').click(function(e) {
+			alert(editor.html());
+		});
+		K('input[name=isEmpty]').click(function(e) {
+			alert(editor.isEmpty());
+		});
+		K('input[name=getText]').click(function(e) {
+			alert(editor.text());
+		});
+		K('input[name=selectedHtml]').click(function(e) {
+			alert(editor.selectedHtml());
+		});
+		K('input[name=setHtml]').click(function(e) {
+			editor.html('<h3>Hello KindEditor</h3>');
+		});
+		K('input[name=setText]').click(function(e) {
+			editor.text('<h3>Hello KindEditor</h3>');
+		});
+		K('input[name=insertHtml]').click(function(e) {
+			editor.insertHtml('<strong>Insert HTML</strong>');
+		});
+		K('input[name=appendHtml]').click(function(e) {
+			editor.appendHtml('<strong>Append HTML</strong>');
+		});
+		K('input[name=clear]').click(function(e) {
+			editor.html('');
+		});
+	});
+</script>
 	</head>
 	<body>
-		<script type="text/javascript"><!--
-		google_ad_client = "ca-pub-7116729301372758";
-		/* 更多演示（728x90） */
-		google_ad_slot = "5052271949";
-		google_ad_width = 728;
-		google_ad_height = 90;
-		//-->
-		</script>
-		<script type="text/javascript"
-		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script>
-		<h3>默认模式</h3>
-		<form>
-			<textarea name="content" style="width:800px;height:400px;visibility:hidden;">KindEditor</textarea>
-			<p>
-				<input type="button" name="getHtml" value="取得HTML" />
-				<input type="button" name="isEmpty" value="判断是否为空" />
-				<input type="button" name="getText" value="取得文本(包含img,embed)" />
-				<input type="button" name="selectedHtml" value="取得选中HTML" />
-				<br />
-				<br />
-				<input type="button" name="setHtml" value="设置HTML" />
-				<input type="button" name="setText" value="设置文本" />
-				<input type="button" name="insertHtml" value="插入HTML" />
-				<input type="button" name="appendHtml" value="添加HTML" />
-				<input type="button" name="clear" value="清空内容" />
-				<input type="reset" name="reset" value="Reset" />
+    <div class="header">
+        <div class="centent">
+            <a class="logo-img"><img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
+            <nav>
+                <ul class="header-nav">
+                    <li><a href="{:U('Home/Index/index')}" style="color: rgb(53, 181, 88);">首页</a></li>
+                    <li>
+                        <if condition="session('sys_tag') eq admin">
+                            	审核文章
+                            <else/>投递文章
+                        </if>
+                    </li>
+	                <li><a href="{:U('Home/All/thesisclassify')}">论文分类<i class="arrow-icon"></i></a>
+	                    <div class="submenu school-list">
+	                        <h3>前端学院</h3>
+	                        <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
+	                        <h3>后端学院</h3>
+	                        <a href="#"><i class="python-icon"></i>Python Web工程师</a>
+	                        <a href="#"><i class="go-icon"></i>Go语言工程师</a>
+	                        <h3>移动学院</h3>
+	                        <a href="#"><i class="ios-icon"></i>iOS工程师</a>
+	                    </div>
+	                </li>
+                    <li>社区</li>
+                </ul>
+            </nav>
+            <div class="icon-box">
+                <span class="search-icon" id="search-btn"></span>
+                        <span class="relative loginlist login-icon" id="loginlist">
+                            <dl class="submenu"><i class="top-icon"></i>
+                                <dd>
+                                    <a href="{:U('Home/Login/register')}" class="reg-btn">注册</a>|
+                                    <a href="{:U('Home/Login/index')}" class="login-btn">登录</a>
+                                </dd>
+                                <dd><a href="{:U('Home/Person/index')}"><i class="grzy-icon"></i>个人主页</a></dd>
+                                <dd><a href="{:U('Home/Person/message')}"><i class="xxtz-icon"></i>消息通知</a></dd>
+                                <dd><a href="{:U('Home/Person/account')}"><i class="zhsz-icon"></i>账号设置</a></dd>
+                            </dl>
+                        </span>
+            </div>
+            <div class="searchbox" id="searchbox">
+                <i class="close-icon" id="close-btn"></i>
+                <i class="search-icon" id="search-btn"></i>
+                <input id="web_search_header" placeholder="搜索课程、问答或Wiki" value="" />
+            </div>
+        </div>
+    </div>
+   	<div class="centent mar-t20">
+   		<div class="edit-box">
+   			<p class="edit-thesis">编辑论文</p>
+   			<textarea class="form-control kindeditor" name="content" style="height: 700px;">123123</textarea>
+			<p class="edit-number pull-right">
+				您当前输入了 <span class="word_count2">0</span> 个文字。
 			</p>
-		</form>
-	</body>
+
+			<form class="form-horizontal form-condensed edit-form ">
+			  <div class="form-group">
+			    <label for="exampleInputAccount4" class="col-sm-1">标&nbsp;&nbsp;&nbsp;&nbsp;签：</label>
+			    <div class="col-md-3 col-sm-10">
+			      <input type="text" class="form-control" id="exampleInputAccount4" placeholder="电子邮件/手机号/用户名">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputPassword4" class="col-sm-1">分&nbsp;&nbsp;&nbsp;&nbsp;类：</label>
+			    <div class="col-md-3 col-sm-10">
+			      <input type="text" class="form-control" id="exampleInputPassword4" placeholder="密码">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleInputAddress1" class="col-sm-1">投&nbsp;&nbsp;&nbsp;&nbsp;稿：</label>
+			    <div class="col-sm-3">
+			      <select class="form-control" id="exampleInputAddress1">
+			        <option>不投稿</option>
+			        <option>投稿</option>
+			      </select>
+			    </div>
+			  </div>
+			</form>
+			
+		<p>
+			<input type="button" name="getHtml" value="Get HTML" />
+			<input type="button" name="isEmpty" value="Is Empty" />
+			<input type="button" name="getText" value="Get text(includes img and embed)" />
+			<input type="button" name="selectedHtml" value="Get selected HTML" />
+		</p>
+		<p>
+			<input type="button" name="setHtml" value="Set HTML" />
+			<input type="button" name="setText" value="Set text" />
+			<input type="button" name="insertHtml" value="Insert HTML" />
+			<input type="button" name="appendHtml" value="Append HTML" />
+			<input type="button" name="clear" value="Clear" />
+			<input type="reset" name="reset" value="Reset" />
+		</p>
+		</div>
+   	</div>
+   <!--底部-->
+    <div id="footer" class="mar-t50">
+        <link rel="stylesheet" href="http://e.jikexueyuan.com/headerandfooter/css/footer.css?t=1475152597000">
+        <div class=" jkinfor-block">
+            <div class="jkinfor cf">
+                <div class="jk-logo">
+                    <img src="http://e.jikexueyuan.com/headerandfooter/images/jk-logo-footer.png?t=1475152597000">
+                    <p>极客学院，编程是一种信仰！</p>
+                </div>
+                <dl>
+                    <dt>职业学院</dt>
+                    <dd><a target="_blank" href="http://www.jikexueyuan.com/zhiye/web">Web前端工程师</a></dd>
+                    <dd><a target="_blank" href="http://www.jikexueyuan.com/zhiye/python">Python Web工程师</a></dd>
+                    <dd><a target="_blank" href="http://www.jikexueyuan.com/zhiye/go">Go语言工程师</a></dd>
+                    <!--<dd><a target="_blank" href="http://j.jikexueyuan.com/train/android?huodong=jiuye_android_in">Android学院</a></dd>-->
+                    <dd><a target="_blank" href="http://www.jikexueyuan.com/zhiye/ios">iOS工程师</a></dd>
+                </dl>
+                <dl>
+                    <dt>会员课程</dt>
+                    <dd><a target="_blank" href="http://www.jikexueyuan.com/course/">课程库</a></dd>
+                    <dd><a target="_blank" href="http://www.jikexueyuan.com/path/">知识体系图</a></dd>
+                    <dd><a target="_blank" href="http://ke.jikexueyuan.com/zhiye/">职业路径图</a></dd>
+                    <dd><a target="_blank" href="http://ke.jikexueyuan.com/xilie/">系列课程</a></dd>
+                    <dd><a target="_blank" href="http://www.jikexueyuan.com/tag/">课程标签</a></dd>
+                </dl>
+                <dl>
+                    <dt>极客社区</dt>
+                    <dd><a target="_blank" href="http://wenda.jikexueyuan.com/">技术问答</a></dd>
+                    <dd><a target="_blank" href="http://wiki.jikexueyuan.com/">Wiki</a></dd>
+                    <dd><a target="_blank" href="http://download.jikexueyuan.com/">资源下载</a></dd>
+                    <dd><a target="_blank" href="http://qun.jikexueyuan.com/">社群</a></dd>
+                </dl>
+                <dl>
+                    <dt>其他</dt>
+                    <dd><a target="_blank" href="http://help.jikexueyuan.com/">关于我们</a></dd>
+                    <dd><a target="_blank" href="http://help.jikexueyuan.com/join.html">加入我们</a></dd>
+                    <dd><a target="_blank" href="http://press.jikexueyuan.com/evangelist/apply.html">讲师合作</a></dd>
+                    <dd><a target="_blank" href="http://help.jikexueyuan.com/contact.html">联系我们</a></dd>
+                    <dd><a target="_blank" href="http://www.jikexueyuan.com/friendlink.html">友情链接</a></dd>
+                </dl>
+
+                <div class="jk-down">
+                    <p class="hot-tel">服务热线:400-678-8266</p>
+                    <div class="downCon down-ios">
+                        <img src="http://e.jikexueyuan.com/headerandfooter/images/app.png?t=1475152597000" class="twoCode" alt="下载二维码"> iPhone
+                    </div>
+                    <div class="downCon down-and">
+                        <img src="http://e.jikexueyuan.com/headerandfooter/images/app.png?t=1475152597000" class="twoCode" alt="下载二维码"> Android
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="w-1000 copyright">
+            Copyright © 2013-2016&nbsp;<strong><a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a></strong> All Rights Reserved. 京ICP备11018032号-8 京公网安备11010802020210
+            <a href="http://qun.jikexueyuan.com/jikexueyuan/topic/430" target="_blank" class="down-wechat"></a>
+            <a href="http://weibo.com/jikexueyuan" target="_blank" class="down-sina"></a>
+        </div>
+    </div>
+    <!--底部结束-->
+
+
+
+    <script type="text/javascript">
+		KindEditor.ready(function(K) {
+			K.create('textarea[name="content"]', {
+				afterChange : function() {
+					K('.word_count2').html(this.count('text'));
+				}
+			});
+		});
+        $(document).ready(function(){
+            $("#search-btn").click(function(){
+                $("#searchbox").addClass("scale");
+            });
+            $("#close-btn").click(function(){
+                $("#searchbox").removeClass("scale");
+            });
+
+        });
+    </script>
+
+
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src="lib/ieonly/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src="lib/ieonly/respond.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src="lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+</body>
 </html>

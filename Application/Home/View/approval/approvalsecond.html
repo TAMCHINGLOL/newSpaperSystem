@@ -54,7 +54,7 @@
 				</span>
 			</div>
 			<div class="searchbox" id="searchbox">
-				<i class="close-icon" id="close-btn"  onclick="closeBtn(this)"></i>
+				<i class="close-icon" id="close-btn" onclick="closeBtn(this)"></i>
 				<i class="search-icon" id="search-btn"></i>
 				<input id="web_search_header" placeholder="搜索文章 / 问答" value="" />
 			</div>
@@ -154,6 +154,14 @@
 		  </footer>
 		</article>
 		<!--评论部分-->
+		<div class="comment">
+			<a href="###" class="avatar"><img src="__ROOT__/Application/Home/View/public/img/back.png"></a>
+			<div class="content">
+				<div class="pull-right text-muted">3 个小时前</div>
+				<div><a href="###"><strong>我是一集审核</strong></a></div>
+				<div class="text">今天玩的真开心！~~~~~~</div>
+			</div>
+		</div>
 		<div class="comments">
 		  <footer>
 			<div class="reply-form" id="commentReplyForm1">
@@ -164,79 +172,10 @@
 				<div class="form-group">
 				  <textarea  class="form-control new-comment-text" onpropertychange="MaxMe(this)" oninput="MaxMe(this)"  placeholder="撰写评论..."></textarea>
 				</div>
-				<!--<a class="publish-comment" data-toggle="tooltip" title="评论不能为空"  trigger='click' onclick="comment()">评论</a>-->
 				<a class="publish-comment" data-toggle="tooltip" title="评论不能为空"  trigger='click' onclick="comment(this)">评论</a>
 			  </form>
 			</div>
 		  </footer>
-		</div>
-		<div class="comment">
-			<a href="###" class="avatar"><img src="__ROOT__/Application/Home/View/public/img/back.png"></a>
-			<div class="content">
-				<div class="pull-right text-muted">3 个小时前</div>
-				<div><a href="###"><strong>我</strong></a></div>
-				<div class="text">今天玩的真开心！~~~~~~</div>
-				<a class="del-comment" onclick="delComment(this)">删除</a>
-			</div>
-		</div>
-		<div class="comment">
-		  <a href="###" class="avatar">
-			<img src="__ROOT__/Application/Home/View/public/img/back.png" />
-		  </a>
-		  <div class="content">
-			<div class="pull-right text-muted">3 个小时前</div>
-			<div><a href="###"><strong>张士超</strong></a></div>
-			<div class="text">今天玩的真开心！~~~~~~</div>
-			  <a href="##" class="reply" onclick="reply(this)">回复</a>
-		  </div>
-		  <div class="comments-list">
-			<div class="comment">
-			  <a href="###" class="avatar">
-			<img src="__ROOT__/Application/Home/View/public/img/back.png" />
-			  </a>
-			  <div class="content">
-				<div class="pull-right text-muted">2 个小时前</div>
-				<div><a href="###"><strong>我</strong></a> <span class="text-muted">回复</span> <a href="###">张士超</a></div>
-				<div class="text">你到底把我家钥匙放哪里了...</div>
-				<a href="##" class="del-comment"  onclick="delComment(this)">删除</a>
-			  </div>
-			  <div class="comments-list">
-				<div class="comment">
-				  <a href="###" class="avatar">
-					<img src="__ROOT__/Application/Home/View/public/img/back.png" />
-				  </a>
-				  <div class="content">
-					<div class="pull-right text-muted">1 个小时前</div>
-					<div><a href="###"><strong>门口大爷</strong></a> <span class="text-muted">回复</span> <a href="###">我</a></div>
-					<div class="text">不在我这儿...</div>
-					<a href="##" class="reply" onclick="reply(this)">回复</a>
-				  </div>
-				</div>
-				<div class="comment">
-				  <a href="###" class="avatar">
-					<img src="__ROOT__/Application/Home/View/public/img/back.png" />
-				  </a>
-				  <div class="content">
-					<div class="pull-right text-muted">1 个小时前</div>
-					<div><a href="###"><strong>队长</strong></a> <span class="text-muted">回复</span> <a href="###">Catouse</a></div>
-					<div class="text">也不在我这儿...</div>
-					<a href="##" class="reply" onclick="reply(this)">回复</a>
-				  </div>
-				</div>
-			  </div>
-			</div>
-			<div class="comment">
-			  <a href="###" class="avatar">
-					<img src="__ROOT__/Application/Home/View/public/img/back.png" />
-			  </a>
-			  <div class="content">
-				<div class="pull-right text-muted">30 分钟前</div>
-				<div><a href="###"><strong>华师大第一美女</strong></a> <span class="text-muted">回复</span> <a href="###">张士超</a></div>
-				<div class="text">很开心~~~</div>
-				<a href="##" class="reply" onclick="reply(this)">回复</a>
-			  </div>
-			</div>
-		  </div>
 		</div>
 	</div>
 	<!--底部-->
@@ -307,36 +246,14 @@
     function closeBtn(c){
         $(c).parent().removeClass("scale");//关闭搜索框
     }
+	</script>
   <script type="text/javascript">
 	function MaxMe(o) {
 	  o.style.height = o.scrollTop + o.scrollHeight + "px";//输入框随字数增加而改变
 	}
   </script>
 	<script>
-	//回复按钮点击之后添加文本框
-	function reply(r){
-			var anwser="<div class='comments-list'>"
-					+"<div class='comment'>"
-					+'<div class=comments>'
-					+'<footer>'
-					+'<div class="reply-form" id="commentReplyForm1">'
-					+'<a href="###" class="avatar">'
-					+'<img src="__ROOT__/Application/Home/View/public/img/back.png" />'
-					+'</a>'
-					+'<form class="form">'
-					+'<div class="form-group">'
-					+'<textarea class="form-control new-comment-text" onpropertychange="MaxMe(this)" oninput="MaxMe(this)"  placeholder="撰写评论..."></textarea>'
-					+'</div>'
-					+'<a class="publish-comment" data-toggle="tooltip" title="评论不能为空"  trigger="click" onclick="comment(this)">评论</a>'
-					+'</form>'
-					+'</div>'
-					+'</footer>'
-					+'</div>'
-					+'</div>'
-					+'</div>';
-			$(r).parent().after(anwser);
-	}
-	//评论按钮点击之后添加文本框
+	//审批者评论按钮点击之后添加文本框
 		function comment(c){
 			var commentContent=$(c).prev().children().val();
 			if(commentContent == ""){
@@ -350,24 +267,35 @@
 						+'</a>'
 						+'<div class="content">'
 						+'<div class="pull-right text-muted">3 个小时前</div>'
-						+'<div><a href="###"><strong>我</strong></a></div>'
+						+'<div><a href="###"><strong>我是二级审核</strong></a></div>'
 						+'<div class="text">'+commentContent+'</div>'
-						+'<a class="del-comment"  onclick="delComment(this)">删除</a>'
+						+'<a class="edit-comment"  onclick="editComment(this)">编辑</a>'
 						+'</div>'
 						+'</div>';
-				$(c).prev().children().val("");
 				$(c).closest(".comments").after(comment);
+				$(c).closest(".comments").remove();
 			}
 		}
-	//删除按钮点击之后添加文本框
-	function  delComment(d){
-			var commentDel='<div class="content">'
-					+'<div class="pull-right text-muted">3 个小时前</div>'
-					+'<div><a href="###"><strong>我</strong></a></div>'
-					+'<div class="text">该评论已删除</div>'
-					+'</div>';
-			$(d).parent().after(commentDel);
-			$(d).parent().remove();
+	//点击编辑
+	function editComment(e){
+		var	commentContent=$(e).prev().text();	
+		var comment="<div class='comments'>"
+						+'<footer>'
+						+'<div class="reply-form" id="commentReplyForm1">'
+						+'<a href="###" class="avatar">'
+						+'<img src="__ROOT__/Application/Home/View/public/img/back.png" />'
+						+'</a>'
+						+'<form class="form">'
+						+'<div class="form-group">'
+						+'<textarea  class="form-control new-comment-text" onpropertychange="MaxMe(this)" oninput="MaxMe(this)"  placeholder="撰写评论...">'+commentContent+'</textarea>'
+						+'</div>'
+						+'<a class="publish-comment" data-toggle="tooltip" title="评论不能为空"  trigger="click" onclick="comment(this)">评论</a>'
+		  				+'</form>'
+		  				+'</div>'
+		  				+'</footer>'
+		  				+'</div>';
+				$(e).closest(".comment").after(comment);
+				$(e).closest(".comment").remove();
 	}
 	</script>
 	<!--[if lt IE 9]>

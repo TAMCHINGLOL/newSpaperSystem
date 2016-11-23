@@ -268,15 +268,12 @@
 <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/login.js' charset='utf-8'></script>
 <script type="text/javascript">
-    $(document).ready(function () {
-        $("#search-btn").click(function () {
-            $("#searchbox").addClass("scale");
-        });
-        $("#close-btn").click(function () {
-            $("#searchbox").removeClass("scale");
-        });
-
-    });
+     function searchBtn(){
+        $("#searchbox").addClass("scale");//开启搜索框
+    }
+    function closeBtn(c){
+        $(c).parent().removeClass("scale");//关闭搜索框
+    }
 </script>
 
 

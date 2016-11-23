@@ -19,3 +19,4 @@ class AllController extends Controller {
     }
 
 }
+?>
