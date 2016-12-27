@@ -96,8 +96,8 @@ if ($yaml['databases'] != array( array("name" => "spartan", "notes" =>
   die("Key: 'databases' failed");
 
 # You can be a bit tricky
-if ($yaml["if: you'd"] != "like")
-	die("Key: 'if: you\'d' failed");
+if ($yaml["if: you'ewew"] != "like")
+	die("Key: 'if: you\'ewew' failed");
 
 # Inline sequences
 if ($yaml[6] != array("One", "Two", "Three", "Four"))

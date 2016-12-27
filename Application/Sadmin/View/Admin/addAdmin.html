@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <LINK rel="Bookmark" href="/favicon.ico" />
+    <LINK rel="Shortcut Icon" href="/favicon.ico" />
+    <include file="Public/frame_header" />
+    <script src='__ROOT__/Application/Sadmin/public/assets/js/layer/layer.js'></script>
+    <script src="__ROOT__/Application/Sadmin/public/js/admin/adminList.js"></script>
+    <script src="__ROOT__/Application/Sadmin/public/sadmin/js/datableAdmin.js"></script>
+    <script>
+         var add_admin_url="{:U('Sadmin/Admin/addAdmin')}"; //添加管理员
+         var addAdminRow_url="{:U('Sadmin/Admin/addAdminRow')}"; //添加管理员
+	</script>
+</head>
+
+<body class="no-skin">
+    <div class="main-container" id="main-container">
+        <label class="space-24"></label>
+        <form class="form-horizontal" > 	
+            <div class="row">
+                <div class="col-xs-12">
+                    <br>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 真实姓名</label>
+                        <div class="col-sm-9">
+                            <notempty name="info">
+                                <input placeholder="{$info['uid']}" style="display:none" value="{$info['uid']}" class="col-xs-10 col-sm-5 addAdminId" type="text">
+                                <input placeholder="请输入员工真实姓名" value="{$info['username']}" class="col-xs-10 col-sm-5 addAdminName" type="text">
+                            </notempty>
+                            <empty name="info">
+                                <input placeholder="请输入员工真实姓名" class="col-xs-10 col-sm-5 addAdminName" type="text">
+                            </empty>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 身份证</label>
+                        <div class="col-sm-9">
+                            <notempty name="info">
+                                <input placeholder="请输入员工身份证" value="{$info['iccard']}" class="col-xs-10 col-sm-5 icCardId" type="text">
+                            </notempty>
+                            <empty name="info">
+                                <input placeholder="请输入员工身份证" class="col-xs-10 col-sm-5 icCardId" type="text">
+                            </empty>
+                        </div>
+                    </div>
+                    <empty name="info">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">初始密码</label>
+                            <div class="col-sm-9">
+                                <input placeholder="请输入初始密码" class="col-xs-10 col-sm-5 password" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label no-padding-right" for="form-field-1">确认密码</label>
+                            <div class="col-sm-9">
+                                <input placeholder="请输入确认密码" class="col-xs-10 col-sm-5 password2" type="text">
+                            </div>
+                        </div>
+                    </empty>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">性别</label>
+                        <div class="radio">
+                            <if condition="$info.sex eq '女'">
+                                <label>
+                                    <input class="ace" name="sex" type="radio" value="男">
+                                    <span class="lbl"> 男 </span>
+                                </label>
+                                <label>
+                                    <input class="ace" name="sex" checked="checked" type="radio" value="女">
+                                    <span class="lbl"> 女 </span>
+                                </label>
+                                <else />
+                                    <label>
+                                        <input class="ace" name="sex" checked="checked" type="radio" value="男">
+                                        <span class="lbl"> 男 </span>
+                                    </label>
+                                    <label>
+                                        <input class="ace" name="sex" type="radio" value="女">
+                                        <span class="lbl"> 女 </span>
+                                    </label>
+                            </if>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">手机</label>
+                        <div class="col-sm-9">
+                            <notempty name="info">
+                                <input placeholder="请输入手机号码" value="{$info['phone']}" class="col-xs-10 col-sm-5 phone" type="text">
+                            </notempty>
+                            <empty name="info">
+                                <input placeholder="请输入手机号码" class="col-xs-10 col-sm-5 phone" type="text">
+                            </empty>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">邮箱</label>
+                        <div class="col-sm-9">
+                            <notempty name="info">
+                                <input placeholder="请输入邮箱" value="{$info['email']}" class="col-xs-10 col-sm-5 email" type="text">
+                            </notempty>
+                            <empty name="info">
+                                <input placeholder="请输入邮箱" class="col-xs-10 col-sm-5 email" type="text">
+                            </empty>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">住址</label>
+                        <div class="col-sm-9">
+                            <notempty name="info">
+                                <input placeholder="请输入员工现居住地址" value="{$info['address']}" class="col-xs-10 col-sm-5 addressId" type="text">
+                            </notempty>
+                            <empty name="info">
+                                <input placeholder="请输入员工现居住地址" class="col-xs-10 col-sm-5 addressId" type="text">
+                            </empty>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">角色</label>
+                        <div class="col-sm-6">
+                            <empty name="info">
+                                <select class="width-40 chosen-select addSelect" id="form-field-select-3" data-placeholder="Choose a Country...">
+                                        <option value="">请选择角色</option>
+                                    <volist name="roleList" id="role">
+                                        <option value="{$role.roleid}">{$role.rolename}</option>
+                                    </volist>                   
+                                </select>
+                            </empty>
+                            <notempty name="info">
+                                <select class="width-40 chosen-select addSelect" id="form-field-select-3" data-placeholder="Choose a Country..."> 
+                                    <volist name="roleList" id="role">
+                                        <if condition="$role.roleid eq $info['roleid']">
+                                            <option value="{$role.roleid}" selected="selected">{$role.rolename}</option>
+                                        <else />
+                                            <option value="{$role.roleid}">{$role.rolename}</option>
+                                        </if>
+                                    </volist>                 
+                                </select>
+                            </notempty>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">文案类型</label>
+                        <div class="col-sm-6">
+                            <empty name="info">
+                                <select class="width-40 chosen-select typeSelect" id="form-field-select-3" data-placeholder="Choose a Country...">
+                                    <volist name="typeList" id="type">
+                                        <option value="{$type.typeid}">{$type.typename}</option>
+                                    </volist>
+                                </select>
+                            </empty>
+                            <notempty name="info">
+                                <select class="width-40 chosen-select typeSelect" id="form-field-select-3" data-placeholder="Choose a Country...">
+                                    <!--<option value="0">默认全部</option>-->
+                                    <volist name="typeList" id="type">
+                                        <if condition="$type.typeid eq $info['typeid']">
+                                            <option value="{$type.typeid}" selected="selected">{$type.typename}</option>
+                                            <else />
+                                            <option value="{$type.typeid}">{$type.typename}</option>
+                                        </if>
+                                    </volist>
+                                </select>
+                            </notempty>
+                        </div>
+                    </div>
+                    <!--<div class="form-group">-->
+                        <!--<label class="col-sm-3 control-label no-padding-right" for="form-field-1">备注</label>-->
+                        <!--<div class="col-sm-5">                            -->
+                            <!--<notempty name="info">-->
+                                <!--<textarea style="width:386px;height:120px" value="{info['comment']}" class="form-control textarea"  placeholder="{info['comment']}"></textarea>-->
+                            <!--</notempty>-->
+                            <!--<empty name="info">-->
+                                <!--<textarea style="width:386px;height:120px" class="form-control textarea"  placeholder="Default Text"></textarea>-->
+                            <!--</empty>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"></label>
+                        <div class="col-sm-5">
+                            <button class="btn btn-info" type="button" onclick="addAdmin_submit()">
+                                <i class="icon-ok bigger-110"></i>
+                                &nbsp;&nbsp;确&nbsp;&nbsp;定&nbsp;&nbsp;
+                            </button>
+                        </div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </form>
+    </div>   
+</body>
+</html>

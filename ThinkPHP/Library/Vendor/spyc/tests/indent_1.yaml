@@ -24,7 +24,7 @@ display:
 nested_hashes_and_seqs:
  - { row: 0, col: 0, headsets_affected: [{ports: [0], side: left}], switch_function: {ics_ptt: true} }
 
-easier_nest: { h: [{a: b, a1: b1}, {c: d}] }
+easier_nest: { h: [{a: b, a1: b1}, {c: ewew}] }
 
 one_space: |
     By four

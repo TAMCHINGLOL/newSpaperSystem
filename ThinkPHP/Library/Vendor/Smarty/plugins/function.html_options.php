@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  * 
  * @package Smarty
  * @subpackage PluginsFunction
  */
 
 /**
- * Smarty {html_options} function plugin
+ * Smarty {html_options} function Plugin
  * 
  * Type:     function<br>
  * Name:     html_options<br>

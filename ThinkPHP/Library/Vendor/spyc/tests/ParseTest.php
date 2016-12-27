@@ -135,7 +135,7 @@ class ParseTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testColons() {
-      $this->assertEquals ("like", $this->yaml["if: you'd"]);
+      $this->assertEquals ("like", $this->yaml["if: you'ewew"]);
     }
 
     public function testInline() {
@@ -302,7 +302,7 @@ dog', $this->yaml['many_lines']);
       $this->assertSame (array ('1' => 'nummer 1', '0' => 'Stunde 0'), $this->yaml['werte']);
     }
 
-    /* public function testNoIndent() {
+    /* PublicABC function testNoIndent() {
       $this->assertSame (array(
         array ('record1'=>'value1'),
         array ('record2'=>'value2')

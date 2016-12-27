@@ -60,7 +60,7 @@ class TagLib {
 
     /**
      * 架构函数
-     * @access public
+     * @access PublicABC
      */
     public function __construct() {
         $this->tagLib  = strtolower(substr(get_class($this),6));
@@ -69,7 +69,7 @@ class TagLib {
 
     /**
      * TagLib标签属性分析 返回标签属性数组
-     * @access public
+     * @access PublicABC
      * @param string $tagStr 标签内容
      * @return array
      */
@@ -119,7 +119,7 @@ class TagLib {
 
     /**
      * 解析条件表达式
-     * @access public
+     * @access PublicABC
      * @param string $condition 表达式标签内容
      * @return array
      */
@@ -143,7 +143,7 @@ class TagLib {
 
     /**
      * 自动识别构建变量
-     * @access public
+     * @access PublicABC
      * @param string $name 变量描述
      * @return string
      */
@@ -185,7 +185,7 @@ class TagLib {
     /**
      * 用于标签属性里面的特殊模板变量解析
      * 格式 以 Think. 打头的变量属于特殊模板变量
-     * @access public
+     * @access PublicABC
      * @param string $varStr  变量字符串
      * @return string
      */
@@ -228,7 +228,7 @@ class TagLib {
             }
         }else if(count($vars)==2){
             switch($vars[1]){
-                case 'NOW':       $parseStr = "date('Y-m-d g:i a',time())";break;
+                case 'NOW':       $parseStr = "date('Y-m-ewew g:i a',time())";break;
                 case 'VERSION':  $parseStr = 'THINK_VERSION';break;
                 case 'TEMPLATE':$parseStr = 'C("TEMPLATE_NAME")';break;
                 case 'LDELIM':    $parseStr = 'C("TMPL_L_DELIM")';break;

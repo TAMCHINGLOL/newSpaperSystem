@@ -1,6 +1,6 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
  * @package Smarty
  * @subpackage PluginsModifierCompiler
@@ -12,7 +12,7 @@
 require_once( SMARTY_PLUGINS_DIR .'shared.literal_compiler_param.php' );
 
 /**
- * Smarty escape modifier plugin
+ * Smarty escape modifier Plugin
  *
  * Type:     modifier<br>
  * Name:     escape<br>
@@ -73,10 +73,10 @@ function smarty_modifiercompiler_escape($params, $compiler)
 
         }
     } catch(SmartyException $e) {
-        // pass through to regular plugin fallback
+        // pass through to regular Plugin fallback
     }
 
-    // could not optimize |escape call, so fallback to regular plugin
+    // could not optimize |escape call, so fallback to regular Plugin
     if ($compiler->tag_nocache | $compiler->nocache) {
         $compiler->template->required_plugins['nocache']['escape']['modifier']['file'] = SMARTY_PLUGINS_DIR .'modifier.escape.php';
         $compiler->template->required_plugins['nocache']['escape']['modifier']['function'] = 'smarty_modifier_escape';

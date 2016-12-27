@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>登录</title>
+    <title>网易鱼用户登录</title>
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
-    <!--<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/datetimepicker.css">-->
+    <!--<link rel="stylesheet" href="__ROOT__/Application/Home/View/PublicABC/css/Login/datetimepicker.css">-->
 </head>
 <style type="text/css">
     .body-back {
         background: url(__ROOT__/Application/Home/View/public/img/rebc.gif) repeat;
     }
-
     .qq {
         background-image: url(__ROOT__/Application/Home/View/public/img/QQ1.png);
     }
@@ -83,13 +82,13 @@
         </div>
         <div class="passport-third"><p style="color: #999">第三方账号登录</p></div>
         <div class="link-third">
-            <a class="qq" jktag="0001|0.1|91058">
+            <a class="qq" jktag="0001|0.1|91058" onclick="otherLoginTip()">
                 <i class="passport-icon icon-tencent"></i>
             </a>
-            <a class="weixin" jktag="0001|0.1|91058">
+            <a class="weixin" jktag="0001|0.1|91058" onclick="otherLoginTip()">
                 <i class="passport-icon icon-tencent"></i>
             </a>
-            <a class="weibo" jktag="0001|0.1|91058">
+            <a class="weibo" jktag="0001|0.1|91058" onclick="otherLoginTip()">
                 <i class="passport-icon icon-tencent"></i>
             </a>
         </div>
@@ -279,6 +278,10 @@
     var verifyCode_url = "{:U('Home/Login/verifyCode','',false)}";
     var register_url = "{:U('Home/Login/registerNew','',false)}";
     var home_url = "{:U('Home/Index/index','',false)}";
+    function otherLoginTip(){
+        layer.msg('小 编 正 在 努 力 , 敬 请 期 待 ...');
+        return false;
+    }
     $(document).ready(function () {
         //笔者注册
         $("#register").on("click", function () {
@@ -385,7 +388,8 @@
         //管理员登录
         $("#sign").on("click", function () {
             var phone = $('#new-user').val();
-            var verify = $("#new-password").val();
+            var verify = $("#r-verify1").val();
+//            alert(verify);return false;
             var code = $('#gcode').val();
             var reg = /^0?1[3|4|5|8][0-9]\d{8}$/;
             if (phone == '' || phone == null) {
@@ -400,11 +404,14 @@
                 alertTips("#new-password", '请输入验证码');
                 return false;
             }
-            if (code == '' || code == null) {
-                alertTips("#gcode", '请输入动态码');
-                return false;
-            }
-            if (phone != '' && verify != '' && code != '') {
+//            if (code == '' || code == null) {
+//                alertTips("#gcode", '请输入动态码');
+//                return false;
+//            }
+
+//            if (phone != '' && verify != '' && code != '') {
+            if (phone != '' && verify != '') {
+
                 layer.load(3, {time: 2000});
                 $.ajax({
                     url: verifySms_url,
@@ -429,36 +436,36 @@
             }
         });
 
-//        //笔者注册验证验证码
-//        $("#r-verify").on('blur', function () {
-//            var code = $('#r-verify').val();
-//            if (code == null || code == '') {
-//                return false;
-//            } else {
-//                verifyCode(code, this, "#img");
-//            }
-//        });
+        //笔者注册验证验证码
+        $("#r-verify").on('blur', function () {
+            var code = $('#r-verify').val();
+            if (code == null || code == '') {
+                return false;
+            } else {
+                verifyCode(code, this, "#img");
+            }
+        });
 
-//        //笔者登录验证验证码
-//        $("#verify").on('blur', function () {
-//            var code = $('#verify').val();
-//            if (code == null || code == '') {
-//                return false;
-//            } else {
-//                verifyCode(code, this, "#img2");
-//            }
-//        });
+        //笔者登录验证验证码
+        $("#verify").on('blur', function () {
+            var code = $('#verify').val();
+            if (code == null || code == '') {
+                return false;
+            } else {
+                verifyCode(code, this, "#img2");
+            }
+        });
 
-//        //管理员登录验证验证码
-//        $("#r-verify1").on('blur', function () {
-//            var code = $('#r-verify1').val();
-////            alert(code);
-//            if (code == null || code == '') {
-//                return false;
-//            } else {
-//                verifyCode(code, this, "#img3");
-//            }
-//        });
+        //管理员登录验证验证码
+        $("#r-verify1").on('blur', function () {
+            var code = $('#r-verify1').val();
+//            alert(code);
+            if (code == null || code == '') {
+                return false;
+            } else {
+                verifyCode(code, this, "#img3");
+            }
+        });
 
         //发送短信动态码(笔者注册)
         $("#getSmsId").on('click', function () {

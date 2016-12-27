@@ -1,8 +1,9 @@
 <?php
 namespace Home\Controller;
+use Common\Controller\CommonController;
 use Think\Controller;
 
-class AllController extends Controller {
+class AllController extends CommonController {
 
     /**
      *加载论文分类

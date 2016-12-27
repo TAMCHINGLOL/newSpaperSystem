@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
  * @package Smarty
  * @subpackage PluginsFunction
  */
 
 /**
- * Smarty {fetch} plugin
+ * Smarty {fetch} Plugin
  *
  * Type:     function<br>
  * Name:     fetch<br>
@@ -23,7 +23,7 @@
 function smarty_function_fetch($params, $template)
 {
     if (empty($params['file'])) {
-        trigger_error("[plugin] fetch parameter 'file' cannot be empty",E_USER_NOTICE);
+        trigger_error("[Plugin] fetch parameter 'file' cannot be empty",E_USER_NOTICE);
         return;
     }
 
@@ -40,7 +40,7 @@ function smarty_function_fetch($params, $template)
             }
             fclose($fp);
         } else {
-            trigger_error('[plugin] fetch cannot read file \'' . $params['file'] . '\'',E_USER_NOTICE);
+            trigger_error('[Plugin] fetch cannot read file \'' . $params['file'] . '\'',E_USER_NOTICE);
             return;
         }
     } else {
@@ -93,7 +93,7 @@ function smarty_function_fetch($params, $template)
                         case "header":
                             if(!empty($param_value)) {
                                 if(!preg_match('![\w\d-]+: .+!',$param_value)) {
-                                    trigger_error("[plugin] invalid header format '".$param_value."'",E_USER_NOTICE);
+                                    trigger_error("[Plugin] invalid header format '".$param_value."'",E_USER_NOTICE);
                                     return;
                                 } else {
                                     $extra_headers[] = $param_value;
@@ -109,7 +109,7 @@ function smarty_function_fetch($params, $template)
                             if(!preg_match('!\D!', $param_value)) {
                                 $proxy_port = (int) $param_value;
                             } else {
-                                trigger_error("[plugin] invalid value for attribute '".$param_key."'",E_USER_NOTICE);
+                                trigger_error("[Plugin] invalid value for attribute '".$param_key."'",E_USER_NOTICE);
                                 return;
                             }
                             break;
@@ -127,12 +127,12 @@ function smarty_function_fetch($params, $template)
                             if(!preg_match('!\D!', $param_value)) {
                                 $timeout = (int) $param_value;
                             } else {
-                                trigger_error("[plugin] invalid value for attribute '".$param_key."'",E_USER_NOTICE);
+                                trigger_error("[Plugin] invalid value for attribute '".$param_key."'",E_USER_NOTICE);
                                 return;
                             }
                             break;
                         default:
-                            trigger_error("[plugin] unrecognized attribute '".$param_key."'",E_USER_NOTICE);
+                            trigger_error("[Plugin] unrecognized attribute '".$param_key."'",E_USER_NOTICE);
                             return;
                     }
                 }
@@ -144,7 +144,7 @@ function smarty_function_fetch($params, $template)
                 }
 
                 if(!$fp) {
-                    trigger_error("[plugin] unable to fetch: $errstr ($errno)",E_USER_NOTICE);
+                    trigger_error("[Plugin] unable to fetch: $errstr ($errno)",E_USER_NOTICE);
                     return;
                 } else {
                     if($_is_proxy) {
@@ -187,7 +187,7 @@ function smarty_function_fetch($params, $template)
                     }
                 }
             } else {
-                trigger_error("[plugin fetch] unable to parse URL, check syntax",E_USER_NOTICE);
+                trigger_error("[Plugin fetch] unable to parse URL, check syntax",E_USER_NOTICE);
                 return;
             }
         } else {
@@ -198,7 +198,7 @@ function smarty_function_fetch($params, $template)
                 }
                 fclose($fp);
             } else {
-                trigger_error('[plugin] fetch cannot read file \'' . $params['file'] .'\'',E_USER_NOTICE);
+                trigger_error('[Plugin] fetch cannot read file \'' . $params['file'] .'\'',E_USER_NOTICE);
                 return;
             }
         }

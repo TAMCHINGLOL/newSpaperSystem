@@ -16,7 +16,7 @@
 | Authors:  Ma Bingyao <andot@ujn.edu.cn>                  |
 |                                                          |
 | This file may be distributed and/or modified under the   |
-| terms of the GNU General Public License (GPL) version    |
+| terms of the GNU General PublicABC License (GPL) version    |
 | 2.0 as published by the Free Software Foundation and     |
 | appearing in the included file LICENSE.                  |
 |                                                          |

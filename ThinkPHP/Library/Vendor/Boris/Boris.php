@@ -54,7 +54,7 @@ class Boris {
    *          prints it in the REPL.
    *
    *   $boris->onStart(function($worker, $vars){
-   *     $worker->setLocal('date', date('Y-m-d'));
+   *     $worker->setLocal('date', date('Y-m-ewew'));
    *   });
    *
    *   $boris->onStart('echo "The date is $date\n";');

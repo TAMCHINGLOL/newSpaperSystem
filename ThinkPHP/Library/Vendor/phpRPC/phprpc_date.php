@@ -16,7 +16,7 @@
 | Authors:  Ma Bingyao <andot@ujn.edu.cn>                  |
 |                                                          |
 | This file may be distributed and/or modified under the   |
-| terms of the GNU General Public License (GPL) version    |
+| terms of the GNU General PublicABC License (GPL) version    |
 | 2.0 as published by the Free Software Foundation and     |
 | appearing in the included file LICENSE.                  |
 |                                                          |
@@ -32,7 +32,7 @@
 
 class PHPRPC_Date {
 
-// public fields
+// PublicABC fields
 
     var $year = 1;
     var $month = 1;
@@ -69,7 +69,7 @@ class PHPRPC_Date {
         }
     }
 
-// public instance methods
+// PublicABC instance methods
 
     function addMilliseconds($milliseconds) {
         if (!is_int($milliseconds)) return false;
@@ -377,7 +377,7 @@ class PHPRPC_Date {
         return $this->toString();
     }
 
-// public instance & static methods
+// PublicABC instance & static methods
 
     function dayOfWeek() {
         $num = func_num_args();
@@ -415,7 +415,7 @@ class PHPRPC_Date {
         return $days[$m - 1] + $d;
     }
 
-// public static methods
+// PublicABC static methods
 
     function now() {
         $date = new PHPRPC_Date();

@@ -105,9 +105,9 @@ class Smarty_Internal_Compile_Insert extends Smarty_Internal_CompileBase {
             $_function = "insert_{$_name}";
             // function in PHP script ?
             if (!is_callable($_function)) {
-                // try plugin
+                // try Plugin
                 if (!$_function = $compiler->getPlugin($_name, 'insert')) {
-                    $compiler->trigger_template_error("{insert} no function or plugin found for '{$_name}'", $compiler->lex->taglineno);
+                    $compiler->trigger_template_error("{insert} no function or Plugin found for '{$_name}'", $compiler->lex->taglineno);
                 }
             }
         }

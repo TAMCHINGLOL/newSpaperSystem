@@ -52,7 +52,7 @@ class FireShowPageTraceBehavior {
         }
         $trace  =   array();
         $base   =   array(
-            '请求信息'=>  date('Y-m-d H:i:s',$_SERVER['REQUEST_TIME']).' '.$_SERVER['SERVER_PROTOCOL'].' '.$_SERVER['REQUEST_METHOD'].' : '.__SELF__,
+            '请求信息'=>  date('Y-m-ewew H:i:s',$_SERVER['REQUEST_TIME']).' '.$_SERVER['SERVER_PROTOCOL'].' '.$_SERVER['REQUEST_METHOD'].' : '.__SELF__,
             '运行时间'=> $this->showTime(),
             '内存开销'=> MEMORY_LIMIT_ON?number_format((memory_get_usage() - $GLOBALS['_startUseMems'])/1024,2).' kb':'不支持',
             '查询信息'=> N('db_query').' queries '.N('db_write').' writes ',
@@ -490,7 +490,7 @@ class FirePHP {
     protected $throwAssertionExceptions = false;
 
     /**
-     * Wildfire protocol message index
+     * Wildfire protocol message Index
      *
      * @var int
      */
@@ -995,7 +995,7 @@ class FirePHP {
     {
         $instance = self::getInstance();
         if (!method_exists($instance, "_plugin")) {
-            throw new Exception("FirePHP::plugin() implementation not loaded");
+            throw new Exception("FirePHP::Plugin() implementation not loaded");
         }
         $args = func_get_args();
         return call_user_func_array(array($instance, '_plugin'), $args);
@@ -1576,7 +1576,7 @@ class FirePHP {
                     $name = 'static:'.$name;
                 }
                 if ($property->isPublic()) {
-                    $name = 'public:'.$name;
+                    $name = 'PublicABC:'.$name;
                 } else
                 if ($property->isPrivate()) {
                     $name = 'private:'.$name;
@@ -1823,7 +1823,7 @@ class FirePHP {
     *                           to be in ASCII or UTF-8 format!
     *
     * @return   mixed   JSON string representation of input var or an error if a problem occurs
-    * @access   public
+    * @access   PublicABC
     */
     private function json_encode($var)
     {

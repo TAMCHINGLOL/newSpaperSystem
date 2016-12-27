@@ -4,7 +4,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>首页</title>
-	<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
+	<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/dist/css/zui.min.css">
 	<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
 	<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
 </head>
@@ -14,29 +14,24 @@
 		<a class="logo-img" href="{:U('Home/Index/index')}"><img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
 		<nav>
 			<ul class="header-nav">
-				<li><a href="{:U('Home/Index/index')}" style="color: rgb(53, 181, 88);">首页</a></li>
-				<li><a href="{:U('Home/All/thesisclassify')}">论文分类<i class="arrow-icon"></i></a>
-					<div class="submenu school-list">
-						<h3>前端学院</h3>
-						<a href="#"><i class="web-icon"></i>Web 前端工程师</a>
-						<h3>后端学院</h3>
-						<a href="#"><i class="python-icon"></i>Python Web工程师</a>
-						<a href="#"><i class="go-icon"></i>Go语言工程师</a>
-						<h3>移动学院</h3>
-						<a href="#"><i class="ios-icon"></i>iOS工程师</a>
-					</div>
+				<li><a href="{:U('Home/Index/index')}">首页</a></li>
+				<if condition="session('sys_tag') eq admin">
+					<li><a href="{:U('Home/Approval/approvalfirst')}">审核文章</a></li>
+					<else />
+					<li><a href="{:U('Home/Writer/mythesis')}">投递文章</a></li>
+				</if>
+				<li><a href="{:U('Home/All/thesisclassify')}" class="active">论文分类<i class="arrow-icon"></i></a>
 				</li>
-				<li>论文投递</li>
-				<li>社区</li>
+				<li><a href="#">社区</a></li>
 			</ul>
 		</nav>
 		<div class="icon-box">
 			<span class="search-icon" id="search-btn" onclick="searchBtn()"></span>
 			<if condition="session('uid') eq ''">
-				<span class="relative loginlist login-icon" id="loginlist">
-				<else/>
-				<span class="relative loginlist" id="loginlist">
-				<img src="__ROOT__/Application/Home/View/public/img/default.gif" style="height: 25px;width: 25px;margin-bottom: 54px">
+                    <span class="relative loginlist login-icon" id="loginlist">
+                    <else/>
+                    <span class="relative loginlist" id="loginlist">
+                    <img src="__ROOT__/Application/Home/View/public/img/default.gif" style="height: 25px;width: 25px;margin-bottom: 54px">
 			</if>
 			<dl class="submenu"><i class="top-icon"></i>
 				<dd>
@@ -391,68 +386,18 @@
 				   </div>
 				</div>
 			</div>
-			<div class="user-side">
-				<div class="user-visit-header"><h2>最近访客</h2></div>
-				<div class="user-visit user-popBoxs-container">
-					<div id="learn-data-missing"><img src="http://sm1.jikexueyuan.com/assets/images/empty/face-he-no-visit.png" class="data-missing-bg" alt="暂无访客"></div>													</div>
-			</div>
 		</div>
 	</div>
 </diV>
-	<!--底部-->
-<div id="footer" class="mar-t50">
-	<div class=" jkinfor-block">
-		<div class="jkinfor cf">
-			<div class="jk-logo">
-				<img src="http://e.jikexueyuan.com/headerandfooter/images/jk-logo-footer.png?t=1475152597000">
-				<p>极客学院，编程是一种信仰！</p>
-			</div>
-			<dl>
-				<dt>职业学院</dt>
-				<dd><a target="_blank" href="#">Web前端工程师</a></dd>
-				<dd><a target="_blank" href="#">Python Web工程师</a></dd>
-				<dd><a target="_blank" href="#">Go语言工程师</a></dd>
-				<dd><a target="_blank" href="#">iOS工程师</a></dd>
-			</dl>
-			<dl>
-				<dt>会员课程</dt>
-				<dd><a target="_blank" href="#">课程库</a></dd>
-				<dd><a target="_blank" href="#">知识体系图</a></dd>
-				<dd><a target="_blank" href="#">职业路径图</a></dd>
-				<dd><a target="_blank" href="#">系列课程</a></dd>
-				<dd><a target="_blank" href="#">课程标签</a></dd>
-			</dl>
-			<dl>
-				<dt>极客社区</dt>
-				<dd><a target="_blank" href="#">技术问答</a></dd>
-				<dd><a target="_blank" href="#">Wiki</a></dd>
-				<dd><a target="_blank" href="#">资源下载</a></dd>
-				<dd><a target="_blank" href="#">社群</a></dd>
-			</dl>
-			<dl>
-				<dt>其他</dt>
-				<dd><a target="_blank" href="#">关于我们</a></dd>
-				<dd><a target="_blank" href="#">加入我们</a></dd>
-				<dd><a target="_blank" href="#">讲师合作</a></dd>
-				<dd><a target="_blank" href="#">联系我们</a></dd>
-				<dd><a target="_blank" href="#">友情链接</a></dd>
-			</dl>
+<!--底部-->
 
-			<div class="jk-down">
-				<p class="hot-tel">服务热线:400-678-8266</p>
-				<div class="downCon down-ios">
-					<img src="http://e.jikexueyuan.com/headerandfooter/images/app.png?t=1475152597000" class="twoCode" alt="下载二维码"> iPhone
-				</div>
-				<div class="downCon down-and">
-					<img src="http://e.jikexueyuan.com/headerandfooter/images/app.png?t=1475152597000" class="twoCode" alt="下载二维码"> Android
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="footer" style="margin-top: 150px">
 	<div class="w-1000 copyright">
-		Copyright © 2013-2016&nbsp;<strong><a href="#" target="_blank">jikexueyuan.com</a></strong> All Rights Reserved. 京ICP备11018032号-8 京公网安备11010802020210
-		<a href="http://qun.jikexueyuan.com/jikexueyuan/topic/430" target="_blank" class="down-wechat"></a>
-		<a href="http://weibo.com/jikexueyuan" target="_blank" class="down-sina"></a>
+		Copyright © 2013-2016&nbsp;<strong><a href="{:U('Home/Index/index')}"
+											  target="_self">wangyiyu.com</a></strong> All Rights Reserved.
+		京ICP备11018032号-8 京公网安备11010802020210
+		<a href="#" target="_self" class="down-wechat"></a>
+		<a href="#" target="_self" class="down-sina"></a>
 	</div>
 </div>
 <!--底部结束-->
@@ -461,17 +406,18 @@
 <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
 <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/login.js' charset='utf-8'></script>
 <script type="text/javascript">
-     function searchBtn(){
-        $("#searchbox").addClass("scale");//开启搜索框
-    }
-    function closeBtn(c){
-        $(c).parent().removeClass("scale");//关闭搜索框
-    }
-$(document).ready(function(){
-	$(".lesson-classfiy-nav ul li").hover(function(){
-		$(".lesson-classfiy-nav ul").css({"width":"565","height":"445"});
+
+	function searchBtn(){
+		$("#searchbox").addClass("scale");//开启搜索框
+	}
+	function closeBtn(c){
+		$(c).parent().removeClass("scale");//关闭搜索框
+	}
+	$(document).ready(function(){
+		$(".lesson-classfiy-nav ul li").hover(function(){
+			$(".lesson-classfiy-nav ul").css({"width":"565","height":"445"});
+		});
 	});
-});
 </script>
 
 

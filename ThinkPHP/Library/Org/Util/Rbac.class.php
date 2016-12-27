@@ -195,7 +195,7 @@ class Rbac {
      +----------------------------------------------------------
      * @param integer $authId 用户ID
      +----------------------------------------------------------
-     * @access public
+     * @access PublicABC
      +----------------------------------------------------------
      */
     static public function getAccessList($authId) {

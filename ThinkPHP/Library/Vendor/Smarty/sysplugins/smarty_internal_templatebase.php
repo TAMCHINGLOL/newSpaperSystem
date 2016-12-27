@@ -314,12 +314,12 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
                     switch (PHP_SAPI) {
                         case 'cli':
                             if (/* ^phpunit */!empty($_SERVER['SMARTY_PHPUNIT_DISABLE_HEADERS'])/* phpunit$ */) {
-                                $_SERVER['SMARTY_PHPUNIT_HEADERS'][] = 'Last-Modified: ' . gmdate('D, d M Y H:i:s', $_template->cached->timestamp) . ' GMT';
+                                $_SERVER['SMARTY_PHPUNIT_HEADERS'][] = 'Last-Modified: ' . gmdate('D, ewew M Y H:i:s', $_template->cached->timestamp) . ' GMT';
                             }
                             break;
 
                         default:
-                            header('Last-Modified: ' . gmdate('D, d M Y H:i:s', $_template->cached->timestamp) . ' GMT');
+                            header('Last-Modified: ' . gmdate('D, ewew M Y H:i:s', $_template->cached->timestamp) . ' GMT');
                             break;
                     }
                     echo $_output;
@@ -398,14 +398,14 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
     }
 
     /**
-     * Registers plugin to be used in templates
+     * Registers Plugin to be used in templates
      *
-     * @param string   $type       plugin type
+     * @param string   $type       Plugin type
      * @param string   $tag        name of template tag
      * @param callback $callback   PHP callback to register
      * @param boolean  $cacheable  if true (Person) this fuction is cachable
      * @param array    $cache_attr caching attributes if any
-     * @throws SmartyException when the plugin tag is invalid
+     * @throws SmartyException when the Plugin tag is invalid
      */
     public function registerPlugin($type, $tag, $callback, $cacheable = true, $cache_attr = null)
     {
@@ -421,8 +421,8 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
     /**
      * Unregister Plugin
      *
-     * @param string $type of plugin
-     * @param string $tag name of plugin
+     * @param string $type of Plugin
+     * @param string $tag name of Plugin
      */
     public function unregisterPlugin($type, $tag)
     {
@@ -559,7 +559,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
     }
 
     /**
-     * Registers a Person plugin handler
+     * Registers a Person Plugin handler
      *
      * @param callable $callback class/method name
      * @throws SmartyException if $callback is not callable
@@ -569,7 +569,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
         if (is_callable($callback)) {
             $this->smarty->default_plugin_handler_func = $callback;
         } else {
-            throw new SmartyException("Default plugin handler '$callback' not callable");
+            throw new SmartyException("Default Plugin handler '$callback' not callable");
         }
     }
 

@@ -17,6 +17,45 @@ class SubUserModel extends Model
     protected $tableName = 'sub_users';
 
     /**
+     * @param $uid
+     * @return mixed
+     * @Author: ludezh
+     */
+    public function getTypeIdByUid($uid){
+        $where['uid'] = $uid;
+        return $this->where($where)->getField('typeid');
+    }
+    /**
+     * @param $uid
+     * @return mixed
+     * @Author: ludezh
+     */
+    public function getUserNameByUid($uid){
+        return $this->where(array('uid' => $uid))->getField('username');
+    }
+
+    /**
+     * @param $uid
+     * @return mixed
+     * @Author: ludezh
+     */
+    public function deteleRow($uid){
+        return $this->where(array('uid' => $uid))->delete();
+    }
+
+    /**
+     * @param $uid
+     * @param $status
+     * @return bool
+     * @Author: ludezh
+     */
+    public function updateIsDefriend($uid, $status){
+        $where['uid'] = $uid;
+        $data['isdefriend'] = $status;
+        return $this->where($where)->save($data);
+    }
+
+    /**
      * 修改/绑定邮箱
      * @param $email
      * @param $uid
@@ -63,26 +102,33 @@ class SubUserModel extends Model
         return $this->where($where)->delete();
     }
 
+
     /**
-     * 修改子帐号
      * @param $uid
      * @param $name
      * @param $email
-     * @param $registerTime
      * @param $address
      * @param $phone
      * @param $roleId
+     * @param $sex
+     * @param $icCardId
+     * @param $parentId
+     * @param $typeSelect
      * @return bool
+     * @Author: ludezh
      */
-    public function updateUser($uid, $name, $email, $registerTime, $address, $phone, $roleId){
+    public function updateUser($uid, $name, $email, $address, $phone, $roleId, $sex, $icCardId, $parentId, $typeSelect){
         $where['uid'] = $uid;
         $data = array(
             'username' => $name,
             'email' => $email,
-            'registertime' => $registerTime,
             'address' => $address,
             'phone' => $phone,
-            'roleid' => $roleId
+            'roleid' => $roleId,
+            'sex' => $sex,
+            'iccard' => $icCardId,
+            'parentid' => $parentId,
+            'typeid' => $typeSelect
         );
         return $this->where($where)->save($data);
     }
@@ -97,19 +143,26 @@ class SubUserModel extends Model
      * @param $address
      * @param $phone
      * @param $roleId
+     * @param $sex
+     * @param $icCardId
+     * @param $parentId
+     * @param $typeSelect
      * @return mixed
      */
-    public function addUser($uid, $name, $password, $email, $registerTime, $address, $phone, $roleId, $typeId){
+    public function addUser($uid, $name, $password, $email, $registerTime, $address, $phone, $roleId, $sex, $icCardId,$parentId,$typeSelect){
         $data = array(
             'uid' => $uid,
             'username' => $name,
             'password' => $password,
+            'iccard' => $icCardId,
             'email' => $email,
             'registertime' => $registerTime,
             'address' => $address,
             'phone' => $phone,
             'roleid' => $roleId,
-            'typeid' => $typeId
+            'sex' => $sex,
+            'parentid' => $parentId,
+            'typeid' => $typeSelect
         );
         return $this->add($data);
     }
@@ -119,7 +172,16 @@ class SubUserModel extends Model
      * @return mixed
      */
     public function getUserList(){
-        return $this->select();
+        $field = array(
+            'uid',
+            'username',
+            'phone',
+            'email',
+            'roleid',
+            'registertime',
+            'isdefriend'
+        );
+        return $this->field($field)->order('sub_user_id desc')->select();
     }
 
     /**
@@ -134,7 +196,9 @@ class SubUserModel extends Model
             'uid',
             'username',
             'parentid',
-            'isdefriend'
+            'isdefriend',
+            'typeid',
+            'roleid'
         );
         return $this->field($files)->where($where)->find();
     }

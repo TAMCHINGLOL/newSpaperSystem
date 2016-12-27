@@ -1,6 +1,6 @@
 <?php
 /**
- * Smarty shared plugin
+ * Smarty shared Plugin
  *
  * @package Smarty
  * @subpackage PluginsShared

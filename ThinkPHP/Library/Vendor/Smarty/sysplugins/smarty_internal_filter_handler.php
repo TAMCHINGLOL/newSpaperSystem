@@ -22,7 +22,7 @@ class Smarty_Internal_Filter_Handler {
      *
      * The filters will be lazy loaded if required
      * class name format: Smarty_FilterType_FilterName
-     * plugin filename format: filtertype.filtername.php
+     * Plugin filename format: filtertype.filtername.php
      * Smarty2 filter plugins could be used
      *
      * @param string                   $type     the type of filter ('pre','post','output') which shall run
@@ -39,10 +39,10 @@ class Smarty_Internal_Filter_Handler {
                 $plugin_name = "Smarty_{$type}filter_{$name}";
                 if ($template->smarty->loadPlugin($plugin_name)) {
                     if (function_exists($plugin_name)) {
-                        // use loaded Smarty2 style plugin
+                        // use loaded Smarty2 style Plugin
                         $output = $plugin_name($output, $template);
                     } elseif (class_exists($plugin_name, false)) {
-                        // loaded class of filter plugin
+                        // loaded class of filter Plugin
                         $output = call_user_func(array($plugin_name, 'execute'), $output, $template);
                     }
                 } else {

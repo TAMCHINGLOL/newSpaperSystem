@@ -29,7 +29,7 @@ class View {
 
     /**
      * 模板变量赋值
-     * @access public
+     * @access PublicABC
      * @param mixed $name
      * @param mixed $value
      */
@@ -43,7 +43,7 @@ class View {
 
     /**
      * 取得模板变量的值
-     * @access public
+     * @access PublicABC
      * @param string $name
      * @return mixed
      */
@@ -56,7 +56,7 @@ class View {
 
     /**
      * 加载模板和页面输出 可以返回输出内容
-     * @access public
+     * @access PublicABC
      * @param string $templateFile 模板文件名
      * @param string $charset 模板输出字符集
      * @param string $contentType 输出类型
@@ -93,7 +93,7 @@ class View {
 
     /**
      * 解析和获取模板内容 用于输出
-     * @access public
+     * @access PublicABC
      * @param string $templateFile 模板文件名
      * @param string $content 模板输出内容
      * @param string $prefix 模板缓存前缀
@@ -141,7 +141,7 @@ class View {
             '__SELF__'      =>  __SELF__,       // 当前页面地址
             '__CONTROLLER__'=>  __CONTROLLER__,
             '__URL__'       =>  __CONTROLLER__,
-            '__PUBLIC__'    =>  __ROOT__.'/Public',// 站点公共目录
+            '__PUBLIC__'    =>  __ROOT__.'/PublicABC',// 站点公共目录
         );
         // 允许用户自定义模板的字符串替换
         if(is_array(C('TMPL_PARSE_STRING')) )
@@ -154,7 +154,7 @@ class View {
     /**
      * 检查缓存文件是否有效
      * 如果无效则需要重新编译
-     * @access public
+     * @access PublicABC
      * @param string $tmplTemplateFile  模板文件名
      * @return boolean
      */
@@ -185,7 +185,7 @@ class View {
     /**
      * 检查缓存内容是否有效
      * 如果无效则需要重新编译
-     * @access public
+     * @access PublicABC
      * @param string $tmplContent  模板内容
      * @return boolean
      */
@@ -253,7 +253,7 @@ class View {
 
     /**
      * 设置当前输出的模板主题
-     * @access public
+     * @access PublicABC
      * @param  mixed $theme 主题名称
      * @return View
      */

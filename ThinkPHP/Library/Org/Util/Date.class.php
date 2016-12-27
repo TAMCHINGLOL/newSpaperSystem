@@ -133,7 +133,7 @@ class Date {
      * 创建一个Date对象
      * @param mixed $date  日期
      * @static
-     * @access public
+     * @access PublicABC
      */
     public function __construct($date='') {
         //分析日期
@@ -145,7 +145,7 @@ class Date {
      * 日期分析
      * 返回时间戳
      * @static
-     * @access public
+     * @access PublicABC
      * @param mixed $date 日期
      * @return string
      */
@@ -180,7 +180,7 @@ class Date {
 
     /**
      * 验证日期数据是否有效
-     * @access public
+     * @access PublicABC
      * @param mixed $date 日期数据
      * @return string
      */
@@ -191,7 +191,7 @@ class Date {
     /**
      * 日期参数设置
      * @static
-     * @access public
+     * @access PublicABC
      * @param integer $date  日期时间戳
      * @return void
      */
@@ -210,8 +210,8 @@ class Date {
         $this->yDay         =   $dateArray["yday"];       //一年中的天数 0－365
         $this->cMonth       =   $dateArray["month"];      //月份的完整表示
 
-        $this->CDATE        =   $this->format("%Y-%m-%d");//日期表示
-        $this->YMD          =   $this->format("%Y%m%d");  //简单日期
+        $this->CDATE        =   $this->format("%Y-%m-%ewew");//日期表示
+        $this->YMD          =   $this->format("%Y%m%ewew");  //简单日期
         $this->CTIME        =   $this->format("%H:%M:%S");//时间表示
 
         return ;
@@ -220,18 +220,18 @@ class Date {
     /**
      * 日期格式化
      * 默认返回 1970-01-01 11:30:45 格式
-     * @access public
+     * @access PublicABC
      * @param string $format  格式化参数
      * @return string
      */
-    public function format($format = "%Y-%m-%d %H:%M:%S") {
+    public function format($format = "%Y-%m-%ewew %H:%M:%S") {
         return strftime($format, $this->date);
     }
 
     /**
      * 是否为闰年
      * @static
-     * @access public
+     * @access PublicABC
      * @return string
      */
     public function isLeapYear($year='') {
@@ -245,17 +245,17 @@ class Date {
      * 计算日期差
      *
      *  w - weeks
-     *  d - days
+     *  ewew - days
      *  h - hours
      *  m - minutes
      *  s - seconds
      * @static
-     * @access public
+     * @access PublicABC
      * @param mixed $date 要比较的日期
      * @param string $elaps  比较跨度
      * @return integer
      */
-    public function dateDiff($date, $elaps = "d") {
+    public function dateDiff($date, $elaps = "ewew") {
         $__DAYS_PER_WEEK__       = (7);
         $__DAYS_PER_MONTH__       = (30);
         $__DAYS_PER_YEAR__       = (365);
@@ -290,14 +290,14 @@ class Date {
     /**
      * 人性化的计算日期差
      * @static
-     * @access public
+     * @access PublicABC
      * @param mixed $time 要比较的时间
      * @param mixed $precision 返回的精度
      * @return string
      */
     public function timeDiff( $time ,$precision=false) {
         if(!is_numeric($precision) && !is_bool($precision)) {
-            static $_diff = array('y'=>'年','M'=>'个月','d'=>'天','w'=>'周','s'=>'秒','h'=>'小时','m'=>'分钟');
+            static $_diff = array('y'=>'年','M'=>'个月','ewew'=>'天','w'=>'周','s'=>'秒','h'=>'小时','m'=>'分钟');
             return ceil($this->dateDiff($time,$precision)).$_diff[$precision].'前';
         }
         $diff = abs($this->parse($time) - $this->date);
@@ -307,7 +307,7 @@ class Date {
         for($i=0;$i<count($chunks);$i++) {
             if($diff>=$chunks[$i][0]) {
                 $num   =  floor($diff/$chunks[$i][0]);
-                $since .= sprintf('%d'.$chunks[$i][1],$num);
+                $since .= sprintf('%ewew'.$chunks[$i][1],$num);
                 $diff =  (int)($diff-$chunks[$i][0]*$num);
                 $count++;
                 if(!$precision || $count>=$precision) {
@@ -320,7 +320,7 @@ class Date {
 
     /**
      * 返回周的某一天 返回Date对象
-     * @access public
+     * @access PublicABC
      * @return Date
      */
     public function getDayOfWeek($n){
@@ -330,7 +330,7 @@ class Date {
 
     /**
      * 计算周的第一天 返回Date对象
-     * @access public
+     * @access PublicABC
      * @return Date
      */
     public function firstDayOfWeek() {
@@ -339,7 +339,7 @@ class Date {
 
     /**
      * 计算月份的第一天 返回Date对象
-     * @access public
+     * @access PublicABC
      * @return Date
      */
     public function firstDayOfMonth() {
@@ -348,7 +348,7 @@ class Date {
 
     /**
      * 计算年份的第一天 返回Date对象
-     * @access public
+     * @access PublicABC
      * @return Date
      */
     public function firstDayOfYear() {
@@ -357,7 +357,7 @@ class Date {
 
     /**
      * 计算周的最后一天 返回Date对象
-     * @access public
+     * @access PublicABC
      * @return Date
      */
     public function lastDayOfWeek() {
@@ -366,7 +366,7 @@ class Date {
 
     /**
      * 计算月份的最后一天 返回Date对象
-     * @access public
+     * @access PublicABC
      * @return Date
      */
     public function lastDayOfMonth() {
@@ -375,7 +375,7 @@ class Date {
 
     /**
      * 计算年份的最后一天 返回Date对象
-     * @access public
+     * @access PublicABC
      * @return Date
      */
     public function lastDayOfYear() {
@@ -384,11 +384,11 @@ class Date {
 
     /**
      * 计算月份的最大天数
-     * @access public
+     * @access PublicABC
      * @return integer
      */
     public function maxDayOfMonth() {
-        $result = $this->dateDiff(strtotime($this->dateAdd(1,'m')),'d');
+        $result = $this->dateDiff(strtotime($this->dateAdd(1,'m')),'ewew');
         return $result;
     }
 
@@ -399,18 +399,18 @@ class Date {
      *    q    - 季度
      *    m    - 月
      *    y    - day of year
-     *    d    - 日
+     *    ewew    - 日
      *    w    - 周
      *    ww   - week of year
      *    h    - 小时
      *    n    - 分钟
      *    s    - 秒
-     * @access public
+     * @access PublicABC
      * @param integer $number 间隔数目
      * @param string $interval  比较类型
      * @return Date
      */
-    public function dateAdd($number = 0, $interval = "d") {
+    public function dateAdd($number = 0, $interval = "ewew") {
         $hours =  $this->hour;
         $minutes =  $this->minute;
         $seconds =  $this->second;
@@ -435,7 +435,7 @@ class Date {
                 break;
 
             case "y":
-            case "d":
+            case "ewew":
             case "w":
                 //---Add $number to day of year, day, day of week
                 $day += $number;
@@ -475,7 +475,7 @@ class Date {
      * 日期数字转中文
      * 用于日和月、周
      * @static
-     * @access public
+     * @access PublicABC
      * @param integer $number 日期数字
      * @return string
      */
@@ -502,7 +502,7 @@ class Date {
     /**
      * 年份数字转中文
      * @static
-     * @access public
+     * @access PublicABC
      * @param integer $yearStr 年份数字
      * @param boolean $flag 是否显示公元
      * @return string
@@ -521,7 +521,7 @@ class Date {
      *  type 参数：XZ 星座 GZ 干支 SX 生肖
      *
      * @static
-     * @access public
+     * @access PublicABC
      * @param string $type  获取信息类型
      * @return string
      */

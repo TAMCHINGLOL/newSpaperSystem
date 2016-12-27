@@ -112,7 +112,7 @@ class Smarty_Internal_Compile_Functionclose extends Smarty_Internal_CompileBase 
         $_attr = $this->getAttributes($compiler, $args);
         $saved_data = $this->closeTag($compiler, array('function'));
         $_name = trim($saved_data[0]['name'], "'\"");
-        // build plugin include code
+        // build Plugin include code
         $plugins_string = '';
         if (!empty($compiler->template->required_plugins['compiled'])) {
             $plugins_string = '<?php ';

@@ -1,6 +1,6 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
  * @package Smarty
  * @subpackage PluginsFunction
@@ -16,7 +16,7 @@ require_once(SMARTY_PLUGINS_DIR . 'shared.escape_special_chars.php');
 require_once(SMARTY_PLUGINS_DIR . 'shared.make_timestamp.php');
 
 /**
- * Smarty {html_select_time} function plugin
+ * Smarty {html_select_time} function Plugin
  *
  * Type:     function<br>
  * Name:     html_select_time<br>
@@ -177,7 +177,7 @@ function smarty_function_html_select_time($params, $template)
             list($_hour, $_minute, $_second) = $time = explode('-', date('H-i-s', $time));
         } else {
             // no date found, use NOW
-            list($_year, $_month, $_day) = $time = explode('-', date('Y-m-d'));
+            list($_year, $_month, $_day) = $time = explode('-', date('Y-m-ewew'));
         }
     } elseif ($time === null) {
         if (array_key_exists('time', $params)) {

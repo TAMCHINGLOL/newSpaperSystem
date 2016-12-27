@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>网易鱼O管理中心</title>
+    <meta name="description" content="overview &amp; stats" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="__ROOT__/Application/Sadmin/public/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="__ROOT__/Application/Sadmin/public/assets/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <!-- page specific plugin styles -->
+    <!-- text fonts -->
+    <link rel="stylesheet" href="__ROOT__/Application/Sadmin/public/assets/fonts/fonts.googleapis.com.css" />
+    <!-- ace styles -->
+    <link rel="stylesheet" href="__ROOT__/Application/Sadmin/public/assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+    <script src="__ROOT__/Application/Sadmin/public/assets/js/ace-extra.min.js"></script>
+    <!-- basic scripts -->
+    <script src="__ROOT__/Application/Sadmin/public/assets/js/jquery.2.1.1.min.js"></script>
+    <script src="__ROOT__/Application/Sadmin/public/assets/js/bootstrap.min.js"></script>
+    <!-- ace scripts -->
+    <script src="__ROOT__/Application/Sadmin/public/assets/js/ace-elements.min.js"></script>
+    <script src="__ROOT__/Application/Sadmin/public/assets/js/ace.min.js"></script>
+    <script src="__ROOT__/Application/Sadmin/public/assets/js/layer/layer.js"></script>
+    <script src="__ROOT__/Application/Sadmin/public/js/index.js"></script>
+</head>
+
+<body class="no-skin">
+    <include file="Public/top" />
+    <div class="main-container" id="main-container">
+        <include file="Public/left" />
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="breadcrumbs" id="breadcrumbs">
+                    <script type="text/javascript">
+                        try {
+                            ace.settings.check('breadcrumbs', 'fixed')
+                        } catch (e) {}
+                    </script>
+                    <ul class="breadcrumb" id="breadcrumb1">
+                       <li>
+                            <i class="ace-icon fa fa-home home-icon"></i>
+                            <a href="#">首页</a>
+                        </li>
+                    </ul>
+                </div>
+                <!--<include file="Public/content" />-->
+            </div>
+            <div class="main-content-inner">
+                <div id="indexImageDiv">
+                    <img src="__ROOT__/Application/Home/View/public/img/logo6.jpg" style="margin-left: 24%;margin-top: 5%">
+                </div>
+                <include file="Public/content" />
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    $(function() {
+        ace.settings.navbar_fixed(null, true);
+        ace.settings.sidebar_fixed(null, true);
+    })
+    </script>
+    <script>
+        var admin_exitLogin_url = "{:U('Sadmin/Index/exitLogin')}";
+        var admin_loginIndex_url = "{:U('Sadmin/Index/login')}";
+    </script>
+</body>
+<script src="__ROOT__/Application/Sadmin/public/js/admin/index.js"></script>
+</html>

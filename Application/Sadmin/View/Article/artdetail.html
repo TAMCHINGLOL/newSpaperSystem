@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <include file="Public/frame_header" />
+    <!--<script src="__ACE__/js/bootbox.min.js"></script>-->
+    <style type="text/css">
+        body{
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 13px;
+        }
+        .profile-info-name{
+            font-size: 16px;
+            /*color: #1a1a1a;*/
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        .widget-title{
+            font-size: 18px;
+            /*color: #1a1a1a;*/
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="no-skin">
+    <div class="main-container" id="main-container">
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="page-content" id="main_page">
+                    <label class="space-12"></label>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="widget-box">
+                                <div class="widget-header widget-header-flat">
+                                    <h4 class="widget-title">基本信息</h4>
+                                </div>
+                                <div class="widget-body">
+                                    <div class="widget-main" style="text-align: center">
+                                        <div class="row">
+                                            <div class="col-sm-1"></div>
+                                            <div class="col-sm-5">
+                                                <div class="profile-user-info">
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 笔者编号 </div>
+                                                        <div class="profile-info-value">
+                                                            <span id="userId">{$personInfo.uid}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 笔者名称 </div>
+                                                        <div class="profile-info-value">
+                                                            <span>{$personInfo.username}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 联系电话 </div>
+                                                        <div class="profile-info-value">
+                                                            <span>{$personInfo.phone}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 邮箱 </div>
+                                                        <div class="profile-info-value">
+                                                            <span>{$personInfo.email}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 住址 </div>
+                                                        <div class="profile-info-value">
+                                                            <span>{$personInfo.address}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> </div>
+                                                        <div class="profile-info-value">
+                                                            <span></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5">
+                                                <div class="profile-user-info">
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 文章编号 </div>
+                                                        <div class="profile-info-value">
+                                                            <span id="artId">{$artInfo.artid}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 标题 </div>
+                                                        <div class="profile-info-value">
+                                                            <span>{$artInfo.title}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 文章类型 </div>
+                                                        <div class="profile-info-value">
+                                                            <span>{$artInfo.typename}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 创建时间 </div>
+                                                        <div class="profile-info-value">
+                                                            <span>{$artInfo.savetime}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> 投递时间 </div>
+                                                        <div class="profile-info-value">
+                                                            <span>{$artInfo.sendtime}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-info-row">
+                                                        <div class="profile-info-name"> </div>
+                                                        <div class="profile-info-value">
+                                                            <span>
+                                                              <a class="label label-success bigger-110" target="_blank" href="{:U('Sadmin/Article/article/',array('artid' => $artInfo['artid']),false)}" style="font-size: 14px">
+                                                                  阅 读 全 文 <i class="icon icon-double-angle-right"></i>
+                                                              </a>
+
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-1"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <label class="space-24"></label>
+                    <label class="space-6"></label>
+                    <div class="row">
+                        <!--<div class="col-sm-1"></div>-->
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="widget-box">
+                                        <div class="widget-header widget-header-flat">
+                                            <h4 class="widget-title">一级审核</h4>
+                                        </div>
+                                        <div class="widget-body">
+                                            <div class="widget-main">
+                                                <div class="profile-social-links align-center">
+                                                    <h3 style="margin-top: 0px;" class="widget-title smaller">
+                                                        <if condition="$manageInfo.onegrade eq '优'">
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <elseif condition="$manageInfo.onegrade eq '良'" />
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <else />
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                        </if>
+                                                        &nbsp;&nbsp;&nbsp;<span>{$manageInfo.onegrade}</span>
+                                                    </h3>
+                                                </div>
+                                                <div class="hr hr-4 dotted"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-5">
+                                                        <div class="profile-user-info text-center">
+                                                            <div class="profile-info-row">
+                                                                <div class=" text-center profile-info-name"> 员工编号 </div>
+                                                                <div class="profile-info-value">
+                                                                    <span>{$manageInfo.oneuid}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="profile-info-row">
+                                                                <div class=" text-center profile-info-name"></div>
+                                                                <div class="profile-info-value">
+                                                                    <span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="profile-user-info text-center">
+                                                            <div class="profile-info-row">
+                                                                <div class=" text-center profile-info-name"> 员工姓名 </div>
+                                                                <div class="profile-info-value">
+                                                                    <span>{$manageInfo.onename}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="profile-info-row">
+                                                                <div class=" text-center profile-info-name"></div>
+                                                                <div class="profile-info-value">
+                                                                    <span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-1"></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-10">
+                                                        <div class="profile-info-row">
+                                                            <div class=" text-center profile-info-name"> 评语： </div>
+                                                            <div class="profile-info-value">
+                                                                <span>{$manageInfo.onediscuss}</span>
+                                                            </div>
+                                                            </div>
+                                                        </div>
+                                                    <div class="col-sm-1"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="widget-box">
+                                        <div class="widget-header widget-header-flat">
+                                            <h4 class="widget-title">二级审核</h4>
+                                        </div>
+                                        <div class="widget-body">
+                                            <div class="widget-main">
+                                                <div class="profile-social-links align-center">
+                                                    <h3 style="margin-top: 0px;" class="widget-title smaller">
+                                                        <if condition="$manageInfo.twograde eq '优'">
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <elseif condition="$manageInfo.twograde eq '良'" />
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <else />
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                            <i class="middle ace-icon fa fa-flag bigger-200 red"></i>
+                                                        </if>
+                                                        &nbsp;&nbsp;&nbsp;<span>{$manageInfo.twograde}</span>
+                                                    </h3>
+                                                </div>
+                                                <div class="hr hr-4 dotted"></div>
+                                                <div class="row">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-5">
+                                                        <div class="profile-user-info text-center">
+                                                            <div class="profile-info-row">
+                                                                <div class=" text-center profile-info-name"> 员工编号 </div>
+                                                                <div class="profile-info-value">
+                                                                    <span>{$manageInfo.towuid}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="profile-info-row">
+                                                                <div class=" text-center profile-info-name"></div>
+                                                                <div class="profile-info-value">
+                                                                    <span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <div class="profile-user-info text-center">
+                                                            <div class="profile-info-row">
+                                                                <div class=" text-center profile-info-name"> 员工姓名 </div>
+                                                                <div class="profile-info-value">
+                                                                    <span>{$manageInfo.towname}</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="profile-info-row">
+                                                                <div class=" text-center profile-info-name"></div>
+                                                                <div class="profile-info-value">
+                                                                    <span></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-1"></div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-1"></div>
+                                                    <div class="col-sm-10">
+                                                        <div class="profile-info-row">
+                                                            <div class=" text-center profile-info-name"> 评语： </div>
+                                                            <div class="profile-info-value">
+                                                                <span>{$manageInfo.towdiscuss}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-1"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <label class="space-24"></label>
+                        <div class="row">
+                            <div class="col-sm-5"></div>
+                            <div class="col-sm-1">
+                                <button class="btn btn-sm btn-danger" style="font-size: 18px" onclick="isPass(4)">
+                                    <i class="ace-icon fa fa-close"></i> 不通过
+                                </button>
+                            </div>
+                            <div class="col-sm-1">
+                                <button class="btn btn-sm btn-primary" style="font-size: 18px" onclick="isPass(3)">
+                                    <i class="ace-icon fa fa-check"></i> 通 过
+                                </button>
+                            </div>
+                            <div class="col-sm-5"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var isAgreePass_url = "{:U('Sadmin/Article/isAgreePass','',false)}";
+    function isPass(status){
+        var artId = $('#artId').html();
+        var userId = $('#userId').html();
+        if(artId){
+            $.ajax({
+                url: isAgreePass_url,
+                type: 'post',
+                dataType: 'json',
+                data: {status: status,userId:userId,artId:artId},
+                success: function(result){
+                    parent.ifm.contentWindow.location.reload(true); //关闭前刷新
+                    if(result.status == 1){
+                        layer.msg(result.info,{time: 3000},function(){
+                            parent.layer.closeAll();
+                            return false;
+                        });
+                    }else{
+                        layer.alert(result.info,{icon: 6});
+                        return false;
+                    }
+                }
+            })
+        }
+    }
+    </script>
+</body>
+
+</html>

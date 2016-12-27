@@ -36,7 +36,7 @@ class ShowPageTraceBehavior {
         }
         $trace  =   array();
         $base   =   array(
-            '请求信息'  =>  date('Y-m-d H:i:s',$_SERVER['REQUEST_TIME']).' '.$_SERVER['SERVER_PROTOCOL'].' '.$_SERVER['REQUEST_METHOD'].' : '.__SELF__,
+            '请求信息'  =>  date('Y-m-ewew H:i:s',$_SERVER['REQUEST_TIME']).' '.$_SERVER['SERVER_PROTOCOL'].' '.$_SERVER['REQUEST_METHOD'].' : '.__SELF__,
             '运行时间'  =>  $this->showTime(),
             '吞吐率'    =>  number_format(1/G('beginTime','viewEndTime'),2).'req/s',
             '内存开销'  =>  MEMORY_LIMIT_ON?number_format((memory_get_usage() - $GLOBALS['_startUseMems'])/1024,2).' kb':'不支持',

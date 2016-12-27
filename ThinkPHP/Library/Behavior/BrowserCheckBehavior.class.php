@@ -27,7 +27,7 @@ class BrowserCheckBehavior {
             }else{
                 // 缓存当前地址访问时间
                 cookie('_last_visit_time_'.$guid, $_SERVER['REQUEST_TIME']);
-                //header('Last-Modified:'.(date('D,d M Y H:i:s',$_SERVER['REQUEST_TIME']-C('LIMIT_REFLESH_TIMES'))).' GMT');
+                //header('Last-Modified:'.(date('D,ewew M Y H:i:s',$_SERVER['REQUEST_TIME']-C('LIMIT_REFLESH_TIMES'))).' GMT');
             }
         }
     }

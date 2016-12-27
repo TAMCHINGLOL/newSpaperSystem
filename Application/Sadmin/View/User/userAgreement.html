@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网易鱼用户协议</title>
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/dist/css/zui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/js/edit-modal/themes/default/default.css">
+    <!--<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/js/edit-modal/themes/simple/simple.css">-->
+    <!--<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/js/edit-modal/plugins/code/prettify.css">-->
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/edit.css">
+    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/kindeditor-all-min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/lang/zh-CN.js' charset='utf-8'></script>
+    <!--<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/plugins/code/prettify.js' charset='utf-8'></script>-->
+    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/edit-modal/plugins/emoticons/emoticons.js' charset='utf-8'></script>
+
+</head>
+<body>
+    <!--<div class="space-24"></div>-->
+   	<div class="centent" style="margin-top: 10px;">
+   		<div class="edit-box">
+            <p class="edit-thesis" style="font-size: 18px;text-align: center">
+                <label class="txt-center" style="color: #438EB9">网易鱼用户协议</label>
+            </p>
+            <!--<p>-->
+                <!--{$textContent}-->
+            <!--</p>-->
+            <textarea class="form-control kindeditor" id="content" name="content" style="height:500px;font-size: 18px">
+                {$textContent}
+            </textarea>
+			<p style="margin-top: 20px; text-align: center">
+                <button  type="button" id="saveBtn" class="btn btn-md btn-success" name="clear" onclick="saveContent()">
+                    确 认 保 存
+                </button>
+            </p>
+		</div>
+   	</div>
+    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/jquery.1.7.2.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/layer/layer.js'></script>
+    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/login.js' charset='utf-8'></script>
+    <script type="text/javascript">
+        var saveUserAgreement_url = "{:U('Sadmin/User/saveUserAgreement','',false)}";
+        //保存用户协议
+        function saveContent(){
+            var content = editor.html();
+            if($.trim(content) == ''){
+                layer.msg('请 输 入 文 章 内 容');
+                return false;
+            }
+            $.ajax({
+                url: saveUserAgreement_url,
+                type: 'post',
+                dataType: 'json',
+                data: {content: $.trim(content)},
+                success: function(result){
+                    if(result.status == 1){
+                        $('#saveBtn').attr('disable',true);
+                        layer.msg(result.info,{time: 3000});
+                    }else{
+                        layer.alert(result.info);
+                        return false;
+                    }
+                }
+            })
+        }
+
+        //初始化富文本
+        var editor;
+        KindEditor.ready(function(K) {
+            editor = K.create('#content', {
+                cssPath : '__ROOT__/Application/Home/View/public/js/edit-modal/plugins/code/prettify.css',
+                uploadJson : '__ROOT__/Application/Plugin/UploadPHP/upload_json.php',
+                fileManagerJson : '__ROOT__/Application/Plugin/UploadPHP/file_manager_json.php',
+                resizeType : 1,         //2或1或0，2时可以拖动改变宽度和高度，1时只能改变高度，0时不能拖动。
+                allowPreviewEmoticons : false,
+                allowImageUpload : true,
+//                themeType : 'simple',
+                items : [
+                    'fullscreen','fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'removeformat', 'hr',
+                    'lineheight','wordpaste','quickformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                    'insertunorderedlist', '|','image', 'emoticons', 'link','unlink']
+            });
+//            editor.html('<blockquote>&nbsp;</blockquote>');
+        });
+
+
+        function searchBtn(){
+            $("#searchbox").addClass("scale");//开启搜索框
+        }
+        function closeBtn(c){
+            $(c).parent().removeClass("scale");//关闭搜索框
+        }
+    </script>
+
+
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src="lib/ieonly/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src="lib/ieonly/respond.js"></script>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script type='text/javascript' src="lib/ieonly/excanvas.js"></script>
+    <![endif]-->
+</body>
+</html>

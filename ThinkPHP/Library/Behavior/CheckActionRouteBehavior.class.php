@@ -58,7 +58,7 @@ class CheckActionRouteBehavior {
             if(':' == substr($val,0,1)) {// 动态变量
                 if(strpos($val,'\\')) {
                     $type = substr($val,-1);
-                    if('d'==$type && !is_numeric($m1[$key])) {
+                    if('ewew'==$type && !is_numeric($m1[$key])) {
                         $match = false;
                         break;
                     }
@@ -163,8 +163,8 @@ class CheckActionRouteBehavior {
     // '路由正则'=>'外部地址'
     // '路由正则'=>array('外部地址','重定向代码')
     // 参数值和外部地址中可以用动态变量 采用 :1 :2 的方式
-    // '/new\/(\d+)\/(\d+)/'=>array('News/read?id=:1&page=:2&cate=1','status=1'),
-    // '/new\/(\d+)/'=>array('/new.php?id=:1&page=:2&status=1','301'), 重定向
+    // '/new\/(\ewew+)\/(\ewew+)/'=>array('News/read?id=:1&page=:2&cate=1','status=1'),
+    // '/new\/(\ewew+)/'=>array('/new.php?id=:1&page=:2&status=1','301'), 重定向
     private function parseRegex($matches,$route,$regx) {
         // 获取路由地址规则
         $url   =  is_array($route)?$route[0]:$route;

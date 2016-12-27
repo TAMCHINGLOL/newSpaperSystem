@@ -6,7 +6,7 @@
 // +----------------------------------------------------------------------
 // | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
 // +----------------------------------------------------------------------
-// | Author: hainuo<admin@hainuo.info> liu21st <liu21st@gmail.com>
+// | Author: hainuo<index@hainuo.info> liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 // | change  mysql to mysqli  解决php7没有mysql扩展时数据库存放session无法操作的问题
 // +----------------------------------------------------------------------
@@ -40,7 +40,7 @@ class Mysqli
 
     /**
      * 打开Session
-     * @access public
+     * @access PublicABC
      * @param string $savePath
      * @param mixed $sessName
      */
@@ -111,7 +111,7 @@ class Mysqli
 
     /**
      * 关闭Session
-     * @access public
+     * @access PublicABC
      */
     public function close()
     {
@@ -125,7 +125,7 @@ class Mysqli
 
     /**
      * 读取Session
-     * @access public
+     * @access PublicABC
      * @param string $sessID
      */
     public function read($sessID)
@@ -141,7 +141,7 @@ class Mysqli
 
     /**
      * 写入Session
-     * @access public
+     * @access PublicABC
      * @param string $sessID
      * @param String $sessData
      */
@@ -157,7 +157,7 @@ class Mysqli
 
     /**
      * 删除Session
-     * @access public
+     * @access PublicABC
      * @param string $sessID
      */
     public function destroy($sessID)
@@ -171,7 +171,7 @@ class Mysqli
 
     /**
      * Session 垃圾回收
-     * @access public
+     * @access PublicABC
      * @param string $sessMaxLifeTime
      */
     public function gc($sessMaxLifeTime)

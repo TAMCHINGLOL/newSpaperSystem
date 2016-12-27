@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
  * @package Smarty
  * @subpackage PluginsModifierCompiler
  */
 
 /**
- * Smarty count_words modifier plugin
+ * Smarty count_words modifier Plugin
  *
  * Type:     modifier<br>
  * Name:     count_words<br>

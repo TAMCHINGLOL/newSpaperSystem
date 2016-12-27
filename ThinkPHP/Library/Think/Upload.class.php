@@ -19,7 +19,7 @@ class Upload {
         'maxSize'       =>  0, //上传的文件大小限制 (0-不做限制)
         'exts'          =>  array(), //允许上传的文件后缀
         'autoSub'       =>  true, //自动子目录保存文件
-        'subName'       =>  array('date', 'Y-m-d'), //子目录创建方式，[0]-函数名，[1]-参数，多个参数使用数组
+        'subName'       =>  array('date', 'Y-m-ewew'), //子目录创建方式，[0]-函数名，[1]-参数，多个参数使用数组
         'rootPath'      =>  './Uploads/', //保存根路径
         'savePath'      =>  '', //保存路径
         'saveName'      =>  array('uniqid', ''), //上传文件命名规则，[0]-函数名，[1]-参数，多个参数使用数组

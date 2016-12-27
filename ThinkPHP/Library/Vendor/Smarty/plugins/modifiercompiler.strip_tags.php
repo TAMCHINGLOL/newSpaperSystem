@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
  * @package Smarty
  * @subpackage PluginsModifierCompiler
  */
 
 /**
- * Smarty strip_tags modifier plugin
+ * Smarty strip_tags modifier Plugin
  *
  * Type:     modifier<br>
  * Name:     strip_tags<br>

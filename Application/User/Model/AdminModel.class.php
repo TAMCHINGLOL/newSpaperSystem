@@ -17,6 +17,16 @@ class AdminModel extends Model
     protected $tableName = "admin";
 
     /**
+     * @param $uid
+     * @return mixed
+     * @Author: ludezh
+     */
+    public function getIdByUid($uid){
+        $where['uid'] = $uid;
+        return $this->where($where)->getField('id');
+    }
+
+    /**
      * 根据手机号登录
      * @param $phone
      * @return mixed
@@ -33,7 +43,8 @@ class AdminModel extends Model
      */
     function loginByUserName($userName){
         $where['username'] = $userName;
-        return $this->where($where)->getField('password,username');
+        $field = array('password','username','uid');
+        return $this->field($field)->where($where)->find();
     }
 
     /**
@@ -43,7 +54,19 @@ class AdminModel extends Model
      */
     function findRowByUserName($userName){
         $where['username'] = $userName;
-        return $this->where($where)->find();
+        $filed = array('username','phone','uid');
+        return $this->field($filed)->where($where)->find();
+    }
+
+    /**
+     * 根据uid查找该记录
+     * @param $uid
+     * @return mixed
+     */
+    function findRowByUid($uid){
+        $where['uid'] = $uid;
+        $filed = array('username','phone','uid','password','id');
+        return $this->field($filed)->where($where)->find();
     }
 
     /**
@@ -54,6 +77,18 @@ class AdminModel extends Model
      */
     function update($userName, $password){
         $where['username'] = $userName;
+        $data['password'] = $password;
+        return  $this->where($where)->save($data);
+    }
+
+    /**
+     * 更新密码
+     * @param $uid
+     * @param $password
+     * @return bool
+     */
+    function updatePwd($uid, $password){
+        $where['uid'] = $uid;
         $data['password'] = $password;
         return  $this->where($where)->save($data);
     }

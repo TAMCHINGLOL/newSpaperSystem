@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网易鱼:{$artInfo.title}</title>
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/dist/css/zui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
+    <style type="text/css">
+        .text-muted{
+            margin-right: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+        }
+    </style>
+</head>
+<body class="body-color">
+<div class="header">
+    <a class="logo-img" href="{:U('Home/Approval/approvalfirst','',false)}" style="margin-left: 80px">
+        <img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" />
+    </a>
+</div>
+<div class="centent mar-t20">
+    <!-- 论文阅读开始 -->
+    <!--<label class="space-12"></label>-->
+    <div class="cards" style="padding-top: 30px;">
+        <div class="col-md-12 col-sm-12 col-lg-12">
+            <div class="text-center">
+                <label class="" style="font-size: 26px;color: #35B57A;line-height: 26px">{$artInfo.title}</label>
+            </div>
+            <label class="space-24"></label>
+            <div class="item " style="margin-top: 10px">
+                <div style="padding: 20px 0px">
+                    <label class="text-muted">
+                        类型：{$artInfo.typename}
+                    </label>
+                    <div class="pull-right">
+                        <span class="text-muted" style="margin-right: 0px">投递时间：{$artInfo.sendtime}</span> &nbsp;
+                    </div><br>
+                    <hr style="margin-bottom: 10px;margin-top: 0px;">
+                </div>
+            </div>
+        </div>
+        <label style="margin-bottom: 80px;"></label>
+        <div class="col-md-12 col-sm-12 col-lg-12">
+            <div style="line-height: 25px">
+                {$artInfo.content}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="centent mar-t20" style="margin-bottom: 40px;" >
+    <button class="btn btn-sm btn-primary" style="margin-left: 43%" data-toggle="modal" data-position="center" data-target="#open-dailog-email">
+        <i class="icon icon-paint-brush"></i> 点 评
+    </button>
+</div>
+<!-- 添加点评弹窗 -->
+<div class="modal fade" id="open-dailog-email">
+    <div class="modal-dialog modal-dialog-1">
+        <div class="modal-content" style="height: 280px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                        class="sr-only">关闭</span></button>
+                <h4 class="modal-title">点评审核文章</h4>
+            </div>
+            <div class="modal-body">
+                <div class="bd">
+                    <!--<form class="form">-->
+                        <div class="row">
+                            <div class="col-sm-3 txt-right" style="line-height: 30px">
+                                <label style="color: red">*</label>成 绩：
+                            </div>
+                            <div class="col-sm-9">
+                                <select id="typeSelect" class="col-sm-9" style="color: #35B558;font-size: 14px">
+                                    <option value="优" >优 (100~90)</option>
+                                    <option value="中" >良 (89~80)</option>
+                                    <option value="良" >中 (79~70)</option>
+                                    <option value="良" >及格 (69~60)</option>
+                                    <option value="差" >不及格 (59以下)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3 txt-right" style="line-height: 30px">
+                                <label style="color: red">*</label>评 语：
+                            </div>
+                            <div class="col-sm-9">
+                                <textarea style="height: 120px" class="txt sm" id="discuss" name="discuss" placeholder="请 点 评"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3 txt-right" style="line-height: 30px">
+                            </div>
+                            <div class="col-sm-6">
+                                <button style="margin-right: 10px; height: 25px;padding: 0px 5px;margin-top: 10px;" class="btn btn-danger btn-xs" id="noPass" onclick="isAgreePass1(1)">
+                                    <i class="icon icon-remove-sign"></i> 不通过
+                                </button>
+                                <button class="btn btn-primary btn-xs" style=" height: 25px;padding: 0px 5px;margin-top: 10px;" id="yesPass" onclick="isAgreePass1(2)">
+                                    <i class="icon icon-check-sign"></i> 通 过</button>
+                            </div>
+                            <div class="col-sm-3 txt-right" style="line-height: 30px">
+                                <input type="hidden" value="{$artInfo.artid}" id="artId">
+                            </div>
+                        </div>
+                    <!--</form>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
+<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/zui.min.js'></script>
+<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/login.js'></script>
+<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/layer/layer.js'></script>
+<!--<script type='text/javascript' src='__ROOT__/Application/Home/View/Public/js/md5/md5.js'></script>-->
+<script type="text/javascript">
+    var isAgreePass_url = "{:U('Home/Approval/isAgreePass','',false)}"
+    var approvalfirst_url = "{:U('Home/Approval/approvalfirst','',false)}"
+    function isAgreePass1(status){
+        var grad = $('#typeSelect').val();
+        var discuss = $('#discuss').val();
+        var artId = $('#artId').val();
+        if(status == 2){
+            if(grad == ''){
+                layer.msg('请 选 择 成 绩');
+                return false;
+            }
+            if(discuss == ''){
+                layer.msg('请 输 入 点 评');
+                return false;
+            }
+        }
+        $.ajax({
+            url: isAgreePass_url,
+            type: 'post',
+            dataType: 'json',
+            data: {status:status,artId: artId, grad: grad, discuss: discuss},
+            success: function(result){
+                if(result.status == 1){
+                    layer.msg(result.info);
+                    $('#open-dailog-email').modal('hide');
+                    window.location.href = approvalfirst_url;
+                    return false;
+                }else{
+                    layer.msg(result.info);
+                    return false;
+                }
+            }
+        })
+    }
+     function searchBtn(){
+        $("#searchbox").addClass("scale");//开启搜索框
+    }
+    function closeBtn(c){
+        $(c).parent().removeClass("scale");//关闭搜索框
+    }
+</script>
+
+
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
+<![endif]-->
+</body>
+</html>

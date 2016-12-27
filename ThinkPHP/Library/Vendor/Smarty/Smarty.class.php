@@ -5,16 +5,16 @@
 * SVN:         $Id: Smarty.class.php 2504 2011-12-28 07:35:29Z liu21st $
 *
 * This library is free software; you can redistribute it and/or
-* modify it under the terms of the GNU Lesser General Public
+* modify it under the terms of the GNU Lesser General PublicABC
 * License as published by the Free Software Foundation; either
 * version 2.1 of the License, or (at your option) any later version.
 *
 * This library is distributed in the hope that it will be useful,
 * but WITHOUT ANY WARRANTY; without even the implied warranty of
 * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-* Lesser General Public License for more details.
+* Lesser General PublicABC License for more details.
 *
-* You should have received a copy of the GNU Lesser General Public
+* You should have received a copy of the GNU Lesser General PublicABC
 * License along with this library; if not, write to the Free Software
 * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 *
@@ -143,7 +143,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
     const FILTER_OUTPUT = 'output';
     const FILTER_VARIABLE = 'variable';
     /**
-    * plugin types
+    * Plugin types
     */
     const PLUGIN_FUNCTION = 'function';
     const PLUGIN_BLOCK = 'block';
@@ -212,7 +212,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
     */
     public $default_config_handler_func = null;
     /**
-    * Person plugin handler
+    * Person Plugin handler
     * @var callable
     */
     public $default_plugin_handler_func = null;
@@ -473,7 +473,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
     */
     public $registered_plugins = array();
     /**
-    * plugin search order
+    * Plugin search order
     * @var array
     */
     public $plugin_search_order = array('function', 'block', 'compiler', 'class');
@@ -825,7 +825,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
                 }
             }
         } elseif ($key !== null) {
-            // override directory at specified index
+            // override directory at specified Index
             $this->template_dir[$key] = rtrim($template_dir, '/\\') . DS;
         } else {
             // append new directory
@@ -838,8 +838,8 @@ class Smarty extends Smarty_Internal_TemplateBase {
     /**
     * Get template directories
     *
-    * @param mixed index of directory to get, null to get all
-    * @return array|string list of template directories, or directory of $index
+    * @param mixed Index of directory to get, null to get all
+    * @return array|string list of template directories, or directory of $Index
     */
     public function getTemplateDir($index=null)
     {
@@ -890,7 +890,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
                 }
             }
         } elseif( $key !== null ) {
-            // override directory at specified index
+            // override directory at specified Index
             $this->config_dir[$key] = rtrim($config_dir, '/\\') . DS;
         } else {
             // append new directory
@@ -933,7 +933,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
     }
 
     /**
-    * Adds directory of plugin files
+    * Adds directory of Plugin files
     *
     * @param object $smarty
     * @param string $ |array $ plugins folder
@@ -964,9 +964,9 @@ class Smarty extends Smarty_Internal_TemplateBase {
     }
 
     /**
-    * Get plugin directories
+    * Get Plugin directories
     *
-    * @return array list of plugin directories
+    * @return array list of Plugin directories
     */
     public function getPluginsDir()
     {
@@ -1219,11 +1219,11 @@ class Smarty extends Smarty_Internal_TemplateBase {
 
 
     /**
-    * Takes unknown classes and loads plugin files for them
+    * Takes unknown classes and loads Plugin files for them
     * class name format: Smarty_PluginType_PluginName
-    * plugin filename format: plugintype.pluginname.php
+    * Plugin filename format: plugintype.pluginname.php
     *
-    * @param string $plugin_name    class plugin name to load
+    * @param string $plugin_name    class Plugin name to load
     * @param bool   $check          check if already loaded
     * @return string |boolean filepath of loaded file or false
     */
@@ -1235,13 +1235,13 @@ class Smarty extends Smarty_Internal_TemplateBase {
         }
         // Plugin name is expected to be: Smarty_[Type]_[Name]
         $_name_parts = explode('_', $plugin_name, 3);
-        // class name must have three parts to be valid plugin
+        // class name must have three parts to be valid Plugin
         // count($_name_parts) < 3 === !isset($_name_parts[2])
         if (!isset($_name_parts[2]) || strtolower($_name_parts[0]) !== 'smarty') {
-            throw new SmartyException("plugin {$plugin_name} is not a valid name format");
+            throw new SmartyException("Plugin {$plugin_name} is not a valid name format");
             return false;
         }
-        // if type is "internal", get plugin from sysplugins
+        // if type is "internal", get Plugin from sysplugins
         if (strtolower($_name_parts[1]) == 'internal') {
             $file = SMARTY_SYSPLUGINS_DIR . strtolower($plugin_name) . '.php';
             if (file_exists($file)) {
@@ -1251,10 +1251,10 @@ class Smarty extends Smarty_Internal_TemplateBase {
                 return false;
             }
         }
-        // plugin filename is expected to be: [type].[name].php
+        // Plugin filename is expected to be: [type].[name].php
         $_plugin_filename = "{$_name_parts[1]}.{$_name_parts[2]}.php";
 
-        // loop through plugin dirs and find the plugin
+        // loop through Plugin dirs and find the Plugin
         foreach($this->getPluginsDir() as $_plugin_dir) {
             $names = array(
                 $_plugin_dir . $_plugin_filename,
@@ -1274,7 +1274,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
                 }
             }
         }
-        // no plugin loaded
+        // no Plugin loaded
         return false;
     }
 

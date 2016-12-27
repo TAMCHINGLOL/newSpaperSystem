@@ -2,7 +2,7 @@
 /**
  * Smarty Internal Plugin Compile Function Plugin
  *
- * Compiles code for the execution of function plugin
+ * Compiles code for the execution of function Plugin
  *
  * @package Smarty
  * @subpackage Compiler
@@ -33,12 +33,12 @@ class Smarty_Internal_Compile_Private_Function_Plugin extends Smarty_Internal_Co
     public $optional_attributes = array('_any');
 
     /**
-     * Compiles code for the execution of function plugin
+     * Compiles code for the execution of function Plugin
      *
      * @param array $args array with attributes from parser
      * @param object $compiler compiler object
      * @param array $parameter array with compilation parameter
-     * @param string $tag name of function plugin
+     * @param string $tag name of function Plugin
      * @param string $function PHP function name
      * @return string compiled code
      */

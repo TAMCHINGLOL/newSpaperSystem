@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>添加轮播图</title>
+    <include file="Public/frame_header" />
+</head>
+<body class="no-skin">
+    <div class="main-container" id="main-container">
+        <div class="page-content">
+            <div class="main-content">
+                <div class="main-content-inner">
+                    <div class="page-content" id="main_page">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <form class="form-horizontal" method="post" enctype="multipart/form-data" action="{:U('Sadmin/Home/addPicRow','',false)}">
+                                <div class="form-group">
+                                    <label class="red">*</label>
+                                    <label class="col-sm-3 control-label no-padding-right " for="form-field-1">图片分类</label>
+                                    <div class="col-sm-9">
+                                        <empty name="picInfo">
+                                            <select class="width-85 chosen-select typeSelect" id="form-field-select-3" data-placeholder="" name="selectType">
+                                                <!--<option value="">请选择图片类型</option>-->
+                                                <volist name="typeList" id="type">
+                                                    <option value="{$type.typeid}">{$type.typename}</option>
+                                                </volist>
+                                            </select>
+                                        </empty>
+                                        <notempty name="picInfo">
+                                            <select class="width-85 chosen-select typeSelect" id="form-field-select-3" data-placeholder="" name="selectType">
+                                                <!--<option value="0">默认全部</option>-->
+                                                <volist name="typeList" id="type">
+                                                    <if condition="$type.typeid eq $picInfo['typeid']">
+                                                        <option value="{$type.typeid}" selected="selected">{$type.typename}</option>
+                                                        <else />
+                                                        <option value="{$type.typeid}">{$type.typename}</option>
+                                                    </if>
+                                                </volist>
+                                            </select>
+                                        </notempty>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="red">*</label>
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">图片描述</label>
+                                    <div class="col-sm-9">
+                                        <if condition="$picInfo.remark eq ''">
+                                            <div class="clearfix">
+                                                <input placeholder="请输入图片描述" name="typeRemark" class="col-xs-10 col-sm-5 newPassword"  type="text" size="50">
+                                            </div>
+                                            <else />
+                                            <div class="clearfix">
+                                                <input placeholder="请输入图片描述" name="typeRemark" class="col-xs-10 col-sm-5 newPassword"  type="text" size="50" value="{$picInfo.remark}">
+                                            </div>
+                                        </if>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="red">*</label>
+                                    <if condition="$picInfo.picurl eq ''">
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">图片上传</label>
+                                        <else />
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">图片上传 ({$picInfo.picurl})</label>
+                                    </if>
+                                    <div class="col-sm-9">
+                                        <div class="clearfix">
+                                            <input placeholder="请选择图片" name="imgFile" class="col-xs-10 col-sm-5 comfirmPassword"  type="file" >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="form-field-1"></label>
+                                    <div class="col-sm-2">
+                                        <div class="clearfix">
+                                            <input type="hidden" id="typeId" name="typeId" value="{$picInfo.id}" >
+                                            <button class="btn btn-success" id="submitButton" type="submit">确定</button>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-sm-2">-->
+                                        <!--<div class="clearfix">-->
+                                            <!--<button class="btn" onclick="password_cancer()">取消</button>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                            </form>
+                            </div>     
+                        </div>         
+                    </div>            
+                </div>
+            </div>                
+        </div>
+    </div>
+</body>
+<script src='__ROOT__/Application/Sadmin/public/assets/js/layer/layer.js'></script>
+<!--<script src="__ROOT__/Application/Sadmin/public/js/admin/index.js"></script>-->
+<script>
+    var addPicRow_url = "{:U('Sadmin/Home/addPicRow','',false)}";
+
+    //添加/编辑图片
+    $('#submitButton').on("click",function(){
+        var typeId = $('#typeId').val();        //图片id
+        var typeName = $('.typeSelect').val(); //
+        var typeRemark = $('.newPassword').val();
+        var picUrl = $('.comfirmPassword').val();
+//        alert(picUrl);return false;
+        if(typeName == ""){
+            //提示层
+            layer.msg('请 选 择 图 片 分 类');
+            return false;
+        }
+        if(typeRemark == ""){
+            //提示层
+            layer.msg('请 输 入 图 片 描 述');
+            return false;
+        }
+        if(picUrl == ''){
+            //提示层
+            layer.msg('请 选 择 上 传 图 片');
+            return false;
+        }
+        setTimeout(
+                $.ajax({
+                    url: addPicRow_url,
+                    type: 'post',
+                    dataType: 'json',
+                    data: {tag: 1},
+                    success: function(result){
+                            layer.msg(result.info,{time: 1000},function(){
+                                parent.parent.layer.closeAll();
+                                return false;
+                            });
+//                        }else if(result.status == 0){
+//                            layer.msg(result.info);
+//                            return false;
+//                        }
+                    }
+                }),2000
+        );
+    });
+</script>
+</html>

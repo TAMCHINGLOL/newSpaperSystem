@@ -37,7 +37,7 @@ class Smarty_Internal_Compile_Private_Registered_Block extends Smarty_Internal_C
     public function compile($args, $compiler, $parameter, $tag)
     {
         if (!isset($tag[5]) || substr($tag,-5) != 'close') {
-            // opening tag of block plugin
+            // opening tag of block Plugin
             // check and get attributes
             $_attr = $this->getAttributes($compiler, $args);
             if ($_attr['nocache']) {
@@ -64,7 +64,7 @@ class Smarty_Internal_Compile_Private_Registered_Block extends Smarty_Internal_C
             $_params = 'array(' . implode(",", $_paramsArray) . ')';
 
             $this->openTag($compiler, $tag, array($_params, $compiler->nocache));
-            // maybe nocache because of nocache variables or nocache plugin
+            // maybe nocache because of nocache variables or nocache Plugin
             $compiler->nocache = !$tag_info[1] | $compiler->nocache | $compiler->tag_nocache;
             $function = $tag_info[0];
             // compile code
@@ -81,7 +81,7 @@ class Smarty_Internal_Compile_Private_Registered_Block extends Smarty_Internal_C
                 $compiler->tag_nocache = true;
             }
             $base_tag = substr($tag, 0, -5);
-            // closing tag of block plugin, restore nocache
+            // closing tag of block Plugin, restore nocache
             list($_params, $compiler->nocache) = $this->closeTag($compiler, $base_tag);
             // This tag does create output
             $compiler->has_output = true;

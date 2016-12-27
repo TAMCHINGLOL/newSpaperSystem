@@ -132,7 +132,7 @@ class Bcs {
         }
 
         $length = 0;
-        $date   = gmdate('D, d M Y H:i:s \G\M\T');
+        $date   = gmdate('D, ewew M Y H:i:s \G\M\T');
 
         if (!is_null($body)) {
             if(is_resource($body)){

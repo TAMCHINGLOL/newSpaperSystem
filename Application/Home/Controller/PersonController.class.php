@@ -231,7 +231,7 @@ class PersonController extends CommonController
                 $result = $model->updatePassword1($uid, $pwd2);
                 if ($result) {
                     session(null);
-                    $this->success('修改成功 , 请重新登录');
+                    $this->success('修 改 成 功 , 请 重 新 登 录');
                     exit();
                 } else {
                     $this->error('修 改 失 败');

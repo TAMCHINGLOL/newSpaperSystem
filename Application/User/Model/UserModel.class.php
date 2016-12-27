@@ -15,6 +15,54 @@ class UserModel extends Model
     protected $tableName = 'users';
 
     /**
+     * @param $start
+     * @param $limit
+     * @param $isDefriend
+     * @param $keyword
+     * @return array
+     * @Author: ludezh
+     */
+    public function getUserAllList($start, $limit, $isDefriend, $keyword){
+        if(empty($isDefriend) && empty($keyword)){
+            $where = array();
+        } else {
+            if (!empty($isDefriend) && empty($keyword)) {
+                $where['isdefriend'] = $isDefriend;
+            } else if (empty($isDefriend) && !empty($keyword)) {
+                $where['phone'] = array('like', '%'.$keyword.'%');
+                $where['alias'] = array('like', '%'.$keyword.'%');
+                $where['uid'] = array('like', '%'.$keyword.'%');
+                $where['_logic'] = 'OR';
+            } else {
+                $map['phone'] = array('like', '%'.$keyword.'%');
+                $map['alias'] = array('like', '%'.$keyword.'%');
+                $map['uid'] = array('like', '%'.$keyword.'%');
+                $map['_logic'] = 'OR';
+                $where['_complex'] = $map;                  //复合查询
+                $where['isdefriend'] = $isDefriend;
+            }
+        }
+        $list = $this->where($where)->order('id desc')->limit($start,$limit)->select();
+        $count = $this->where($where)->count();
+        $data = array(
+            'list' => $list,
+            'count' => $count
+        );
+        return $data;
+    }
+
+    /**
+     * @param $uid
+     * @return mixed
+     * @Author: ludezh
+     */
+    public function getRowsByUid($uid){
+        $where['uid'] = $uid;
+        $field = array('uid','username','alias');
+        return $this->field($field)->where($where)->find();
+    }
+
+    /**
      * 修改/绑定邮箱
      * @param $email
      * @param $uid

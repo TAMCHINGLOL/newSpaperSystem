@@ -4,12 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>登录</title>
+    <title>网易鱼用户注册</title>
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
     <!--<link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/datetimepicker.css">-->
 </head>
+<style type="text/css">
+    .body-back {
+        background: url(__ROOT__/Application/Home/View/public/img/rebc.gif) repeat;
+    }
+    .qq {
+        background-image: url(__ROOT__/Application/Home/View/public/img/QQ1.png);
+    }
+
+    .weixin {
+        background-image: url(__ROOT__/Application/Home/View/public/img/weixin1.png);
+    }
+
+    .weibo {
+        background-image: url(__ROOT__/Application/Home/View/public/img/weibo1.png);
+    }
+
+    .qq:hover {
+        background-image: url(__ROOT__/Application/Home/View/public/img/QQ.png);
+    }
+
+    .weixin:hover {
+        background-image: url(__ROOT__/Application/Home/View/public/img/weixin.png);
+    }
+
+    .weibo:hover {
+        background-image: url(__ROOT__/Application/Home/View/public/img/weibo.png);
+    }
+</style>
 <body class="body-back">
 <header id="header" class="passport-header">
     <!--<div id="logo122">-->
@@ -24,13 +52,13 @@
         </div>
         <div class="passport-third"><p style="color: #999">第三方账号登录</p></div>
         <div class="link-third">
-            <a class="qq" jktag="0001|0.1|91058">
+            <a class="qq" jktag="0001|0.1|91058" onclick="otherLoginTip()">
                 <i class="passport-icon icon-tencent"></i>
             </a>
-            <a class="weixin" jktag="0001|0.1|91058">
+            <a class="weixin" jktag="0001|0.1|91058" onclick="otherLoginTip()">
                 <i class="passport-icon icon-tencent"></i>
             </a>
-            <a class="weibo" jktag="0001|0.1|91058">
+            <a class="weibo" jktag="0001|0.1|91058" onclick="otherLoginTip()">
                 <i class="passport-icon icon-tencent"></i>
             </a>
         </div>
@@ -76,7 +104,7 @@
                     <div class="form-group">
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" checked> 同意<a>鱼易社用户协议</a>
+                                <input type="checkbox" checked> 同意<a>网易鱼用户协议</a>
                             </label>
                         </div>
                     </div>
@@ -186,23 +214,28 @@
 <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/md5/md5.js'></script>
 <script type="text/javascript">
     var login_url = "{:U('Home/Login/login','',false)}";
+    var loginHome_url = "{:U('Home/Login/index','',false)}";
     var getSms_url = "{:U('Home/Login/getSms','',false)}";
     var verifySms_url = "{:U('Home/Login/verifySms','',false)}";
     var verifyCode_url = "{:U('Home/Login/verifyCode','',false)}";
     var register_url = "{:U('Home/Login/registerNew','',false)}";
     var home_url = "{:U('Home/Index/index','',false)}";
+    function otherLoginTip(){
+        layer.msg('小 编 正 在 努 力 , 敬 请 期 待 ...');
+        return false;
+    }
     $(document).ready(function () {
         //笔者注册
         $("#register").on("click", function () {
             var user = $('#r-phone').val();
             var password = $('#r-password').val();
             var code = $('#code').val();
-            if (code == '' || code == null) {
-                alertTips("#code","请输入动态码");
+//            if (code == '' || code == null) {
 //                alertTips("#code","请输入动态码");
-//                $('#code').focus();
-                return false;
-            }
+////                alertTips("#code","请输入动态码");
+////                $('#code').focus();
+//                return false;
+//            }
             if(user == '' || user == null){
                 alertTips("#r-phone","请输入手机号");
 //                alertTips("#r-phone","请输入手机号");
@@ -241,7 +274,7 @@
 //                        $("#open-register").attr('aria-hidden',"true");      //隐藏注册
 //                        $("#open-register").css('display',"none");      //隐藏注册
                         setTimeout(function(){
-                            window.location.href = login_url;
+                            window.location.href = loginHome_url;
                         },3000);
                     } else if (result.status == 0) {
                         layer.alert(result.info, {icon: 6});

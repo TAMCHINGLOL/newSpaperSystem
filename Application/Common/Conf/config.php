@@ -3,7 +3,7 @@ return array(
 
     /* 模块相关配置 */
     'DEFAULT_MODULE' => 'Home',
-    'MODULE_DENY_LIST'   => array('Common','User'),
+    'MODULE_DENY_LIST'   => array('Common','User','Plugin'),
 //    'URL_ROUTER_ON' => true,
 
     /* 加载扩展配置文件 */
@@ -16,7 +16,7 @@ return array(
     'URL_PATHINFO_DEPR'    => '/',      //PATHINFO URL分割符
     'URL_HTML_SUFFIX'       => 'html',  // URL伪静态后缀设置
 
-    'DATE_FORMAT' =>'Y-m-d H:i:s',      //时间格式
+    'DATE_FORMAT' =>'Y-m-ewew H:i:s',      //时间格式
 
     /* JSON返回中文编码 */
     'JSON_UNESCAPED_UNICODE' => true,   // PHP 5.4以上才支持

@@ -16,7 +16,7 @@
 | Authors:  Ma Bingyao <andot@ujn.edu.cn>                  |
 |                                                          |
 | This file may be distributed and/or modified under the   |
-| terms of the GNU General Public License (GPL) version    |
+| terms of the GNU General PublicABC License (GPL) version    |
 | 2.0 as published by the Free Software Foundation and     |
 | appearing in the included file LICENSE.                  |
 |                                                          |
@@ -101,7 +101,7 @@ class PHPRPC_Server {
         header("Content-Type: text/plain; charset={$this->charset}");
         header("X-Powered-By: PHPRPC Server/3.0");
         header('P3P: CP="CAO DSP COR CUR ADM DEV TAI PSA PSD IVAi IVDi CONi TELo OTPi OUR DELi SAMi OTRi UNRi PUBi IND PHY ONL UNI PUR FIN COM NAV INT DEM CNT STA POL HEA PRE GOV"');
-        header('Expires: ' . gmdate('D, d M Y H:i:s') . ' GMT');
+        header('Expires: ' . gmdate('D, ewew M Y H:i:s') . ' GMT');
         header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
     }
     function getRequestURL() {
@@ -420,7 +420,7 @@ class PHPRPC_Server {
         ob_implicit_flush(0);
         $this->buffer = "";
     }
-    // Public Methods
+    // PublicABC Methods
     function PHPRPC_Server() {
         require_once('compat.php');
         $this->functions = array();

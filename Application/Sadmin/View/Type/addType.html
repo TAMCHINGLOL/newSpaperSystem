@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>添加分类</title>
+    <include file="Public/frame_header" />
+</head>
+<body class="no-skin">
+    <div class="main-container" id="main-container">
+        <div class="page-content">
+            <div class="main-content">
+                <div class="main-content-inner">
+                    <div class="page-content" id="main_page">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <form class="form-horizontal" id="theForm" method="post" enctype="multipart/form-data" action="{:U('Sadmin/Type/addTypeRow1','',false)}">
+                                <div class="form-group">
+                                    <label class="red">*</label>
+                                    <label class="col-sm-3 control-label no-padding-right " for="form-field-1">类型名称</label>
+                                    <div class="col-sm-9">
+                                        <if condition="$typeInfo.typename eq ''">
+                                            <div class="clearfix">
+                                                <input placeholder="请输入类型名称" name="typeName" class="col-xs-10 col-sm-5 oldpassword" type="text">
+                                            </div>
+                                            <else />
+                                            <div class="clearfix">
+                                                <input placeholder="请输入类型名称" name="typeName" class="col-xs-10 col-sm-5 oldpassword"  type="text" value="{$typeInfo.typename}">
+                                            </div>
+                                        </if>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="red">*</label>
+                                    <label class="col-sm-3 control-label no-padding-right" for="form-field-1">类型描述</label>
+                                    <div class="col-sm-9">
+                                        <if condition="$typeInfo.remark eq ''">
+                                            <div class="clearfix">
+                                                <input placeholder="请输入类型描述" name="typeRemark" class="col-xs-10 col-sm-5 newPassword"  type="text" size="50">
+                                            </div>
+                                            <else />
+                                            <div class="clearfix">
+                                                <input placeholder="请输入类型描述" name="typeRemark" class="col-xs-10 col-sm-5 newPassword"  type="text" size="50" value="{$typeInfo.remark}">
+                                            </div>
+                                        </if>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <!--<label class="red">*</label>-->
+                                    <if condition="$typeInfo.picurl eq ''">
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">类型图片</label>
+                                        <else />
+                                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1">类型图片 ({$typeInfo.picurl})</label>
+                                    </if>
+                                    <div class="col-sm-9">
+                                        <div class="clearfix">
+                                            <input placeholder="请选择图片" name="imgFile" class="col-xs-10 col-sm-5 comfirmPassword"  type="file" >
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="form-field-1"></label>
+                                    <div class="col-sm-2">
+                                        <div class="clearfix">
+                                            <input type="hidden" id="typeId" name="typeId" value="{$typeInfo.typeid}" >
+                                            <button class="btn btn-success" id="submitButton" type="submit">确定</button>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-sm-2">-->
+                                        <!--<div class="clearfix">-->
+                                            <!--<button class="btn" onclick="password_cancer()">取消</button>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                </div>
+                            </form>
+                            </div>     
+                        </div>         
+                    </div>            
+                </div>
+            </div>                
+        </div>
+    </div>
+</body>
+<script src='__ROOT__/Application/Sadmin/public/assets/js/layer/layer.js'></script>
+<!--<script src="__ROOT__/Application/Sadmin/public/js/admin/index.js"></script>-->
+<script>
+    var addTypeRow1_url = "{:U('Sadmin/Type/addTypeRow1','',false)}";
+    var admin_loginIndex_url = "{:U('Sadmin/Index/login')}";
+    var admin_loginIndex_url1 = "{:U('Sadmin/Admin/index','',false)}";
+
+    //添加/编辑类型
+    $('#submitButton').on("click",function(){
+        var typeId = $('#typeId').val();
+        var typeName = $('.oldpassword').val();
+        var typeRemark = $('.newPassword').val();
+        var picUrl = $('.comfirmPassword').val();
+        if(typeName == ""){
+            //提示层
+            layer.msg('请 输 入 类 型 名 称');
+            return false;
+        }
+        if(typeRemark == ""){
+            //提示层
+            layer.msg('请 输 入 类 型 描 述');
+            return false;
+        }
+        setTimeout(
+                $.ajax({
+                    url: addTypeRow1_url,
+                    type: 'post',
+                    dataType: 'json',
+                    data: {tag: 1},
+                    success: function(result){
+//                        if(result.status == 1){
+                            layer.msg(result.info,{time: 1000},function(){
+                                parent.parent.layer.closeAll();
+                                return false;
+                            });
+//                        }else if(result.status == 0){
+//                            layer.msg(result.info);
+//                            return false;
+//                        }
+                    }
+                }),2000
+        );
+    });
+</script>
+</html>

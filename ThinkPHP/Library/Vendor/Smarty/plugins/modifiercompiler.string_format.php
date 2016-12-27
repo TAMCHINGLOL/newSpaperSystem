@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
  * @package Smarty
  * @subpackage PluginsModifierCompiler
  */
 
 /**
- * Smarty string_format modifier plugin
+ * Smarty string_format modifier Plugin
  *
  * Type:     modifier<br>
  * Name:     string_format<br>

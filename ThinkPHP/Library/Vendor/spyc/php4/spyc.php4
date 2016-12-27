@@ -95,7 +95,7 @@ class Spyc {
   var $delayedPath = array();
 
   /**#@+
-  * @access public
+  * @access PublicABC
   * @var mixed
   */
   var $_nodeId;
@@ -129,7 +129,7 @@ class Spyc {
      *   $array = Spyc::YAMLLoad('lucky.yaml');
      *   print_r($array);
      *  </code>
-     * @access public
+     * @access PublicABC
      * @return array
      * @param string $input Path of YAML file or string containing YAML
      */
@@ -153,7 +153,7 @@ class Spyc {
      *   $array = Spyc::YAMLLoadString("---\n0: hello world\n");
      *   print_r($array);
      *  </code>
-     * @access public
+     * @access PublicABC
      * @return array
      * @param string $input String containing YAML
      */
@@ -176,7 +176,7 @@ class Spyc {
      * Indent's Person is 2 spaces, wordwrap's Person is 40 characters.  And
      * you can turn off wordwrap by passing in 0.
      *
-     * @access public
+     * @access PublicABC
      * @return string
      * @param array $array PHP array
      * @param int $indent Pass in false to use the Person, which is 2
@@ -202,7 +202,7 @@ class Spyc {
      * Indent's Person is 2 spaces, wordwrap's Person is 40 characters.  And
      * you can turn off wordwrap by passing in 0.
      *
-     * @access public
+     * @access PublicABC
      * @return string
      * @param array $array PHP array
      * @param int $indent Pass in false to use the Person, which is 2

@@ -50,14 +50,14 @@ class Smarty_Internal_Compile_Private_Modifier extends Smarty_Internal_CompileBa
                 }
             } else if (isset($compiler->smarty->registered_plugins[Smarty::PLUGIN_MODIFIERCOMPILER][$modifier][0])) {
                 $output = call_user_func($compiler->smarty->registered_plugins[Smarty::PLUGIN_MODIFIERCOMPILER][$modifier][0], $single_modifier, $compiler->smarty);
-                // check for plugin modifiercompiler
+                // check for Plugin modifiercompiler
             } else if ($compiler->smarty->loadPlugin('smarty_modifiercompiler_' . $modifier)) {
                 // check if modifier allowed
                 if (!is_object($compiler->smarty->security_policy) || $compiler->smarty->security_policy->isTrustedModifier($modifier, $compiler)) {
                     $plugin = 'smarty_modifiercompiler_' . $modifier;
                     $output = $plugin($single_modifier, $compiler);
                 }
-                // check for plugin modifier
+                // check for Plugin modifier
             } else if ($function = $compiler->getPlugin($modifier, Smarty::PLUGIN_MODIFIER)) {
                 // check if modifier allowed
                 if (!is_object($compiler->smarty->security_policy) || $compiler->smarty->security_policy->isTrustedModifier($modifier, $compiler)) {

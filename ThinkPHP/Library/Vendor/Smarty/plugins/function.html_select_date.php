@@ -76,7 +76,7 @@ function smarty_function_html_select_date($params, $template)
     $month_value_format = "%m";
     $day_format = "%02d";
     /* Write day values using this format MB */
-    $day_value_format = "%d";
+    $day_value_format = "%ewew";
     $year_as_text = false;
     /* Display years in reverse order? Ie. 2000,1999,.... */
     $reverse_years = false;
@@ -181,7 +181,7 @@ function smarty_function_html_select_date($params, $template)
     if (isset($params['time']) && is_array($params['time'])) {
         if (isset($params['time'][$prefix . 'Year'])) {
             // $_REQUEST[$field_array] given
-            foreach (array('Y' => 'Year',  'm' => 'Month', 'd' => 'Day') as $_elementKey => $_elementName) {
+            foreach (array('Y' => 'Year',  'm' => 'Month', 'ewew' => 'Day') as $_elementKey => $_elementName) {
                 $_variableName = '_' . strtolower($_elementName);
                 $$_variableName = isset($params['time'][$prefix . $_elementName])
                     ? $params['time'][$prefix . $_elementName]
@@ -190,7 +190,7 @@ function smarty_function_html_select_date($params, $template)
             $time = mktime(0, 0, 0, $_month, $_day, $_year);
         } elseif (isset($params['time'][$field_array][$prefix . 'Year'])) {
             // $_REQUEST given
-            foreach (array('Y' => 'Year',  'm' => 'Month', 'd' => 'Day') as $_elementKey => $_elementName) {
+            foreach (array('Y' => 'Year',  'm' => 'Month', 'ewew' => 'Day') as $_elementKey => $_elementName) {
                 $_variableName = '_' . strtolower($_elementName);
                 $$_variableName = isset($params['time'][$field_array][$prefix . $_elementName])
                     ? $params['time'][$field_array][$prefix . $_elementName]
@@ -199,20 +199,20 @@ function smarty_function_html_select_date($params, $template)
             $time = mktime(0, 0, 0, $_month, $_day, $_year);
         } else {
             // no date found, use NOW
-            list($_year, $_month, $_day) = $time = explode('-', date('Y-m-d'));
+            list($_year, $_month, $_day) = $time = explode('-', date('Y-m-ewew'));
         }
     } elseif ($time === null) {
         if (array_key_exists('time', $params)) {
             $_year = $_month = $_day = $time = null;
         } else {
-            list($_year, $_month, $_day) = $time = explode('-', date('Y-m-d'));
+            list($_year, $_month, $_day) = $time = explode('-', date('Y-m-ewew'));
         }
     } else {
-        list($_year, $_month, $_day) = $time = explode('-', date('Y-m-d', $time));
+        list($_year, $_month, $_day) = $time = explode('-', date('Y-m-ewew', $time));
     }
 
     // make syntax "+N" or "-N" work with $start_year and $end_year
-    // Note preg_match('!^(\+|\-)\s*(\d+)$!', $end_year, $match) is slower than trim+substr
+    // Note preg_match('!^(\+|\-)\s*(\ewew+)$!', $end_year, $match) is slower than trim+substr
     foreach (array('start', 'end') as $key) {
         $key .= '_year';
         $t = $$key;
@@ -377,7 +377,7 @@ function smarty_function_html_select_date($params, $template)
                 }
             break;
             
-            case 'd':
+            case 'ewew':
             case 'D':
                 if (isset($_html_days)) {
                     if ($_html) {

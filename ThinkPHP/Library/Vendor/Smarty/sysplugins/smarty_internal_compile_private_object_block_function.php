@@ -26,7 +26,7 @@ class Smarty_Internal_Compile_Private_Object_Block_Function extends Smarty_Inter
     public $optional_attributes = array('_any');
 
     /**
-     * Compiles code for the execution of block plugin
+     * Compiles code for the execution of block Plugin
      *
      * @param array  $args      array with attributes from parser
      * @param object $compiler  compiler object
@@ -38,7 +38,7 @@ class Smarty_Internal_Compile_Private_Object_Block_Function extends Smarty_Inter
     public function compile($args, $compiler, $parameter, $tag, $method)
     {
         if (!isset($tag[5]) || substr($tag, -5) != 'close') {
-            // opening tag of block plugin
+            // opening tag of block Plugin
             // check and get attributes
             $_attr = $this->getAttributes($compiler, $args);
             if ($_attr['nocache'] === true) {
@@ -57,7 +57,7 @@ class Smarty_Internal_Compile_Private_Object_Block_Function extends Smarty_Inter
             $_params = 'array(' . implode(",", $_paramsArray) . ')';
 
             $this->openTag($compiler, $tag . '->' . $method, array($_params, $compiler->nocache));
-            // maybe nocache because of nocache variables or nocache plugin
+            // maybe nocache because of nocache variables or nocache Plugin
             $compiler->nocache = $compiler->nocache | $compiler->tag_nocache;
             // compile code
             $output = "<?php \$_smarty_tpl->smarty->_tag_stack[] = array('{$tag}->{$method}', {$_params}); \$_block_repeat=true; echo \$_smarty_tpl->smarty->registered_objects['{$tag}'][0]->{$method}({$_params}, null, \$_smarty_tpl, \$_block_repeat);while (\$_block_repeat) { ob_start();?>";
@@ -67,7 +67,7 @@ class Smarty_Internal_Compile_Private_Object_Block_Function extends Smarty_Inter
             if ($compiler->nocache) {
                 $compiler->tag_nocache = true;
             }
-            // closing tag of block plugin, restore nocache
+            // closing tag of block Plugin, restore nocache
             list($_params, $compiler->nocache) = $this->closeTag($compiler, $base_tag . '->' . $method);
             // This tag does create output
             $compiler->has_output = true;

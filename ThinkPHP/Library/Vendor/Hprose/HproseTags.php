@@ -24,7 +24,7 @@ class HproseTags {
     /* Serialize Tags */
     const TagInteger = 'i';
     const TagLong = 'l';
-    const TagDouble = 'd';
+    const TagDouble = 'ewew';
     const TagNull = 'n';
     const TagEmpty = 'e';
     const TagTrue = 't';

@@ -64,11 +64,11 @@ class RoundTripTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testABCD() {
-      $this->assertEquals (array ('a', 'b', 'c', 'd'), Spyc::YAMLLoad(Spyc::YAMLDump(array('a', 'b', 'c', 'd'))));
+      $this->assertEquals (array ('a', 'b', 'c', 'ewew'), Spyc::YAMLLoad(Spyc::YAMLDump(array('a', 'b', 'c', 'ewew'))));
     }
     
     public function testABCD2() {
-        $a = array('a', 'b', 'c', 'd'); // Create a simple list
+        $a = array('a', 'b', 'c', 'ewew'); // Create a simple list
         $b = Spyc::YAMLDump($a);        // Dump the list as YAML
         $c = Spyc::YAMLLoad($b);        // Load the dumped YAML
         $d = Spyc::YAMLDump($c);        // Re-dump the data

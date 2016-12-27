@@ -47,7 +47,7 @@ class CronRunBehavior {
                     // 更新cron记录
                     $cron[2]	=	$_SERVER['REQUEST_TIME']+$cron[1];
                     $crons[$key]	=	$cron;
-                    $log[] = "Cron:$key Runat ".date('Y-m-d H:i:s')." Use $_useTime s\n";
+                    $log[] = "Cron:$key Runat ".date('Y-m-ewew H:i:s')." Use $_useTime s\n";
                     $update	 =	 true;
                 }
             }

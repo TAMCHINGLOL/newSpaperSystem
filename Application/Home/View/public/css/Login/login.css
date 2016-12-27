@@ -1,3 +1,45 @@
+/** 分页样式 **/
+.pager{
+    text-align: right;
+    margin: 0px;
+}
+.pager>li.active>a, .pager>li.active>a:hover, .pager>li.active>span, .pager>li.active>span:hover {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #35B558;
+    border-color: #35B558;
+}
+.pager>li>a, .pager>li>span {
+    display:inline-block;
+    padding:2px 23px;
+    margin:0 1px;
+    border:1px solid #f0f0f0;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+}
+.pager>li>a:focus, .pager>li>a:hover, .pager>li>span:focus, .pager>li>span:hover{
+    z-index: 2;
+    background-color: #fff;
+}
+.pager a,.pager li {
+    display:inline-block;
+    list-style: none;
+    text-decoration:none; color:#35B558;
+}
+.pager a.first,.pager a.prev,.pager a.next,.pager a.end{
+    margin:0;
+}
+.pager a:hover{
+    border-color:#35B558;
+}
+.pager span.current{
+    background:#35B558;
+    color:#FFF;
+    font-weight:700;
+    border-color:#35B558;
+}
 /*登陆*/
 .login{width: 800px;margin: 0 auto;position: relative;position: relative;top: 180px;background: #FFFFFF;padding: 40px;}
 .layout-box{width: 370px;padding-right: 40px;border-right: 1px solid #cccccc;}
@@ -727,7 +769,6 @@ ul.story .story-info span {
 }
 .user-course .user-course-cont {
     position: relative;
-    width: 750px;
     float: left;
 }
 #learn-course-missing {

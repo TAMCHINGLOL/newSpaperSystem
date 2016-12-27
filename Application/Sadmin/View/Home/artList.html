@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>已处理论文</title>
+    <include file="Public/frame_header" />
+    <link rel="stylesheet" type="text/css" href="__ROOT__/Application/Sadmin/public/css/common.css">
+    <style type="text/css">
+        .dataTables_paginate .pagination{
+            margin-top: 5px;
+        }
+        .bottom {
+            display: none;
+            background-color: #EFF3F8;
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            height: 43px;
+        }
+
+        #table_id_wrapper .bottom {
+            margin-top: 0px;
+        }
+
+        #table_id_length {
+            width: 140px;
+            float: left;
+            margin-top: 12px;
+        }
+
+        #table_id_length label {
+            font-size: 12px;
+        }
+
+        #table_id_info {
+            font-size: 14px;
+            float: left;
+            width: 200px;
+            margin-top: 14px;
+        }
+
+        .dataTables_empty {
+            text-align: center
+        }
+
+        .dataTables_paginate .pagination {
+            margin-top: 12px;
+            margin-right: 12px;
+        }
+
+        #main-container {
+            font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 13px;
+        }
+
+        th {
+            text-align: center
+        }
+
+        #table_id tbody tr td {
+            text-align: center
+        }
+    </style>
+    <script src="__ROOT__/Application/Sadmin/public/assets/js/jquery.dataTables.min.js"></script>
+    <script src="__ROOT__/Application/Sadmin/public/assets/js/jquery.dataTables.bootstrap.min.js"></script>
+    <script src="__ROOT__/Application/Sadmin/public/js/admin/datableAdmin.js"></script>
+</head>
+
+<body class="no-skin">
+    <div class="main-container" id="main-container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="hr hr8 "></div>
+                <table class="table table-striped table-bordered table-hover" id="table_id">
+                    <thead>
+                        <tr>
+                            <th width="15%">文章编号</th>
+                            <th width="15%">笔者名称</th>
+                            <th width="15%">文章标题</th>
+                            <th width="10%">类 别</th>
+                            <th width="10%">投稿时间</th>
+                            <th width="10%">处理时间</th>
+                            <th width="25%">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <foreach name="artList" item="v">
+                            <tr>
+                                <td>{$v.artid}</td>
+                                <td>{$v.username}</td>
+                                <td>{$v.title}</td>
+                                <td>{$v.typeid}</td>
+                                <td>{$v.sendtime}</td>
+                                <td>{$v.passtime}</td>
+                                <td>
+                                    <if condition="$v.istop eq 2">
+                                        <button class="btn btn-xs btn-danger center" style="margin-right: 10px" onclick="isTopRow('{$v['artid']}',1)">
+                                            <i class="ace-icon fa fa-sort-up"></i> 已置顶
+                                        </button>
+                                        <else />
+                                        <button class="btn btn-xs btn-info center" style="margin-right: 10px" onclick="isTopRow('{$v['artid']}',2)">
+                                            <i class="ace-icon fa fa-sort-desc"></i> 未置顶
+                                        </button>
+                                    </if>
+                                    <button class="btn btn-xs btn-primary center" style="margin-right: 10px" onclick="searchDetails('{$v['artid']}')">
+                                        <i class="ace-icon fa fa-search"></i> 查看详情
+                                    </button>
+                                    <button class="btn btn-xs center" onclick="cancelArt('{$v['artid']}',1)">
+                                        <i class="ace-icon fa fa-archive"></i> 已在优文箱
+                                    </button>
+                                </td>
+                            </tr>
+                        </foreach>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var articleList_url = "{:U('Sadmin/Article/articleList','',false)}";
+        var article_url = "{:U('Sadmin/Article/article','',false)}";
+        var isBox_url = "{:U('Sadmin/Article/isBox','',false)}";
+        var isTopRow_url = "{:U('Sadmin/Home/isTopRow','',false)}";
+        var dataTable;
+        $(function() {
+            userList.init();
+        });
+
+        //是否置顶
+        function isTopRow(id,status){
+            if(id){
+//                alert(id);return false;
+                var title;
+                if(status == 2){
+                    title = '确 定 置 顶 该 类 别 ？';
+                }else{
+                    title = '确 定 不 置 顶 该 类 别 ？';
+                }
+                layer.confirm(title,function(){
+                    $.ajax({
+                        url: isTopRow_url,
+                        type: 'post',
+                        dataType: 'json',
+                        data: {id: id,status:status},
+                        success: function(result){
+                            parent.ifm.contentWindow.location.reload(true);
+                            layer.msg(result.info,{time: 1000},function(){
+                                parent.parent.layer.closeAll();
+                                return false;
+                            });
+                        }
+                    })
+                });
+            }
+        }
+        function cancelArt(artId,status){
+            var title = '取 消 存 放 优 文 箱 ？';
+            layer.confirm(title,function() {
+                $.ajax({
+                    url: isBox_url,
+                    type: 'post',
+                    dataType: 'json',
+                    data: {artId: artId, status:status},
+                    success: function (result) {
+                        parent.ifm.contentWindow.location.reload(true); //关闭前刷新
+                        if (result.status == 1) {
+                            layer.msg(result.info, {time: 3000}, function () {
+                                parent.layer.closeAll();
+                                return false;
+                            });
+                        } else {
+                            layer.msg(result.info, {icon: 6});
+                            return false;
+                        }
+                    }
+                })
+            });
+        }
+
+        function searchDetails(artId){
+            var urlRequest = article_url;
+            var titleName = '<span style="font-size: 14px;color: #35B57A;line-height: 26px">文章阅读</span>';
+            if(artId) {
+                urlRequest += '/artid/' + artId;
+                parent.layer.open({
+                    type: 2,
+                    title: titleName,
+                    shadeClose: true,
+                    shade: true,
+                    scrollbar: true,
+                    maxmin: true,
+                    area: ['85%', '85%'],
+                    content: urlRequest,
+                    end: function () {
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

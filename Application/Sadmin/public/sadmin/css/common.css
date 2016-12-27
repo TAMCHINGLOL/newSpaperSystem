@@ -1,0 +1,19 @@
+#table_id_length{
+	width:140px;
+	float: left;
+	margin-top: -5px;
+}
+
+#table_id_info{
+	width:240px;
+	float: left;
+}
+
+#table_id_filter{
+	width:240px;
+	float: left;
+}
+#table_id_wrapper .bottom{
+	margin-top: 10px;
+}
+

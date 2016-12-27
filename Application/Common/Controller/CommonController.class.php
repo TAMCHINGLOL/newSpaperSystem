@@ -18,8 +18,9 @@ class CommonController extends Controller
         header("Content-type: text/html; charset=utf-8");  //把所有的头文件都设置字符编码为utf-8;
         if($_SESSION['uid'] == null || !isset($_SESSION['uid'])){
             session(null);
-//             $this->error('登录已过期,正在跳转...','index.php/Home/Login/index.html',2);
-            $this->redirect('/Home/Login/index');
+//             $this->error('登录已过期,正在跳转...','Index.php/Home/Login/Index.html',2);
+            $this->redirect('/Home/Login/Index');
+//            $this- redirect('Index.php/Home/Login/Index.html');
             exit();
         }
     }

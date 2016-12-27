@@ -2,7 +2,7 @@
 /**
  * Smarty Internal Plugin Compile Block Plugin
  *
- * Compiles code for the execution of block plugin
+ * Compiles code for the execution of block Plugin
  *
  * @package Smarty
  * @subpackage Compiler
@@ -26,19 +26,19 @@ class Smarty_Internal_Compile_Private_Block_Plugin extends Smarty_Internal_Compi
     public $optional_attributes = array('_any');
 
     /**
-     * Compiles code for the execution of block plugin
+     * Compiles code for the execution of block Plugin
      *
      * @param array  $args      array with attributes from parser
      * @param object $compiler  compiler object
      * @param array  $parameter array with compilation parameter
-     * @param string $tag       name of block plugin
+     * @param string $tag       name of block Plugin
      * @param string $function  PHP function name
      * @return string compiled code
      */
     public function compile($args, $compiler, $parameter, $tag, $function)
     {
         if (!isset($tag[5]) || substr($tag, -5) != 'close') {
-            // opening tag of block plugin
+            // opening tag of block Plugin
             // check and get attributes
             $_attr = $this->getAttributes($compiler, $args);
             if ($_attr['nocache'] === true) {
@@ -57,7 +57,7 @@ class Smarty_Internal_Compile_Private_Block_Plugin extends Smarty_Internal_Compi
             $_params = 'array(' . implode(",", $_paramsArray) . ')';
 
             $this->openTag($compiler, $tag, array($_params, $compiler->nocache));
-            // maybe nocache because of nocache variables or nocache plugin
+            // maybe nocache because of nocache variables or nocache Plugin
             $compiler->nocache = $compiler->nocache | $compiler->tag_nocache;
             // compile code
             $output = "<?php \$_smarty_tpl->smarty->_tag_stack[] = array('{$tag}', {$_params}); \$_block_repeat=true; echo {$function}({$_params}, null, \$_smarty_tpl, \$_block_repeat);while (\$_block_repeat) { ob_start();?>";
@@ -66,7 +66,7 @@ class Smarty_Internal_Compile_Private_Block_Plugin extends Smarty_Internal_Compi
             if ($compiler->nocache) {
                 $compiler->tag_nocache = true;
             }
-            // closing tag of block plugin, restore nocache
+            // closing tag of block Plugin, restore nocache
             list($_params, $compiler->nocache) = $this->closeTag($compiler, substr($tag, 0, -5));
             // This tag does create output
             $compiler->has_output = true;

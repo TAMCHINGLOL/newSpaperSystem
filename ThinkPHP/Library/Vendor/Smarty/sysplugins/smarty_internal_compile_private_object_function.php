@@ -26,7 +26,7 @@ class Smarty_Internal_Compile_Private_Object_Function extends Smarty_Internal_Co
     public $optional_attributes = array('_any');
 
     /**
-     * Compiles code for the execution of function plugin
+     * Compiles code for the execution of function Plugin
      *
      * @param array  $args      array with attributes from parser
      * @param object $compiler  compiler object

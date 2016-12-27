@@ -21,7 +21,7 @@ class LoginController extends Controller
     public function index()
     {
         if (session('uid') != null && isset($_SESSION['uid'])) {
-            $this->redirect('/Home/Index/index');
+            $this->redirect('/Home/Index/Index');
         }
         $this->display();
     }
@@ -40,8 +40,8 @@ class LoginController extends Controller
      */
     public function login()
     {
-        if (session('isVerify') == 'no' && isset($_SESSION['isVerify'])) {
-            $this->error('请重新输入验证码');
+        if (session('isVerify') == 'no' || isset($_SESSION['isVerify'])) {
+            $this->error('请 重 新 输 入 验 证 码');
             exit();
         }
         $phone = I('post.phone');
@@ -61,11 +61,11 @@ class LoginController extends Controller
             }
 //                $countRow = $messageModel->getMessageCount($returnResult['uid']);
         } else {
-            $this->error('未知用户类型');
+            $this->error('非法操作,未知用户类型');
             exit();
         }
 
-        if ($returnResult['isdefriend'] == 12) {
+        if ($returnResult['isdefriend'] == 2) {
             $this->error('你已被管理员拉黑,请联系管理员');
             exit();
         }
@@ -131,7 +131,7 @@ class LoginController extends Controller
         $phone = I('post.phone');
         if (preg_match("/^1[34578]{1}\d{9}$/", $phone)) {
             $tag = I('post.tag');
-            if ($tag == 'admin') {
+            if ($tag == 'Index') {
                 $userSubModel = D('User/SubUser');
                 $returnResult = $userSubModel->getRowByPhone($phone);
                 if (empty($returnResult)) {
@@ -169,6 +169,10 @@ class LoginController extends Controller
         }
         $smsCode = I('post.smsCode');
         $sureSms = session('smsCode');
+//        if($smsCode == md5('')){
+//            $this->error('请输入动态码');
+//            exit();
+//        }
         if ($smsCode == md5($sureSms)) {
             $phone = I('post.phone');
             $subUserModel = D('User/SubUser');
@@ -177,12 +181,14 @@ class LoginController extends Controller
                 $this->error('用户不存在');
                 exit();
             }
-            if ($info['isdefriend'] == 12) {
-                $this->error('你已被管理员拉黑,请联系管理员');
+            if ($info['isdefriend'] == 2) {
+                $this->error('你已被管理员禁用,请联系管理员');
                 exit();
             }
-            session('sys_tag', 'admin');
             sessionSave($info);
+            if(session('roleid') == 3 || session('roleid') == 6){
+                session('sys_tag', 'admin');
+            }
             $this->success('动态码正确');
             exit();
         } else {
@@ -236,10 +242,10 @@ class LoginController extends Controller
     {
         $smsCode = I('post.smsCode');
         $sureSms = session('smsCode');
-        if ($smsCode != md5($sureSms)) {
-            $this->error('动态码不正确');
-            exit();
-        }
+//        if ($smsCode != md5($sureSms)) {
+//            $this->error('动态码不正确');
+//            exit();
+//        }
 
         $phone = I('post.phone');
         if (preg_match("/^1[34578]{1}\d{9}$/", $phone)) {
@@ -255,7 +261,7 @@ class LoginController extends Controller
             $alias = getRandStr(11);            //生成用户名
             $result = $userModel->register($uid, $phone, $pwd, $alias);
             if ($result) {
-                $this->success(' 注 册 成 功');
+                $this->success(' 注 册 成 功 , 赶 紧 上 车');
                 exit();
             } else {
                 $this->error('注册失败');

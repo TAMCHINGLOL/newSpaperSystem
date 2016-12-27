@@ -16,7 +16,7 @@
 | Authors:  Ma Bingyao <andot@ujn.edu.cn>                  |
 |                                                          |
 | This file may be distributed and/or modified under the   |
-| terms of the GNU General Public License (GPL) version    |
+| terms of the GNU General PublicABC License (GPL) version    |
 | 2.0 as published by the Free Software Foundation and     |
 | appearing in the included file LICENSE.                  |
 |                                                          |
@@ -106,7 +106,7 @@ class _PHPRPC_Client {
     var $_clientid;
     var $_http_version;
     var $_keep_alive;
-    // Public Methods
+    // PublicABC Methods
     function _PHPRPC_Client($serverURL = '') {
         global $_PHPRPC_SID;
         require_once('compat.php');

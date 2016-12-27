@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin to format text blocks
+ * Smarty Plugin to format text blocks
  *
  * @package Smarty
  * @subpackage PluginsBlock
  */
 
 /**
- * Smarty {textformat}{/textformat} block plugin
+ * Smarty {textformat}{/textformat} block Plugin
  *
  * Type:     block function<br>
  * Name:     textformat<br>

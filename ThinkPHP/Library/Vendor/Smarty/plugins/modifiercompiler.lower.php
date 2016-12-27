@@ -1,12 +1,12 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  * @package Smarty
  * @subpackage PluginsModifierCompiler
  */
 
 /**
- * Smarty lower modifier plugin
+ * Smarty lower modifier Plugin
  *
  * Type:     modifier<br>
  * Name:     lower<br>

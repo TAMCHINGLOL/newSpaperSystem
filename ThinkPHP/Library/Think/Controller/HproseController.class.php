@@ -22,7 +22,7 @@ class HproseController {
 
    /**
      * 架构函数
-     * @access public
+     * @access PublicABC
      */
     public function __construct() {
         //控制器初始化
@@ -52,7 +52,7 @@ class HproseController {
 
     /**
      * 魔术方法 有不存在的操作的时候执行
-     * @access public
+     * @access PublicABC
      * @param string $method 方法名
      * @param array $args 参数
      * @return mixed

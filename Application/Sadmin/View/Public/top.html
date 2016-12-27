@@ -1,0 +1,75 @@
+<div id="navbar" class="navbar navbar-default">
+    <div class="navbar-container" id="navbar-container">
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+            <span class="sr-only">Toggle sidebar</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-header pull-left">
+            <a href="index.html" class="navbar-brand">
+                <small>
+                            <i class="icon fa fa-university"></i>
+                           网易鱼
+                        </small>
+            </a>
+        </div>
+        <script>
+            var Password_url = "{:U('Sadmin/Index/passwordEdit','',false)}";
+            var admin_exitLogin_url = "{:U('Sadmin/Index/exitLogin','',false)}";
+            var admin_loginIndex_url1 = "{:U('Sadmin/Admin/index','',false)}";
+        </script>
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                
+                
+                
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                
+                        <span class="user-info">
+                                    <small>欢迎光临</small>
+                                    {$info.username}
+                                </span>
+                        <i class="ace-icon fa fa-caret-down"></i>
+                    </a>
+                    <empty name="info">
+                        <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-blue dropdown-caret dropdown-close">
+                            <li>
+                                <a href="{:U('Sadmin/Index/login')}">
+                                    <i class="ace-icon fa fa-lock"></i> 登 录 入 口
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{:U('Home/Index/index')}">
+                                    <i class="ace-icon fa fa-lock"></i> 网易鱼首页
+                                </a>
+                            </li>
+                        </ul>
+                    </empty>
+                    <notempty name="info">
+                        <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-blue dropdown-caret dropdown-close">
+                            <li>
+                                <a href="javascript:void(0)" onclick="passwordEdit()">
+                                    <i class="ace-icon fa fa-edit (alias)"></i>密 码 修 改
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{:U('Home/Index/index')}" target="_blank">
+                                    <i class="ace-icon fa fa-home"></i> 网易鱼首页
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="userquit()">
+                                    <i class="ace-icon fa fa-lock"></i> 退 出 登 录
+                                </a>
+                            </li>
+                        </ul>
+                    </notempty>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /.navbar-container -->
+<script src="__ROOT__/Application/Sadmin/public/js/admin/index.js"></script>
+</div>

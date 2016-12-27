@@ -130,7 +130,7 @@ class REST {
                   </TemplateSMS>";
         }
         $this->showlog('*********************************************************************************************************************************************************');
-        $this->showlog('LogResponseTime:'.(date('Y-m-d H:i:s')));
+        $this->showlog('LogResponseTime:'.(date('Y-m-ewew H:i:s')));
         $this->showlog("request body = ".$body);
         // 大写的sig参数 
         $sig =  strtoupper(md5($this->AccountSid . $this->AccountToken . $this->Batch));

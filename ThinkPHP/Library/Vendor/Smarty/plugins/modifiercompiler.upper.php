@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
  * @package Smarty
  * @subpackage PluginsModifierCompiler
  */
 
 /**
- * Smarty upper modifier plugin
+ * Smarty upper modifier Plugin
  * 
  * Type:     modifier<br>
  * Name:     lower<br>

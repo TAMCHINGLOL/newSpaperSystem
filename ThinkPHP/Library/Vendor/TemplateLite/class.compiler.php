@@ -6,16 +6,16 @@
  * Copyright:	2003,2004,2005 by Paul Lockaby, 2005,2006 Mark Dickenson
  *
  * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
+ * modify it under the terms of the GNU Lesser General PublicABC
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
  *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
+ * Lesser General PublicABC License for more details.
  *
- * You should have received a copy of the GNU Lesser General Public
+ * You should have received a copy of the GNU Lesser General PublicABC
  * License along with this library; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *
@@ -25,7 +25,7 @@
  */
 
 class Template_Lite_Compiler extends Template_Lite {
-	// public configuration variables
+	// PublicABC configuration variables
 	var $left_delimiter			= "";
 	var $right_delimiter			= "";
 	var $plugins_dir			= "";
@@ -136,7 +136,7 @@ class Template_Lite_Compiler extends Template_Lite {
 		$_match		= array();		// a temp variable for the current regex match
 		$tags		= array();		// all original tags
 		$text		= array();		// all original text
-		$compiled_text	= '<?php /* '.$this->_version.' '.strftime("%Y-%m-%d %H:%M:%S %Z").' */ ?>'."\n\n"; // stores the compiled result
+		$compiled_text	= '<?php /* '.$this->_version.' '.strftime("%Y-%m-%ewew %H:%M:%S %Z").' */ ?>'."\n\n"; // stores the compiled result
 		$compiled_tags	= array();		// all tags and stuff
 
 		$this->_require_stack = array();
@@ -845,7 +845,7 @@ class Template_Lite_Compiler extends Template_Lite {
 //					$_result .= "['$var']";
 					$parts = explode('.', $var);
 					$section = $parts[0];
-					$section_prop = isset($parts[1]) ? $parts[1] : 'index';
+					$section_prop = isset($parts[1]) ? $parts[1] : 'Index';
 					$_result .= "[\$this->_sections['$section']['$section_prop']]";
 				}
 			}
@@ -921,7 +921,7 @@ class Template_Lite_Compiler extends Template_Lite {
 				$php_function = "PHP";
 				if ($this->_plugin_exists($_mods[$i], "modifier"))
 				{
-					$php_function = "plugin";
+					$php_function = "Plugin";
 				}
 				$variable = "\$this->_run_modifier($variable, '$_mods[$i]', '$php_function', $_map_array$_arg)";
 			}
@@ -945,7 +945,7 @@ class Template_Lite_Compiler extends Template_Lite {
 		{
 			return $this->_plugins[$type][$function];
 		}
-		// check for a plugin in the plugin directory
+		// check for a Plugin in the Plugin directory
 		if (file_exists($this->_get_plugin_dir($type . '.' . $function . '.php') . $type . '.' . $function . '.php'))
 		{
 			require_once($this->_get_plugin_dir($type . '.' . $function . '.php') . $type . '.' . $function . '.php');

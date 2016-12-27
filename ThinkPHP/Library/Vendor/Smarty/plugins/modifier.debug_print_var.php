@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  * 
  * @package Smarty
  * @subpackage Debug
  */
 
 /**
- * Smarty debug_print_var modifier plugin
+ * Smarty debug_print_var modifier Plugin
  * 
  * Type:     modifier<br>
  * Name:     debug_print_var<br>

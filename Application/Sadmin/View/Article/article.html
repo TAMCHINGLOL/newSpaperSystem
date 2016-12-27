@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>网易鱼:{$artInfo.title}</title>
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/dist/css/zui.min.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
+    <style type="text/css">
+        .text-muted{
+            margin-right: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            /*font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+        }
+    </style>
+</head>
+<body class="body-color">
+<div class="header">
+    <a class="logo-img" href="#" style="margin-left: 80px">
+        <img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" />
+    </a>
+</div>
+<div class="centent mar-t20">
+    <!-- 轮播结束 -->
+    <!-- 论文阅读开始 -->
+    <!--<label class="space-12"></label>-->
+    <div class="cards" style="padding-top: 30px;">
+        <div class="col-md-12 col-sm-12 col-lg-12">
+            <div class="text-center">
+                <label class="" style="font-size: 26px;color: #35B57A;line-height: 26px">{$artInfo.title}</label>
+            </div>
+            <label class="space-24"></label>
+            <div class="item " style="margin-top: 10px">
+                <div style="padding: 20px 0px">
+                    <label class="text-muted">
+                        文章编号：{$artInfo.artid}
+                    </label>
+                    <label class="text-muted">
+                        笔者编号：{$userInfo.uid}
+                    </label>
+                    <label class="text-muted">
+                        笔者名称：{$userInfo.username}
+                    </label>
+                    <label class="text-muted">
+                        类型：{$artInfo.typename}
+                    </label>
+                    <label class="text-muted">
+                        标签：{$artInfo.tag}
+                    </label>
+                    <div class="pull-right">
+                        <span class="text-muted" style="margin-right: 0px">投递时间：{$artInfo.sendtime}</span> &nbsp;
+                    </div><br>
+                    <hr style="margin-bottom: 10px;margin-top: 0px;">
+                </div>
+            </div>
+        </div>
+        <label style="margin-bottom: 80px;"></label>
+        <div class="col-md-12 col-sm-12 col-lg-12">
+            <div style="line-height: 25px">
+                {$artInfo.content}
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/jquery.1.7.2.min.js'></script>
+<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/zui.min.js'></script>
+<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/Login/login.js'></script>
+<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/layer/layer.js'></script>
+<!--<script type='text/javascript' src='__ROOT__/Application/Home/View/Public/js/md5/md5.js'></script>-->
+<script type="text/javascript">
+     function searchBtn(){
+        $("#searchbox").addClass("scale");//开启搜索框
+    }
+    function closeBtn(c){
+        $(c).parent().removeClass("scale");//关闭搜索框
+    }
+</script>
+
+
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/html5shiv.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/respond.js"></script>
+<![endif]-->
+<!--[if lt IE 9]>
+<script type='text/javascript' src="__ROOT__/Application/Home/View/public/js/lib/ieonly/excanvas.js"></script>
+<![endif]-->
+</body>
+</html>

@@ -3,278 +3,391 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>我的论文</title>
-    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/zui.min.css">
+    <title>草稿箱</title>
+    <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/dist/css/zui.min.css">
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/common.css">
     <link rel="stylesheet" href="__ROOT__/Application/Home/View/public/css/Login/login.css">
 </head>
+<style type="text/css">
+    html,body{
+        font: 14px/1.5 'Microsoft Yahei',Arial,Helvetica,sans-serif;
+        width:100%;
+        height:100%;
+        margin:0;
+        padding:0;
+    }
+    .item {
+        /*background-color: #F5F5F5;*/
+        background-color: #EEEEEE;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    #learn-course-missing{
+        font-family: "PingFang SC","Microsoft YaHei";
+        width: 1000px;
+    }
+    .user-course-content {
+        width: 1000px;
+        margin: auto;
+        margin: 10px 0;
+    }
+    .specLabel {
+        font-family: Verdana;
+        font-size: 18px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+    #typeSelect option{
+        color: #1a1a1a;
+    }
+</style>
 <body>
-    <div class="header">
-        <div class="centent">
-            <a class="logo-img"><img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
-            <nav>
-                <ul class="header-nav">
-                    <li><a href="{:U('Home/Index/index')}" style="color: rgb(53, 181, 88);">首页</a></li>
-                    <li>
-                        <if condition="session('sys_tag') eq admin">
-                            审核文章
-                            <else/>投递文章
-                        </if>
-                    </li>
-	                <li><a href="{:U('Home/All/thesisclassify')}">论文分类<i class="arrow-icon"></i></a>
-	                    <div class="submenu school-list">
-	                        <h3>前端学院</h3>
-	                        <a href="#"><i class="web-icon"></i>Web 前端工程师</a>
-	                        <h3>后端学院</h3>
-	                        <a href="#"><i class="python-icon"></i>Python Web工程师</a>
-	                        <a href="#"><i class="go-icon"></i>Go语言工程师</a>
-	                        <h3>移动学院</h3>
-	                        <a href="#"><i class="ios-icon"></i>iOS工程师</a>
-	                    </div>
-	                </li>
-                    <li>社区</li>
-                </ul>
-            </nav>
-            <div class="icon-box">
-                <span class="search-icon" id="search-btn" onclick="searchBtn(this)"></span>
-                        <span class="relative loginlist login-icon" id="loginlist">
-                            <dl class="submenu"><i class="top-icon"></i>
-		                        <dd>
-		                            <if condition="session('uid') eq ''">
-		                                <a href="{:U('Home/Login/register')}" class="reg-btn">注册</a>|<a href="{:U('Home/Login/index')}" class="login-btn">登录</a>
-		                            </if>
-		                        </dd>
-                                <dd><a href="{:U('Home/Person/index')}"><i class="grzy-icon"></i>个人主页</a></dd>
-                                <dd><a href="{:U('Home/Person/message')}"><i class="xxtz-icon"></i>消息通知</a></dd>
-                                <dd><a href="{:U('Home/Person/account')}"><i class="zhsz-icon"></i>账号设置</a></dd>
-                            </dl>
-                        </span>
-            </div>
-            <div class="searchbox" id="searchbox">
-                <i class="close-icon" id="close-btn"></i>
-                <i class="search-icon" id="search-btn"></i>
-                <input id="web_search_header" placeholder="搜索课程、问答或Wiki" value="" />
-            </div>
+<div class="header">
+    <div class="centent">
+        <a class="logo-img" href="{:U('Home/Index/index')}"><img class="pull-left" src="__ROOT__/Application/Home/View/public/img/logo2.png" width="105px" height="45px" /></a>
+        <nav>
+            <ul class="header-nav">
+                <li><a href="{:U('Home/Index/index')}">首页</a></li>
+                <if condition="session('sys_tag') eq admin">
+                    <li><a href="{:U('Home/Index/index')}" style="color: rgb(53, 181, 88);">审核文章</a></li>
+                    <else/>
+                    <li><a href="{:U('Home/Writer/mythesis')}" style="color: rgb(53, 181, 88);">投递文章</a></li>
+                </if>
+                <li><a href="{:U('Home/All/thesisclassify')}">论文分类<i class="arrow-icon"></i></a>
+                </li>
+                <li><a href="#">社区</a></li>
+            </ul>
+        </nav>
+        <div class="icon-box">
+            <span class="search-icon" id="search-btn" onclick="searchBtn()"></span>
+            <if condition="session('uid') eq ''">
+                    <span class="relative loginlist login-icon" id="loginlist">
+                    <else/>
+                    <span class="relative loginlist" id="loginlist">
+                    <img src="__ROOT__/Application/Home/View/public/img/default.gif" style="height: 25px;width: 25px;margin-bottom: 54px">
+            </if>
+            <dl class="submenu"><i class="top-icon"></i>
+                <dd>
+                    <if condition="session('uid') eq ''">
+                        <a href="{:U('Home/Login/register')}" class="reg-btn">注册</a>|<a href="{:U('Home/Login/index')}" class="login-btn">登录</a>
+                    </if>
+                </dd>
+                <dd><a href="{:U('Home/Person/index')}"><i class="grzy-icon"></i>个人主页</a></dd>
+                <dd><a href="{:U('Home/Person/message')}"><i class="xxtz-icon"></i>消息通知</a></dd>
+                <dd><a href="{:U('Home/Person/account')}"><i class="zhsz-icon"></i>账号设置</a></dd>
+                <if condition="session('uid') neq ''">
+                    <dd><a href="{:U('Home/Index/exitLogin')}"><i class="zhsz-icon"></i>退出登录</a></dd>
+                </if>
+            </dl>
+            </span>
+        </div>
+        <div class="searchbox" id="searchbox">
+            <i class="close-icon" id="close-btn" onclick="closeBtn(this)"></i>
+            <i class="search-icon" id="search-btn"></i>
+            <input id="web_search_header" placeholder="搜索文章 / 问答" value="" />
         </div>
     </div>
+</div>
 
-    <div class="centent">
+<div class="centent">
         <div class="user-course">
-            <div class="course-nav" id="courseNav">
-                <a href="{:U('Home/Writer/mythesis')}" id="navHome">我的论文</a>
-                <a href="{:U('Home/Writer/delivered')}" id="navHome" >已投递</a>
-                <a href="{:U('Home/Writer/nodeliver')}" id="navHome"  class="active" >未投递</a>
+            <div class="course-nav" id="courseNav" style="background-color: #F5F5F5">
+                <a href="{:U('Home/Writer/mythesis')}"><i class="icon icon-bars"></i> 我 的 文 章</a>
+                <a href="{:U('Home/Writer/addthesis')}"><i class="icon icon-edit-sign"></i> 写 文 章</a>
+                <a href="{:U('Home/Writer/delivered')}"><i class="icon icon-envelope-alt"></i> 投 递 箱</a>
+                <a href="{:U('Home/Writer/nodeliver')}" class="active"><i class="icon icon-archive"></i> 草 稿 箱</a>
+                <a href="{:U('Home/Writer/afterThesis')}"><i class="icon icon-cloud"></i> 垃 圾 箱</a>
+                <select id="typeSelect" class=" btn-sm pull-right col-xs-3" style="color: #35B558; height: 38px; font-size: 14px">
+                    <!--<option value="1">默认分类</option>-->
+                    <if condition="$typeList[0]['id'] eq ''">
+                        <option id="addSelfTypeId">添加自定义分类</option>
+                        <else/>
+                        <volist name="typeList" id="vo">
+                            <if condition="$articleList[0]['self_typeid'] eq $vo['id']">
+                                <option value="{$vo.id}" selected>{$vo.typename}</option>
+                                <else/>
+                                <option value="{$vo.id}">{$vo.typename}</option>
+                            </if>
+                        </volist>
+                    </if>
+                </select>
+                <a id="" href="javascript:;" data-toggle="modal" data-position="center"
+                   data-target="#open-dailog-email"><i class="icon icon-plus-sign"></i> 添加分类</a>
+            </div>
+            <!-- 添加分类弹窗 -->
+            <div class="modal fade" id="open-dailog-email">
+                <div class="modal-dialog modal-dialog-1">
+                    <div class="modal-content" style="height: 140px">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                                    class="sr-only">关闭</span></button>
+                            <h4 class="modal-title">添加文章分类</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="bd">
+                                <form class="form">
+                                    <div class="" style="display: inline-block">
+                                        <input class="txt sm" type="text" id="typeName" name="typeName" style="width: 280px">
+                                        <button type="button" id="addTypeBtn" class="green-btn xs" style="display: inline-block"> 确 定 </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </div>
             <div class="user-course-content">
                 <div class="user-course-cont">
                   <div id="learn-course-missing">
- <!-- //无论文是显示                    	<img src="http://sm1.jikexueyuan.com/assets/images/empty/paizi-he-not-index-course.png" class="data-missing-bg">-->	
-			            <div class="txt-right">
-			            	<a class="btn-operate" href="{:U('Home/Writer/addthesis')}"><strong>+</strong>新增论文</a>
-			            </div>
 					  <div class="items">
-						<div class="item">
-						  <div class="item-heading">
-							<div class="pull-right"><span class="text-muted">2013-11-11 16:14:37</span> &nbsp; <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a></div>
-							<h4><a href="{:U('Home/All/thesisshow')}">我的论文</a></h4>
-						  </div>
-						  <div class="item-content">
-							<div class="text">HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
-						  </div>
-						  <div class="txt-right">
-							  <a class="label label-success" href="javascript:;" data-toggle="modal" data-position="center" data-target="#open-tip">投递</a>
-							  <a class="label label-success" href="{:U('Home/Writer/editthesis')}">编辑</a>
-							  <a class="label label-success del-thesis" onclick="delThesis(this)">删除</a>
-						  </div>
-						</div>
-						<div class="item">
-						  <div class="item-heading">
-							<div class="pull-right"><span class="text-muted">2013-11-11 16:14:37</span> &nbsp; <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a></div>
-							<h4><a href="thesisshow.html">HTML5 发展历史</a></h4>
-						  </div>
-						  <div class="item-content">
-							<div class="text">HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
-						  </div>
-						  <div class="txt-right">
-							  <a class="label label-success" href="javascript:;" data-toggle="modal" data-position="center" data-target="#open-tip">投递</a>
-							  <a class="label label-success" href="{:U('Home/Writer/editthesis')}">编辑</a>
-							  <a class="label label-success del-thesis" onclick="delThesis(this)">删除</a>
-						  </div>
-						</div>
-						<div class="item">
-						  <div class="item-heading">
-							<div class="pull-right"><span class="text-muted">2013-11-11 16:14:37</span> &nbsp; <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a></div>
-							<h4><a href="thesisshow.html">HTML5 发展历史</a></h4>
-						  </div>
-						  <div class="item-content">
-							<div class="text">HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
-						  </div>
-						  <div class="txt-right">
-							  <a class="label label-success" href="javascript:;" data-toggle="modal" data-position="center" data-target="#open-tip">投递</a>
-							  <a class="label label-success" href="{:U('Home/Writer/editthesis')}">编辑</a>
-							  <a class="label label-success del-thesis" onclick="delThesis(this)">删除</a>
-						  </div>
-						</div>
-						<div class="item">
-						  <div class="item-heading">
-							<div class="pull-right"><span class="text-muted">2013-11-11 16:14:37</span> &nbsp; <a href="#" class="text-muted"><i class="icon-comments"></i> 243</a></div>
-							<h4><a href="thesisshow.html">HTML5 发展历史</a></h4>
-						  </div>
-						  <div class="item-content">
-							<div class="text">HTML 5草案的前身名为Web Applications 1.0，是在2004年由WHATWG提出。2008年1月22日，第一份正式草案发布。WHATWG表示该规范是目前仍在进行的工作，仍须多年的努力。[8]目前Mozilla Firefox、Google Chrome、Opera、Safari（版本4以上）、Internet Explorer（版本9以上）已支持HTML5技术。</div>
-						  </div>
-						  <div class="txt-right">
-							  <a class="label label-success" href="javascript:;" data-toggle="modal" data-position="center" data-target="#open-tip">投递</a>
-							  <a class="label label-success" href="{:U('Home/Writer/editthesis')}">编辑</a>
-							  <a class="label label-success del-thesis" onclick="delThesis(this)">删除</a>
-						  </div>
-						</div>
-						
+                          <a href="{:U('Home/Writer/addthesis')}" id="displayImg" style="display: none">
+                              <img src="__ROOT__/Application/Home/View/public/img/shangche.jpg" class="data-missing-bg" style="width: 240px;margin-left: 0px;left: 30%; ">
+                          </a>
+                          <foreach name="articleList" item="vo">
+                              <div class="item" id="item">
+                                  <div class="" style="padding: 0 30px">
+                                      <label class="specLabel">
+                                          <a href="{:U('Home/Writer/article',array('artId' => $vo['artid']),'')}">{$vo.title}</a>
+                                      </label>
+                                      <div class="pull-right" style="padding-top: 10px">
+                                          <span class="text-muted">{$vo.savetime}</span> &nbsp;
+                                      </div>
+                                      <hr style="margin-bottom: 10px;margin-top: 0px;">
+                                      <div class="item-content">
+                                          <div style="line-height: 30px" class="text">
+                                              {$vo.content}
+                                          </div>
+                                      </div>
+                                      <div style="line-height: 30px;margin-top: 10px" id="{$vo.artid}">
+                                          <a class="label label-success" href="javascript:;" data-toggle="modal" data-position="center" data-target="#open{$vo.artid}">
+                                              <i class="icon icon-share"></i> 投 递</a>
+                                          <a class="label label-info" href="{:U('Home/Writer/addthesis',array('cate_id'=>$vo['artid']),false)}"><i class="icon icon-pencil"></i> 编 辑</a>
+                                          <a class="label label-danger del-thesis" href="javascript:;" data-toggle="modal" data-position="center" data-target="#del{$vo.artid}">
+                                              <i class="icon icon-repeat"></i> 删 除</a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--确认投递-->
+                              <div class="modal fade" id="open{$vo.artid}">
+                                  <div class="modal-dialog modal-dialog-1">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                                                      class="sr-only">关闭</span></button>
+                                              <h4 class="modal-title">投 稿 分 类</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                              <div class="bd">
+                                                  <form class="form form-setting" style="padding-top: 0px">
+                                                      <fieldset>
+                                                          <div class="form-group">
+                                                              <select name="typeId" class="col-md-3 col-sm-10 btn-mini form-control" id="typeId" style="font-size: 14px; color: #1a1a1a">
+                                                                  <!--<option value="0">默认不投</option>-->
+                                                                  <volist name="sysTypeList" id="vo1">
+                                                                      <if condition="$vo1.typeid neq 1">
+                                                                          <option value="{$vo1.typeid}">{$vo1.typename}</option>
+                                                                      </if>
+                                                                  </volist>
+                                                              </select>
+                                                          </div><br><br>
+                                                          <div class="tip txt-center">
+                                                              <button type="button" class="gray-btn xs"  data-dismiss="modal" style="width:85px">取 消</button>
+                                                              <button type="button" class="green-btn xs" data-dismiss="modal" style="width:85px" onclick="openmadol('{$vo.artid}')">确 定</button>
+                                                          </div>
+                                                      </fieldset>
+                                                  </form>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <!--确认删除-->
+                              <div class="modal fade" id="del{$vo.artid}">
+                                  <div class="modal-dialog modal-dialog-1">
+                                      <div class="modal-content">
+                                          <div class="modal-header">
+                                              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                                                      class="sr-only">关闭</span></button>
+                                              <h4 class="modal-title">确 认 删 除</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                              <div class="bd">
+                                                  <form class="form form-setting">
+                                                      <fieldset>
+                                                          <div class="form-item txt-center" style="font-size: 16px; font-weight: 500">
+                                                              确 认 删 除 文 章？
+                                                          </div>
+                                                          <div class="tip txt-center">
+                                                              <button type="button" class="gray-btn"  data-dismiss="modal">否</button>
+                                                              <button type="button" class="green-btn" data-dismiss="modal" onclick="openDel('{$vo.artid}')">是</button>
+                                                          </div>
+                                                      </fieldset>
+                                                  </form>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </foreach>
+                          <!--跳窗-->
+                          <div class="modal fade" id="open-del-secceed">
+                              <div class="modal-dialog modal-dialog-1">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
+                                                  class="sr-only">关闭</span></button>
+                                          <h4 class="modal-title"></h4>
+                                      </div>
+                                      <div class="modal-body">
+                                          <div class="bd">
+                                              <form class="form form-setting">
+                                                  <fieldset>
+                                                      <div id="success-content-tip" class="form-item txt-center" style="font-size: 16px">
+
+                                                      </div>
+                                                  </fieldset>
+                                              </form>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="pages txt-right"> {$page} </div>
 					  </div>
                    </div>
-                </div>
-                <div class="user-side">
-                    <div class="user-visit-header"><h2>最近访客</h2></div>
-                    <div class="user-visit user-popBoxs-container">
-                        <div id="learn-data-missing"><img src="http://sm1.jikexueyuan.com/assets/images/empty/face-he-no-visit.png" class="data-missing-bg" alt="暂无访客"></div>													</div>
                 </div>
             </div>
         </div>
     </div>		
     	
     <!--底部-->
-    <div id="footer" class="mar-t50">
-        <link rel="stylesheet" href="http://e.jikexueyuan.com/headerandfooter/css/footer.css?t=1475152597000">
-        <div class=" jkinfor-block">
-            <div class="jkinfor cf">
-                <div class="jk-logo">
-                    <img src="http://e.jikexueyuan.com/headerandfooter/images/jk-logo-footer.png?t=1475152597000">
-                    <p>极客学院，编程是一种信仰！</p>
-                </div>
-                <dl>
-                    <dt>职业学院</dt>
-                    <dd><a target="_blank" href="http://www.jikexueyuan.com/zhiye/web">Web前端工程师</a></dd>
-                    <dd><a target="_blank" href="http://www.jikexueyuan.com/zhiye/python">Python Web工程师</a></dd>
-                    <dd><a target="_blank" href="http://www.jikexueyuan.com/zhiye/go">Go语言工程师</a></dd>
-                    <!--<dd><a target="_blank" href="http://j.jikexueyuan.com/train/android?huodong=jiuye_android_in">Android学院</a></dd>-->
-                    <dd><a target="_blank" href="http://www.jikexueyuan.com/zhiye/ios">iOS工程师</a></dd>
-                </dl>
-                <dl>
-                    <dt>会员课程</dt>
-                    <dd><a target="_blank" href="http://www.jikexueyuan.com/course/">课程库</a></dd>
-                    <dd><a target="_blank" href="http://www.jikexueyuan.com/path/">知识体系图</a></dd>
-                    <dd><a target="_blank" href="http://ke.jikexueyuan.com/zhiye/">职业路径图</a></dd>
-                    <dd><a target="_blank" href="http://ke.jikexueyuan.com/xilie/">系列课程</a></dd>
-                    <dd><a target="_blank" href="http://www.jikexueyuan.com/tag/">课程标签</a></dd>
-                </dl>
-                <dl>
-                    <dt>极客社区</dt>
-                    <dd><a target="_blank" href="http://wenda.jikexueyuan.com/">技术问答</a></dd>
-                    <dd><a target="_blank" href="http://wiki.jikexueyuan.com/">Wiki</a></dd>
-                    <dd><a target="_blank" href="http://download.jikexueyuan.com/">资源下载</a></dd>
-                    <dd><a target="_blank" href="http://qun.jikexueyuan.com/">社群</a></dd>
-                </dl>
-                <dl>
-                    <dt>其他</dt>
-                    <dd><a target="_blank" href="http://help.jikexueyuan.com/">关于我们</a></dd>
-                    <dd><a target="_blank" href="http://help.jikexueyuan.com/join.html">加入我们</a></dd>
-                    <dd><a target="_blank" href="http://press.jikexueyuan.com/evangelist/apply.html">讲师合作</a></dd>
-                    <dd><a target="_blank" href="http://help.jikexueyuan.com/contact.html">联系我们</a></dd>
-                    <dd><a target="_blank" href="http://www.jikexueyuan.com/friendlink.html">友情链接</a></dd>
-                </dl>
-
-                <div class="jk-down">
-                    <p class="hot-tel">服务热线:400-678-8266</p>
-                    <div class="downCon down-ios">
-                        <img src="http://e.jikexueyuan.com/headerandfooter/images/app.png?t=1475152597000" class="twoCode" alt="下载二维码"> iPhone
-                    </div>
-                    <div class="downCon down-and">
-                        <img src="http://e.jikexueyuan.com/headerandfooter/images/app.png?t=1475152597000" class="twoCode" alt="下载二维码"> Android
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <div class="w-1000 copyright">
-            Copyright © 2013-2016&nbsp;<strong><a href="http://www.jikexueyuan.com/" target="_blank">jikexueyuan.com</a></strong> All Rights Reserved. 京ICP备11018032号-8 京公网安备11010802020210
-            <a href="http://qun.jikexueyuan.com/jikexueyuan/topic/430" target="_blank" class="down-wechat"></a>
-            <a href="http://weibo.com/jikexueyuan" target="_blank" class="down-sina"></a>
-        </div>
-    </div>
+    <!--<div id="footer"style="margin-top: 150px">-->
+        <!--<div class="w-1000 copyright">-->
+            <!--Copyright © 2013-2016&nbsp;<strong><a href="{:U('Home/Index/index','',false)}" target="_blank">wangyiyu.com</a></strong> All Rights Reserved. 京ICP备11018032号-8 京公网安备11010802020210-->
+            <!--<a href="#" target="_self" class="down-wechat"></a>-->
+            <!--<a href="#" target="_self" class="down-sina"></a>-->
+        <!--</div>-->
+    <!--</div>-->
     <!--底部结束-->
-<!--跳窗-->
-<div class="modal fade" id="open-tip">
-    <div class="modal-dialog modal-dialog-1">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                        class="sr-only">关闭</span></button>
-                <h4 class="modal-title">发布</h4>
-            </div>
-            <div class="modal-body">
-                <div class="bd">
-                    <form class="form form-setting">
-                        <fieldset>
-                            <div class="form-item txt-center">
-                                	是否确认投递？
-                            </div>
-                            <div class="tip txt-center">
-                                	<button type="button" class="gray-btn"  data-dismiss="modal">否</button>
-                                    <button type="button" class="green-btn" data-dismiss="modal" onclick="openmadol(this)">是</button>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--跳窗-->
-<div class="modal fade" id="open-tip-secceed">
-    <div class="modal-dialog modal-dialog-1">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span
-                        class="sr-only">关闭</span></button>
-                <h4 class="modal-title">发布</h4>
-            </div>
-            <div class="modal-body">
-                <div class="bd">
-                    <form class="form form-setting">
-                        <fieldset>
-                            <div class="form-item txt-center">
-                                	投递成功！
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 	<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/jquery.1.7.2.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/zui.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/login.js' charset='utf-8'></script>
+    <script type='text/javascript' src='__ROOT__/Application/Home/View/public/js/layer/layer.js'></script>
     <script type="text/javascript">
-     function searchBtn(){
-        $("#searchbox").addClass("scale");//开启搜索框
-    }
-    function closeBtn(c){
-        $(c).parent().removeClass("scale");//关闭搜索框
-    }
+        var addType_url = "{:U('Home/SelfType/addType','',false)}";
+        var sureArt_url = "{:U('Home/Writer/sureArt','',false)}";
+        var delArt_url = "{:U('Home/Writer/delArt','',false)}";
+        var nodeliver_url = "{:U('Home/Writer/nodeliver','',false)}";
+        //选择分类加载
+        $('#typeSelect').change(function(){
+            var typeId = $("#typeSelect").val();
+//            alert(typeId);return false;
+//            if(typeId){
+            window.location.href = nodeliver_url + '/typeId/' + typeId;
+//            }
+        });
+        //投递触发事件
+        function openmadol(id){
+            if(id){
+                var typeId = $('#typeId').val();
+                $.ajax({
+                    url: sureArt_url,
+                    type: 'post',
+                    dataType: 'json',
+                    data: {artId: id,typeId: typeId},
+                    success: function(result){
+                        $('#success-content-tip').text("");
+                        $('#success-content-tip').append(result.info);
+                        $('#open-del-secceed').modal();
+                        setInterval(function(){$('#open-del-secceed').modal('hide')},3000);
+                        if(result.status == 1){
+                            $('#'+id).closest(".item").remove();
+                        }
+                        if(document.getElementById('item') == null ){
+                            $('#displayImg').css('display','block');
+                        }
+                        return false;
+                    },error: function(){
+                        layer.msg('小 编 正 在 抢 修 服 务',{time: 3000});
+                        return false;
+                    }
+                })
+            }
+        }
+        //触发删除事件
+        function openDel(id){
+            if(id){
+                $.ajax({
+                    url: delArt_url,
+                    type: 'post',
+                    dataType: 'json',
+                    data: {artId: id},
+                    success: function(result){
+                        $('#success-content-tip').text("");
+                        $('#success-content-tip').append(result.info);
+                        $('#open-del-secceed').modal();
+                        setInterval(function(){$('#open-del-secceed').modal('hide')},3000);
+                        if(result.status == 1){
+                            $('#'+id).closest(".item").remove();
+                        }
+                        if(document.getElementById('item') == null ){
+                            $('#displayImg').css('display','block');
+                        }
+                        return false;
+                    },error: function(){
+                        layer.msg('小 编 正 在 抢 修 服 务',{time: 3000});
+                        return false;
+                    }
+                })
+            }
+        }
+        $(document).ready(function(){
+            if(document.getElementById('item') == null ){
+                $('#displayImg').css('display','block');
+            }
+        });
+        //添加分类
+        $('#addTypeBtn').on('click',function(){
+            var typeName = $('#typeName').val();
+            if(typeName == '' || typeName == null || typeName ==' '){
+                layer.alert('请 输 入 分 类 名 称');
+                return false;
+            }
+            $.ajax({
+                url: addType_url,
+                type: 'post',
+                dataType: "json",
+                data: {typename: typeName},
+                success: function(result){
+                    if(result.status == 1){
+                        layer.msg(result.info[0]);
+                        var obj = document.getElementById("typeSelect");
+                        obj.options.add(new Option(result.info[1],result.info[2]));
+                        $('#open-dailog-email').modal('hide');
+                        return false;
+                    }else{
+                        layer.msg(result.info);
+                        return false;
+                    }
+
+                },error: function(){
+                    layer.msg('小 编 正 在 抢 修 网 络',{time: 3000});
+                    return false;
+                }
+            })
+        });
+         function searchBtn(){
+            $("#searchbox").addClass("scale");//开启搜索框
+        }
+        function closeBtn(c){
+            $(c).parent().removeClass("scale");//关闭搜索框
+        }
+        function delThesis(d){
+            $(d).closest(".item").remove();//删除未投递论文
+        }
+
     </script>
-<script>
-function delThesis(d){
-	$(d).closest(".item").remove();//删除未投递论文
-}
-</script>
-<script>
-	function openmadol(o){
-		$('#open-tip-secceed').modal();
-		setInterval(function(){$('#open-tip-secceed').modal('hide')},3000);
-		
-	}
-</script>
     <!--[if lt IE 9]>
     <script type='text/javascript' src="lib/ieonly/html5shiv.js"></script>
     <![endif]-->

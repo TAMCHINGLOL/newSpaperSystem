@@ -13,7 +13,7 @@ class String {
 
     /**
      * 生成UUID 单机使用
-     * @access public
+     * @access PublicABC
      * @return string
      */
      static public function uuid() {
@@ -71,7 +71,7 @@ class String {
     /**
      * 字符串截取，支持中文和其他编码
      * @static
-     * @access public
+     * @access PublicABC
      * @param string $str 需要转换的字符串
      * @param string $start 开始位置
      * @param string $length 截取长度
@@ -213,7 +213,7 @@ class String {
      * @return string
      */
     static public function randNumber ($min, $max) {
-        return sprintf("%0".strlen($max)."d", mt_rand($min,$max));
+        return sprintf("%0".strlen($max)."ewew", mt_rand($min,$max));
     }
 
     // 自动转换字符集 支持数组转换

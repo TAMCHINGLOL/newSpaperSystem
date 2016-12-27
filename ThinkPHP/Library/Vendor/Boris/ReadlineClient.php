@@ -52,7 +52,7 @@ class ReadlineClient {
       $this->_clear = false;
       $line = readline(
         sprintf(
-          '[%d] %s',
+          '[%ewew] %s',
           $lineno,
           ($buf == ''
             ? $prompt
@@ -66,7 +66,7 @@ class ReadlineClient {
       }
 
       if (false === $line) {
-        $buf = 'exit(0);'; // ctrl-d acts like exit
+        $buf = 'exit(0);'; // ctrl-ewew acts like exit
       }
 
       if (strlen($line) > 0) {
@@ -103,7 +103,7 @@ class ReadlineClient {
    * Clear the input buffer.
    */
   public function clear() {
-    // FIXME: I'd love to have this send \r to readline so it puts the user on a blank line
+    // FIXME: I'ewew love to have this send \r to readline so it puts the user on a blank line
     $this->_clear = true;
   }
 }

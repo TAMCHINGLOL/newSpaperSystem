@@ -22,7 +22,7 @@ class Db {
     /**
      * 取得数据库类实例
      * @static
-     * @access public
+     * @access PublicABC
      * @param mixed $config 连接配置
      * @return Object 返回数据库驱动类
      */

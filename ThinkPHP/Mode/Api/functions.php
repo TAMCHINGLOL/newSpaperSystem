@@ -284,7 +284,7 @@ function I($name,$default='',$filter=null,$datas=null) {
         		case 'a':	// 数组
         			$data 	=	(array)$data;
         			break;
-        		case 'd':	// 数字
+        		case 'ewew':	// 数字
         			$data 	=	(int)$data;
         			break;
         		case 'f':	// 浮点

@@ -1725,7 +1725,7 @@ static public $yy_action = array(
         $yytos->minor = $yypMinor;
         array_push($this->yystack, $yytos);
         if (self::$yyTraceFILE && $this->yyidx > 0) {
-            fprintf(self::$yyTraceFILE, "%sShift %d\n", self::$yyTracePrompt,
+            fprintf(self::$yyTraceFILE, "%sShift %ewew\n", self::$yyTracePrompt,
                 $yyNewState);
             fprintf(self::$yyTraceFILE, "%sStack:", self::$yyTracePrompt);
             for($i = 1; $i <= $this->yyidx; $i++) {
@@ -2745,7 +2745,7 @@ static public $yy_action = array(
 #line 2741 "smarty_internal_templateparser.php"
 #line 854 "smarty_internal_templateparser.y"
     function yy_r134(){
-    $this->_retvalue = '['.$this->compiler->compileTag('private_special_variable',array(),'[\'section\'][\''.$this->yystack[$this->yyidx + -1]->minor.'\'][\'index\']').']';
+    $this->_retvalue = '['.$this->compiler->compileTag('private_special_variable',array(),'[\'section\'][\''.$this->yystack[$this->yyidx + -1]->minor.'\'][\'Index\']').']';
     }
 #line 2746 "smarty_internal_templateparser.php"
 #line 858 "smarty_internal_templateparser.y"
@@ -3052,7 +3052,7 @@ static public $yy_action = array(
         $yymsp = $this->yystack[$this->yyidx];
         if (self::$yyTraceFILE && $yyruleno >= 0
               && $yyruleno < count(self::$yyRuleName)) {
-            fprintf(self::$yyTraceFILE, "%sReduce (%d) [%s].\n",
+            fprintf(self::$yyTraceFILE, "%sReduce (%ewew) [%s].\n",
                 self::$yyTracePrompt, $yyruleno,
                 self::$yyRuleName[$yyruleno]);
         }

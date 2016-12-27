@@ -1,0 +1,151 @@
+<div id="sidebar" class="sidebar                  responsive">
+    <!-- /.sidebar-shortcuts -->
+    <ul class="nav nav-list">
+        <!-- 如果用户是admin,则将管理员管理显示 -->
+        <if condition="session('adminTag') neq ''">
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-user"></i>
+                    <span class="menu-text">
+                                   人事管理
+                                </span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li id="left-rolelist" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/Role/roleList\')}','left-rolelist')" >
+                            <i class="icon-double-angle-right"></i> 角色管理
+                        </a>
+                        
+                        <b class="arrow"></b>
+                    </li>
+                    <li id="left-adminlist" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/Admin/adminList\')}','left-adminlist')" >
+                            <i class="icon-double-angle-right"></i> 员工管理
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+        
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-book"></i>
+                    <span class="menu-text"> 文章管理 </span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li id="left-waitList" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/Article/waitList\')}','left-waitList')" >
+                            <i class="icon-double-angle-right"></i> 待审核文章
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li id="left-dealList" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/Article/dealList\')}','left-dealList')" >
+                            <i class="icon-double-angle-right"></i> 已处理文章
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+ 
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-users"></i>
+                    <span class="menu-text"> 用户管理  </span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li id="left-index" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/User/index\')}','left-index')" >
+                            <i class="icon-double-angle-right"></i> 用户列表
+                        </a <b class="arrow"></b>
+                    </li>
+                    <li id="left-userAgreement" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/User/userAgreement\')}','left-userAgreement')" >
+                            <i class="icon-double-angle-right"></i> 用户协议
+                        </a <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-list-alt"></i>
+                    <span class="menu-text"> 分类管理  </span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li id="left-typeList" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/Type/typeList\')}','left-typeList')" >
+                            <i class="icon-double-angle-right"></i> 文章分类列表
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <!--<li class="">-->
+                <!--<a href="#" class="dropdown-toggle">-->
+                    <!--<i class="menu-icon fa fa-bell"></i>-->
+                    <!--<span class="menu-text"> 公告管理  </span>-->
+                    <!--<b class="arrow fa fa-angle-down"></b>-->
+                <!--</a>-->
+                <!--<b class="arrow"></b>-->
+                <!--<ul class="submenu">-->
+                    <!--<li id="left-orderList" class="">-->
+                        <!--<a href="javascript:openFrame('{:U(\'Sadmin/Order/orderList\')}','left-orderList')" >-->
+                            <!--<i class="icon-double-angle-right"></i> 系统通知-->
+                        <!--</a <b class="arrow"></b>-->
+                    <!--</li>-->
+                    <!--<li id="left-payList" class="">-->
+                        <!--<a href="javascript:openFrame('{:U(\'Sadmin/Payment/payList\')}','left-payList')" >-->
+                            <!--<i class="icon-double-angle-right"></i> 聘任通知-->
+                        <!--</a <b class="arrow"></b>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</li>-->
+ 
+            <li class="">
+                <a href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-desktop"></i>
+                    <span class="menu-text"> 首页管理 </span>
+ 
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+ 
+                <ul class="submenu" >
+                    <li id="left-pictureList" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/Home/pictureList\')}','left-pictureList')" >
+                            <i class="icon-double-angle-right"></i>轮播图
+                        </a <b  class="arrow"></b>
+                    </li>
+                    <!--<li id="left-findSignedContract" class="">-->
+                        <!--<a href="javascript:openFrame('{:U(\'Sadmin/Contract/findSignedContract\')}','left-findSignedContract')" >-->
+                            <!--<i class="icon-double-angle-right"></i>热门分类-->
+                        <!--</a <b  class="arrow"></b>-->
+                    <!--</li>-->
+                    <li id="left-artList" class="">
+                        <a href="javascript:openFrame('{:U(\'Sadmin/Home/artList\')}','left-artList')" >
+                            <i class="icon-double-angle-right"></i>优文推荐
+                        </a <b  class="arrow"></b>
+                    </li>
+                    <!--<li id="left-findSignedContract" class="">-->
+                        <!--<a href="javascript:openFrame('{:U(\'Sadmin/Contract/findSignedContract\')}','left-findSignedContract')" >-->
+                            <!--<i class="icon-double-angle-right"></i>优秀笔者-->
+                        <!--</a <b  class="arrow"></b>-->
+                    <!--</li>-->
+                </ul>
+            </li>
+             <!-- 如果存在车店助手选项结束 -->
+ 
+        </if>
+    </ul>
+    <!-- /.nav-list -->
+    <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+        <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+    </div>
+</div>

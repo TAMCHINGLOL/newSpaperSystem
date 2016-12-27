@@ -1,8 +1,8 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
- * This plugin is only for Smarty2 BC
+ * This Plugin is only for Smarty2 BC
  * @package Smarty
  * @subpackage PluginsFunction
  */

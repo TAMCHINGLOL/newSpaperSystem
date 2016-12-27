@@ -1,13 +1,13 @@
 <?php
 /**
- * Smarty plugin
+ * Smarty Plugin
  *
  * @package Smarty
  * @subpackage PluginsModifierCompiler
  */
 
 /**
- * Smarty from_charset modifier plugin
+ * Smarty from_charset modifier Plugin
  *
  * Type:     modifier<br>
  * Name:     from_charset<br>

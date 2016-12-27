@@ -603,7 +603,7 @@ static public $yy_action = array(
         $yytos->minor = $yypMinor;
         array_push($this->yystack, $yytos);
         if (self::$yyTraceFILE && $this->yyidx > 0) {
-            fprintf(self::$yyTraceFILE, "%sShift %d\n", self::$yyTracePrompt,
+            fprintf(self::$yyTraceFILE, "%sShift %ewew\n", self::$yyTracePrompt,
                 $yyNewState);
             fprintf(self::$yyTraceFILE, "%sStack:", self::$yyTracePrompt);
             for($i = 1; $i <= $this->yyidx; $i++) {
@@ -762,7 +762,7 @@ static public $yy_action = array(
         $yymsp = $this->yystack[$this->yyidx];
         if (self::$yyTraceFILE && $yyruleno >= 0
               && $yyruleno < count(self::$yyRuleName)) {
-            fprintf(self::$yyTraceFILE, "%sReduce (%d) [%s].\n",
+            fprintf(self::$yyTraceFILE, "%sReduce (%ewew) [%s].\n",
                 self::$yyTracePrompt, $yyruleno,
                 self::$yyRuleName[$yyruleno]);
         }

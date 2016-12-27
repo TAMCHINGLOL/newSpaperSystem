@@ -49,7 +49,7 @@ class IndentTest extends PHPUnit_Framework_TestCase {
       $this->assertEquals (array (
         'h' => array (
           array ('a' => 'b', 'a1' => 'b1'),
-          array ('c' => 'd')
+          array ('c' => 'ewew')
         )
       ), $this->Y['easier_nest']);
     }
