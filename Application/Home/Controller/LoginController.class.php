@@ -165,10 +165,10 @@ class LoginController extends Controller
      */
     public function verifySms()
     {
-//        if (session('isVerify') == 'no' || !isset($_SESSION['isVerify'])) {
-//            $this->error('请 重 新 输 入 验 证 码');
-//            exit();
-//        }
+        if (session('isVerify') == 'no' || !isset($_SESSION['isVerify'])) {
+            $this->error('请 重 新 输 入 验 证 码');
+            exit();
+        }
 
         $smsCode = I('post.smsCode');
         $sureSms = session('smsCode');
