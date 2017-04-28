@@ -244,9 +244,6 @@ class WriterController extends CommonController {
         }else{
             foreach($articleList as $k => $v){
                 $content1 = strip_tags(html_entity_decode($v['content']));
-//                $content2 = substr($content1,0,200);
-//                $content3 = substr($content1,200,200);
-//                $articleList[$k]['content'] = $content2."<br>".$content3."............";
                 $articleList[$k]['content'] = $content1;
             }
         }
@@ -267,20 +264,15 @@ class WriterController extends CommonController {
         $count = $articleModel->getCount($uid,3,2,$typeId);
         $where['uid'] = $uid;
         $where['ispass'] = array('in','3,4');
-//        $where['ispass'] = 4;
         $where['status'] = 2;
         $where['typeid'] = $typeId;
         $page = getPage($count,3,$where);
-//        print_r($page);exit();
         $articleList = $articleModel->getPassedList($page->firstRow,$page->listRows,$uid,array('in','3,4'),2,$typeId);
         if(empty($articleList)){
             $articleList = '';
         }else{
             foreach($articleList as $k => $v){
                 $content1 = strip_tags(html_entity_decode($v['content']));
-//                $content2 = substr($content1,0,200);
-//                $content3 = substr($content1,200,200);
-//                $articleList[$k]['content'] = $content2."<br>".$content3."............";
                 $articleList[$k]['content'] = $content1;
             }
         }
@@ -306,12 +298,8 @@ class WriterController extends CommonController {
         $where['typeid'] = $typeId;
         $page = getPage($count,3,$where);
         $articleList = $articleModel->getPassedList($page->firstRow,$page->listRows,$uid,0,1,$typeId);
-//        $articleList = $articleModel ->getRows($uid,1);
         foreach($articleList as $k => $v){
             $content1 = strip_tags(html_entity_decode($v['content']));
-//            $content2 = substr($content1,0,200);
-//            $content3 = substr($content1,200,200);
-//            $articleList[$k]['content'] = $content2."<br>".$content3."............";
             $articleList[$k]['content'] = $content1;
         }
         $typeModel = D('Sadmin/Type');
@@ -339,20 +327,15 @@ class WriterController extends CommonController {
         $where['typeid'] = 0;
         $page = getPage($count,3,$where);
         $articleList = $articleModel->getPassedList($page->firstRow,$page->listRows,$uid,5,2,$typeId);
-//        $articleList = $articleModel->getAllPassedList($uid,5,2);
         if(empty($articleList)){
             $articleList = '';
         }else{
             foreach($articleList as $k => $v){
                 $content1 = strip_tags(html_entity_decode($v['content']));
-//                $content2 = substr($content1,0,200);
-//                $content3 = substr($content1,200,200);
-//                $articleList[$k]['content'] = $content2."<br>".$content3."............";
                 $articleList[$k]['content'] = $content1;
 
             }
         }
-//        print_r($articleList[0]);exit();
         $this->assign('articleList',$articleList);
         $this->assign('page', $page->show());       // 赋值分页输出
         $this->assign('typeList',$typeList);

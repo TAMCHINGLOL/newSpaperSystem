@@ -40,18 +40,17 @@ class LoginController extends Controller
      */
     public function login()
     {
-        if (session('isVerify') == 'no' || isset($_SESSION['isVerify'])) {
+        if (session('isVerify') == 'no' || !isset($_SESSION['isVerify'])) {
             $this->error('请 重 新 输 入 验 证 码');
             exit();
         }
+
         $phone = I('post.phone');
         $username = I('post.username');
         $password = I('post.password');
-        $pwd = md5($password);       //加密两次密码
+        $pwd = md5($password);              //加密两次密码
         $userTag = I('post.userTag');
-//            $messageModel = D('User/Message');
-
-        if ($userTag == 'author') {                       //笔者登录
+        if ($userTag == 'author') {         //笔者登录
             $userModel = D('User/User');
             if (!empty($phone)) {
                 $returnResult = $userModel->login($phone);
@@ -59,7 +58,6 @@ class LoginController extends Controller
             if (!empty($username)) {
                 $returnResult = $userModel->loginName($username);
             }
-//                $countRow = $messageModel->getMessageCount($returnResult['uid']);
         } else {
             $this->error('非法操作,未知用户类型');
             exit();
@@ -112,10 +110,14 @@ class LoginController extends Controller
         }
         if (!checkVerify($code)) {
             session("isVerify", 'no');
+            $_SESSION['isVerify'] = 'no';
             $this->error('验证码不正确');
             exit();
+        }else{
+            session('isVerify','yes');
         }
         $this->success('验 证 码 正 确');
+        exit();
     }
 
     /**
@@ -163,16 +165,17 @@ class LoginController extends Controller
      */
     public function verifySms()
     {
-        if (session('isVerify') == 'no') {
-            $this->error('请重新输入验证码');
-            exit();
-        }
-        $smsCode = I('post.smsCode');
-        $sureSms = session('smsCode');
-//        if($smsCode == md5('')){
-//            $this->error('请输入动态码');
+//        if (session('isVerify') == 'no' || !isset($_SESSION['isVerify'])) {
+//            $this->error('请 重 新 输 入 验 证 码');
 //            exit();
 //        }
+
+        $smsCode = I('post.smsCode');
+        $sureSms = session('smsCode');
+        if($smsCode == md5('')){
+            $this->error('请输入动态码');
+            exit();
+        }
         if ($smsCode == md5($sureSms)) {
             $phone = I('post.phone');
             $subUserModel = D('User/SubUser');
@@ -189,6 +192,7 @@ class LoginController extends Controller
             if(session('roleid') == 3 || session('roleid') == 6){
                 session('sys_tag', 'admin');
             }
+            session('smsCode',null);
             $this->success('动态码正确');
             exit();
         } else {

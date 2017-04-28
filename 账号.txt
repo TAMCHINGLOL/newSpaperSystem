@@ -1,0 +1,10 @@
+作者：13144490877 密码123456
+后台管理员：xxx 密码123456
+期刊账号：登录后台管理->人事管理->员工管理->添加员工实现账号分发；针对主编和副主编；
+
+首页登录：http://localhost/newSpaperSystem/index.php/home/login/index
+后台管理登录：http://localhost/newSpaperSystem/index.php/sadmin
+
+建议看完后台管理模块即可，包括所有的javascript，就应该没问题了，每个页面最下面都包含了js片段
+其中会用到layer 这是一个弹窗插件，百度自行搜索layer UI看文档 很简单；
+

@@ -161,7 +161,7 @@
                         <div class="item" style="width: 1000px">
                             <div class="item-heading">
                                 <div class="pull-right label label-success" style="font-size: 100%;">网易鱼</div>
-                                <h4><a href="###" style="font-size: 14px"><strong>{$v3.title}</strong></a></h4>
+                                <h4><a href="{:U('Home/Writer/article',array('artId' => $v3['artid']),'')}" style="font-size: 14px"><strong>{$v3.title}</strong></a></h4>
                             </div>
                             <div class="item-content">
                                 <div class="media pull-right">
@@ -169,14 +169,14 @@
                                         <img src="__ROOT__{$v3.picurl}" alt="{$v3.picname}" style="height: 60px;width: 90px" title="{$v3.picname}">
                                     </if>
                                 </div>
-                                <div class="text" style="line-height: 25px;">
+                                <div class="text" style="line-height: 25px;height: 150px;overflow: hidden;-webkit-user-select: none;">
                                     {$v3.content}
                                 </div>
                             </div>
                             <div class="" style="margin-top:10px">
                                 <span class="text-muted" style="margin-right: 20px">{$v3.passtime}</span>
-                                <a href="#" class="text-muted" style="color: #35b558"><i class="icon-comments"></i> {$v3.clicknum}</a> &nbsp;
-                                <a href="#" class="text-muted" style="color: #35b558"><i class="icon-star"></i> {$v3.clicknum}</a> &nbsp;
+                                <a href="###" class="text-muted" style="color: #35b558"><i class="icon-comments"></i> {$v3.clicknum}</a> &nbsp;
+                                <a href="###" class="text-muted" style="color: #35b558"><i class="icon-star"></i> {$v3.clicknum}</a> &nbsp;
                             </div>
                         </div>
                     </foreach>

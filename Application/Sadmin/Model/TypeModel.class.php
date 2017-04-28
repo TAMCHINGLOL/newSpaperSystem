@@ -16,6 +16,21 @@ class TypeModel extends Model
 {
     protected $tableName = 'type';
 
+    /**
+     * @param $id
+     * @return mixed
+     * @Author: ludezh
+     */
+    public function delRow($id){
+        $where['typeid'] = $id;
+        return $this->where($where)->delete();
+    }
+
+    /**
+     * @param $typeId
+     * @return mixed
+     * @Author: ludezh
+     */
     public function getPicByTypeId($typeId){
         $where['typeid'] = $typeId;
         $where['status'] = 1;
@@ -34,7 +49,7 @@ class TypeModel extends Model
     public function getHomeList($start = 0, $limit = 4){
         $where['status'] = 1;
         $where['istop'] = 1;
-        return $this->where($where)->limit($start,$limit)->select();
+        return $this->where($where)->limit($start,$limit)->order('typeid desc')->select();
     }
 
     /**

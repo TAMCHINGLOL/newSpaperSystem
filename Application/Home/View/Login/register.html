@@ -80,6 +80,16 @@
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
+                        <div class="input-group form-mcode width">
+                            <input type="text" class="form-control form-type " name="code" id="code" placeholder="动态码">
+                            <div class="btn-getcode">
+                                <button type="button" id="getSmsId" class="passport-btn js-getcode numberBtn" jktag="0001|0.1|91024">
+                                    获取动态码
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-mar">
                         <div class="input-group" style="display: inline-block">
                             <div style="float: left;">
                                 <input type="text" name="verify" class="form-control form-type" id="r-verify"
@@ -89,16 +99,6 @@
                         <div style="float: right;width: 137px;display: inline-block;">
                             <img id="img3" name="img" width="90%" height="40" style="float: right" alt="验证码"
                                  src="{:U('Home/Login/verify',array())}" title="点击刷新" onclick="clickVerify('#img3')">
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group form-mcode width">
-                            <input type="text" class="form-control form-type " name="code" id="code" placeholder="动态码">
-                            <div class="btn-getcode">
-                                <button type="button" id="getSmsId" class="passport-btn js-getcode numberBtn" jktag="0001|0.1|91024">
-                                    获取动态码
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -451,13 +451,14 @@
 //                $("#r-password").focus();
                 return false;
             }
-            if (verify == '' || verify == null) {
-                alertTips('#r-verify','请输入验证码');
-//                layer.alert("请输入验证码");
-//                $("#r-verify").focus();
-                return false;
-            }
-            if (phone != '' && verify != '') {
+//            if (verify == '' || verify == null) {
+//                alertTips('#r-verify','请输入验证码');
+////                layer.alert("请输入验证码");
+////                $("#r-verify").focus();
+//                return false;
+//            }
+//            if (phone != '' && verify != '') {
+            if (phone != '') {
                 countDown(this,'getSmsId');
                 sendSms(phone,'author');
             }

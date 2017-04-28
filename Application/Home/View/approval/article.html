@@ -45,7 +45,7 @@
         </div>
         <label style="margin-bottom: 80px;"></label>
         <div class="col-md-12 col-sm-12 col-lg-12">
-            <div style="line-height: 25px">
+            <div style="line-height: 25px;-webkit-user-select: none;">
                 {$artInfo.content}
             </div>
         </div>
@@ -53,7 +53,7 @@
 </div>
 <div class="centent mar-t20" style="margin-bottom: 40px;" >
     <button class="btn btn-sm btn-primary" style="margin-left: 43%" data-toggle="modal" data-position="center" data-target="#open-dailog-email">
-        <i class="icon icon-paint-brush"></i> 点 评
+        <i class="icon icon-paint-brush"></i> 审 核
     </button>
 </div>
 <!-- 添加点评弹窗 -->
@@ -95,10 +95,10 @@
                             </div>
                             <div class="col-sm-6">
                                 <button style="margin-right: 10px; height: 25px;padding: 0px 5px;margin-top: 10px;" class="btn btn-danger btn-xs" id="noPass" onclick="isAgreePass1(1)">
-                                    <i class="icon icon-remove-sign"></i> 不通过
+                                    <i class="icon icon-remove-sign"></i> 拒 绝
                                 </button>
                                 <button class="btn btn-primary btn-xs" style=" height: 25px;padding: 0px 5px;margin-top: 10px;" id="yesPass" onclick="isAgreePass1(2)">
-                                    <i class="icon icon-check-sign"></i> 通 过</button>
+                                    <i class="icon icon-check-sign"></i> 同 意</button>
                             </div>
                             <div class="col-sm-3 txt-right" style="line-height: 30px">
                                 <input type="hidden" value="{$artInfo.artid}" id="artId">

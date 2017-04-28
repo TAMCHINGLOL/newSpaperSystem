@@ -95,9 +95,9 @@
     </div>
     <div class="layout-box">
         <ul class="nav nav-tabs">
-            <li class="login-tittle width50 active"><a href="###" data-target="#tab2Content1" data-toggle="tab">笔者登录</a>
+            <li class="login-tittle width50 active"><a href="###" data-target="#tab2Content1" data-toggle="tab">作者登录</a>
             </li>
-            <li class="login-tittle width50"><a href="###" data-target="#tab2Content2" data-toggle="tab">管理员登录</a></li>
+            <li class="login-tittle width50"><a href="###" data-target="#tab2Content2" data-toggle="tab">期刊登录</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane fade active in" id="tab2Content1">
@@ -147,6 +147,14 @@
                         </div>
                     </div>
                     <div class="form-group form-group-mar">
+                        <div class="input-group form-mcode width">
+                            <input type="text" class="form-control form-type " name="code" id="gcode" placeholder="动态码">
+                            <div class="btn-getcode">
+                                <button type="button" id="getSmsBtn" class="passport-btn js-getcode numberBtn">获取动态码</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group form-group-mar">
                         <div class="input-group" style="display: inline-block">
                             <div style="float: left;">
                                 <input type="text" name="verify" class="form-control form-type" id="r-verify1"
@@ -156,16 +164,6 @@
                         <div style="float: right;width: 137px;display: inline-block;">
                             <img id="img3" name="img" width="90%" height="40" style="float: right" alt="验证码"
                                  src="{:U('Home/Login/verify',array())}" title="点击刷新" onclick="clickVerify('#img3')">
-                        </div>
-                    </div>
-                    <div class="form-group form-group-mar">
-                        <div class="input-group form-mcode width">
-                            <input type="text" class="form-control form-type " name="code" id="gcode" placeholder="动态码">
-                            <div class="btn-getcode">
-                                <button type="button" id="getSmsBtn" class="passport-btn js-getcode numberBtn"
-                                        jktag="0001|0.1|91024">获取动态码
-                                </button>
-                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -404,10 +402,10 @@
                 alertTips("#new-password", '请输入验证码');
                 return false;
             }
-//            if (code == '' || code == null) {
-//                alertTips("#gcode", '请输入动态码');
-//                return false;
-//            }
+            if (code == '' || code == null) {
+                alertTips("#gcode", '请输入动态码');
+                return false;
+            }
 
 //            if (phone != '' && verify != '' && code != '') {
             if (phone != '' && verify != '') {
@@ -512,14 +510,14 @@
                 alertTips('#new-user', '手机号码有误');
                 return false;
             }
-            if (verify == '' || verify == null) {
-                alertTips('#r-verify1', '请输入验证码');
-                return false;
-            }
+//            if (verify == '' || verify == null) {
+//                alertTips('#r-verify1', '请输入验证码');
+//                return false;
+//            }
             if(verify != ''){
                 verifyCode(verify,"#verify1","#img3")
             }
-            if (phone != '' && verify != '') {
+            if (phone != '') {
                 sendSms(phone, 'admin');
                 countDown(this, 'getSmsBtn');
             }

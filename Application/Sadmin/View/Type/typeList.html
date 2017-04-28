@@ -129,6 +129,9 @@
                                        <button onclick="addArtType({$v['typeid']})" style="margin-left: 10px;font-size:15px" class="btn btn-xs btn-primary">
                                            <i class="ace-icon fa fa-pencil-square-o bigger-110"></i> 编 辑
                                        </button>
+                                       <button onclick="delArtType({$v['typeid']})" style="margin-left: 10px;font-size:15px" class="btn btn-xs btn-danger">
+                                           <i class="ace-icon fa fa-pencil-square-o bigger-110"></i> 删 除
+                                       </button>
                                    </if>
                                </td>
                            </tr>
@@ -144,6 +147,26 @@
     var addType_url = "{:U('Sadmin/Type/addType','',false)}";
     var isOpen_url = "{:U('Sadmin/Type/isOpen','',false)}";
     var isTop_url = "{:U('Sadmin/Type/isTop','',false)}";
+    var delType_url = "{:U('Sadmin/Type/delete','',false)}";
+
+    //触发删除
+    function delArtType(id){
+        layer.confirm('确 定 删 除 ?',function(){
+            $.ajax({
+                url: delType_url,
+                type: 'post',
+                dataType: 'json',
+                data: {id: id},
+                success: function(result){
+                    parent.ifm.contentWindow.location.reload(true);
+                    layer.msg(result.info,{time: 1000},function(){
+                        parent.parent.layer.closeAll();
+                        return false;
+                    });
+                }
+            })
+        });
+    }
     //添加文章分类
     function addArtType(id){
         var title;

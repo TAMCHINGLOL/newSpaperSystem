@@ -61,6 +61,9 @@ class ApprovalController extends CommonController {
         $this->display();
     }
 
+    function dss(){
+
+    }
     /**
      * 加载待审核文章列表(分页)
      * @Author: ludezh
@@ -88,9 +91,10 @@ class ApprovalController extends CommonController {
         $articleList = $articleModel->getListByCondition($page->firstRow,$page->listRows,$status,$isPass,$typeId);
         foreach($articleList as $k => $v){
             $content1 = strip_tags(html_entity_decode($v['content']));
-            $content2 = substr($content1,0,200);
-            $content3 = substr($content1,200,200);
-            $articleList[$k]['content'] = $content2."<br>".$content3."............";
+//            $content2 = substr($content1,0,200);
+//            $content3 = substr($content1,200,200);
+//            $articleList[$k]['content'] = $content2."<br>".$content3."............";
+            $articleList[$k]['content'] = $content1;
         }
         $this->assign('articleList', $articleList); // 赋值数据集
         $this->assign('page', $page->show());       // 赋值分页输出

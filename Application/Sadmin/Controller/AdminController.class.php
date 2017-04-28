@@ -103,7 +103,7 @@ class AdminController extends BaseController
         $parentId = $adminModel->getIdByUid(session('uid'));
         if($adminId){   //修改
             $rs = $subUserModel->updateUser($adminId,$adminname,$email,$address,$phone,$selectedId,$sex,$icCardId,$parentId,$typeSelect);
-        }else{  //新增
+        }else{          //新增
             if(md5($password) == md5($password2)){
                 $adminId = getRandStr(15);
                 $registerTime = date('Y-m-d H:i:s');

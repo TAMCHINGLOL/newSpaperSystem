@@ -17,6 +17,21 @@ class TypeController extends BaseController
 {
 
     /**
+     * 删除分类
+     * @Author: ludezh
+     */
+    public function delete(){
+        $id = I('post.id');
+        $typeModel = D('Sadmin/Type');
+        $rs = $typeModel->delRow($id);
+        if(!$rs){
+            $this->error('删 除 失 败');
+        }
+        $this->success('删 除 成 功');
+        exit();
+    }
+
+    /**
      * 修改是否置顶
      * @Author: ludezh
      */
@@ -136,31 +151,34 @@ class TypeController extends BaseController
             $typeModel = D('Sadmin/Type');
             if($_FILES['imgFile']['name']){
                 $picData = picUpload('typePicFile');     //调用图片上传公共方法
-                if($picData['status'] == 0){
-                    session('UploadStatus',0);
-                    session('UploadInfo',$picData['info']);
-                    exit();
-                }
+//                if($picData['status'] == 0){
+//                    session('UploadStatus',0);
+//                    session('UploadInfo',$picData['info']);
+////                    exit();
+//                }
             }
+//            echo 1;exit();
             if($typeId){    //修改
                 $rs = $typeModel->updateRow($typeId,$typeName,$typeRemark,$picData['info']);
             }else{  //新增
                 $rs = $typeModel->addRow($typeName,$typeRemark,$picData['info']);
             }
-            session('UploadStatus',1);
-            session('UploadInfo','操 作 成 功');
+            $this->success('操 作 成 功');
             exit();
-//            if($rs){
-//                session('UploadStatus',1);
-//                session('UploadInfo','操 作 成 功');
-////                $this->success('操 作 成 功');
-//                exit();
-//            }else{
-//                session('UploadStatus',0);
-//                session('UploadInfo','操 作 失 败');
-////                $this->error('操 作 失 败');
-//                exit();
-//            }
+//            session('UploadStatus',1);
+//            session('UploadInfo','操 作 成 功');
+//            exit();
+            if($rs){
+                session('UploadStatus',1);
+                session('UploadInfo','操 作 成 功');
+                $this->success('操 作 成 功');
+                exit();
+            }else{
+                session('UploadStatus',0);
+                session('UploadInfo','操 作 失 败');
+                $this->error('操 作 失 败');
+                exit();
+            }
         }
     }
 
